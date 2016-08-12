@@ -1,0 +1,6 @@
+framework module Pods_AndyWarholAccessibilityProject {
+  umbrella header "Pods-AndyWarholAccessibilityProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

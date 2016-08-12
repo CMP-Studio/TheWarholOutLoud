@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "import/no-unresolved": 0,
+    "arrow-body-style": [0, "always"],
+    "global-require": 0,
+    "react/jsx-boolean-value": 0,
+    "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
+  },
+  "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "classes": true,
+            experimentalObjectRestSpread: true
+        }
+    },
+    "globals": {
+        "__DEV__": false,
+    },
+}

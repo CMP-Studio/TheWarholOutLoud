@@ -1,0 +1,47 @@
+
+import {
+  NativeModules,
+  NativeEventEmitter,
+} from 'react-native';
+
+import {
+  updateBeacons,
+} from './beacon';
+
+const BeaconManager = NativeModules.CMSBeaconManager;
+const BeaconManagerObserver = new NativeEventEmitter(BeaconManager);
+
+let update = true;
+let updateTimer;
+const UPDATE_INTERVAL = 1; // sec
+
+// *** BeaconManager Native Module Events ***
+let BeaconManagerEventListenerActive = false;
+export function addBeaconManagerEventListeners(dispatch, beaconBlockRules) {
+  if (BeaconManagerEventListenerActive) {
+    return;
+  }
+
+  const {
+    BeaconManagerBeaconPing,
+  } = BeaconManager.Events;
+
+  BeaconManagerObserver.addListener(BeaconManagerBeaconPing, (beacons) => {
+    if (update) {
+      updateTimer = null;
+      update = false;
+
+      dispatch(
+        updateBeacons(beacons, beaconBlockRules)
+      );
+    } else {
+      if (updateTimer == null) {
+        updateTimer = setTimeout(() => {
+          update = true;
+        }, 1000 * UPDATE_INTERVAL);
+      }
+    }
+  });
+
+  BeaconManagerEventListenerActive = true;
+}

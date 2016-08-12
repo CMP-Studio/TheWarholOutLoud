@@ -1,0 +1,37 @@
+{
+  "name": "AndyWarholAccessibilityProject",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "mocha --require test/init --compilers js:babel-core/register $(find ./test -name '*.test.js')",
+    "test:watch": "npm test -- --watch"
+  },
+  "dependencies": {
+    "lodash": "^4.12.0",
+    "react": "^15.0.2",
+    "react-native": "^0.28.0",
+    "react-native-blur": "^0.8.0",
+    "react-native-collapsible": "^0.6.0",
+    "react-native-device-info": "^0.9.3",
+    "react-native-grid-view": "git://github.com/CMP-Studio/react-native-grid-view.git#4.0.0",
+    "react-redux": "^4.4.5",
+    "realm": "^0.14.1",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.0.1",
+    "remote-redux-devtools": "^0.3.2",
+    "uuid": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.0.4",
+    "babel-preset-react-native": "^1.9.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-plugin-import": "^1.6.1",
+    "eslint-plugin-jsx-a11y": "^1.0.4",
+    "eslint-plugin-react": "^5.0.1",
+    "mocha": "^2.5.3"
+  }
+}

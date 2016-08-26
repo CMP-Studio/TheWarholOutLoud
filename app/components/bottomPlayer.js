@@ -113,7 +113,6 @@ export const BottomPlayer = (props) => {
             props.audioContent,
             props.currentUUID,
             props.index,
-            props.time,
             props.autoplayOn
           );
         },
@@ -180,7 +179,6 @@ export const BottomPlayer = (props) => {
               props.audioContent,
               props.currentUUID,
               props.index,
-              props.time,
               props.autoplayOn
             );
           },

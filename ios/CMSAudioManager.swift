@@ -176,6 +176,7 @@ class CMSAudioManager: RCTEventEmitter {
 
     let eventData = [
       "uuid": self.uuid,
+      "time": self.duration,
       ]
 
     self.sendEventWithName(eventName, body: eventData)

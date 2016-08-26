@@ -292,14 +292,9 @@ export function loadNextAutoplayAudio(
   audioContent,
   currentUUID,
   activeAudioIndex,
-  timeListened,
   autoplayOn
 ) {
   return async (dispatch) => {
-    dispatch(
-      updateLocalPreferences(currentUUID, timeListened)
-    );
-
     if (activeAudioIndex + 1 >= audioContent.length) {
       dispatch(audioDone);
       return;
@@ -365,10 +360,11 @@ export function updateAudioCurrentTime(uuid, time) {
   };
 }
 
-export function audioDidFinishPlaying(uuid) {
+export function audioDidFinishPlaying(uuid, time) {
   return {
     type: AUDIO_DID_FINISH_PLAYING,
     uuid,
+    time,
   };
 }
 

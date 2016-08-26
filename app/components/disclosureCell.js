@@ -32,7 +32,8 @@ const DisclosureCell = (props) => {
       onPress={props.onPress}
       style={[
         { backgroundColor: props.color },
-        props.border ? { marginBottom: StyleSheet.hairlineWidth } : {},
+        props.border ? { borderBottomWidth: 2 } : {},
+        props.borderColor ? { borderBottomColor: props.borderColor } : {},
       ]}
       underlayColor={props.highlightColor}
       accessibilityTraits={props.accessibility.traits}
@@ -58,6 +59,7 @@ DisclosureCell.propTypes = {
   color: PropTypes.string.isRequired,
   highlightColor: PropTypes.string.isRequired,
   border: PropTypes.bool.isRequired,
+  borderColor: PropTypes.string.isRequired,
 };
 
 export default DisclosureCell;

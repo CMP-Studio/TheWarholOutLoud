@@ -27,7 +27,7 @@ const initialState = {
       category: VISUAL_DESCRIPTION,
       totalServed: 0,
       totalListened: 0,
-      percentage: 1,
+      percentage: 0,
     },
     {
       category: ART_PROCESS,

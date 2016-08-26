@@ -16,10 +16,12 @@
 
 RCT_EXTERN_METHOD(loadLocalAudio:(NSString *)audioURL
                   audioUUID:(NSString *)audioUUID
+                  playAudioAfterLoad:(BOOL)playAudioAfterLoad
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject)
 RCT_EXTERN_METHOD(loadRemoteAudio:(NSString *)audioURL
                   audioUUID:(NSString *)audioUUID
+                  playAudioAfterLoad:(BOOL)playAudioAfterLoad
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject)
 

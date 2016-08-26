@@ -19,6 +19,7 @@ enum CMSAudioManagerEvents:String {
 class CMSAudioManager: RCTEventEmitter {
 
   var player = AVPlayer()
+  var playAudioAfterLoad = false
   var playerRate:Float = 1.0
   var duration:Double = 0.0
 
@@ -61,12 +62,14 @@ class CMSAudioManager: RCTEventEmitter {
 
   @objc func loadLocalAudio(audioURL:String,
                             audioUUID:String,
+                            playAudioAfterLoad:Bool,
                             resolve:RCTPromiseResolveBlock,
                             reject:RCTPromiseRejectBlock) {
     if let localPath = NSBundle.mainBundle().pathForResource(audioURL, ofType: "mp3") {
       let url = NSURL(fileURLWithPath:localPath)
       let asset = AVURLAsset(URL: url)
 
+      self.playAudioAfterLoad = playAudioAfterLoad
       uuid = audioUUID
       jsResolveCallback = resolve
       jsRejectCallback = reject
@@ -78,11 +81,13 @@ class CMSAudioManager: RCTEventEmitter {
 
   @objc func loadRemoteAudio(audioURL:String,
                              audioUUID:String,
+                             playAudioAfterLoad:Bool,
                              resolve:RCTPromiseResolveBlock,
                              reject:RCTPromiseRejectBlock) {
     if let url = NSURL(string:audioURL) {
       let asset = AVURLAsset(URL: url)
 
+      self.playAudioAfterLoad = playAudioAfterLoad
       uuid = audioUUID
       jsResolveCallback = resolve
       jsRejectCallback = reject
@@ -135,7 +140,10 @@ class CMSAudioManager: RCTEventEmitter {
 
       case .ReadyToPlay:
         player.actionAtItemEnd = .Pause
-        player.rate = self.playerRate
+        
+        if playAudioAfterLoad {
+          player.rate = self.playerRate
+        }
 
         let interval = CMTimeMakeWithSeconds(1, Int32(NSEC_PER_SEC))
         playbackTimeObserver = player.addPeriodicTimeObserverForInterval(interval,

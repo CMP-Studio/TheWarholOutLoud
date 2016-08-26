@@ -2,6 +2,7 @@
 import {
   TOGGLE_PAUSE_PLAY,
   PAUSE_AUDIO,
+  PLAY_AUDIO,
   CYCLE_AUDIO_SPEED,
   PLAY_RATE_NORMAL,
   LOAD_AUDIO_SUCCESS,
@@ -217,6 +218,15 @@ export function bottomPlayer(state = initialState, action) {
         {
           playerStatus: newStatus,
           playerOpen: openStatus,
+        }
+      );
+    }
+
+    case PLAY_AUDIO: {
+      return Object.assign({},
+        state,
+        {
+          playerStatus: PLAYER_STATUS_PLAY,
         }
       );
     }

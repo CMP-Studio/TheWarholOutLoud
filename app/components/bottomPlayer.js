@@ -1,5 +1,5 @@
 
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import {
   StyleSheet,
@@ -17,6 +17,7 @@ import {
   PLAYER_STATUS_NOTLOADED,
   PLAYER_STATUS_UNLOADED,
   PLAYER_STATUS_LOADING,
+  PLAYER_STATUS_PLAY,
 } from '../actions/audio';
 
 import ControlsView from './controlsView';
@@ -48,36 +49,152 @@ function nextAudioTitle(audioContent, nextUUID, defaultTitle) {
   return defaultTitle;
 }
 
-export const BottomPlayer = (props) => {
-  const {
-    togglePausePlay,
-    rewindAudio,
-    cycleAudioSpeed,
-    unloadAudio,
-    loadNextAudio,
-    loadNextAutoplayAudio,
-    loadPrevAudio,
-    replayAudio,
-    toggleAutoplay,
-  } = props.actions;
-
-  // Force the screen reader to update with bottom player
-  screenReaderReloadLayout();
-
-  const width = Dimensions.get('window').width;
-
-  if (props.playerStatus === PLAYER_STATUS_ERROR ||
-      props.playerStatus === PLAYER_STATUS_NOTLOADED ||
-      props.playerStatus === PLAYER_STATUS_LOADING ||
-      props.playerStatus === PLAYER_STATUS_UNLOADED) {
-    // We don't want the bottom player:
-    return null;
+class BottomPlayer extends Component {
+  static propTypes = {
+    currentUUID: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
+    navToTourStop: PropTypes.func.isRequired,
+    nextUUID: PropTypes.string,
+    stopTitle: PropTypes.string.isRequired,
+    audioTitle: PropTypes.string.isRequired,
+    audioContent: PropTypes.array.isRequired,
+    time: PropTypes.number.isRequired,
+    duration: PropTypes.number.isRequired,
+    playRate: PropTypes.string.isRequired,
+    playerStatus: PropTypes.string.isRequired,
+    timerActive: PropTypes.bool.isRequired,
+    timerStartAt: PropTypes.number.isRequired,
+    timerNumber: PropTypes.number.isRequired,
+    autoplayOn: PropTypes.bool.isRequired,
+    actions: PropTypes.shape({
+      togglePausePlay: PropTypes.func.isRequired,
+      replayAudio: PropTypes.func.isRequired,
+      rewindAudio: PropTypes.func.isRequired,
+      cycleAudioSpeed: PropTypes.func.isRequired,
+      loadNextAudio: PropTypes.func.isRequired,
+      loadNextAutoplayAudio: PropTypes.func.isRequired,
+      loadPrevAudio: PropTypes.func.isRequired,
+      toggleAutoplay: PropTypes.func.isRequired,
+      unloadAudio: PropTypes.func.isRequired,
+      playAudio: PropTypes.func.isRequired,
+    }).isRequired,
   }
 
-  let progress;
+  componentWillReceiveProps(nextProps) {
+    if (this.props.playerStatus === PLAYER_STATUS_LOADING &&
+        nextProps.playerStatus === PLAYER_STATUS_PLAY) {
+      this.props.actions.playAudio();
+    }
+  }
 
-  if (props.playerStatus === PLAYER_STATUS_FINISHED &&
-      props.nextUUID === null) {
+  render() {
+    const {
+      currentUUID,
+      index,
+      navToTourStop,
+      nextUUID,
+      stopTitle,
+      audioTitle,
+      audioContent,
+      time,
+      duration,
+      playRate,
+      playerStatus,
+      timerActive,
+      timerStartAt,
+      timerNumber,
+      autoplayOn,
+    } = this.props;
+
+    const {
+      togglePausePlay,
+      rewindAudio,
+      cycleAudioSpeed,
+      unloadAudio,
+      loadNextAudio,
+      loadNextAutoplayAudio,
+      loadPrevAudio,
+      replayAudio,
+      toggleAutoplay,
+    } = this.props.actions;
+
+    // Force the screen reader to update with bottom player
+    screenReaderReloadLayout();
+
+    const width = Dimensions.get('window').width;
+
+    if (playerStatus === PLAYER_STATUS_ERROR ||
+        playerStatus === PLAYER_STATUS_NOTLOADED ||
+        playerStatus === PLAYER_STATUS_LOADING ||
+        playerStatus === PLAYER_STATUS_UNLOADED) {
+      // We don't want the bottom player:
+      return null;
+    }
+
+    let progress;
+
+    if (playerStatus === PLAYER_STATUS_FINISHED && nextUUID === null) {
+      return (
+        <View
+          style={[styles.bottomBar,
+                  { width, height: BOTTOMPLAYERHEIGHT,
+                    bottom: BOTTOMBARHEIGHT,
+                    backgroundColor: OFF_BLACK,
+                   }]}
+        >
+          <ClosePlayerView
+            stopTitle={stopTitle}
+            closePlayer={() => { unloadAudio(); }}
+            navToTourStop={() => { navToTourStop(); }}
+          />
+        </View>
+      );
+    } else if (playerStatus === PLAYER_STATUS_FINISHED &&
+               nextUUID !== null) {
+      // display the autoplay progress
+      progress = (<AutoplayProgressView
+        time={time}
+        duration={duration}
+        playerStatus={playerStatus}
+
+        timerActive={timerActive}
+        timerStartAt={timerStartAt}
+        timerNumber={timerNumber}
+        autoplayOn={autoplayOn}
+        nextUUID={nextUUID}
+        actions={{
+          toggleAutoplay,
+          loadNextAutoplayAudio: () => {
+            loadNextAutoplayAudio(
+              audioContent,
+              currentUUID,
+              index,
+              autoplayOn
+            );
+          },
+        }}
+      />);
+    } else {
+      // display the time progress
+      progress = (<TimeProgressView
+        time={time}
+        duration={duration}
+      />);
+    }
+
+    let prevDisabled = false;
+    let nextDisabled = false;
+    const activeAudioIndex = audioContent.findIndex((content) => {
+      return content.uuid === currentUUID;
+    });
+
+    if ((activeAudioIndex - 1) < 0) {
+      prevDisabled = true;
+    }
+    if (activeAudioIndex + 1 >= audioContent.length) {
+      nextDisabled = true;
+    }
+
     return (
       <View
         style={[styles.bottomBar,
@@ -85,144 +202,56 @@ export const BottomPlayer = (props) => {
                   bottom: BOTTOMBARHEIGHT,
                   backgroundColor: OFF_BLACK,
                  }]}
+        // Rerender when PLAYER_STATUS_FINISHED begins and ends
+        key={playerStatus === PLAYER_STATUS_FINISHED}
       >
-        <ClosePlayerView
-          stopTitle={props.stopTitle}
-          closePlayer={() => { unloadAudio(); }}
-          navToTourStop={() => { props.navToTourStop(); }}
+        {progress}
+        <ControlsView
+          stopTitle={stopTitle}
+          audioTitle={audioTitle}
+          nextAudioTitle={nextAudioTitle(audioContent, nextUUID, audioTitle)}
+          time={time}
+          playerStatus={playerStatus}
+          prevDisabled={prevDisabled}
+          nextDisabled={nextDisabled}
+          playRate={playRate}
+          actions={{
+            togglePausePlay,
+            replayAudio,
+            rewindAudio,
+            cycleAudioSpeed,
+            navToTourStop,
+            loadNextAudio: () => {
+              loadNextAudio(
+                audioContent,
+                currentUUID,
+                index,
+                time,
+                autoplayOn
+              );
+            },
+            loadNextAutoplayAudio: () => {
+              loadNextAutoplayAudio(
+                audioContent,
+                currentUUID,
+                index,
+                autoplayOn
+              );
+            },
+            loadPrevAudio: () => {
+              loadPrevAudio(
+                audioContent,
+                currentUUID,
+                index,
+                time,
+                autoplayOn
+              );
+            },
+          }}
         />
       </View>
     );
-  } else if (props.playerStatus === PLAYER_STATUS_FINISHED &&
-      props.nextUUID !== null) {
-    // display the autoplay progress
-    progress = (<AutoplayProgressView
-      time={props.time}
-      duration={props.duration}
-      playerStatus={props.playerStatus}
-
-      timerActive={props.timerActive}
-      timerStartAt={props.timerStartAt}
-      timerNumber={props.timerNumber}
-      autoplayOn={props.autoplayOn}
-      nextUUID={props.nextUUID}
-      actions={{
-        toggleAutoplay,
-        loadNextAutoplayAudio: () => {
-          loadNextAutoplayAudio(
-            props.audioContent,
-            props.currentUUID,
-            props.index,
-            props.autoplayOn
-          );
-        },
-      }}
-    />);
-  } else {
-    // display the time progress
-    progress = (<TimeProgressView
-      time={props.time}
-      duration={props.duration}
-    />);
   }
+}
 
-  let prevDisabled = false;
-  let nextDisabled = false;
-  const activeAudioIndex = props.audioContent.findIndex((content, index) => {
-    return content.uuid === props.currentUUID;
-  });
-
-  if ((activeAudioIndex - 1) < 0) {
-    prevDisabled = true;
-  }
-  if (activeAudioIndex + 1 >= props.audioContent.length) {
-    nextDisabled = true;
-  }
-
-  return (
-    <View
-      style={[styles.bottomBar,
-              { width, height: BOTTOMPLAYERHEIGHT,
-                bottom: BOTTOMBARHEIGHT,
-                backgroundColor: OFF_BLACK,
-               }]}
-      // Rerender when PLAYER_STATUS_FINISHED begins and ends
-      key={props.playerStatus === PLAYER_STATUS_FINISHED}
-    >
-      {progress}
-      <ControlsView
-        stopTitle={props.stopTitle}
-        audioTitle={props.audioTitle}
-        nextAudioTitle={nextAudioTitle(props.audioContent, props.nextUUID, props.audioTitle)}
-        time={props.time}
-        playerStatus={props.playerStatus}
-        prevDisabled={prevDisabled}
-        nextDisabled={nextDisabled}
-        playRate={props.playRate}
-        actions={{
-          togglePausePlay,
-          replayAudio,
-          rewindAudio,
-          cycleAudioSpeed,
-          navToTourStop: props.navToTourStop,
-          loadNextAudio: () => {
-            loadNextAudio(
-              props.audioContent,
-              props.currentUUID,
-              props.index,
-              props.time,
-              props.autoplayOn
-            );
-          },
-          loadNextAutoplayAudio: () => {
-            loadNextAutoplayAudio(
-              props.audioContent,
-              props.currentUUID,
-              props.index,
-              props.autoplayOn
-            );
-          },
-          loadPrevAudio: () => {
-            const { audioContent } = props;
-            loadPrevAudio(
-              audioContent,
-              props.currentUUID,
-              props.index,
-              props.time,
-              props.autoplayOn
-            );
-          },
-        }}
-      />
-    </View>
-  );
-};
-
-BottomPlayer.propTypes = {
-  currentUUID: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
-  currentAudioRoute: PropTypes.object.isRequired,
-  navToTourStop: PropTypes.func.isRequired,
-  nextUUID: PropTypes.string,
-  stopTitle: PropTypes.string.isRequired,
-  audioTitle: PropTypes.string.isRequired,
-  audioContent: PropTypes.array.isRequired,
-  time: PropTypes.number.isRequired,
-  duration: PropTypes.number.isRequired,
-  playRate: PropTypes.string.isRequired,
-  playerStatus: PropTypes.string.isRequired,
-  timerActive: PropTypes.bool.isRequired,
-  timerStartAt: PropTypes.number.isRequired,
-  timerNumber: PropTypes.number.isRequired,
-  autoplayOn: PropTypes.bool.isRequired,
-  actions: PropTypes.shape({
-    togglePausePlay: PropTypes.func.isRequired,
-    replayAudio: PropTypes.func.isRequired,
-    rewindAudio: PropTypes.func.isRequired,
-    cycleAudioSpeed: PropTypes.func.isRequired,
-    loadNextAudio: PropTypes.func.isRequired,
-    loadNextAutoplayAudio: PropTypes.func.isRequired,
-    loadPrevAudio: PropTypes.func.isRequired,
-    toggleAutoplay: PropTypes.func.isRequired,
-  }).isRequired,
-};
+export default BottomPlayer;

@@ -141,7 +141,7 @@ class AudioContentItem extends Component {
     }
 
     const indent = audioContent.depth * 30;
-    const transcriptContainerWidth = 30;
+    const transcriptContainerWidth = 35;
 
     return (
       <View style={styles.container}>
@@ -195,7 +195,9 @@ class AudioContentItem extends Component {
             </View>
           </View>
           <TranscriptButton
-            styles={{ width: transcriptContainerWidth }}
+            styles={{
+              width: transcriptContainerWidth,
+            }}
             accessibilityLabel={parseVoiceoverText(audioContent.title)}
             onPress={() => { toggleAudioTranscript(audioContent.uuid); }}
             showTranscript={audioContent.showTranscript}

@@ -739,7 +739,7 @@ export const tourStops = [
     floor: 7,
     order: 12,
     shortTitle: 'Pop products',
-    longTitle: 'Pop products: Campbell\'s Soup',
+    longTitle: 'Pop products: Campbell\'s soup',
     shortCredit: 'Andy Warhol (American, 1928-1987), <i>Big Torn Campbell\'s Soup Can (Pepper Pot)</i>, 1962 © AWF',
     longCredit: 'Andy Warhol (American, 1928-1987) \n<i>Big Torn Campbell\'s Soup Can (Pepper Pot)</i>, 1962 \ncasein and graphite on canvas \n71 5/8 x 52 in. (181.9 x 132.1 cm.) \nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc. \n© The Andy Warhol Foundation for the Visual Arts, Inc. \n1998.1.31',
     regions: ['green'],

@@ -34,7 +34,7 @@ const HowToScreen = (props) => {
         automaticallyAdjustContentInsets={false}
       >
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
-          Welcome to the warhol: out loud, The Andy Warhol Museum’s audio guide.
+          Welcome to Out Loud, The Andy Warhol Museum’s inclusive audio guide.
         </Text>
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
           We've organized our audio guide into stories. Each story centers on one theme, time period, or artwork, and contains several short chapters of audio content focusing on different aspects of Andy Warhol’s life and art.

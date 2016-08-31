@@ -18,7 +18,7 @@ import AccessibilityScreen from './accessibilityScreen';
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
-import { OFF_BLACK, TEAL, LIGHT_BLUE } from '../styles';
+import { OFF_BLACK, TEAL } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -64,10 +64,6 @@ class MuseumScreen extends Component {
       bottomOffset += BOTTOMPLAYERHEIGHT;
     }
 
-    let cellColor = 'rgba(255, 255, 255, .85);';
-    let cellHighlightColor = 'rgba(255, 255, 255, .75);';
-    let cellBorderColor = LIGHT_BLUE;
-
     return (
       <View style={[styles.container]}>
         <View style={styles.header}>
@@ -89,10 +85,7 @@ class MuseumScreen extends Component {
                 traits: ['button'],
                 label: 'About The Andy Warhol Museum.',
               }}
-              border={true}
-              borderColor={cellBorderColor}
-              color={cellColor}
-              highlightColor={cellHighlightColor}
+              bottomBorder={true}
               title="About The Andy Warhol Museum"
               onPress={() => {
                 this.props.navigator.push({
@@ -113,10 +106,7 @@ class MuseumScreen extends Component {
                 traits: ['button'],
                 label: 'Accessibility at The Warhol.',
               }}
-              border={true}
-              borderColor={cellBorderColor}
-              color={cellColor}
-              highlightColor={cellHighlightColor}
+              bottomBorder={true}
               title="Accessibility at The Warhol"
               onPress={() => {
                 this.props.navigator.push({
@@ -137,10 +127,7 @@ class MuseumScreen extends Component {
                 traits: ['button'],
                 label: 'Museum Amenities.',
               }}
-              border={true}
-              borderColor={cellBorderColor}
-              color={cellColor}
-              highlightColor={cellHighlightColor}
+              bottomBorder={true}
               title="Museum amenities"
               onPress={() => {
                 this.props.navigator.push({
@@ -161,10 +148,7 @@ class MuseumScreen extends Component {
                 traits: ['button'],
                 label: 'How to use this app.',
               }}
-              border={true}
-              borderColor={cellBorderColor}
-              color={cellColor}
-              highlightColor={cellHighlightColor}
+              bottomBorder={true}
               title="How to use this app"
               onPress={() => {
                 this.props.navigator.push({
@@ -185,10 +169,7 @@ class MuseumScreen extends Component {
                 traits: ['button'],
                 label: 'Credits.',
               }}
-              border={false}
-              borderColor={cellBorderColor}
-              color={cellColor}
-              highlightColor={cellHighlightColor}
+              bottomBorder={false}
               title="Credits"
               onPress={() => {
                 this.props.navigator.push({

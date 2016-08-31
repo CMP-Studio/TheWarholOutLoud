@@ -60,6 +60,7 @@ export function bottomPlayer(state = initialState, action) {
         state,
         {
           timerStartAt: action.screenReader ? 7 : 5,
+          autoplayOn: action.screenReader ? false : state.autoplayOn,
         }
       );
     }

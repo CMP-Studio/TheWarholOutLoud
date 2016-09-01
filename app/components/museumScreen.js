@@ -11,7 +11,7 @@ import {
 import DisclosureCell from './disclosureCell';
 import AmenitiesScreen from '../containers/amenities';
 import AboutScreen from './aboutScreen';
-import HowToScreen from './howToScreen';
+import SettingsScreen from '../containers/settings';
 import CreditsScreen from './creditsScreen';
 import AccessibilityScreen from './accessibilityScreen';
 
@@ -146,14 +146,14 @@ class MuseumScreen extends Component {
             <DisclosureCell
               accessibility={{
                 traits: ['button'],
-                label: 'How to use this app.',
+                label: 'Settings.',
               }}
               bottomBorder={true}
-              title="How to use this app"
+              title="Settings"
               onPress={() => {
                 this.props.navigator.push({
-                  title: 'How to use this app',
-                  component: HowToScreen,
+                  title: 'Settings',
+                  component: SettingsScreen,
                   barTintColor: '#ffffff',
                   tintColor: TEAL,
                   titleTextColor: OFF_BLACK,

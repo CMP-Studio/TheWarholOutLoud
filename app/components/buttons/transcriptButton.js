@@ -45,7 +45,7 @@ const TranscriptButton = (props) => {
         resizeMode={'contain'}
         style={[
           styles.transcriptButton,
-          props.styles || props.styles,
+          props.styles,
           props.showTranscript ? { tintColor: TURQUOISE } : {},
         ]}
         source={require('../../assets//Transcript.png')}

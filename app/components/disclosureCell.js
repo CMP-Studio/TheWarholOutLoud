@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   cell: {
     flexDirection: 'row',
     alignItems: 'center',
+    height: 41,
     backgroundColor: '#fff',
     borderBottomWidth: 3,
     borderBottomColor: LIGHT_BLUE,

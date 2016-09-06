@@ -19,6 +19,7 @@ import {
   PLAYER_STATUS_PAUSE,
 } from '../actions/audio';
 
+import Tutorial from '../containers/tutorial';
 import NearMe from '../containers/nearMe';
 import Everything from '../containers/everything';
 import Museum from '../containers/museum';
@@ -75,6 +76,7 @@ class RootScreen extends Component {
           }
         }}
       >
+        <Tutorial />
         <TabBarIOS
           translucent={false}
           barTintColor={TURQUOISE}

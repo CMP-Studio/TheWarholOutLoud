@@ -84,7 +84,7 @@ class NearMeScreen extends Component {
 
   componentDidMount() {
     const { rangingUUID, rangingIdentifier, beaconBlockRules, actions } = this.props;
-    actions.startScanningForBeacons(rangingUUID, rangingIdentifier, beaconBlockRules);
+    // actions.startScanningForBeacons(rangingUUID, rangingIdentifier, beaconBlockRules);
   }
 
   shouldComponentUpdate(nextProps, nextState) {

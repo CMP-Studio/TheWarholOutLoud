@@ -12,6 +12,8 @@ const mapStateToProps = (state) => {
   return {
     timerActive: state.bottomPlayer.timerActive,
     autoplayOn: state.bottomPlayer.autoplayOn,
+    bluetoothOn: state.beacon.bluetoothOn,
+    locationServicesStatus: state.beacon.locationServicesStatus,
   };
 };
 

@@ -14,6 +14,9 @@
 
 @interface RCT_EXTERN_MODULE(CMSBeaconManager, RCTEventEmitter)
 
+RCT_EXTERN_METHOD(beginBluetoothAndLocationServicesEvents)
+RCT_EXTERN_METHOD(requestLocationServicesAuthorization)
+
 RCT_EXTERN_METHOD(startTracking:(NSString *)uuidString
                   identifier:(NSString *)identifier
                   resolve:(RCTPromiseResolveBlock)resolve

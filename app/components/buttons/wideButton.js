@@ -26,6 +26,7 @@ const WideButton = (props) => {
     <TouchableOpacity
       onPress={props.onPress}
       styles={styles.container}
+      disabled={props.disabled || false}
     >
       <View style={[styles.wideButton, props.style]}>
         <Text style={[globalStyles.h1, props.textStyle, { flex: 1 }]}>
@@ -39,10 +40,11 @@ const WideButton = (props) => {
 
 WideButton.propTypes = {
   style: PropTypes.object,
+  disabled: PropTypes.bool,
   textStyle: PropTypes.object,
   accessoryView: PropTypes.object,
   text: PropTypes.string.isRequired,
-  onPress: PropTypes.func.isRequired,
+  onPress: PropTypes.func,
 };
 
 export default WideButton;

@@ -25,7 +25,7 @@ enum CMSBeaconManagerLocationServicesStatus:String {
 class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconManagerDelegate {
   
   let beaconManager = ESTBeaconManager()
-  var beaconRegion = CLBeaconRegion()
+  var beaconRegion:CLBeaconRegion?
   var hasAlwaysAuthorization = false
   
   var bluetoothPeripheralManager: CBPeripheralManager?
@@ -90,14 +90,16 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconM
       
       //Ranging Beacons
       beaconManager.avoidUnknownStateBeacons = true
-      beaconManager.startRangingBeaconsInRegion(beaconRegion)
+      beaconManager.startRangingBeacons(in: beaconRegion!)
     } else {
       reject("Beacon Scanning failed", "uuidString is invalid", nil)
     }
   }
   
   @objc func stopTracking() {
-    beaconManager.stopRangingBeaconsInRegion(self.beaconRegion)
+    if let _beaconRegion = beaconRegion {
+      beaconManager.stopRangingBeacons(in: _beaconRegion)
+    }
   }
   
   func sendBluetoothStatusEvent(bluetoothOn: Bool) {

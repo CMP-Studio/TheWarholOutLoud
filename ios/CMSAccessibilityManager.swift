@@ -17,7 +17,7 @@ enum CMSAccessibilityManagerEvents:String {
 @objc(CMSAccessibilityManager)
 class CMSAccessibilityManager: RCTEventEmitter {
   
-  override func constantsToExport() -> [String: AnyObject] {
+  override func constantsToExport() -> [String: Any] {
     let screenReaderStatusChanged = CMSAccessibilityManagerEvents.screenReaderStatusChanged.rawValue
     
     return [
@@ -35,24 +35,24 @@ class CMSAccessibilityManager: RCTEventEmitter {
     ]
   }
 
-  @objc func screenReaderSpeak(text:String) {
+  @objc func screenReaderSpeak(_ text:String) {
     mainThread() {
       UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, text);
     }
   }
   
-  @objc func screenReaderScreenChanged(text:String) {
+  @objc func screenReaderScreenChanged(_ text:String) {
     mainThread() {
       UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, text)
     }
   }
   
-  @objc func screenReaderForceFocus(reactTag:Int) {
+  @objc func screenReaderForceFocus(_ reactTag:Int) {
     mainThread() {
       // How to find the reactTag in JS:
       // const reactTag = ReactNative.findNodeHandle(this.refs.testView);
       // !! Note: This is true for react 0.28 but bound to change in the future !!
-      let view = self.bridge.uiManager.viewForReactTag(reactTag)
+      let view = self.bridge.uiManager.view(forReactTag: reactTag as NSNumber!)
       
       UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, view)
     }
@@ -64,7 +64,7 @@ class CMSAccessibilityManager: RCTEventEmitter {
     }
   }
   
-  @objc func screenReaderStatus(resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
+  @objc func screenReaderStatus(_ resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
     let screenReaderStatus = UIAccessibilityIsVoiceOverRunning()
     
     // This function will never reject but I want to be able
@@ -73,7 +73,7 @@ class CMSAccessibilityManager: RCTEventEmitter {
   }
   
   override func startObserving() {
-    NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(CMSAccessibilityManager.screenReaderStatusChanged), name: UIAccessibilityVoiceOverStatusChanged, object: nil)
+    NotificationCenter.default.addObserver(self, selector:#selector(CMSAccessibilityManager.screenReaderStatusChanged), name: NSNotification.Name(rawValue: UIAccessibilityVoiceOverStatusChanged), object: nil)
   }
   
   func screenReaderStatusChanged() {
@@ -84,11 +84,11 @@ class CMSAccessibilityManager: RCTEventEmitter {
       "screenReaderStatus": screenReaderStatus,
     ]
     
-    self.sendEventWithName(eventName, body: eventData)
+    self.sendEvent(withName: eventName, body: eventData)
   }
   
-  func mainThread(closure:() -> ()) {
-    dispatch_async(dispatch_get_main_queue()) {
+  func mainThread(_ closure:@escaping () -> ()) {
+    DispatchQueue.main.async {
       closure()
     }
   }

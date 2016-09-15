@@ -1,11 +1,11 @@
 PODS:
-  - EstimoteSDK (4.3.0)
+  - EstimoteSDK (4.8.1)
 
 DEPENDENCIES:
   - EstimoteSDK
 
 SPEC CHECKSUMS:
-  EstimoteSDK: 1a6afdee2267b001595a9fe3b37ab4af7f13a1a1
+  EstimoteSDK: 8ea0a0c6f7bee1286aad03b9bf38066e8839b6d9
 
 PODFILE CHECKSUM: 9895f9e92372ccec0bd5c6a0f4cab96774baa7ed
 

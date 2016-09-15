@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.3.0
+//  Version: 4.8.1
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -249,6 +249,12 @@
 #import "ESTNotificationGPIOData.h"
 
 /**
+ *  Eddystone Configuration Service
+ */
+#import "ESTSettingsEddystoneConfigurationService.h"
+#import "ESTSettingEddystoneConfigurationServiceEnable.h"
+
+/**
  *  Nearables
  */
 #import "ESTNearable.h"
@@ -263,7 +269,15 @@
 #import "ESTNearableOperationProtocol.h"
 #import "ESTNearableOperationNearableInterval.h"
 #import "ESTNearableOperationNearablePower.h"
+#import "ESTNearableOperationName.h"
 #import "ESTNearableOperationApplicationVersion.h"
+#import "ESTNearableOperationHardware.h"
+#import "ESTNearableOperationMotionOnly.h"
+#import "ESTNearableOperationIBeaconProximityUUID.h"
+#import "ESTNearableOperationIBeaconMajor.h"
+#import "ESTNearableOperationIBeaconMinor.h"
+#import "ESTNearableOperationEddystoneURL.h"
+#import "ESTNearableOperationBroadcastingScheme.h"
 
 /**
  *  Bulk updater
@@ -329,6 +343,7 @@
  */
 #import "ESTRequestV2GetDeviceDetails.h"
 #import "ESTRequestV2GetDevices.h"
+#import "ESTRequestV2GetDevicesPending.h"
 
 /**
  *  Cloud API v2 value objects
@@ -344,6 +359,8 @@
 #import "ESTDeviceSettingsAdvertiserEddystoneURL.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneTLM.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneEID.h"
+#import "ESTDeviceSettingsAdvertiserEstimoteLocation.h"
+#import "ESTDeviceSettingsAdvertiserEstimoteTLM.h"
 #import "ESTDeviceStatusReport.h"
 #import "ESTDeviceGeoLocation.h"
 #import "ESTDeviceIndoorLocation.h"
@@ -360,4 +377,9 @@
 #import "ESTTelemetryNotificationSystemStatus.h"
 #import "ESTTelemetryNotificationMagnetometer.h"
 #import "ESTTelemetryNotificationGPIO.h"
+
+/** 
+ * Monitoring
+ */
+#import "ESTMonitoringManager.h"
 

@@ -38,7 +38,7 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconM
     super.init()
   }
   
-  override func constantsToExport() -> [String: AnyObject] {
+  override func constantsToExport() -> [String: Any] {
     let BeaconManagerBeaconPing = CMSBeaconManagerEvents.BeaconManagerBeaconPing.rawValue
     let BluetoothStatusChanged = CMSBeaconManagerEvents.BluetoothStatusChanged.rawValue
     let LocationServicesAllowedChanged = CMSBeaconManagerEvents.LocationServicesAllowedChanged.rawValue
@@ -78,11 +78,11 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconM
     beaconManager.requestWhenInUseAuthorization()
   }
   
-  @objc func startTracking(uuid: String,
+  @objc func startTracking(_ uuid: String,
                            identifier: String,
-                           resolve:RCTPromiseResolveBlock,
-                           reject:RCTPromiseRejectBlock) {
-    if let nsuuid = NSUUID(UUIDString: uuid) {
+                           resolve:@escaping RCTPromiseResolveBlock,
+                           reject:@escaping RCTPromiseRejectBlock) {
+    if let nsuuid = UUID(uuidString: uuid) {
       beaconRegion = CLBeaconRegion(proximityUUID: nsuuid, identifier: identifier)
       
       jsRejectCallback = reject
@@ -102,45 +102,45 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconM
     }
   }
   
-  func sendBluetoothStatusEvent(bluetoothOn: Bool) {
+  func sendBluetoothStatusEvent(_ bluetoothOn: Bool) {
     let eventName = CMSBeaconManagerEvents.BluetoothStatusChanged.rawValue
     
-    self.sendEventWithName(eventName, body: ["bluetoothOn": bluetoothOn])
+    self.sendEvent(withName: eventName, body: ["bluetoothOn": bluetoothOn])
   }
   
-  func sendLocationServicesEvent(status: CLAuthorizationStatus) {
+  func sendLocationServicesEvent(_ status: CLAuthorizationStatus) {
     hasAlwaysAuthorization = beaconManager.isAuthorizedForRanging()
     
     let locationServicesStatus:CMSBeaconManagerLocationServicesStatus
     
     switch status {
-      case .NotDetermined:
+      case .notDetermined:
         locationServicesStatus = .NotDetermined
-      case .Restricted, .Denied:
+      case .restricted, .denied:
         locationServicesStatus = .Denied
-      case .AuthorizedAlways, .AuthorizedWhenInUse:
+      case .authorizedAlways, .authorizedWhenInUse:
         locationServicesStatus = .Authorized
     }
     
     let eventName = CMSBeaconManagerEvents.LocationServicesAllowedChanged.rawValue
-    self.sendEventWithName(eventName, body: ["locationServicesStatus": locationServicesStatus.rawValue])
+    self.sendEvent(withName: eventName, body: ["locationServicesStatus": locationServicesStatus.rawValue])
   }
   
   // MARK: - ESTBeaconManagerDelegate functions
   
-  func beaconManager(manager: AnyObject, didStartMonitoringForRegion region: CLBeaconRegion) {
+  private func beaconManager(_ manager: AnyObject, didStartMonitoringFor region: CLBeaconRegion) {
     if let resolve = jsResolveCallback {
       resolve(nil)
     }
   }
   
-  func beaconManager(manager: AnyObject, rangingBeaconsDidFailForRegion region: CLBeaconRegion?, withError error: NSError) {
+  private func beaconManager(_ manager: AnyObject, rangingBeaconsDidFailFor region: CLBeaconRegion?, withError error: NSError) {
     if let reject = jsRejectCallback {
       reject("Beacon Scanning failed", error.localizedDescription, nil)
     }
   }
   
-  func beaconManager(manager: AnyObject, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+  private func beaconManager(_ manager: AnyObject, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
     var beaconsJSON = [String]()
     
     for beacon in beacons {
@@ -149,27 +149,27 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconM
     
     let eventName = CMSBeaconManagerEvents.BeaconManagerBeaconPing.rawValue
     
-    self.sendEventWithName(eventName, body: beaconsJSON)
+    self.sendEvent(withName: eventName, body: beaconsJSON)
   }
   
-  func beaconManager(manager: AnyObject, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+  private func beaconManager(_ manager: AnyObject, didChange status: CLAuthorizationStatus) {
     sendLocationServicesEvent(status)
   }
   
   // MARK: - CBPeripheralManagerDelegate functions
   
-  func peripheralManagerDidUpdateState(peripheral: CBPeripheralManager) {
+  func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
     
     switch peripheral.state {
-    case .Unknown, .Resetting, .PoweredOff:
+    case .unknown, .resetting, .poweredOff:
       bluetoothActive = false
-    case .Unsupported:
+    case .unsupported:
       // This is never hit as every modern iOS device has bluetooth
       break
-    case .Unauthorized:
+    case .unauthorized:
       // This is never hit as we only use bluetooth for location
       break
-    case .PoweredOn:
+    case .poweredOn:
       bluetoothActive = true
     }
     

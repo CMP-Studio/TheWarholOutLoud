@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -100,7 +99,6 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		89DB25260881405EB749C488 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC665411C24E4CF6A5C2773D /* libz.tbd */; };
 		F69CF019DCD14030BF6E6846 /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D260585236149398895A4E6 /* libRealmReact.a */; };
-		F91239FAD2EC4E2EA3217ACD /* libRNBlur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CF4949C8FF43CDBA25E3FF /* libRNBlur.a */; };
 		FA520F5123227F6EF74BC023 /* Pods_AndyWarholAccessibilityProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41FF1C7176CF695511DE78D /* Pods_AndyWarholAccessibilityProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -167,13 +165,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = F60690131CA2766F0003FB26;
 			remoteInfo = RealmReact;
-		};
-		32CADBE41D709B54006122E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 527FAAFABAF449548278EF64 /* RNBlur.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A68BD7BC1BC31318005F02DF;
-			remoteInfo = RNBlur;
 		};
 		32CADBE91D709B54006122E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -293,8 +284,6 @@
 		32CADBBA1D709B15006122E5 /* CMSAudioManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSAudioManagerBridge.m; sourceTree = "<group>"; };
 		32CADBBB1D709B15006122E5 /* CMSBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSBeaconManager.swift; sourceTree = "<group>"; };
 		32CADBBC1D709B15006122E5 /* CMSBeaconManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSBeaconManagerBridge.m; sourceTree = "<group>"; };
-		527FAAFABAF449548278EF64 /* RNBlur.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNBlur.xcodeproj; path = "../node_modules/react-native-blur/ios/RNBlur.xcodeproj"; sourceTree = "<group>"; };
-		53CF4949C8FF43CDBA25E3FF /* libRNBlur.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNBlur.a; sourceTree = "<group>"; };
 		5DE6AA1E78184C068BD5FFD2 /* RealmReact.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RealmReact.xcodeproj; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; };
 		6D6553A0A1BB4AC796F299D1 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -321,7 +310,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				F91239FAD2EC4E2EA3217ACD /* libRNBlur.a in Frameworks */,
 				633BA1BC7B8F408A96F0F333 /* libRNDeviceInfo.a in Frameworks */,
 				F69CF019DCD14030BF6E6846 /* libRealmReact.a in Frameworks */,
 				498E19D7529C4582BD5F2D5D /* libc++.tbd in Frameworks */,
@@ -542,14 +530,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		32CADBE11D709B54006122E5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				32CADBE51D709B54006122E5 /* libRNBlur.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		32CADBE61D709B54006122E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,7 +569,6 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				527FAAFABAF449548278EF64 /* RNBlur.xcodeproj */,
 				6D6553A0A1BB4AC796F299D1 /* RNDeviceInfo.xcodeproj */,
 				5DE6AA1E78184C068BD5FFD2 /* RealmReact.xcodeproj */,
 			);
@@ -666,12 +645,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 800;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = SZY22WCGL8;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 800;
 					};
 				};
 			};
@@ -730,10 +709,6 @@
 				{
 					ProductGroup = 32CADBD21D709B54006122E5 /* Products */;
 					ProjectRef = 5DE6AA1E78184C068BD5FFD2 /* RealmReact.xcodeproj */;
-				},
-				{
-					ProductGroup = 32CADBE11D709B54006122E5 /* Products */;
-					ProjectRef = 527FAAFABAF449548278EF64 /* RNBlur.xcodeproj */;
 				},
 				{
 					ProductGroup = 32CADBE61D709B54006122E5 /* Products */;
@@ -809,13 +784,6 @@
 			fileType = archive.ar;
 			path = libRealmReact.a;
 			remoteRef = 32CADBDF1D709B54006122E5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		32CADBE51D709B54006122E5 /* libRNBlur.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNBlur.a;
-			remoteRef = 32CADBE41D709B54006122E5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		32CADBEA1D709B54006122E5 /* libRNDeviceInfo.a */ = {
@@ -1020,7 +988,6 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/react-native-blur/ios",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 				);
@@ -1028,9 +995,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AndyWarholAccessibilityProject\"",
-					"\"$(SRCROOT)/AndyWarholAccessibilityProject\"",
-					"\"$(SRCROOT)/AndyWarholAccessibilityProject\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1061,7 +1025,6 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/react-native-blur/ios",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 				);
@@ -1069,9 +1032,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AndyWarholAccessibilityProject\"",
-					"\"$(SRCROOT)/AndyWarholAccessibilityProject\"",
-					"\"$(SRCROOT)/AndyWarholAccessibilityProject\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1127,7 +1087,6 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/react-native-blur/ios",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 				);
@@ -1173,7 +1132,6 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/react-native-blur/ios",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 				);

@@ -11,7 +11,6 @@
     "lodash": "^4.12.0",
     "react": "^15.3.1",
     "react-native": "^0.33.0",
-    "react-native-blur": "^0.8.0",
     "react-native-collapsible": "^0.6.0",
     "react-native-device-info": "^0.9.3",
     "react-native-swiper": "^1.4.11",

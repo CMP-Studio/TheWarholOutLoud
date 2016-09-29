@@ -12,6 +12,8 @@ import {
 
 import Swiper from 'react-native-swiper';
 
+import TutorialPageOne from './tutorialPageOne.js';
+
 import { OFF_BLACK, TURQUOISE, globalStyles } from '../styles.js';
 
 const styles = StyleSheet.create({
@@ -160,11 +162,7 @@ class TutorialScreen extends Component {
             tutorialPageDidChange(state.index);
           }}
         >
-          <View style={[styles.pageOne]}>
-            <Text>
-              PageOne
-            </Text>
-          </View>
+          <TutorialPageOne />
           <View style={[styles.pageTwo]}>
             <Text>
               PageTwo

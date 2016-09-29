@@ -27,6 +27,10 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
     justifyContent: 'center',
   },
+  floatingButton: {
+    height: 40,
+    justifyContent: 'center',
+  },
   floatingButtonText: {
     color: TURQUOISE,
   },
@@ -106,6 +110,7 @@ class TutorialScreen extends Component {
     if (currentPage === 0 || currentPage === 1) {
       floatingButton = (
         <TouchableOpacity
+          style={styles.floatingButton}
           onPress={() => {
             this.refs[SWIPER_REF].scrollBy(1);
           }}
@@ -120,6 +125,7 @@ class TutorialScreen extends Component {
     } else {
       floatingButton = (
         <TouchableOpacity
+          style={styles.floatingButton}
           onPress={() => {
             this.hideModal();
           }}

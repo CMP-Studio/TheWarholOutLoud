@@ -10,6 +10,11 @@ import {
   Dimensions,
 } from 'react-native';
 
+import {
+  parseDisplayText,
+  parseVoiceoverText,
+} from '../utilities';
+
 import { globalStyles } from '../styles';
 
 const SPACING = 10;
@@ -72,9 +77,15 @@ const ImageDetailScreen = (props) => {
           ]}
           source={{ uri: props.imageURL }}
         />
-        <Text style={[styles.longCopyright, globalStyles.body]}>
-          {props.longCopyright}
-        </Text>
+        <View
+          accessible={true}
+          accessibilityTraits={['text']}
+          accessibilityLabel={parseVoiceoverText(props.longCopyright)}
+        >
+          <Text style={[styles.longCopyright, globalStyles.body]}>
+            {parseDisplayText(props.longCopyright)}
+          </Text>
+        </View>
       </ScrollView>
     </View>
   );

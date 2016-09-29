@@ -12,10 +12,10 @@ import {
 
 import Swiper from 'react-native-swiper';
 
-import TutorialWelcomePage from './tutorialWelcomePage.js';
-import TutorialNearMePage from './tutorialNearMePage.js';
+import TutorialWelcomePage from './tutorialWelcomePage';
+import TutorialNearMePage from './tutorialNearMePage';
 
-import { OFF_BLACK, TURQUOISE, globalStyles } from '../styles.js';
+import { OFF_BLACK, TURQUOISE, globalStyles } from '../styles';
 
 const styles = StyleSheet.create({
   container: {

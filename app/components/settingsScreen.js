@@ -6,30 +6,20 @@ import {
   StyleSheet,
   ScrollView,
   Text,
-  Image,
-  Alert,
 } from 'react-native';
 
 import SwitchButton from './buttons/switchButton';
-import WideButton from './buttons/wideButton';
+
+import BluetoothButton from './buttons/bluetoothButton';
+import LocationServicesButton from './buttons/locationServicesButton';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
 import {
   globalStyles,
-  OFF_WHITE,
   LIGHT_BLUE,
-  TURQUOISE,
-  OFF_BLACK,
 } from '../styles';
-
-import {
-  LOCATION_SERVICES_STATUS_NOTDETERMINED,
-  LOCATION_SERVICES_STATUS_AUTHORIZED,
-  LOCATION_SERVICES_STATUS_DENIED,
-  requestLocationServicesAuthorization,
-} from '../actions/beacon';
 
 const styles = StyleSheet.create({
   container: {
@@ -73,100 +63,6 @@ const SettingsScreen = (props) => {
     autoplayVoiceoverMessage = 'Autoplay, off. Double tap to turn on.';
   }
 
-  let bluetoothButton;
-
-  if (bluetoothOn) {
-    bluetoothButton = (<WideButton
-      style={{
-        borderColor: OFF_BLACK,
-      }}
-      text={"Bluetooth is on"}
-      disabled={true}
-      accessoryView={
-        <Image
-          source={require('../assets/checkmark.png')}
-        />
-      }
-    />);
-  } else {
-    bluetoothButton = (<WideButton
-      style={{
-        backgroundColor: TURQUOISE,
-        borderWidth: 0,
-        marginBottom: 0,
-      }}
-      textStyle={{
-        color: OFF_WHITE,
-      }}
-      text={'Turn Bluetooth on'}
-      onPress={() => {
-        Alert.alert(
-          'Bluetooth',
-          'Go to settings to turn bluetooth on.',
-        );
-      }}
-    />);
-  }
-
-  let locationServicesButton;
-
-  switch (locationServicesStatus) {
-    case LOCATION_SERVICES_STATUS_NOTDETERMINED:
-      locationServicesButton = (<WideButton
-        style={{
-          backgroundColor: TURQUOISE,
-          borderWidth: 0,
-          marginBottom: 0,
-        }}
-        textStyle={{
-          color: OFF_WHITE,
-        }}
-        text={'Allow location access'}
-        onPress={() => {
-          requestLocationServicesAuthorization();
-        }}
-      />);
-      break;
-
-    case LOCATION_SERVICES_STATUS_DENIED:
-      locationServicesButton = (<WideButton
-        style={{
-          backgroundColor: TURQUOISE,
-          borderWidth: 0,
-          marginBottom: 0,
-        }}
-        textStyle={{
-          color: OFF_WHITE,
-        }}
-        text={'Location access denied'}
-        onPress={() => {
-          Alert.alert(
-            'Location Access',
-            'Go to settings to allow The Warhol location access.',
-          );
-        }}
-      />);
-      break;
-
-    case LOCATION_SERVICES_STATUS_AUTHORIZED:
-      locationServicesButton = (<WideButton
-        style={{
-          borderColor: OFF_BLACK,
-          marginBottom: 0,
-        }}
-        text={'Location access allowed'}
-        disabled={true}
-        accessoryView={
-          <Image
-            source={require('../assets/checkmark.png')}
-          />
-        }
-      />);
-      break;
-
-    // no default
-  }
-
   return (
     <View style={[styles.container, { marginBottom: BOTTOMBARHEIGHT }]}>
       <ScrollView
@@ -190,8 +86,12 @@ const SettingsScreen = (props) => {
                + '\n\n' +
               'To use this feature, we’ll need two things from you…'}
             </Text>
-            {locationServicesButton}
-            {bluetoothButton}
+            <LocationServicesButton
+              locationServicesStatus={locationServicesStatus}
+            />
+            <BluetoothButton
+              bluetoothOn={bluetoothOn}
+            />
           </View>
         </View>
         <View style={styles.cell}>

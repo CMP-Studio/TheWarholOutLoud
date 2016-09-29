@@ -49,7 +49,7 @@ const SwitchButton = (props) => {
     >
       <View
         style={{
-          backgroundColor: GRAY,
+          backgroundColor: '#DADADA',
           borderWidth: 1,
           borderColor: GRAY,
           width: props.width,

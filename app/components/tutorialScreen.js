@@ -14,6 +14,7 @@ import Swiper from 'react-native-swiper';
 
 import TutorialWelcomePage from './tutorialWelcomePage';
 import TutorialNearMePage from './tutorialNearMePage';
+import TutorialStoriesPage from './tutorialStoriesPage';
 
 import { OFF_BLACK, TURQUOISE, globalStyles } from '../styles';
 
@@ -168,11 +169,13 @@ class TutorialScreen extends Component {
             bluetoothOn={bluetoothOn}
             locationServicesStatus={locationServicesStatus}
           />
-          <View style={[styles.pageThree]}>
-            <Text>
-              PageThree
-            </Text>
-          </View>
+          <TutorialStoriesPage
+            timerActive={timerActive}
+            autoplayOn={autoplayOn}
+            actions={{
+              toggleAutoplay,
+            }}
+          />
         </Swiper>
         <View style={[styles.floatingButtonContainer, { width }]}>
           {floatingButton}

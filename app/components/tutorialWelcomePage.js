@@ -27,11 +27,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const TutorialPageOne = (props) => {
+const TutorialWelcomePage = (props) => {
   return (
     <View style={[styles.container]}>
       <Image
         style={styles.logo}
+        accessibilityLabel={'The Warhol: Out Loud Logo'}
         source={require('../assets/warholTutorialLogo.png')}
       />
       <Text style={styles.text}>
@@ -44,7 +45,4 @@ const TutorialPageOne = (props) => {
   );
 };
 
-TutorialPageOne.propTypes = {
-};
-
-export default TutorialPageOne;
+export default TutorialWelcomePage;

@@ -12,7 +12,8 @@ import {
 
 import Swiper from 'react-native-swiper';
 
-import TutorialPageOne from './tutorialPageOne.js';
+import TutorialWelcomePage from './tutorialWelcomePage.js';
+import TutorialNearMePage from './tutorialNearMePage.js';
 
 import { OFF_BLACK, TURQUOISE, globalStyles } from '../styles.js';
 
@@ -162,7 +163,8 @@ class TutorialScreen extends Component {
             tutorialPageDidChange(state.index);
           }}
         >
-          <TutorialPageOne />
+          <TutorialNearMePage />
+          <TutorialWelcomePage />
           <View style={[styles.pageTwo]}>
             <Text>
               PageTwo

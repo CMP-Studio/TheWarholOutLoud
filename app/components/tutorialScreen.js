@@ -163,13 +163,11 @@ class TutorialScreen extends Component {
             tutorialPageDidChange(state.index);
           }}
         >
-          <TutorialNearMePage />
           <TutorialWelcomePage />
-          <View style={[styles.pageTwo]}>
-            <Text>
-              PageTwo
-            </Text>
-          </View>
+          <TutorialNearMePage
+            bluetoothOn={bluetoothOn}
+            locationServicesStatus={locationServicesStatus}
+          />
           <View style={[styles.pageThree]}>
             <Text>
               PageThree

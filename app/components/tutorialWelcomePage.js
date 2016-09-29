@@ -36,10 +36,9 @@ const TutorialWelcomePage = (props) => {
         source={require('../assets/warholTutorialLogo.png')}
       />
       <Text style={styles.text}>
-        Welcome to
-      </Text>
-      <Text style={styles.text}>
-        The Andy Warhol Museum’s inclusive audio guide
+        {'Welcome to'
+         + '\n' +
+        'The Andy Warhol Museum’s inclusive audio guide'}
       </Text>
     </View>
   );

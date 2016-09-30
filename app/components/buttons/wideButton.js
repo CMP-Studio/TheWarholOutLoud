@@ -39,9 +39,15 @@ const WideButton = (props) => {
 };
 
 WideButton.propTypes = {
-  style: PropTypes.object,
+  style: PropTypes.oneOfType([
+    View.propTypes.style,
+    PropTypes.object,
+  ]),
+  textStyle: PropTypes.oneOfType([
+    Text.propTypes.style,
+    PropTypes.object,
+  ]),
   disabled: PropTypes.bool,
-  textStyle: PropTypes.object,
   accessoryView: PropTypes.object,
   text: PropTypes.string.isRequired,
   onPress: PropTypes.func,

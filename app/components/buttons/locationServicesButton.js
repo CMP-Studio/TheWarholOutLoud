@@ -6,6 +6,7 @@ import {
   Alert,
   StyleSheet,
   Linking,
+  View,
 } from 'react-native';
 
 import WideButton from './wideButton';
@@ -40,8 +41,8 @@ const LocationServicesButton = (props) => {
   switch (props.locationServicesStatus) {
     case LOCATION_SERVICES_STATUS_NOTDETERMINED:
       locationServicesButton = (<WideButton
-        style={styles.notAllowedBackground}
-        textStyle={styles.notAllowedText}
+        style={[styles.notAllowedBackground, props.style]}
+        textStyle={[styles.notAllowedText, props.textStyle]}
         text={'Allow location access'}
         onPress={() => {
           requestLocationServicesAuthorization();
@@ -51,8 +52,8 @@ const LocationServicesButton = (props) => {
 
     case LOCATION_SERVICES_STATUS_DENIED: {
       locationServicesButton = (<WideButton
-        style={styles.notAllowedBackground}
-        textStyle={styles.notAllowedText}
+        style={[styles.notAllowedBackground, props.style]}
+        textStyle={[styles.notAllowedText, props.textStyle]}
         text={'Location access denied'}
         onPress={() => {
           Alert.alert(
@@ -82,7 +83,8 @@ const LocationServicesButton = (props) => {
 
     case LOCATION_SERVICES_STATUS_AUTHORIZED:
       locationServicesButton = (<WideButton
-        style={styles.allowedBackground}
+        style={[styles.allowedBackground, props.style]}
+        textStyle={props.textStyle}
         text={'Location access allowed'}
         disabled={true}
         accessoryView={
@@ -101,6 +103,14 @@ const LocationServicesButton = (props) => {
 
 LocationServicesButton.propTypes = {
   locationServicesStatus: PropTypes.string.isRequired,
+  style: PropTypes.oneOfType([
+    View.propTypes.style,
+    PropTypes.object,
+  ]),
+  textStyle: PropTypes.oneOfType([
+    Text.propTypes.style,
+    PropTypes.object,
+  ]),
 };
 
 export default LocationServicesButton;

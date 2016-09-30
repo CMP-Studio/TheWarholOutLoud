@@ -5,6 +5,7 @@ import {
   Image,
   Alert,
   StyleSheet,
+  View,
 } from 'react-native';
 
 import WideButton from './wideButton';
@@ -30,7 +31,8 @@ const BluetoothButton = (props) => {
 
   if (props.bluetoothOn) {
     bluetoothButton = (<WideButton
-      style={styles.onStyle}
+      style={[styles.onStyle, props.style]}
+      textStyle={props.textStyle}
       text={"Bluetooth is on"}
       disabled={true}
       accessoryView={
@@ -41,8 +43,8 @@ const BluetoothButton = (props) => {
     />);
   } else {
     bluetoothButton = (<WideButton
-      style={styles.offStyle}
-      textStyle={styles.offTextStyle}
+      style={[styles.offStyle, props.style]}
+      textStyle={[styles.offTextStyle, props.textStyle]}
       text={'Turn Bluetooth on'}
       onPress={() => {
         Alert.alert(
@@ -58,6 +60,14 @@ const BluetoothButton = (props) => {
 
 BluetoothButton.propTypes = {
   bluetoothOn: PropTypes.bool.isRequired,
+  style: PropTypes.oneOfType([
+    View.propTypes.style,
+    PropTypes.object,
+  ]),
+  textStyle: PropTypes.oneOfType([
+    Text.propTypes.style,
+    PropTypes.object,
+  ]),
 };
 
 export default BluetoothButton;

@@ -28,7 +28,7 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocation
   let beaconManager = ESTBeaconManager()
   var beaconRegion:CLBeaconRegion?
 
-  var locationManager: CLLocationManager
+  var locationManager: CLLocationManager!
   var hasAlwaysAuthorization = false
   
   var bluetoothPeripheralManager: CBPeripheralManager?
@@ -38,11 +38,7 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocation
   var jsRejectCallback:RCTPromiseRejectBlock?
   
   override init() {
-    locationManager = CLLocationManager()
-
     super.init()
-    
-    locationManager.delegate = self
   }
   
   override func constantsToExport() -> [String: Any] {
@@ -74,8 +70,10 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocation
   @objc func beginBluetoothAndLocationServicesEvents() {
     let options = [CBCentralManagerOptionShowPowerAlertKey: 0] // Don't show bluetooth popover
     bluetoothPeripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: options)
-    
     beaconManager.delegate = self
+    
+    locationManager = CLLocationManager()
+    locationManager.delegate = self
   }
   
   @objc func requestLocationServicesAuthorization() {

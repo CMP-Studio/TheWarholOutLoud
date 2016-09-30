@@ -6,6 +6,7 @@ import {
   Alert,
   StyleSheet,
   View,
+  Text,
 } from 'react-native';
 
 import WideButton from './wideButton';

@@ -22,10 +22,13 @@ enum CMSBeaconManagerLocationServicesStatus:String {
 }
 
 @objc(CMSBeaconManager)
-class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconManagerDelegate {
+class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocationManagerDelegate,
+ ESTBeaconManagerDelegate {
   
   let beaconManager = ESTBeaconManager()
   var beaconRegion:CLBeaconRegion?
+
+  var locationManager: CLLocationManager
   var hasAlwaysAuthorization = false
   
   var bluetoothPeripheralManager: CBPeripheralManager?
@@ -35,7 +38,11 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconM
   var jsRejectCallback:RCTPromiseRejectBlock?
   
   override init() {
+    locationManager = CLLocationManager()
+
     super.init()
+    
+    locationManager.delegate = self
   }
   
   override func constantsToExport() -> [String: Any] {
@@ -69,9 +76,6 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconM
     bluetoothPeripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: options)
     
     beaconManager.delegate = self
-    
-    // Location servies status does not send inital value like bluetooth does
-    sendLocationServicesEvent(ESTBeaconManager.authorizationStatus())
   }
   
   @objc func requestLocationServicesAuthorization() {
@@ -152,10 +156,6 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconM
     self.sendEvent(withName: eventName, body: beaconsJSON)
   }
   
-  private func beaconManager(_ manager: AnyObject, didChange status: CLAuthorizationStatus) {
-    sendLocationServicesEvent(status)
-  }
-  
   // MARK: - CBPeripheralManagerDelegate functions
   
   func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
@@ -174,5 +174,11 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, ESTBeaconM
     }
     
     sendBluetoothStatusEvent(bluetoothActive)
+  }
+  
+  // MARK: - CLLocationManagerDelegate functions
+  
+  public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    sendLocationServicesEvent(status)
   }
 }

@@ -5,6 +5,7 @@ import {
   Image,
   Alert,
   StyleSheet,
+  Linking,
 } from 'react-native';
 
 import WideButton from './wideButton';
@@ -56,7 +57,23 @@ const LocationServicesButton = (props) => {
         onPress={() => {
           Alert.alert(
             'Location Access',
-            'Go to settings to allow The Warhol location access.',
+            'Go to Settings > Privacy > Location Services > The Warhol to allow location access while using this app.',
+            [
+              { text: 'Cancel', style: 'cancel' },
+              { text: 'Settings',
+                onPress: () => {
+                  const url = 'app-settings:';
+                  Linking.canOpenURL(url).then(supported => {
+                    if (!supported) {
+                      console.error(`Can\'t handle url: ${url}`);
+                      return;
+                    }
+
+                    Linking.openURL(url);
+                  });
+                },
+              },
+            ],
           );
         }}
       />);

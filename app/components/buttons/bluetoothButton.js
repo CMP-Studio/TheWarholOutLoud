@@ -47,7 +47,7 @@ const BluetoothButton = (props) => {
       onPress={() => {
         Alert.alert(
           'Bluetooth',
-          'Go to settings to turn bluetooth on.',
+          'Go to Settings > Bluetooth to turn on Bluetooth.',
         );
       }}
     />);

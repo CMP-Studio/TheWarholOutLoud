@@ -11,7 +11,11 @@ import {
 import BluetoothButton from './buttons/bluetoothButton';
 import LocationServicesButton from './buttons/locationServicesButton';
 
-import { OFF_WHITE, TURQUOISE } from '../styles';
+import {
+  LOCATION_SERVICES_STATUS_AUTHORIZED,
+} from '../actions/beacon';
+
+import { OFF_WHITE, TURQUOISE, LIGHT_GRAY } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -68,10 +72,18 @@ const TutorialNearMePage = (props) => {
         <View style={styles.firstButtonsContainer}>
           <LocationServicesButton
             locationServicesStatus={locationServicesStatus}
+            style={locationServicesStatus === LOCATION_SERVICES_STATUS_AUTHORIZED ? {
+              borderColor: LIGHT_GRAY,
+              backgroundColor: LIGHT_GRAY,
+            } : {}}
           />
         </View>
         <BluetoothButton
           bluetoothOn={bluetoothOn}
+          style={bluetoothOn ? {
+            borderColor: LIGHT_GRAY,
+            backgroundColor: LIGHT_GRAY,
+          } : {}}
         />
       </View>
     </View>

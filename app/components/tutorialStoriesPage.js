@@ -103,7 +103,9 @@ const TutorialStoriesPage = (props) => {
           <SwitchButton
             width={40}
             height={25}
-            onPress={() => {}}
+            onPress={() => {
+              toggleAutoplay(autoplayOn, timerActive);
+            }}
             value={autoplayOn}
           />
         </TouchableOpacity>

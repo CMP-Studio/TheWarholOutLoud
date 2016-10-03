@@ -67,17 +67,25 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocation
     ]
   }
   
+  func mainThread(_ closure:@escaping () -> ()) {
+    DispatchQueue.main.async {
+      closure()
+    }
+  }
+  
   @objc func beginBluetoothAndLocationServicesEvents() {
     let options = [CBCentralManagerOptionShowPowerAlertKey: 0] // Don't show bluetooth popover
     bluetoothPeripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: options)
     beaconManager.delegate = self
     
-    locationManager = CLLocationManager()
-    locationManager.delegate = self
+    mainThread() {
+      self.locationManager = CLLocationManager()
+      self.locationManager.delegate = self
+    }
   }
   
   @objc func requestLocationServicesAuthorization() {
-    beaconManager.requestWhenInUseAuthorization()
+    locationManager.requestWhenInUseAuthorization()
   }
   
   @objc func startTracking(_ uuid: String,

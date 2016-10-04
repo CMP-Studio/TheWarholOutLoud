@@ -16,6 +16,8 @@ const mapStateToProps = (state) => {
     timerActive: state.bottomPlayer.timerActive,
     atNearMeRoot: state.nav.atNearMeRoot,
     tracking: state.beacon.tracking,
+    bluetoothOn: state.beacon.bluetoothOn,
+    locationServicesStatus: state.beacon.locationServicesStatus,
   };
 };
 

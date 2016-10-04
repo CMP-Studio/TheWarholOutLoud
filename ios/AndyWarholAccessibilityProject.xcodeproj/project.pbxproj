@@ -19,6 +19,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		3219C0DB1DA42D6300A14415 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3219C0DA1DA42D6300A14415 /* Settings.bundle */; };
 		32CADB361D709A39006122E5 /* andyAndJulia.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB291D709A39006122E5 /* andyAndJulia.png */; };
 		32CADB371D709A39006122E5 /* asia.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB2A1D709A39006122E5 /* asia.png */; };
 		32CADB381D709A39006122E5 /* blottedLineStill.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB2B1D709A39006122E5 /* blottedLineStill.png */; };
@@ -208,6 +209,7 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2269C6073CFD2C7947542405 /* Pods-AndyWarholAccessibilityProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject.release.xcconfig"; sourceTree = "<group>"; };
 		2D260585236149398895A4E6 /* libRealmReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRealmReact.a; sourceTree = "<group>"; };
+		3219C0DA1DA42D6300A14415 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		32CADB291D709A39006122E5 /* andyAndJulia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = andyAndJulia.png; sourceTree = "<group>"; };
 		32CADB2A1D709A39006122E5 /* asia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asia.png; sourceTree = "<group>"; };
 		32CADB2B1D709A39006122E5 /* blottedLineStill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blottedLineStill.png; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 			children = (
 				32CADB431D709A3D006122E5 /* audio */,
 				32CADB281D709A30006122E5 /* images */,
+				3219C0DA1DA42D6300A14415 /* Settings.bundle */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -831,6 +834,7 @@
 				32CADB871D709AC3006122E5 /* Blotted-Line_Introduction_v2.mp3 in Resources */,
 				32CADB8E1D709AC3006122E5 /* CommercialWork_Visual.mp3 in Resources */,
 				32CADBA91D709AC3006122E5 /* Warhola_Donald_Childhood_Family_portrait.mp3 in Resources */,
+				3219C0DB1DA42D6300A14415 /* Settings.bundle in Resources */,
 				32CADB9C1D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 in Resources */,
 				32CADBB41D709AC3006122E5 /* Warhola_Julia_Folksong.mp3 in Resources */,
 				32CADB981D709AC3006122E5 /* Marsden_Grace_Campbells_Introduction.mp3 in Resources */,

@@ -2,6 +2,7 @@
 import {
   TUTORIAL_PAGE_DID_CHANGE,
   HIDE_TUTORIAL,
+  SHOW_TUTORIAL,
  } from '../actions/tutorial';
 
 const initialState = {
@@ -17,6 +18,17 @@ export function tutorial(state = initialState, action) {
           state,
           {
             currentPage: action.newPage,
+          }
+        )
+      );
+    }
+
+    case SHOW_TUTORIAL: {
+      return (
+        Object.assign({},
+          state,
+          {
+            tutorialHidden: false,
           }
         )
       );

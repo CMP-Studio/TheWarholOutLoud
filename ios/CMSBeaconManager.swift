@@ -22,23 +22,22 @@ enum CMSBeaconManagerLocationServicesStatus:String {
 }
 
 @objc(CMSBeaconManager)
-class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocationManagerDelegate,
- ESTBeaconManagerDelegate {
+class CMSBeaconManager: RCTEventEmitter {
   
-  let beaconManager = ESTBeaconManager()
+  var beaconManager = ESTBeaconManager()
   var beaconRegion:CLBeaconRegion?
 
   var locationManager: CLLocationManager!
-  var hasAlwaysAuthorization = false
-  
   var bluetoothPeripheralManager: CBPeripheralManager?
-  var bluetoothActive = false
   
   var jsResolveCallback:RCTPromiseResolveBlock?
   var jsRejectCallback:RCTPromiseRejectBlock?
   
   override init() {
     super.init()
+    
+    beaconManager.delegate = self
+    beaconManager.avoidUnknownStateBeacons = true
   }
   
   override func constantsToExport() -> [String: Any] {
@@ -67,21 +66,12 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocation
     ]
   }
   
-  func mainThread(_ closure:@escaping () -> ()) {
-    DispatchQueue.main.async {
-      closure()
-    }
-  }
-  
   @objc func beginBluetoothAndLocationServicesEvents() {
     let options = [CBCentralManagerOptionShowPowerAlertKey: 0] // Don't show bluetooth popover
     bluetoothPeripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: options)
-    beaconManager.delegate = self
     
-    mainThread() {
-      self.locationManager = CLLocationManager()
-      self.locationManager.delegate = self
-    }
+    self.locationManager = CLLocationManager()
+    self.locationManager.delegate = self
   }
   
   @objc func requestLocationServicesAuthorization() {
@@ -95,11 +85,14 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocation
     if let nsuuid = UUID(uuidString: uuid) {
       beaconRegion = CLBeaconRegion(proximityUUID: nsuuid, identifier: identifier)
       
+      if beaconManager.rangedRegions.contains(beaconRegion!) {
+        resolve(nil)
+        return
+      }
+      
       jsRejectCallback = reject
       jsResolveCallback = resolve
       
-      //Ranging Beacons
-      beaconManager.avoidUnknownStateBeacons = true
       beaconManager.startRangingBeacons(in: beaconRegion!)
     } else {
       reject("Beacon Scanning failed", "uuidString is invalid", nil)
@@ -112,45 +105,19 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocation
     }
   }
   
-  func sendBluetoothStatusEvent(_ bluetoothOn: Bool) {
-    let eventName = CMSBeaconManagerEvents.BluetoothStatusChanged.rawValue
-    
-    self.sendEvent(withName: eventName, body: ["bluetoothOn": bluetoothOn])
+  func clearJSCallbacks() {
+    jsResolveCallback = nil
+    jsRejectCallback = nil
   }
-  
-  func sendLocationServicesEvent(_ status: CLAuthorizationStatus) {
-    hasAlwaysAuthorization = beaconManager.isAuthorizedForRanging()
-    
-    let locationServicesStatus:CMSBeaconManagerLocationServicesStatus
-    
-    switch status {
-      case .notDetermined:
-        locationServicesStatus = .NotDetermined
-      case .restricted, .denied:
-        locationServicesStatus = .Denied
-      case .authorizedAlways, .authorizedWhenInUse:
-        locationServicesStatus = .Authorized
-    }
-    
-    let eventName = CMSBeaconManagerEvents.LocationServicesAllowedChanged.rawValue
-    self.sendEvent(withName: eventName, body: ["locationServicesStatus": locationServicesStatus.rawValue])
-  }
-  
-  // MARK: - ESTBeaconManagerDelegate functions
-  
-  private func beaconManager(_ manager: AnyObject, didStartMonitoringFor region: CLBeaconRegion) {
+}
+
+extension CMSBeaconManager: ESTBeaconManagerDelegate {
+  func beaconManager(_ manager: Any, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
     if let resolve = jsResolveCallback {
+      clearJSCallbacks()
       resolve(nil)
     }
-  }
-  
-  private func beaconManager(_ manager: AnyObject, rangingBeaconsDidFailFor region: CLBeaconRegion?, withError error: NSError) {
-    if let reject = jsRejectCallback {
-      reject("Beacon Scanning failed", error.localizedDescription, nil)
-    }
-  }
-  
-  private func beaconManager(_ manager: AnyObject, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+    
     var beaconsJSON = [String]()
     
     for beacon in beacons {
@@ -162,9 +129,17 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocation
     self.sendEvent(withName: eventName, body: beaconsJSON)
   }
   
-  // MARK: - CBPeripheralManagerDelegate functions
-  
+  func beaconManager(_ manager: Any, rangingBeaconsDidFailFor region: CLBeaconRegion?, withError error: Error) {
+    if let reject = jsRejectCallback {
+      clearJSCallbacks()
+      reject("Beacon Scanning failed", error.localizedDescription, nil)
+    }
+  }
+}
+
+extension CMSBeaconManager: CBPeripheralManagerDelegate {
   func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
+    var bluetoothActive = false
     
     switch peripheral.state {
     case .unknown, .resetting, .poweredOff:
@@ -182,9 +157,30 @@ class CMSBeaconManager: RCTEventEmitter, CBPeripheralManagerDelegate, CLLocation
     sendBluetoothStatusEvent(bluetoothActive)
   }
   
-  // MARK: - CLLocationManagerDelegate functions
+  func sendBluetoothStatusEvent(_ bluetoothOn: Bool) {
+    let eventName = CMSBeaconManagerEvents.BluetoothStatusChanged.rawValue
+    self.sendEvent(withName: eventName, body: ["bluetoothOn": bluetoothOn])
+  }
+}
+
+extension CMSBeaconManager: CLLocationManagerDelegate {
+  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    let locationServicesStatus:CMSBeaconManagerLocationServicesStatus
+    
+    switch status {
+    case .notDetermined:
+      locationServicesStatus = .NotDetermined
+    case .restricted, .denied:
+      locationServicesStatus = .Denied
+    case .authorizedAlways, .authorizedWhenInUse:
+      locationServicesStatus = .Authorized
+    }
+    
+    sendLocationServicesEvent(locationServicesStatus)
+  }
   
-  public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-    sendLocationServicesEvent(status)
+  func sendLocationServicesEvent(_ status: CMSBeaconManagerLocationServicesStatus) {
+    let eventName = CMSBeaconManagerEvents.LocationServicesAllowedChanged.rawValue
+    self.sendEvent(withName: eventName, body: ["locationServicesStatus": status.rawValue])
   }
 }

@@ -7,12 +7,18 @@ import { configureStore } from './store';
 
 import { startListeningForWayfindingEvents } from './actions/beacon';
 
+import {
+  initialState,
+} from './reducers/beacon';
+
 // Hydrate the DB
 import hydrate from './data/hydrate';
 hydrate();
 
 const store = configureStore();
-store.dispatch(startListeningForWayfindingEvents());
+store.dispatch(startListeningForWayfindingEvents(
+  initialState.rangingUUID, initialState.rangingIdentifier
+));
 
 const App = () => {
   return (

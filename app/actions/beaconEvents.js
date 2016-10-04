@@ -17,7 +17,7 @@ const UPDATE_INTERVAL = 1; // sec
 
 // *** BeaconManager Native Module Events ***
 let BeaconManagerEventListenerActive = false;
-export function addBeaconManagerEventListeners(dispatch, beaconBlockRules) {
+export function addBeaconManagerEventListeners(dispatch) {
   if (BeaconManagerEventListenerActive) {
     return;
   }
@@ -32,7 +32,7 @@ export function addBeaconManagerEventListeners(dispatch, beaconBlockRules) {
       update = false;
 
       dispatch(
-        updateBeacons(beacons, beaconBlockRules)
+        updateBeacons(beacons)
       );
     } else {
       if (updateTimer == null) {

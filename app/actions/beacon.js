@@ -15,8 +15,7 @@ const BeaconManager = NativeModules.CMSBeaconManager;
 
 // *** Action Types ***
 export const UPDATE_BEACONS = 'UPDATE_BEACONS';
-export const UPDATE_BLUETOOTH_STATUS = 'UPDATE_BLUETOOTH_STATUS';
-export const UPDATE_LOCATION_SERVICES_STATUS = 'UPDATE_LOCATION_SERVICES_STATUS';
+export const UPDATE_WAYFINDING_STATUS = 'UPDATE_WAYFINDING_STATUS';
 
 export const START_SCANNING_FOR_BEACONS_FAILURE = 'START_SCANNING_FOR_BEACONS_FAILURE';
 export const START_SCANNING_FOR_BEACONS_SUCCESS = 'START_SCANNING_FOR_BEACONS_SUCCESS';
@@ -32,23 +31,17 @@ export function requestLocationServicesAuthorization() {
 }
 
 // *** Action Creators ***
-export function updateBluetoothStatus(bluetoothOn) {
+export function updateWayfindingStatus(bluetoothOn, locationServicesStatus) {
   return {
     bluetoothOn,
-    type: UPDATE_BLUETOOTH_STATUS,
-  };
-}
-
-export function updateLocationServicesStatus(locationServicesStatus) {
-  return {
     locationServicesStatus,
-    type: UPDATE_LOCATION_SERVICES_STATUS,
+    type: UPDATE_WAYFINDING_STATUS,
   };
 }
 
-export function startListeningForWayfindingEvents() {
+export function startListeningForWayfindingEvents(rangingUUID, rangingIdentifier) {
   return async (dispatch) => {
-    addWayfindingManagerEventListeners(dispatch);
+    addWayfindingManagerEventListeners(dispatch, rangingUUID, rangingIdentifier);
 
     BeaconManager.beginBluetoothAndLocationServicesEvents();
   };
@@ -68,9 +61,9 @@ function startScanningForBeaconsFailure(error) {
   };
 }
 
-export function startScanningForBeacons(rangingUUID, rangingIdentifier, beaconBlockRules) {
+export function startScanningForBeacons(rangingUUID, rangingIdentifier) {
   return async (dispatch) => {
-    addBeaconManagerEventListeners(dispatch, beaconBlockRules);
+    addBeaconManagerEventListeners(dispatch);
 
     try {
       await BeaconManager.startTracking(rangingUUID, rangingIdentifier);
@@ -86,10 +79,9 @@ export function startScanningForBeacons(rangingUUID, rangingIdentifier, beaconBl
   };
 }
 
-export function updateBeacons(newBeacons, beaconBlockRules) {
+export function updateBeacons(newBeacons) {
   return {
     type: UPDATE_BEACONS,
     newBeacons,
-    beaconBlockRules,
   };
 }

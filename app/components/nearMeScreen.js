@@ -66,10 +66,7 @@ class NearMeScreen extends Component {
     navigator: PropTypes.object.isRequired,
     playerOpen: PropTypes.bool.isRequired,
     closeTourStops: PropTypes.object.isRequired,
-    rangingUUID: PropTypes.string.isRequired,
     regions: PropTypes.array.isRequired,
-    rangingIdentifier: PropTypes.string.isRequired,
-    beaconBlockRules: PropTypes.array.isRequired,
     amenities: PropTypes.array.isRequired,
     timerActive: PropTypes.bool.isRequired,
     activeTab: PropTypes.string.isRequired,
@@ -77,14 +74,7 @@ class NearMeScreen extends Component {
     atNearMeRoot: PropTypes.bool.isRequired,
     playerStatus: PropTypes.string.isRequired,
     floor: PropTypes.number,
-    actions: PropTypes.shape({
-      startScanningForBeacons: PropTypes.func.isRequired,
-    }).isRequired,
-  }
-
-  componentDidMount() {
-    const { rangingUUID, rangingIdentifier, beaconBlockRules, actions } = this.props;
-    // actions.startScanningForBeacons(rangingUUID, rangingIdentifier, beaconBlockRules);
+    tracking: PropTypes.bool.isRequired,
   }
 
   shouldComponentUpdate(nextProps, nextState) {

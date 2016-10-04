@@ -3,13 +3,9 @@ import {
   UPDATE_BEACONS,
   START_SCANNING_FOR_BEACONS_SUCCESS,
   START_SCANNING_FOR_BEACONS_FAILURE,
-  UPDATE_BLUETOOTH_STATUS,
-  UPDATE_LOCATION_SERVICES_STATUS,
+  UPDATE_WAYFINDING_STATUS,
   LOCATION_SERVICES_STATUS_NOTDETERMINED,
 } from '../actions/beacon';
-
-// TODO: In the future load data from a database to prevent memory pressure
-import { blockRules } from '../data/beaconBlockRules';
 
 export const initialState = {
   bluetoothOn: false,
@@ -22,24 +18,16 @@ export const initialState = {
   [
     // "majorNumber:minorNumber",
   ],
-  blockRules,
 };
 
 export function beacon(state = initialState, action) {
   switch (action.type) {
-    case UPDATE_BLUETOOTH_STATUS: {
+    case UPDATE_WAYFINDING_STATUS: {
       return Object.assign({},
         state,
         {
+          tracking: false,
           bluetoothOn: action.bluetoothOn,
-        }
-      );
-    }
-
-    case UPDATE_LOCATION_SERVICES_STATUS: {
-      return Object.assign({},
-        state,
-        {
           locationServicesStatus: action.locationServicesStatus,
         }
       );

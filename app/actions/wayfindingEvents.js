@@ -5,19 +5,37 @@ import {
 } from 'react-native';
 
 import {
-  updateBluetoothStatus,
-  updateLocationServicesStatus,
+  LOCATION_SERVICES_STATUS_NOTDETERMINED,
+  LOCATION_SERVICES_STATUS_AUTHORIZED,
+  startScanningForBeacons,
+  updateWayfindingStatus,
 } from './beacon';
 
 const BeaconManager = NativeModules.CMSBeaconManager;
 const BeaconManagerObserver = new NativeEventEmitter(BeaconManager);
 
+let bluetoothOn;
+let locationServicesStatus;
+
+function handleWayfindingChanges(dispatch, rangingUUID, rangingIdentifier) {
+  dispatch(updateWayfindingStatus(bluetoothOn, locationServicesStatus));
+
+  if (bluetoothOn && locationServicesStatus === LOCATION_SERVICES_STATUS_AUTHORIZED) {
+    dispatch(startScanningForBeacons(rangingUUID, rangingIdentifier));
+  }
+}
+
 // *** BeaconManager Native Module Events ***
 let WayfindingEventListenerActive = false;
-export function addWayfindingManagerEventListeners(dispatch) {
+export function addWayfindingManagerEventListeners(
+  dispatch, rangingUUID, rangingIdentifier,
+) {
   if (WayfindingEventListenerActive) {
     return;
   }
+
+  bluetoothOn = false;
+  locationServicesStatus = LOCATION_SERVICES_STATUS_NOTDETERMINED;
 
   const {
     BluetoothStatusChanged,
@@ -25,11 +43,15 @@ export function addWayfindingManagerEventListeners(dispatch) {
   } = BeaconManager.Events;
 
   BeaconManagerObserver.addListener(BluetoothStatusChanged, (body) => {
-    dispatch(updateBluetoothStatus(body.bluetoothOn));
+    bluetoothOn = body.bluetoothOn;
+
+    handleWayfindingChanges(dispatch, rangingUUID, rangingIdentifier);
   });
 
   BeaconManagerObserver.addListener(LocationServicesAllowedChanged, (body) => {
-    dispatch(updateLocationServicesStatus(body.locationServicesStatus));
+    locationServicesStatus = body.locationServicesStatus;
+
+    handleWayfindingChanges(dispatch, rangingUUID, rangingIdentifier);
   });
 
   WayfindingEventListenerActive = true;

@@ -27,7 +27,7 @@
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>The Warhol uses bluetooth to figure out your location and show you stories close by.</string>

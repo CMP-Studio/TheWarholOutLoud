@@ -1,7 +1,7 @@
 
 export const blockRules = [
   {
-    uuid: '38467:38396', // Testing Beacon
+    uuid: '20688:13234', // Testing Beacon
     region: 'blue',
     floor: 7,
     blocks: [],

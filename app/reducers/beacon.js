@@ -10,7 +10,7 @@ import {
 export const initialState = {
   bluetoothOn: false,
   locationServicesStatus: LOCATION_SERVICES_STATUS_NOTDETERMINED,
-  tracking: false,
+  tracking: null,
   rangingUUID: '30ACEAFF-76B7-C685-BBF8-4D66E6DE977A',
   rangingIdentifier: 'Warhol Accessibility Project App',
   // beacons is only useful for debugging

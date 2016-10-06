@@ -74,7 +74,7 @@ class NearMeScreen extends Component {
     atNearMeRoot: PropTypes.bool.isRequired,
     playerStatus: PropTypes.string.isRequired,
     floor: PropTypes.number,
-    tracking: PropTypes.bool.isRequired,
+    tracking: PropTypes.bool,
     bluetoothOn: PropTypes.bool.isRequired,
     locationServicesStatus: PropTypes.string.isRequired,
   }
@@ -108,7 +108,7 @@ class NearMeScreen extends Component {
           </View>
         </View>
       );
-    } else {
+    } else if (this.props.tracking === true) {
       let storiesMessage;
 
       if (this.props.floor === null) {

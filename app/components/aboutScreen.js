@@ -51,7 +51,7 @@ const AboutScreen = (props) => {
         automaticallyAdjustContentInsets={false}
       >
         <Text style={globalStyles.body}>
-          Located in Pittsburgh, Pennsylvania, the place of Andy Warhol’s birth, The Andy Warhol Museum holds the largest collection of Warhol’s artwork and archival materials and is one of the most comprehensive single-artist museums in the world. The Warhol is one of the four Carnegie Museums of Pittsburgh.
+          Located in Pittsburgh, Pennsylvania, the place of Andy Warhol’s birth, {'<a href="http://www.warhol.org/">'}The Andy Warhol Museum{'</a>'} holds the largest collection of Warhol’s artwork and archival materials and is one of the most comprehensive single-artist museums in the world. The Warhol is one of the four Carnegie Museums of Pittsburgh.
         </Text>
         <Text style={[globalStyles.h1, styles.aboutHeader]}>
           About Carnegie Museums of Pittsburgh

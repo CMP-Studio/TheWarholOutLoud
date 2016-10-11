@@ -112,7 +112,7 @@ class NearMeScreen extends Component {
       let storiesMessage;
 
       if (this.props.floor === null) {
-        storiesMessage = 'Out Loud is under construction. Stories are available on floor 7.';
+        storiesMessage = 'While at the museum, we show you stories based on what’s near you.';
       } else if (this.props.floor === 7) {
         if (tourStopsNum === 0) {
           storiesMessage = 'There are no stories near you.';
@@ -122,7 +122,7 @@ class NearMeScreen extends Component {
           storiesMessage = `There are ${tourStopsNum} stories near you.`;
         }
       } else {
-        storiesMessage = 'Out Loud is under construction. Stories are available on floor 7.';
+        storiesMessage = 'Stories are available on floor 7.';
       }
 
       // Only announce changes when:

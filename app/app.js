@@ -8,12 +8,9 @@ import { configureStore } from './store';
 
 import DeviceInfo from 'react-native-device-info';
 
-import { startListeningForWayfindingEvents } from './actions/beacon';
-import { decideIfToShowTutorial } from './actions/tutorial';
+import { WayfindingActor } from './actors/wayfindingActor';
 
-import {
-  initialState,
-} from './reducers/beacon';
+import { decideIfToShowTutorial } from './actions/tutorial';
 
 const appVersion = `${DeviceInfo.getVersion()}.${DeviceInfo.getBuildNumber()}`;
 const lastAppVersion = Settings.get('LastAppVersion');
@@ -35,9 +32,8 @@ if (newVersion) {
 }
 
 const App = () => {
-  store.dispatch(startListeningForWayfindingEvents(
-    initialState.rangingUUID, initialState.rangingIdentifier
-  ));
+  const wayfindingActor = new WayfindingActor(store);
+  wayfindingActor.startListening();
 
   return (
     <Provider store={store}>

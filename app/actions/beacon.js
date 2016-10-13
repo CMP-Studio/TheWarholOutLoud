@@ -7,10 +7,6 @@ import {
   addBeaconManagerEventListeners,
 } from './beaconEvents';
 
-import {
-  addWayfindingManagerEventListeners,
-} from './wayfindingEvents';
-
 const BeaconManager = NativeModules.CMSBeaconManager;
 
 // *** Action Types ***
@@ -36,14 +32,6 @@ export function updateWayfindingStatus(bluetoothOn, locationServicesStatus) {
     bluetoothOn,
     locationServicesStatus,
     type: UPDATE_WAYFINDING_STATUS,
-  };
-}
-
-export function startListeningForWayfindingEvents(rangingUUID, rangingIdentifier) {
-  return async (dispatch) => {
-    addWayfindingManagerEventListeners(dispatch, rangingUUID, rangingIdentifier);
-
-    BeaconManager.beginBluetoothAndLocationServicesEvents();
   };
 }
 

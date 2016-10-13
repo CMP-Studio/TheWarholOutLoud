@@ -722,16 +722,6 @@ export const tourStops = [
         audioURL: 'Diaz_Jose-Coke-Hand_Painted_Pop',
         transcript: 'This is a placeholder.',
       },
-      {
-        uuid: uuid.v4(),
-        category: 'ARCHIVAL_MATERIAL',
-        depth: 0,
-        title: '<i>Andy Warhol | Ai Weiwei</i>: Capitalism and communism',
-        duration: 3,
-        speaker: 'Grace Marston',
-        audioURL: 'JBeck_AndyWarholAiWeiwei',
-        transcript: 'This is a placeholder.',
-      },
     ],
   },
   {

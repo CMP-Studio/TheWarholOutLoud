@@ -32,12 +32,12 @@ export class WayfindingActor {
 
     this.BeaconManagerObserver.addListener(BluetoothStatusChanged, (body) => {
       const bluetoothOn = body.bluetoothOn;
-      this.handleWayfindingChanges({ bluetoothOn, type: 'Blu' });
+      this.handleWayfindingChanges({ bluetoothOn });
     });
 
     this.BeaconManagerObserver.addListener(LocationServicesAllowedChanged, (body) => {
       const locationServicesStatus = body.locationServicesStatus;
-      this.handleWayfindingChanges({ locationServicesStatus, type: 'Loc' });
+      this.handleWayfindingChanges({ locationServicesStatus });
     });
 
     this.BeaconManager.beginBluetoothAndLocationServicesEvents();

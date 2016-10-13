@@ -55,11 +55,11 @@ const LocationServicesButton = (props) => {
       locationServicesButton = (<WideButton
         style={[styles.notAllowedBackground, props.style]}
         textStyle={[styles.notAllowedText, props.textStyle]}
-        text={'Location access denied'}
+        text={'Allow location access'}
         onPress={() => {
           Alert.alert(
             'Location Access',
-            'Go to Settings > Privacy > Location Services > The Warhol to allow location access while using this app.',
+            'Go to Settings, then Privacy, then Location Services, then The Warhol to allow location access while using this app.',
             [
               { text: 'Cancel', style: 'cancel' },
               { text: 'Settings',

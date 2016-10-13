@@ -16,7 +16,7 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>show tutorial on every launch</string>
+			<string>Show tutorial on every launch</string>
 			<key>Key</key>
 			<string>ShowTutorialEveryTime</string>
 			<key>DefaultValue</key>

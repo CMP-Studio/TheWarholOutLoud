@@ -153,6 +153,7 @@ const Grid = (props) => {
           enableEmptySections={true}
           contentContainerStyle={styles.gridColumn}
           dataSource={dataSource}
+          initialListSize={20}
           renderRow={(item, sectionIndex, index) => {
             return renderItem(item, index, props.onCellPress, true);
           }}
@@ -161,6 +162,7 @@ const Grid = (props) => {
           enableEmptySections={true}
           contentContainerStyle={styles.gridColumn}
           dataSource={dataSource}
+          initialListSize={20}
           renderRow={(item, sectionIndex, index) => {
             return renderItem(item, index, props.onCellPress, false);
           }}

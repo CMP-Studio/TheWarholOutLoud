@@ -19,7 +19,7 @@ import {
   requestLocationServicesAuthorization,
 } from '../../actions/beacon';
 
-import { OFF_WHITE, OFF_BLACK, TURQUOISE } from '../../styles';
+import { OFF_WHITE, LIGHT_GRAY, TURQUOISE } from '../../styles';
 
 const styles = StyleSheet.create({
   notAllowedText: {
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     marginBottom: 0,
   },
   allowedBackground: {
-    borderColor: OFF_BLACK,
+    borderColor: LIGHT_GRAY,
+    backgroundColor: OFF_WHITE,
     marginBottom: 0,
   },
 });

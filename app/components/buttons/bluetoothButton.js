@@ -11,11 +11,12 @@ import {
 
 import WideButton from './wideButton';
 
-import { OFF_WHITE, OFF_BLACK, TURQUOISE } from '../../styles';
+import { OFF_WHITE, LIGHT_GRAY, TURQUOISE } from '../../styles';
 
 const styles = StyleSheet.create({
   onStyle: {
-    borderColor: OFF_BLACK,
+    borderColor: LIGHT_GRAY,
+    backgroundColor: OFF_WHITE,
   },
   offStyle: {
     backgroundColor: TURQUOISE,

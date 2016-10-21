@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
   },
   cell: {
     flexDirection: 'column',
-    marginHorizontal: 10,
     marginBottom: 5,
   },
   cellTitle: {

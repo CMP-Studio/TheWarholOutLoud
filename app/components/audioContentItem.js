@@ -61,6 +61,21 @@ const styles = StyleSheet.create({
   },
 });
 
+function breakIntoParagraphTextComponents(text) {
+  const paragraphs = text.split('\n\n');
+
+  return paragraphs.map((paragraph, index) => {
+    return (
+      <Text
+        key={index}
+        style={[globalStyles.body, globalStyles.paragraph]}
+      >
+        {parseDisplayText(paragraph)}
+      </Text>
+    );
+  });
+}
+
 function progressWidthStyle(eleWidth, progress) {
   return {
     width: eleWidth * progress,
@@ -210,9 +225,7 @@ class AudioContentItem extends Component {
           duration={collapsibleDuration}
         >
           <View style={styles.transcriptContainer}>
-            <Text style={globalStyles.body}>
-              {parseDisplayText(audioContent.transcript)}
-            </Text>
+            {breakIntoParagraphTextComponents(audioContent.transcript)}
           </View>
         </Collapsible>
       </View>

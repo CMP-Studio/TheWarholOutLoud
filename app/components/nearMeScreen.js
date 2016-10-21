@@ -54,6 +54,11 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     marginTop: 15,
   },
+  settingContainer: {
+    paddingHorizontal: 5,
+    paddingVertical: 10,
+    backgroundColor: LIGHT_BLUE,
+  },
 });
 
 // I tried to do this through state but couldn't...
@@ -92,7 +97,7 @@ class NearMeScreen extends Component {
 
     if (this.props.tracking === false) {
       contentView = (
-        <View style={styles.messageContainer}>
+        <View style={[styles.messageContainer, styles.settingContainer]}>
           <Text style={globalStyles.body}>
             {'While at the museum, we show you stories based on what’s near you.'
              + '\n\n' +

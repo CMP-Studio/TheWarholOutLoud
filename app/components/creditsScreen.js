@@ -8,6 +8,8 @@ import {
   Text,
 } from 'react-native';
 
+import { parseDisplayText } from '../utilities';
+
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 
@@ -72,7 +74,7 @@ const CreditsScreen = (props) => {
           Chris Maury {'\n'}
         </Text>
         <Text style={[globalStyles.body, { marginTop: 20 }]}>
-          The Warhol section image: Silver Clouds, The Andy Warhol Museum, Pittsburgh, photo © Abby Warhola
+          {parseDisplayText('The Warhol section image: <i>Silver Clouds</i> installation, The Andy Warhol Museum, Pittsburgh, photo © Abby Warhola, Warhol art © The Andy Warhol Foundation for the Visual Arts, Inc.')}
         </Text>
       </ScrollView>
     </View>

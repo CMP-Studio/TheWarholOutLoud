@@ -108,7 +108,7 @@ export const allAmenities = [
     amenities: [
       {
         uuid: uuid.v4(),
-        title: 'Special exhibitons gallery',
+        title: 'Special exhibitions gallery',
         icon: 'Amenities_SpecialExhibitions.png',
         notes: '',
         description: 'Temporary exhibitions are featured in this gallery space.',

@@ -90,10 +90,15 @@ export function html2jsx(textArray) {
 }
 
 export function parseDisplayText(text) {
-  let displayText = text;
+  if (text === '') {
+    return '';
+  }
+
+  let displayText;
   const brackets = new RegExp('(<[a-z]>|</[a-z]>)');
   displayText = text.split(brackets);
   displayText = displayText.filter((n) => { return n !== ''; });
+
   // TODO: validate displayText
   return html2jsx(displayText);
 }

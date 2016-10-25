@@ -9,12 +9,16 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { globalStyles } from '../styles';
+import { globalStyles, LIGHT_BLUE } from '../styles';
 
 const styles = StyleSheet.create({
   cell: {
     flexDirection: 'row',
     alignItems: 'center',
+    height: 41,
+    backgroundColor: '#fff',
+    borderBottomWidth: 3,
+    borderBottomColor: LIGHT_BLUE,
   },
   cellTitle: {
     flex: 1,
@@ -30,15 +34,15 @@ const DisclosureCell = (props) => {
   return (
     <TouchableHighlight
       onPress={props.onPress}
-      style={[
-        { backgroundColor: props.color },
-        props.border ? { marginBottom: StyleSheet.hairlineWidth } : {},
-      ]}
-      underlayColor={props.highlightColor}
       accessibilityTraits={props.accessibility.traits}
       accessibilityLabel={props.accessibility.label}
     >
-      <View style={styles.cell}>
+      <View
+        style={[
+          styles.cell,
+          props.bottomBorder === false ? { borderBottomWidth: 0 } : {},
+        ]}
+      >
         <Text style={[styles.cellTitle, globalStyles.disclosure]}>
           {props.title}
         </Text>
@@ -55,9 +59,7 @@ DisclosureCell.propTypes = {
   accessibility: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
-  color: PropTypes.string.isRequired,
-  highlightColor: PropTypes.string.isRequired,
-  border: PropTypes.bool.isRequired,
+  bottomBorder: PropTypes.bool.isRequired,
 };
 
 export default DisclosureCell;

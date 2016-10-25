@@ -23,6 +23,7 @@ import { _ } from 'lodash';
 // *** Action Types ***
 export const TOGGLE_PAUSE_PLAY = 'TOGGLE_PAUSE_PLAY';
 export const PAUSE_AUDIO = 'PAUSE_AUDIO';
+export const PLAY_AUDIO = 'PLAY_AUDIO';
 export const TOGGLE_TRANSCRIPT = 'TOGGLE_TRANSCRIPT';
 export const CYCLE_AUDIO_SPEED = 'CYCLE_AUDIO_SPEED';
 export const REWIND_AUDIO = 'REWIND_AUDIO';
@@ -108,6 +109,7 @@ async function fireAudioAction(
   autoplayOn,
   stopTitle,
   stopUUID,
+  playAudioAfterLoad = true,
 ) {
   const activeAudioIndex = audioContent.findIndex((content, index) => {
     return content.uuid === activeAudio.uuid;
@@ -120,7 +122,11 @@ async function fireAudioAction(
 
   setAudioManagerEventListeners(dispatch, autoplayOn, nextUUID !== null);
   try {
-    const [, duration] = await AudioManager.loadLocalAudio(activeAudio.audioURL, activeAudio.uuid);
+    const [, duration] = await AudioManager.loadLocalAudio(
+      activeAudio.audioURL,
+      activeAudio.uuid,
+      playAudioAfterLoad,
+    );
 
     // eslint-disable-next-line no-param-reassign
     activeAudio.duration = Math.round(duration);
@@ -227,6 +233,7 @@ export function loadAudioContent(
       autoplayOn,
       stopTitle,
       stopUUID,
+      false,
     );
   };
 }
@@ -292,14 +299,9 @@ export function loadNextAutoplayAudio(
   audioContent,
   currentUUID,
   activeAudioIndex,
-  timeListened,
   autoplayOn
 ) {
   return async (dispatch) => {
-    dispatch(
-      updateLocalPreferences(currentUUID, timeListened)
-    );
-
     if (activeAudioIndex + 1 >= audioContent.length) {
       dispatch(audioDone);
       return;
@@ -365,10 +367,11 @@ export function updateAudioCurrentTime(uuid, time) {
   };
 }
 
-export function audioDidFinishPlaying(uuid) {
+export function audioDidFinishPlaying(uuid, time) {
   return {
     type: AUDIO_DID_FINISH_PLAYING,
     uuid,
+    time,
   };
 }
 
@@ -410,6 +413,14 @@ export function pauseAudio() {
 
   return {
     type: PAUSE_AUDIO,
+  };
+}
+
+export function playAudio() {
+  AudioManager.play();
+
+  return {
+    type: PLAY_AUDIO,
   };
 }
 

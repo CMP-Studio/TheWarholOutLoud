@@ -14,9 +14,6 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
   },
-  transcriptLabel: {
-    textAlign: 'center',
-  },
 });
 
 const TranscriptButton = (props) => {
@@ -48,6 +45,7 @@ const TranscriptButton = (props) => {
         resizeMode={'contain'}
         style={[
           styles.transcriptButton,
+          props.styles,
           props.showTranscript ? { tintColor: TURQUOISE } : {},
         ]}
         source={require('../../assets//Transcript.png')}
@@ -57,6 +55,7 @@ const TranscriptButton = (props) => {
 };
 
 TranscriptButton.propTypes = {
+  styles: PropTypes.object,
   showTranscript: PropTypes.bool.isRequired,
   onPress: PropTypes.func.isRequired,
   accessibilityLabel: PropTypes.string.isRequired,

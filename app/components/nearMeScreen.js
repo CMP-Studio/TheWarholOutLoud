@@ -18,6 +18,9 @@ import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 import { TAB_NEARME } from '../actions/navigation';
 import { PLAYER_STATUS_PLAY } from '../actions/audio';
 
+import BluetoothButton from './buttons/bluetoothButton';
+import LocationServicesButton from './buttons/locationServicesButton';
+
 import {
    screenReaderScreenChanged,
  } from '../actions/accessibility';
@@ -35,7 +38,7 @@ const styles = StyleSheet.create({
   },
   messageContainer: {
     flex: 1,
-    marginLeft: 10,
+    marginHorizontal: 10,
     paddingTop: 25,
     paddingBottom: 15,
   },
@@ -45,14 +48,16 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingBottom: 0,
   },
-  segmentedControl: {
-    marginTop: 5,
-    marginHorizontal: 5,
-  },
-  message: {
-  },
   amenitiesTitle: {
     marginBottom: 10,
+  },
+  buttonsContainer: {
+    marginTop: 15,
+  },
+  settingContainer: {
+    paddingHorizontal: 5,
+    paddingVertical: 10,
+    backgroundColor: LIGHT_BLUE,
   },
 });
 
@@ -66,10 +71,7 @@ class NearMeScreen extends Component {
     navigator: PropTypes.object.isRequired,
     playerOpen: PropTypes.bool.isRequired,
     closeTourStops: PropTypes.object.isRequired,
-    rangingUUID: PropTypes.string.isRequired,
     regions: PropTypes.array.isRequired,
-    rangingIdentifier: PropTypes.string.isRequired,
-    beaconBlockRules: PropTypes.array.isRequired,
     amenities: PropTypes.array.isRequired,
     timerActive: PropTypes.bool.isRequired,
     activeTab: PropTypes.string.isRequired,
@@ -77,14 +79,9 @@ class NearMeScreen extends Component {
     atNearMeRoot: PropTypes.bool.isRequired,
     playerStatus: PropTypes.string.isRequired,
     floor: PropTypes.number,
-    actions: PropTypes.shape({
-      startScanningForBeacons: PropTypes.func.isRequired,
-    }).isRequired,
-  }
-
-  componentDidMount() {
-    const { rangingUUID, rangingIdentifier, beaconBlockRules, actions } = this.props;
-    actions.startScanningForBeacons(rangingUUID, rangingIdentifier, beaconBlockRules);
+    tracking: PropTypes.bool,
+    bluetoothOn: PropTypes.bool.isRequired,
+    locationServicesStatus: PropTypes.string.isRequired,
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -95,20 +92,135 @@ class NearMeScreen extends Component {
     const tourStops = this.props.closeTourStops;
     const tourStopsNum = tourStops.length || 0;
 
-    let storiesMessage;
+    let contentView;
+    let debugView;
 
-    if (this.props.floor === null) {
-      storiesMessage = 'Out Loud is under construction. Stories are available on floor 7.';
-    } else if (this.props.floor === 7) {
-      if (tourStopsNum === 0) {
-        storiesMessage = 'There are no stories near you.';
-      } else if (tourStopsNum === 1) {
-        storiesMessage = 'There is one story near you.';
+    if (this.props.tracking === false) {
+      contentView = (
+        <View style={[styles.messageContainer, styles.settingContainer]}>
+          <Text style={globalStyles.body}>
+            {'While at the museum, we show you stories based on what’s near you.'
+             + '\n\n' +
+            'To use this feature, we’ll need two things from you…'}
+          </Text>
+          <View style={styles.buttonsContainer}>
+            <LocationServicesButton
+              locationServicesStatus={this.props.locationServicesStatus}
+            />
+            <BluetoothButton
+              bluetoothOn={this.props.bluetoothOn}
+            />
+          </View>
+        </View>
+      );
+    } else if (this.props.tracking === true) {
+      let storiesMessage;
+
+      if (this.props.floor === null) {
+        storiesMessage = 'While at the museum, we show you stories based on what’s near you.';
+      } else if (this.props.floor === 7) {
+        if (tourStopsNum === 0) {
+          storiesMessage = 'There are no stories near you.';
+        } else if (tourStopsNum === 1) {
+          storiesMessage = 'There is one story near you.';
+        } else {
+          storiesMessage = `There are ${tourStopsNum} stories near you.`;
+        }
       } else {
-        storiesMessage = `There are ${tourStopsNum} stories near you.`;
+        storiesMessage = 'Stories are available on floor 7.';
       }
-    } else {
-      storiesMessage = 'Out Loud is under construction. Stories are available on floor 7.';
+
+      // Only announce changes when:
+      // 1. The Near Me Tab is active
+      // 2. The navigator is at the root view
+      // 3. The number of stops has changed
+      // 4. The autoplay timer is not active
+      // 5. The player is not currently playing
+      if (this.props.activeTab === TAB_NEARME &&
+          this.props.atNearMeRoot &&
+          lastSeenNumber !== tourStopsNum &&
+          !this.props.timerActive &&
+          this.props.playerStatus !== PLAYER_STATUS_PLAY
+      ) {
+        lastSeenNumber = tourStopsNum;
+        screenReaderScreenChanged(storiesMessage);
+      }
+
+      const regionsDetected = this.props.regions ? this.props.regions.join(', ') : '';
+
+      if (__DEV__ && regionsDetected) {
+        debugView = (
+          <View
+            style={{
+              height: 25,
+              backgroundColor: LIGHT_BLUE,
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 20,
+                textAlign: 'center',
+              }}
+            >
+              {`Regions: ${regionsDetected}`}
+            </Text>
+          </View>
+        );
+      }
+
+      let amenitiesList;
+      if (this.props.amenities.length !== 0) {
+        amenitiesList = (
+          <View style={[styles.amenitiesContainer, { backgroundColor: LIGHT_BLUE }]}>
+            <Text
+              allowFontScaling={false}
+              style={[styles.amenitiesTitle, globalStyles.h1]}
+            >
+              Amenities
+            </Text>
+            {this.props.amenities.map((amenity, index) => {
+              return (
+                <AmenitiesItem
+                  key={amenity.uuid}
+                  amenity={amenity}
+                  border={index !== (this.props.amenities.length - 1)}
+                />
+              );
+            })}
+          </View>
+        );
+      }
+
+      contentView = (
+        <View>
+          <View style={styles.messageContainer}>
+            <Text style={globalStyles.body}>
+              {storiesMessage}
+            </Text>
+          </View>
+          <Grid
+            items={tourStops}
+            screenReader={this.props.screenReader}
+            onCellPress={(item) => {
+              this.props.navigator.push({
+                title: item.shortTitle,
+                component: TourStop,
+                barTintColor: '#ffffff',
+                tintColor: TEAL,
+                titleTextColor: OFF_BLACK,
+                shadowHidden: true,
+                passProps: {
+                  tab: TAB_NEARME,
+                  tourStop: item,
+                  initialCategory: item.initialAudio,
+                  imageURL: item.imageURL,
+                },
+              });
+            }}
+          />
+          {amenitiesList}
+        </View>
+      );
     }
 
     let floor;
@@ -122,71 +234,9 @@ class NearMeScreen extends Component {
       floor = `Floor ${this.props.floor}`;
     }
 
-    // Only announce changes when:
-    // 1. The Near Me Tab is active
-    // 2. The navigator is at the root view
-    // 3. The number of stops has changed
-    // 4. The autoplay timer is not active
-    // 5. The player is not currently playing
-    if (this.props.activeTab === TAB_NEARME &&
-        this.props.atNearMeRoot &&
-        lastSeenNumber !== tourStopsNum &&
-        !this.props.timerActive &&
-        this.props.playerStatus !== PLAYER_STATUS_PLAY
-    ) {
-      lastSeenNumber = tourStopsNum;
-      screenReaderScreenChanged(storiesMessage);
-    }
-
     let containerMargin = BOTTOMBARHEIGHT;
     if (this.props.playerOpen) {
       containerMargin = BOTTOMPLAYERHEIGHT + BOTTOMBARHEIGHT;
-    }
-
-    let debugView;
-    const regionsDetected = this.props.regions ? this.props.regions.join(', ') : '';
-
-    if (__DEV__ && regionsDetected) {
-      debugView = (
-        <View
-          style={{
-            height: 25,
-            backgroundColor: LIGHT_BLUE,
-          }}
-        >
-          <Text
-            style={{
-              fontSize: 20,
-              textAlign: 'center',
-            }}
-          >
-            {`Regions: ${regionsDetected}`}
-          </Text>
-        </View>
-      );
-    }
-
-    let amenitiesList = (<View />);
-    if (this.props.amenities.length !== 0) {
-      amenitiesList = (
-        <View style={[styles.amenitiesContainer, { backgroundColor: LIGHT_BLUE }]}>
-          <Text
-            allowFontScaling={false}
-            style={[styles.amenitiesTitle, globalStyles.h1]}
-          >
-            Amenities
-          </Text>
-          {this.props.amenities.map((amenity, index) => {
-            return (
-              <AmenitiesItem
-                key={amenity.uuid}
-                amenity={amenity}
-                border={index !== (this.props.amenities.length - 1)}
-              />
-            );
-          })}
-        </View>
-      );
     }
 
     return (
@@ -208,32 +258,7 @@ class NearMeScreen extends Component {
           <ScrollView
             automaticallyAdjustContentInsets={false}
           >
-            <View style={styles.messageContainer}>
-              <Text style={globalStyles.body}>
-                {storiesMessage}
-              </Text>
-            </View>
-            <Grid
-              items={tourStops}
-              screenReader={this.props.screenReader}
-              onCellPress={(item) => {
-                this.props.navigator.push({
-                  title: item.shortTitle,
-                  component: TourStop,
-                  barTintColor: '#ffffff',
-                  tintColor: TEAL,
-                  titleTextColor: OFF_BLACK,
-                  shadowHidden: true,
-                  passProps: {
-                    tab: TAB_NEARME,
-                    tourStop: item,
-                    initialCategory: item.initialAudio,
-                    imageURL: item.imageURL,
-                  },
-                });
-              }}
-            />
-            {amenitiesList}
+            {contentView}
           </ScrollView>
         </View>
       </View>

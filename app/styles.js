@@ -8,6 +8,7 @@ export const TURQUOISE = '#4CCEDE';
 export const LIGHT_BLUE = '#EFFBFB';
 export const GREEN = '#7DCC77';
 export const GRAY = '#7D7D7D';
+export const LIGHT_GRAY = '#DADADA';
 export const OFF_BLACK = '#4D4D4D';
 export const OFF_WHITE = '#F7F7F7';
 

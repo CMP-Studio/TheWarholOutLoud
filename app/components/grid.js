@@ -12,9 +12,14 @@ import {
 
 import { ListView } from 'realm/react-native';
 
-const SPACING = 5;
+import {
+  parseDisplayText,
+  parseVoiceoverText,
+} from '../utilities';
 
 import { globalStyles, OFF_BLACK } from '../styles';
+
+const SPACING = 5;
 
 const styles = StyleSheet.create({
   container: {
@@ -27,6 +32,7 @@ const styles = StyleSheet.create({
   gridRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    alignItems: 'flex-start',
   },
   cellContainer: {
     marginLeft: SPACING,
@@ -83,13 +89,12 @@ const Grid = (props) => {
       <View
         style={[styles.cellContainer, {
           width: cellWidth,
-          flex: screenReader ? 1 : 0,
         }]}
         key={item.uuid}
         accessible={true}
         accessibilityTraits={traits}
         accessibilityLabel={
-          `${item.longTitle}, ${realIndex} of ${gridLength}.` +
+          `${parseVoiceoverText(item.longTitle)}, ${realIndex} of ${gridLength}.` +
           ` Plays audio for ${item.shortTitle} story.`
         }
       >
@@ -117,7 +122,7 @@ const Grid = (props) => {
                 globalStyles.disclosure,
               ]}
             >
-              {item.longTitle}
+              {parseDisplayText(item.longTitle)}
             </Text>
           </View>
         </TouchableOpacity>
@@ -148,6 +153,7 @@ const Grid = (props) => {
           enableEmptySections={true}
           contentContainerStyle={styles.gridColumn}
           dataSource={dataSource}
+          initialListSize={20}
           renderRow={(item, sectionIndex, index) => {
             return renderItem(item, index, props.onCellPress, true);
           }}
@@ -156,6 +162,7 @@ const Grid = (props) => {
           enableEmptySections={true}
           contentContainerStyle={styles.gridColumn}
           dataSource={dataSource}
+          initialListSize={20}
           renderRow={(item, sectionIndex, index) => {
             return renderItem(item, index, props.onCellPress, false);
           }}

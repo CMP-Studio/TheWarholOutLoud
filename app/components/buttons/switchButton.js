@@ -10,7 +10,6 @@ import { OFF_WHITE, GREEN, GRAY } from '../../styles';
 
 const SwitchButton = (props) => {
   if (props.value) {
-    // case where switch is on
     return (
       <TouchableOpacity
         activeOpacity={1}
@@ -41,40 +40,39 @@ const SwitchButton = (props) => {
         </View>
       </TouchableOpacity>
     );
-  } else {
-    // case where switch is off
-    return (
-      <TouchableOpacity
-        activeOpacity={1}
-        onPress={props.onPress}
+  }
+
+  return (
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={props.onPress}
+    >
+      <View
+        style={{
+          backgroundColor: '#DADADA',
+          borderWidth: 1,
+          borderColor: GRAY,
+          width: props.width,
+          height: props.height + 2,
+          borderRadius: props.height / 2,
+          alignItems: 'flex-start',
+        }}
       >
         <View
           style={{
-            backgroundColor: GRAY,
+            backgroundColor: OFF_WHITE,
             borderWidth: 1,
             borderColor: GRAY,
-            width: props.width,
-            height: props.height + 2,
+            width: props.height,
+            height: props.height,
             borderRadius: props.height / 2,
-            alignItems: 'flex-start',
+            position: 'relative',
+            left: -1,
           }}
-        >
-          <View
-            style={{
-              backgroundColor: OFF_WHITE,
-              borderWidth: 1,
-              borderColor: GRAY,
-              width: props.height,
-              height: props.height,
-              borderRadius: props.height / 2,
-              position: 'relative',
-              left: -1,
-            }}
-          />
-        </View>
-      </TouchableOpacity>
-    );
-  }
+        />
+      </View>
+    </TouchableOpacity>
+  );
 };
 
 SwitchButton.propTypes = {

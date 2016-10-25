@@ -18,6 +18,11 @@ import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
 import AudioContentList from './audioContentList';
 import ImageDetailScreen from './imageDetailScreen';
 
+import {
+  parseDisplayText,
+  parseVoiceoverText,
+} from '../utilities';
+
 import { globalStyles } from '../styles.js';
 
 const HEADER_IMAGE_MAX_DIMENSION = 100;
@@ -133,6 +138,14 @@ class TourStopScreen extends Component {
       headerImageHeight = (imageHeight / imageWidth) * HEADER_IMAGE_MAX_DIMENSION;
     }
 
+    let accessibilityLabel;
+
+    if (this.props.tourStop.shortCreditAccessibilityLabel) {
+      accessibilityLabel = parseVoiceoverText(this.props.tourStop.shortCreditAccessibilityLabel);
+    } else {
+      accessibilityLabel = parseVoiceoverText(this.props.tourStop.shortCredit);
+    }
+
     return (
       <View
         style={[styles.container, { marginBottom: containerMargin }]}
@@ -142,7 +155,10 @@ class TourStopScreen extends Component {
         >
           <TouchableOpacity
             accessibilityTraits={['header', 'button']}
-            accessibilityLabel={`Artwork Information. ${this.props.tourStop.shortCredit}. Double tap to go to long credits.`}
+            accessibilityLabel={
+              `Artwork Information. ${accessibilityLabel}. ` +
+              'Double tap to go to long credits.'
+            }
             onPress={() => {
               this.props.navigator.push({
                 title: 'Artwork',
@@ -164,24 +180,20 @@ class TourStopScreen extends Component {
           >
             <View style={styles.header}>
               <Image
-                // TODO: Use accessibilityLabel
-                // accessible={true}
-                // accessibilityTraits={'image'}
-                // accessibilityLabel={this.props.tourStop.imageAccessibilityLabel}
-                style={[styles.headerImage, { width: headerImageWidth, height: headerImageHeight }]}
+                style={[
+                  styles.headerImage,
+                  {
+                    width: headerImageWidth,
+                    height: headerImageHeight,
+                  },
+                ]}
                 source={{ uri: this.props.imageURL }}
               />
               <View
                 style={styles.headerText}
-                accessible={true}
-                accessibilityTraits={['text']}
-                accessibilityLabel={
-                  this.props.tourStop.shortCreditAccessibilityLabel
-                  || this.props.tourStop.shortCredit
-                }
               >
                 <Text style={globalStyles.body}>
-                  {this.props.tourStop.shortCredit}
+                  {parseDisplayText(this.props.tourStop.shortCredit)}
                 </Text>
               </View>
             </View>

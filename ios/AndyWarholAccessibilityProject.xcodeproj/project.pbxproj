@@ -12,7 +12,6 @@
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* AndyWarholAccessibilityProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AndyWarholAccessibilityProjectTests.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -20,90 +19,83 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		303EA7CBFB44400E98D04D53 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD73C3EDCC241209E215329 /* libz.tbd */; };
-		322462E71D1AC5AF00C847AB /* CMSAccessibilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322462E61D1AC5AF00C847AB /* CMSAccessibilityManager.swift */; };
-		322462E91D1AC66800C847AB /* CMSAccessibilityManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 322462E81D1AC66800C847AB /* CMSAccessibilityManagerBridge.m */; };
-		322975EB1D5A127F00C6F2B8 /* newYork.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975EA1D5A127F00C6F2B8 /* newYork.png */; };
-		322975F71D5A27E500C6F2B8 /* andyAndJulia.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975EC1D5A27E500C6F2B8 /* andyAndJulia.png */; };
-		322975F81D5A27E500C6F2B8 /* asia.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975ED1D5A27E500C6F2B8 /* asia.png */; };
-		322975F91D5A27E500C6F2B8 /* blottedLineStill.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975EE1D5A27E500C6F2B8 /* blottedLineStill.png */; };
-		322975FA1D5A27E500C6F2B8 /* campbells.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975EF1D5A27E500C6F2B8 /* campbells.png */; };
-		322975FB1D5A27E500C6F2B8 /* childhood.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975F01D5A27E500C6F2B8 /* childhood.png */; };
-		322975FC1D5A27E500C6F2B8 /* cocaCola.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975F11D5A27E500C6F2B8 /* cocaCola.png */; };
-		322975FD1D5A27E500C6F2B8 /* collegeYears.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975F21D5A27E500C6F2B8 /* collegeYears.png */; };
-		322975FE1D5A27E500C6F2B8 /* commercialWork.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975F31D5A27E500C6F2B8 /* commercialWork.png */; };
-		322975FF1D5A27E500C6F2B8 /* earlyYears.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975F41D5A27E500C6F2B8 /* earlyYears.png */; };
-		322976001D5A27E500C6F2B8 /* lobbySpace.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975F51D5A27E500C6F2B8 /* lobbySpace.png */; };
-		322976011D5A27E500C6F2B8 /* tactile.png in Resources */ = {isa = PBXBuildFile; fileRef = 322975F61D5A27E500C6F2B8 /* tactile.png */; };
-		322976031D5A2E3700C6F2B8 /* museumBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 322976021D5A2E3700C6F2B8 /* museumBackground.png */; };
-		32C617A41D522F88009416CE /* Warhola_Donald_7th-Floor-Overview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617A31D522F88009416CE /* Warhola_Donald_7th-Floor-Overview.mp3 */; };
-		32C617AC1D5231C0009416CE /* Childhood_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617A51D5231C0009416CE /* Childhood_Visual.mp3 */; };
-		32C617AD1D5231C0009416CE /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617A61D5231C0009416CE /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 */; };
-		32C617AE1D5231C0009416CE /* Warhola_Donald_Childhood_Family_portrait.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617A71D5231C0009416CE /* Warhola_Donald_Childhood_Family_portrait.mp3 */; };
-		32C617AF1D5231C0009416CE /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617A81D5231C0009416CE /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 */; };
-		32C617B01D5231C0009416CE /* Warhola_Donald_Childhood_Warhola_Family.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617A91D5231C0009416CE /* Warhola_Donald_Childhood_Warhola_Family.mp3 */; };
-		32C617B11D5231C0009416CE /* Warhola_Donald-Childhood_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617AA1D5231C0009416CE /* Warhola_Donald-Childhood_Introduction.mp3 */; };
-		32C617B21D5231C0009416CE /* Warhola_John_Movie_Projector-v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617AB1D5231C0009416CE /* Warhola_John_Movie_Projector-v2.mp3 */; };
-		32C617BA1D523372009416CE /* Beck_Jessica_College-Years_AAP.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617B31D523372009416CE /* Beck_Jessica_College-Years_AAP.mp3 */; };
-		32C617BB1D523372009416CE /* Beck_Jessica_College-Years_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617B41D523372009416CE /* Beck_Jessica_College-Years_Introduction.mp3 */; };
-		32C617BC1D523372009416CE /* Beck_Jessica_College-Years_Nosepicker-v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617B51D523372009416CE /* Beck_Jessica_College-Years_Nosepicker-v2.mp3 */; };
-		32C617BE1D523372009416CE /* CollegeYears_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617B71D523372009416CE /* CollegeYears_Visual.mp3 */; };
-		32C617BF1D523372009416CE /* Pearlstein_Meeting_Andy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617B81D523372009416CE /* Pearlstein_Meeting_Andy.mp3 */; };
-		32C617C01D523372009416CE /* Warhola_Donald_College-Years_Sense-of-Humor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617B91D523372009416CE /* Warhola_Donald_College-Years_Sense-of-Humor.mp3 */; };
-		32C617C81D5234CE009416CE /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617C11D5234CE009416CE /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 */; };
-		32C617C91D5234CE009416CE /* Beck_Jessica_New-York_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617C21D5234CE009416CE /* Beck_Jessica_New-York_Introduction.mp3 */; };
-		32C617CA1D5234CE009416CE /* Beck_Jessica_New-York_Persona.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617C31D5234CE009416CE /* Beck_Jessica_New-York_Persona.mp3 */; };
-		32C617CB1D5234CE009416CE /* Beck_Jessica_New-York_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617C41D5234CE009416CE /* Beck_Jessica_New-York_Success.mp3 */; };
-		32C617CC1D5234CE009416CE /* Pearlstein_Moving_to_NYC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617C51D5234CE009416CE /* Pearlstein_Moving_to_NYC.mp3 */; };
-		32C617CD1D5234CE009416CE /* PittsburghNewYork_VIsual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617C61D5234CE009416CE /* PittsburghNewYork_VIsual.mp3 */; };
-		32C617CE1D5234CE009416CE /* Singelis_Walks_in_NewYork.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617C71D5234CE009416CE /* Singelis_Walks_in_NewYork.mp3 */; };
-		32C617D31D523600009416CE /* Blotted-Line_Collaboration_v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617CF1D523600009416CE /* Blotted-Line_Collaboration_v2.mp3 */; };
-		32C617D41D523600009416CE /* Blotted-Line_Commercial_to_fine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617D01D523600009416CE /* Blotted-Line_Commercial_to_fine.mp3 */; };
-		32C617D51D523600009416CE /* Blotted-Line_Introduction_v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617D11D523600009416CE /* Blotted-Line_Introduction_v2.mp3 */; };
-		32C617D61D523600009416CE /* Blotted-Line_Process_v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617D21D523600009416CE /* Blotted-Line_Process_v2.mp3 */; };
-		32C617DE1D523690009416CE /* AndyAndJulia_visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617D71D523690009416CE /* AndyAndJulia_visual.mp3 */; };
-		32C617DF1D523690009416CE /* Warhola_Donald_Julia_Mothers_Influence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617D81D523690009416CE /* Warhola_Donald_Julia_Mothers_Influence.mp3 */; };
-		32C617E01D523690009416CE /* Warhola_Donald_Julia_Prayer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617D91D523690009416CE /* Warhola_Donald_Julia_Prayer.mp3 */; };
-		32C617E11D523690009416CE /* Warhola_Donald_Julia_Signature_style.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617DA1D523690009416CE /* Warhola_Donald_Julia_Signature_style.mp3 */; };
-		32C617E21D523690009416CE /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617DB1D523690009416CE /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 */; };
-		32C617E31D523690009416CE /* Warhola_Donald-Julia_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617DC1D523690009416CE /* Warhola_Donald-Julia_Introduction.mp3 */; };
-		32C617E41D523690009416CE /* Warhola_Julia_Folksong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617DD1D523690009416CE /* Warhola_Julia_Folksong.mp3 */; };
-		32C617E91D52379F009416CE /* Diaz_Jose-World_Travels-Boy_Book.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617E51D52379F009416CE /* Diaz_Jose-World_Travels-Boy_Book.mp3 */; };
-		32C617EA1D52379F009416CE /* Diaz_Jose-World_Travels-Intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617E61D52379F009416CE /* Diaz_Jose-World_Travels-Intro.mp3 */; };
-		32C617EB1D52379F009416CE /* Diaz_Jose-World_Travels-Sketching.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617E71D52379F009416CE /* Diaz_Jose-World_Travels-Sketching.mp3 */; };
-		32C617EC1D52379F009416CE /* WorldTravels_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617E81D52379F009416CE /* WorldTravels_Visual.mp3 */; };
-		32C617F11D5238D7009416CE /* CommercialWork_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617ED1D5238D7009416CE /* CommercialWork_Visual.mp3 */; };
-		32C617F21D5238D7009416CE /* Diaz_Jose-Commercial_Art-I_Miller.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617EE1D5238D7009416CE /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */; };
-		32C617F31D5238D7009416CE /* Diaz_Jose-Commercial_Art-Intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617EF1D5238D7009416CE /* Diaz_Jose-Commercial_Art-Intro.mp3 */; };
-		32C617F41D5238D7009416CE /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617F01D5238D7009416CE /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 */; };
-		32C617F71D523CC2009416CE /* TactileFemaleFashionFigure_Tactile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617F51D523CC2009416CE /* TactileFemaleFashionFigure_Tactile.mp3 */; };
-		32C617F81D523CC2009416CE /* TactileFemaleFashionFigure_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617F61D523CC2009416CE /* TactileFemaleFashionFigure_Visual.mp3 */; };
-		32C617FB1D523D5F009416CE /* TactileRecliningMaleTorso_Tactile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617F91D523D5F009416CE /* TactileRecliningMaleTorso_Tactile.mp3 */; };
-		32C617FC1D523D5F009416CE /* TactileRecliningMaleTorso_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617FA1D523D5F009416CE /* TactileRecliningMaleTorso_Visual.mp3 */; };
-		32C618001D523E13009416CE /* TactileCocaCola_Tactile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C617FE1D523E13009416CE /* TactileCocaCola_Tactile.mp3 */; };
-		32C618021D523EB7009416CE /* CocaCola_Tactile_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618011D523EB7009416CE /* CocaCola_Tactile_Visual.mp3 */; };
-		32C618091D523F63009416CE /* CocaCola_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618031D523F63009416CE /* CocaCola_Visual.mp3 */; };
-		32C6180A1D523F63009416CE /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618041D523F63009416CE /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */; };
-		32C6180B1D523F63009416CE /* JBeck_AndyWarholAiWeiwei.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618051D523F63009416CE /* JBeck_AndyWarholAiWeiwei.mp3 */; };
-		32C6180C1D523F63009416CE /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618061D523F63009416CE /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 */; };
-		32C6180D1D523F63009416CE /* Marsden_Grace_Coca-Cola_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618071D523F63009416CE /* Marsden_Grace_Coca-Cola_Introduction.mp3 */; };
-		32C6180E1D523F63009416CE /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618081D523F63009416CE /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 */; };
-		32C618141D5240E3009416CE /* Campbells_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C6180F1D5240E3009416CE /* Campbells_Visual.mp3 */; };
-		32C618151D5240E3009416CE /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618101D5240E3009416CE /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 */; };
-		32C618161D5240E3009416CE /* Marsden_Grace_Campbells_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618111D5240E3009416CE /* Marsden_Grace_Campbells_Introduction.mp3 */; };
-		32C618171D5240E3009416CE /* Marsden_Grace_Campbells_Torn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618121D5240E3009416CE /* Marsden_Grace_Campbells_Torn.mp3 */; };
-		32C618181D5240E3009416CE /* Singelis_Campbells.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32C618131D5240E3009416CE /* Singelis_Campbells.mp3 */; };
-		32E27B421CEF8FF2000F775E /* CMSBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E27B401CEF8FF2000F775E /* CMSBeaconManager.swift */; };
-		32E27B431CEF8FF2000F775E /* CMSBeaconManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E27B411CEF8FF2000F775E /* CMSBeaconManagerBridge.m */; };
-		32F7EF8E1CF4B32800A8C236 /* CMSAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F7EF8D1CF4B32800A8C236 /* CMSAudioManager.swift */; };
-		32F7EF901CF4B38800A8C236 /* CMSAudioManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F7EF8F1CF4B38800A8C236 /* CMSAudioManagerBridge.m */; };
-		4C93AA3FBAC344DEA71C537D /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE0AACF679E451B9ADAEABB /* libRealmReact.a */; };
+		3219C0DB1DA42D6300A14415 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3219C0DA1DA42D6300A14415 /* Settings.bundle */; };
+		32CADB361D709A39006122E5 /* andyAndJulia.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB291D709A39006122E5 /* andyAndJulia.png */; };
+		32CADB371D709A39006122E5 /* asia.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB2A1D709A39006122E5 /* asia.png */; };
+		32CADB381D709A39006122E5 /* blottedLineStill.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB2B1D709A39006122E5 /* blottedLineStill.png */; };
+		32CADB391D709A39006122E5 /* campbells.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB2C1D709A39006122E5 /* campbells.png */; };
+		32CADB3A1D709A39006122E5 /* childhood.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB2D1D709A39006122E5 /* childhood.png */; };
+		32CADB3B1D709A39006122E5 /* cocaCola.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB2E1D709A39006122E5 /* cocaCola.png */; };
+		32CADB3D1D709A39006122E5 /* commercialWork.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB301D709A39006122E5 /* commercialWork.png */; };
+		32CADB3E1D709A39006122E5 /* earlyYears.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB311D709A39006122E5 /* earlyYears.png */; };
+		32CADB3F1D709A39006122E5 /* lobbySpace.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB321D709A39006122E5 /* lobbySpace.png */; };
+		32CADB401D709A39006122E5 /* museumBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB331D709A39006122E5 /* museumBackground.png */; };
+		32CADB411D709A39006122E5 /* newYork.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB341D709A39006122E5 /* newYork.png */; };
+		32CADB7D1D709AC3006122E5 /* AndyAndJulia_visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB441D709AC3006122E5 /* AndyAndJulia_visual.mp3 */; };
+		32CADB811D709AC3006122E5 /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB481D709AC3006122E5 /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 */; };
+		32CADB821D709AC3006122E5 /* Beck_Jessica_New-York_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB491D709AC3006122E5 /* Beck_Jessica_New-York_Introduction.mp3 */; };
+		32CADB831D709AC3006122E5 /* Beck_Jessica_New-York_Persona.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB4A1D709AC3006122E5 /* Beck_Jessica_New-York_Persona.mp3 */; };
+		32CADB841D709AC3006122E5 /* Beck_Jessica_New-York_Success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB4B1D709AC3006122E5 /* Beck_Jessica_New-York_Success.mp3 */; };
+		32CADB851D709AC3006122E5 /* Blotted-Line_Collaboration_v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB4C1D709AC3006122E5 /* Blotted-Line_Collaboration_v2.mp3 */; };
+		32CADB861D709AC3006122E5 /* Blotted-Line_Commercial_to_fine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB4D1D709AC3006122E5 /* Blotted-Line_Commercial_to_fine.mp3 */; };
+		32CADB871D709AC3006122E5 /* Blotted-Line_Introduction_v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB4E1D709AC3006122E5 /* Blotted-Line_Introduction_v2.mp3 */; };
+		32CADB881D709AC3006122E5 /* Blotted-Line_Process_v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB4F1D709AC3006122E5 /* Blotted-Line_Process_v2.mp3 */; };
+		32CADB891D709AC3006122E5 /* Campbells_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB501D709AC3006122E5 /* Campbells_Visual.mp3 */; };
+		32CADB8A1D709AC3006122E5 /* Childhood_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB511D709AC3006122E5 /* Childhood_Visual.mp3 */; };
+		32CADB8B1D709AC3006122E5 /* CocaCola_Tactile_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB521D709AC3006122E5 /* CocaCola_Tactile_Visual.mp3 */; };
+		32CADB8C1D709AC3006122E5 /* CocaCola_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB531D709AC3006122E5 /* CocaCola_Visual.mp3 */; };
+		32CADB8E1D709AC3006122E5 /* CommercialWork_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB551D709AC3006122E5 /* CommercialWork_Visual.mp3 */; };
+		32CADB8F1D709AC3006122E5 /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB561D709AC3006122E5 /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */; };
+		32CADB901D709AC3006122E5 /* Diaz_Jose-Commercial_Art-I_Miller.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB571D709AC3006122E5 /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */; };
+		32CADB911D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB581D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Intro.mp3 */; };
+		32CADB921D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB591D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 */; };
+		32CADB931D709AC3006122E5 /* Diaz_Jose-World_Travels-Boy_Book.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB5A1D709AC3006122E5 /* Diaz_Jose-World_Travels-Boy_Book.mp3 */; };
+		32CADB941D709AC3006122E5 /* Diaz_Jose-World_Travels-Intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB5B1D709AC3006122E5 /* Diaz_Jose-World_Travels-Intro.mp3 */; };
+		32CADB951D709AC3006122E5 /* Diaz_Jose-World_Travels-Sketching.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB5C1D709AC3006122E5 /* Diaz_Jose-World_Travels-Sketching.mp3 */; };
+		32CADB971D709AC3006122E5 /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB5E1D709AC3006122E5 /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 */; };
+		32CADB981D709AC3006122E5 /* Marsden_Grace_Campbells_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB5F1D709AC3006122E5 /* Marsden_Grace_Campbells_Introduction.mp3 */; };
+		32CADB991D709AC3006122E5 /* Marsden_Grace_Campbells_Torn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB601D709AC3006122E5 /* Marsden_Grace_Campbells_Torn.mp3 */; };
+		32CADB9A1D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB611D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 */; };
+		32CADB9B1D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB621D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Introduction.mp3 */; };
+		32CADB9C1D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB631D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 */; };
+		32CADB9E1D709AC3006122E5 /* Pearlstein_Moving_to_NYC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB651D709AC3006122E5 /* Pearlstein_Moving_to_NYC.mp3 */; };
+		32CADB9F1D709AC3006122E5 /* PittsburghNewYork_VIsual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB661D709AC3006122E5 /* PittsburghNewYork_VIsual.mp3 */; };
+		32CADBA01D709AC3006122E5 /* Singelis_Campbells.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB671D709AC3006122E5 /* Singelis_Campbells.mp3 */; };
+		32CADBA11D709AC3006122E5 /* Singelis_Walks_in_NewYork.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB681D709AC3006122E5 /* Singelis_Walks_in_NewYork.mp3 */; };
+		32CADBA21D709AC3006122E5 /* TactileCocaCola_Tactile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB691D709AC3006122E5 /* TactileCocaCola_Tactile.mp3 */; };
+		32CADBA31D709AC3006122E5 /* TactileFemaleFashionFigure_Tactile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB6A1D709AC3006122E5 /* TactileFemaleFashionFigure_Tactile.mp3 */; };
+		32CADBA41D709AC3006122E5 /* TactileFemaleFashionFigure_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB6B1D709AC3006122E5 /* TactileFemaleFashionFigure_Visual.mp3 */; };
+		32CADBA51D709AC3006122E5 /* TactileRecliningMaleTorso_Tactile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB6C1D709AC3006122E5 /* TactileRecliningMaleTorso_Tactile.mp3 */; };
+		32CADBA61D709AC3006122E5 /* TactileRecliningMaleTorso_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB6D1D709AC3006122E5 /* TactileRecliningMaleTorso_Visual.mp3 */; };
+		32CADBA71D709AC3006122E5 /* Warhola_Donald_7th-Floor-Overview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB6E1D709AC3006122E5 /* Warhola_Donald_7th-Floor-Overview.mp3 */; };
+		32CADBA81D709AC3006122E5 /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB6F1D709AC3006122E5 /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 */; };
+		32CADBA91D709AC3006122E5 /* Warhola_Donald_Childhood_Family_portrait.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB701D709AC3006122E5 /* Warhola_Donald_Childhood_Family_portrait.mp3 */; };
+		32CADBAA1D709AC3006122E5 /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB711D709AC3006122E5 /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 */; };
+		32CADBAB1D709AC3006122E5 /* Warhola_Donald_Childhood_Warhola_Family.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB721D709AC3006122E5 /* Warhola_Donald_Childhood_Warhola_Family.mp3 */; };
+		32CADBAD1D709AC3006122E5 /* Warhola_Donald_Julia_Mothers_Influence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB741D709AC3006122E5 /* Warhola_Donald_Julia_Mothers_Influence.mp3 */; };
+		32CADBAE1D709AC3006122E5 /* Warhola_Donald_Julia_Prayer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB751D709AC3006122E5 /* Warhola_Donald_Julia_Prayer.mp3 */; };
+		32CADBAF1D709AC3006122E5 /* Warhola_Donald_Julia_Signature_style.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB761D709AC3006122E5 /* Warhola_Donald_Julia_Signature_style.mp3 */; };
+		32CADBB01D709AC3006122E5 /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB771D709AC3006122E5 /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 */; };
+		32CADBB11D709AC3006122E5 /* Warhola_Donald-Childhood_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB781D709AC3006122E5 /* Warhola_Donald-Childhood_Introduction.mp3 */; };
+		32CADBB21D709AC3006122E5 /* Warhola_Donald-Julia_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB791D709AC3006122E5 /* Warhola_Donald-Julia_Introduction.mp3 */; };
+		32CADBB31D709AC3006122E5 /* Warhola_John_Movie_Projector-v2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB7A1D709AC3006122E5 /* Warhola_John_Movie_Projector-v2.mp3 */; };
+		32CADBB41D709AC3006122E5 /* Warhola_Julia_Folksong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB7B1D709AC3006122E5 /* Warhola_Julia_Folksong.mp3 */; };
+		32CADBB51D709AC3006122E5 /* WorldTravels_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB7C1D709AC3006122E5 /* WorldTravels_Visual.mp3 */; };
+		32CADBBD1D709B15006122E5 /* CMSAccessibilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CADBB71D709B15006122E5 /* CMSAccessibilityManager.swift */; };
+		32CADBBE1D709B15006122E5 /* CMSAccessibilityManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CADBB81D709B15006122E5 /* CMSAccessibilityManagerBridge.m */; };
+		32CADBBF1D709B15006122E5 /* CMSAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CADBB91D709B15006122E5 /* CMSAudioManager.swift */; };
+		32CADBC01D709B15006122E5 /* CMSAudioManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CADBBA1D709B15006122E5 /* CMSAudioManagerBridge.m */; };
+		32CADBC11D709B15006122E5 /* CMSBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CADBBB1D709B15006122E5 /* CMSBeaconManager.swift */; };
+		32CADBC21D709B15006122E5 /* CMSBeaconManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CADBBC1D709B15006122E5 /* CMSBeaconManagerBridge.m */; };
+		32DADA881DBA96DD003D00DE /* Tactile-Coca-Cola.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DADA851DBA96DD003D00DE /* Tactile-Coca-Cola.png */; };
+		32DADA891DBA96DD003D00DE /* Tactile-Female_Fashion_Figure.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DADA861DBA96DD003D00DE /* Tactile-Female_Fashion_Figure.png */; };
+		32DADA8A1DBA96DD003D00DE /* Tactile-Reclining_Male_Torso.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DADA871DBA96DD003D00DE /* Tactile-Reclining_Male_Torso.png */; };
+		498E19D7529C4582BD5F2D5D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9653058D874183A3A559DA /* libc++.tbd */; };
+		633BA1BC7B8F408A96F0F333 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB1D3D947CE4DEC804D02F2 /* libRNDeviceInfo.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		8C702295C2AF44738CD076F1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B240748C851F498B81360E86 /* libc++.tbd */; };
-		93B591D8B3A04E2B8DA81B54 /* libRNBlur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8580C593D45B4E8A856CDA75 /* libRNBlur.a */; };
-		D135B9C8892D5369A435F7CA /* Pods_AndyWarholAccessibilityProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD878347E38970A228DAC04F /* Pods_AndyWarholAccessibilityProject.framework */; };
-		E3634AC9091841FC963438DB /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E33D35D9835445FE8268DCCE /* libRNDeviceInfo.a */; };
-		F8A54C255B3007466D6E28C3 /* Pods_AndyWarholAccessibilityProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D432642DF347AC61D116DEB /* Pods_AndyWarholAccessibilityProjectTests.framework */; };
+		89DB25260881405EB749C488 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC665411C24E4CF6A5C2773D /* libz.tbd */; };
+		F69CF019DCD14030BF6E6846 /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D260585236149398895A4E6 /* libRealmReact.a */; };
+		FA520F5123227F6EF74BC023 /* Pods_AndyWarholAccessibilityProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41FF1C7176CF695511DE78D /* Pods_AndyWarholAccessibilityProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,13 +134,6 @@
 			remoteGlobalIDString = 832C81801AAF6DEF007FA2F7;
 			remoteInfo = RCTVibration;
 		};
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = AndyWarholAccessibilityProject;
-		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
@@ -170,26 +155,19 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
-		322976201D5B682000C6F2B8 /* PBXContainerItemProxy */ = {
+		32CADBDF1D709B54006122E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D7560D28523B46C29992905C /* RNDeviceInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DA5891D81BA9A9FC002B4DB2;
-			remoteInfo = RNDeviceInfo;
-		};
-		32DB93A41D01EC7800EE0CDA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 925834FC462E4FE5ADFF359F /* RNBlur.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A68BD7BC1BC31318005F02DF;
-			remoteInfo = RNBlur;
-		};
-		32FD36EE1D26A8FE00B44B2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF5C5CF0CB9D4303A0329EC6 /* RealmReact.xcodeproj */;
+			containerPortal = 5DE6AA1E78184C068BD5FFD2 /* RealmReact.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F60690131CA2766F0003FB26;
 			remoteInfo = RealmReact;
+		};
+		32CADBE91D709B54006122E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D6553A0A1BB4AC796F299D1 /* RNDeviceInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA5891D81BA9A9FC002B4DB2;
+			remoteInfo = RNDeviceInfo;
 		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -214,9 +192,6 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* AndyWarholAccessibilityProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AndyWarholAccessibilityProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* AndyWarholAccessibilityProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AndyWarholAccessibilityProjectTests.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AndyWarholAccessibilityProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndyWarholAccessibilityProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,110 +201,92 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AndyWarholAccessibilityProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AndyWarholAccessibilityProject/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		322462E61D1AC5AF00C847AB /* CMSAccessibilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSAccessibilityManager.swift; sourceTree = "<group>"; };
-		322462E81D1AC66800C847AB /* CMSAccessibilityManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSAccessibilityManagerBridge.m; sourceTree = "<group>"; };
-		322975EA1D5A127F00C6F2B8 /* newYork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newYork.png; sourceTree = "<group>"; };
-		322975EC1D5A27E500C6F2B8 /* andyAndJulia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = andyAndJulia.png; sourceTree = "<group>"; };
-		322975ED1D5A27E500C6F2B8 /* asia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asia.png; sourceTree = "<group>"; };
-		322975EE1D5A27E500C6F2B8 /* blottedLineStill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blottedLineStill.png; sourceTree = "<group>"; };
-		322975EF1D5A27E500C6F2B8 /* campbells.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campbells.png; sourceTree = "<group>"; };
-		322975F01D5A27E500C6F2B8 /* childhood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childhood.png; sourceTree = "<group>"; };
-		322975F11D5A27E500C6F2B8 /* cocaCola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocaCola.png; sourceTree = "<group>"; };
-		322975F21D5A27E500C6F2B8 /* collegeYears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collegeYears.png; sourceTree = "<group>"; };
-		322975F31D5A27E500C6F2B8 /* commercialWork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = commercialWork.png; sourceTree = "<group>"; };
-		322975F41D5A27E500C6F2B8 /* earlyYears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earlyYears.png; sourceTree = "<group>"; };
-		322975F51D5A27E500C6F2B8 /* lobbySpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lobbySpace.png; sourceTree = "<group>"; };
-		322975F61D5A27E500C6F2B8 /* tactile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tactile.png; sourceTree = "<group>"; };
-		322976021D5A2E3700C6F2B8 /* museumBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = museumBackground.png; sourceTree = "<group>"; };
-		32C617A31D522F88009416CE /* Warhola_Donald_7th-Floor-Overview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_Donald_7th-Floor-Overview.mp3"; sourceTree = "<group>"; };
-		32C617A51D5231C0009416CE /* Childhood_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Childhood_Visual.mp3; sourceTree = "<group>"; };
-		32C617A61D5231C0009416CE /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_Donald_Childhood_Carpatho-Rusyn.mp3"; sourceTree = "<group>"; };
-		32C617A71D5231C0009416CE /* Warhola_Donald_Childhood_Family_portrait.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Childhood_Family_portrait.mp3; sourceTree = "<group>"; };
-		32C617A81D5231C0009416CE /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3; sourceTree = "<group>"; };
-		32C617A91D5231C0009416CE /* Warhola_Donald_Childhood_Warhola_Family.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Childhood_Warhola_Family.mp3; sourceTree = "<group>"; };
-		32C617AA1D5231C0009416CE /* Warhola_Donald-Childhood_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_Donald-Childhood_Introduction.mp3"; sourceTree = "<group>"; };
-		32C617AB1D5231C0009416CE /* Warhola_John_Movie_Projector-v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_John_Movie_Projector-v2.mp3"; sourceTree = "<group>"; };
-		32C617B31D523372009416CE /* Beck_Jessica_College-Years_AAP.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_College-Years_AAP.mp3"; sourceTree = "<group>"; };
-		32C617B41D523372009416CE /* Beck_Jessica_College-Years_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_College-Years_Introduction.mp3"; sourceTree = "<group>"; };
-		32C617B51D523372009416CE /* Beck_Jessica_College-Years_Nosepicker-v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_College-Years_Nosepicker-v2.mp3"; sourceTree = "<group>"; };
-		32C617B71D523372009416CE /* CollegeYears_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CollegeYears_Visual.mp3; sourceTree = "<group>"; };
-		32C617B81D523372009416CE /* Pearlstein_Meeting_Andy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pearlstein_Meeting_Andy.mp3; sourceTree = "<group>"; };
-		32C617B91D523372009416CE /* Warhola_Donald_College-Years_Sense-of-Humor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_Donald_College-Years_Sense-of-Humor.mp3"; sourceTree = "<group>"; };
-		32C617C11D5234CE009416CE /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_New-York_Commercial-Fine-Art.mp3"; sourceTree = "<group>"; };
-		32C617C21D5234CE009416CE /* Beck_Jessica_New-York_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_New-York_Introduction.mp3"; sourceTree = "<group>"; };
-		32C617C31D5234CE009416CE /* Beck_Jessica_New-York_Persona.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_New-York_Persona.mp3"; sourceTree = "<group>"; };
-		32C617C41D5234CE009416CE /* Beck_Jessica_New-York_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_New-York_Success.mp3"; sourceTree = "<group>"; };
-		32C617C51D5234CE009416CE /* Pearlstein_Moving_to_NYC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pearlstein_Moving_to_NYC.mp3; sourceTree = "<group>"; };
-		32C617C61D5234CE009416CE /* PittsburghNewYork_VIsual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PittsburghNewYork_VIsual.mp3; sourceTree = "<group>"; };
-		32C617C71D5234CE009416CE /* Singelis_Walks_in_NewYork.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Singelis_Walks_in_NewYork.mp3; sourceTree = "<group>"; };
-		32C617CF1D523600009416CE /* Blotted-Line_Collaboration_v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blotted-Line_Collaboration_v2.mp3"; sourceTree = "<group>"; };
-		32C617D01D523600009416CE /* Blotted-Line_Commercial_to_fine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blotted-Line_Commercial_to_fine.mp3"; sourceTree = "<group>"; };
-		32C617D11D523600009416CE /* Blotted-Line_Introduction_v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blotted-Line_Introduction_v2.mp3"; sourceTree = "<group>"; };
-		32C617D21D523600009416CE /* Blotted-Line_Process_v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blotted-Line_Process_v2.mp3"; sourceTree = "<group>"; };
-		32C617D71D523690009416CE /* AndyAndJulia_visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AndyAndJulia_visual.mp3; sourceTree = "<group>"; };
-		32C617D81D523690009416CE /* Warhola_Donald_Julia_Mothers_Influence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Julia_Mothers_Influence.mp3; sourceTree = "<group>"; };
-		32C617D91D523690009416CE /* Warhola_Donald_Julia_Prayer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Julia_Prayer.mp3; sourceTree = "<group>"; };
-		32C617DA1D523690009416CE /* Warhola_Donald_Julia_Signature_style.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Julia_Signature_style.mp3; sourceTree = "<group>"; };
-		32C617DB1D523690009416CE /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Julia_The_Boss_Is_Going.mp3; sourceTree = "<group>"; };
-		32C617DC1D523690009416CE /* Warhola_Donald-Julia_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_Donald-Julia_Introduction.mp3"; sourceTree = "<group>"; };
-		32C617DD1D523690009416CE /* Warhola_Julia_Folksong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Julia_Folksong.mp3; sourceTree = "<group>"; };
-		32C617E51D52379F009416CE /* Diaz_Jose-World_Travels-Boy_Book.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-World_Travels-Boy_Book.mp3"; sourceTree = "<group>"; };
-		32C617E61D52379F009416CE /* Diaz_Jose-World_Travels-Intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-World_Travels-Intro.mp3"; sourceTree = "<group>"; };
-		32C617E71D52379F009416CE /* Diaz_Jose-World_Travels-Sketching.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-World_Travels-Sketching.mp3"; sourceTree = "<group>"; };
-		32C617E81D52379F009416CE /* WorldTravels_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WorldTravels_Visual.mp3; sourceTree = "<group>"; };
-		32C617ED1D5238D7009416CE /* CommercialWork_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CommercialWork_Visual.mp3; sourceTree = "<group>"; };
-		32C617EE1D5238D7009416CE /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Commercial_Art-I_Miller.mp3"; sourceTree = "<group>"; };
-		32C617EF1D5238D7009416CE /* Diaz_Jose-Commercial_Art-Intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Commercial_Art-Intro.mp3"; sourceTree = "<group>"; };
-		32C617F01D5238D7009416CE /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3"; sourceTree = "<group>"; };
-		32C617F51D523CC2009416CE /* TactileFemaleFashionFigure_Tactile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TactileFemaleFashionFigure_Tactile.mp3; sourceTree = "<group>"; };
-		32C617F61D523CC2009416CE /* TactileFemaleFashionFigure_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TactileFemaleFashionFigure_Visual.mp3; sourceTree = "<group>"; };
-		32C617F91D523D5F009416CE /* TactileRecliningMaleTorso_Tactile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TactileRecliningMaleTorso_Tactile.mp3; sourceTree = "<group>"; };
-		32C617FA1D523D5F009416CE /* TactileRecliningMaleTorso_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TactileRecliningMaleTorso_Visual.mp3; sourceTree = "<group>"; };
-		32C617FE1D523E13009416CE /* TactileCocaCola_Tactile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TactileCocaCola_Tactile.mp3; sourceTree = "<group>"; };
-		32C618011D523EB7009416CE /* CocaCola_Tactile_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CocaCola_Tactile_Visual.mp3; sourceTree = "<group>"; };
-		32C618031D523F63009416CE /* CocaCola_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CocaCola_Visual.mp3; sourceTree = "<group>"; };
-		32C618041D523F63009416CE /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Coke-Hand_Painted_Pop.mp3"; sourceTree = "<group>"; };
-		32C618051D523F63009416CE /* JBeck_AndyWarholAiWeiwei.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JBeck_AndyWarholAiWeiwei.mp3; sourceTree = "<group>"; };
-		32C618061D523F63009416CE /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Marsden_Grace_Coca-Cola_Expressionist_elements.mp3"; sourceTree = "<group>"; };
-		32C618071D523F63009416CE /* Marsden_Grace_Coca-Cola_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Marsden_Grace_Coca-Cola_Introduction.mp3"; sourceTree = "<group>"; };
-		32C618081D523F63009416CE /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Marsden_Grace_Coca-Cola_Mass-Appeal.mp3"; sourceTree = "<group>"; };
-		32C6180F1D5240E3009416CE /* Campbells_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Campbells_Visual.mp3; sourceTree = "<group>"; };
-		32C618101D5240E3009416CE /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Marsden_Grace_Campbells_AbEx-to-Pop.mp3"; sourceTree = "<group>"; };
-		32C618111D5240E3009416CE /* Marsden_Grace_Campbells_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marsden_Grace_Campbells_Introduction.mp3; sourceTree = "<group>"; };
-		32C618121D5240E3009416CE /* Marsden_Grace_Campbells_Torn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marsden_Grace_Campbells_Torn.mp3; sourceTree = "<group>"; };
-		32C618131D5240E3009416CE /* Singelis_Campbells.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Singelis_Campbells.mp3; sourceTree = "<group>"; };
-		32E27B3F1CEF8FF2000F775E /* AndyWarholAccessibilityProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AndyWarholAccessibilityProject-Bridging-Header.h"; sourceTree = "<group>"; };
-		32E27B401CEF8FF2000F775E /* CMSBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSBeaconManager.swift; sourceTree = "<group>"; };
-		32E27B411CEF8FF2000F775E /* CMSBeaconManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSBeaconManagerBridge.m; sourceTree = "<group>"; };
-		32F7EF8D1CF4B32800A8C236 /* CMSAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSAudioManager.swift; sourceTree = "<group>"; };
-		32F7EF8F1CF4B38800A8C236 /* CMSAudioManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSAudioManagerBridge.m; sourceTree = "<group>"; };
-		55FF292B07FD905ACEBC74D8 /* Pods-AndyWarholAccessibilityProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject.release.xcconfig"; sourceTree = "<group>"; };
+		2269C6073CFD2C7947542405 /* Pods-AndyWarholAccessibilityProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject.release.xcconfig"; sourceTree = "<group>"; };
+		2D260585236149398895A4E6 /* libRealmReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRealmReact.a; sourceTree = "<group>"; };
+		3219C0DA1DA42D6300A14415 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		32CADB291D709A39006122E5 /* andyAndJulia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = andyAndJulia.png; sourceTree = "<group>"; };
+		32CADB2A1D709A39006122E5 /* asia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asia.png; sourceTree = "<group>"; };
+		32CADB2B1D709A39006122E5 /* blottedLineStill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blottedLineStill.png; sourceTree = "<group>"; };
+		32CADB2C1D709A39006122E5 /* campbells.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campbells.png; sourceTree = "<group>"; };
+		32CADB2D1D709A39006122E5 /* childhood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childhood.png; sourceTree = "<group>"; };
+		32CADB2E1D709A39006122E5 /* cocaCola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocaCola.png; sourceTree = "<group>"; };
+		32CADB301D709A39006122E5 /* commercialWork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = commercialWork.png; sourceTree = "<group>"; };
+		32CADB311D709A39006122E5 /* earlyYears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earlyYears.png; sourceTree = "<group>"; };
+		32CADB321D709A39006122E5 /* lobbySpace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lobbySpace.png; sourceTree = "<group>"; };
+		32CADB331D709A39006122E5 /* museumBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = museumBackground.png; sourceTree = "<group>"; };
+		32CADB341D709A39006122E5 /* newYork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newYork.png; sourceTree = "<group>"; };
+		32CADB441D709AC3006122E5 /* AndyAndJulia_visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AndyAndJulia_visual.mp3; sourceTree = "<group>"; };
+		32CADB481D709AC3006122E5 /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_New-York_Commercial-Fine-Art.mp3"; sourceTree = "<group>"; };
+		32CADB491D709AC3006122E5 /* Beck_Jessica_New-York_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_New-York_Introduction.mp3"; sourceTree = "<group>"; };
+		32CADB4A1D709AC3006122E5 /* Beck_Jessica_New-York_Persona.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_New-York_Persona.mp3"; sourceTree = "<group>"; };
+		32CADB4B1D709AC3006122E5 /* Beck_Jessica_New-York_Success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_New-York_Success.mp3"; sourceTree = "<group>"; };
+		32CADB4C1D709AC3006122E5 /* Blotted-Line_Collaboration_v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blotted-Line_Collaboration_v2.mp3"; sourceTree = "<group>"; };
+		32CADB4D1D709AC3006122E5 /* Blotted-Line_Commercial_to_fine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blotted-Line_Commercial_to_fine.mp3"; sourceTree = "<group>"; };
+		32CADB4E1D709AC3006122E5 /* Blotted-Line_Introduction_v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blotted-Line_Introduction_v2.mp3"; sourceTree = "<group>"; };
+		32CADB4F1D709AC3006122E5 /* Blotted-Line_Process_v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blotted-Line_Process_v2.mp3"; sourceTree = "<group>"; };
+		32CADB501D709AC3006122E5 /* Campbells_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Campbells_Visual.mp3; sourceTree = "<group>"; };
+		32CADB511D709AC3006122E5 /* Childhood_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Childhood_Visual.mp3; sourceTree = "<group>"; };
+		32CADB521D709AC3006122E5 /* CocaCola_Tactile_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CocaCola_Tactile_Visual.mp3; sourceTree = "<group>"; };
+		32CADB531D709AC3006122E5 /* CocaCola_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CocaCola_Visual.mp3; sourceTree = "<group>"; };
+		32CADB551D709AC3006122E5 /* CommercialWork_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CommercialWork_Visual.mp3; sourceTree = "<group>"; };
+		32CADB561D709AC3006122E5 /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Coke-Hand_Painted_Pop.mp3"; sourceTree = "<group>"; };
+		32CADB571D709AC3006122E5 /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Commercial_Art-I_Miller.mp3"; sourceTree = "<group>"; };
+		32CADB581D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Commercial_Art-Intro.mp3"; sourceTree = "<group>"; };
+		32CADB591D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3"; sourceTree = "<group>"; };
+		32CADB5A1D709AC3006122E5 /* Diaz_Jose-World_Travels-Boy_Book.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-World_Travels-Boy_Book.mp3"; sourceTree = "<group>"; };
+		32CADB5B1D709AC3006122E5 /* Diaz_Jose-World_Travels-Intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-World_Travels-Intro.mp3"; sourceTree = "<group>"; };
+		32CADB5C1D709AC3006122E5 /* Diaz_Jose-World_Travels-Sketching.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-World_Travels-Sketching.mp3"; sourceTree = "<group>"; };
+		32CADB5E1D709AC3006122E5 /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Marsden_Grace_Campbells_AbEx-to-Pop.mp3"; sourceTree = "<group>"; };
+		32CADB5F1D709AC3006122E5 /* Marsden_Grace_Campbells_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marsden_Grace_Campbells_Introduction.mp3; sourceTree = "<group>"; };
+		32CADB601D709AC3006122E5 /* Marsden_Grace_Campbells_Torn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marsden_Grace_Campbells_Torn.mp3; sourceTree = "<group>"; };
+		32CADB611D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Marsden_Grace_Coca-Cola_Expressionist_elements.mp3"; sourceTree = "<group>"; };
+		32CADB621D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Marsden_Grace_Coca-Cola_Introduction.mp3"; sourceTree = "<group>"; };
+		32CADB631D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Marsden_Grace_Coca-Cola_Mass-Appeal.mp3"; sourceTree = "<group>"; };
+		32CADB651D709AC3006122E5 /* Pearlstein_Moving_to_NYC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pearlstein_Moving_to_NYC.mp3; sourceTree = "<group>"; };
+		32CADB661D709AC3006122E5 /* PittsburghNewYork_VIsual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PittsburghNewYork_VIsual.mp3; sourceTree = "<group>"; };
+		32CADB671D709AC3006122E5 /* Singelis_Campbells.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Singelis_Campbells.mp3; sourceTree = "<group>"; };
+		32CADB681D709AC3006122E5 /* Singelis_Walks_in_NewYork.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Singelis_Walks_in_NewYork.mp3; sourceTree = "<group>"; };
+		32CADB691D709AC3006122E5 /* TactileCocaCola_Tactile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TactileCocaCola_Tactile.mp3; sourceTree = "<group>"; };
+		32CADB6A1D709AC3006122E5 /* TactileFemaleFashionFigure_Tactile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TactileFemaleFashionFigure_Tactile.mp3; sourceTree = "<group>"; };
+		32CADB6B1D709AC3006122E5 /* TactileFemaleFashionFigure_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TactileFemaleFashionFigure_Visual.mp3; sourceTree = "<group>"; };
+		32CADB6C1D709AC3006122E5 /* TactileRecliningMaleTorso_Tactile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TactileRecliningMaleTorso_Tactile.mp3; sourceTree = "<group>"; };
+		32CADB6D1D709AC3006122E5 /* TactileRecliningMaleTorso_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TactileRecliningMaleTorso_Visual.mp3; sourceTree = "<group>"; };
+		32CADB6E1D709AC3006122E5 /* Warhola_Donald_7th-Floor-Overview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_Donald_7th-Floor-Overview.mp3"; sourceTree = "<group>"; };
+		32CADB6F1D709AC3006122E5 /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_Donald_Childhood_Carpatho-Rusyn.mp3"; sourceTree = "<group>"; };
+		32CADB701D709AC3006122E5 /* Warhola_Donald_Childhood_Family_portrait.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Childhood_Family_portrait.mp3; sourceTree = "<group>"; };
+		32CADB711D709AC3006122E5 /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3; sourceTree = "<group>"; };
+		32CADB721D709AC3006122E5 /* Warhola_Donald_Childhood_Warhola_Family.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Childhood_Warhola_Family.mp3; sourceTree = "<group>"; };
+		32CADB741D709AC3006122E5 /* Warhola_Donald_Julia_Mothers_Influence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Julia_Mothers_Influence.mp3; sourceTree = "<group>"; };
+		32CADB751D709AC3006122E5 /* Warhola_Donald_Julia_Prayer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Julia_Prayer.mp3; sourceTree = "<group>"; };
+		32CADB761D709AC3006122E5 /* Warhola_Donald_Julia_Signature_style.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Julia_Signature_style.mp3; sourceTree = "<group>"; };
+		32CADB771D709AC3006122E5 /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Donald_Julia_The_Boss_Is_Going.mp3; sourceTree = "<group>"; };
+		32CADB781D709AC3006122E5 /* Warhola_Donald-Childhood_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_Donald-Childhood_Introduction.mp3"; sourceTree = "<group>"; };
+		32CADB791D709AC3006122E5 /* Warhola_Donald-Julia_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_Donald-Julia_Introduction.mp3"; sourceTree = "<group>"; };
+		32CADB7A1D709AC3006122E5 /* Warhola_John_Movie_Projector-v2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Warhola_John_Movie_Projector-v2.mp3"; sourceTree = "<group>"; };
+		32CADB7B1D709AC3006122E5 /* Warhola_Julia_Folksong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warhola_Julia_Folksong.mp3; sourceTree = "<group>"; };
+		32CADB7C1D709AC3006122E5 /* WorldTravels_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WorldTravels_Visual.mp3; sourceTree = "<group>"; };
+		32CADBB61D709B14006122E5 /* AndyWarholAccessibilityProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AndyWarholAccessibilityProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		32CADBB71D709B15006122E5 /* CMSAccessibilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSAccessibilityManager.swift; sourceTree = "<group>"; };
+		32CADBB81D709B15006122E5 /* CMSAccessibilityManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSAccessibilityManagerBridge.m; sourceTree = "<group>"; };
+		32CADBB91D709B15006122E5 /* CMSAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSAudioManager.swift; sourceTree = "<group>"; };
+		32CADBBA1D709B15006122E5 /* CMSAudioManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSAudioManagerBridge.m; sourceTree = "<group>"; };
+		32CADBBB1D709B15006122E5 /* CMSBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSBeaconManager.swift; sourceTree = "<group>"; };
+		32CADBBC1D709B15006122E5 /* CMSBeaconManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSBeaconManagerBridge.m; sourceTree = "<group>"; };
+		32DADA851DBA96DD003D00DE /* Tactile-Coca-Cola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tactile-Coca-Cola.png"; sourceTree = "<group>"; };
+		32DADA861DBA96DD003D00DE /* Tactile-Female_Fashion_Figure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tactile-Female_Fashion_Figure.png"; sourceTree = "<group>"; };
+		32DADA871DBA96DD003D00DE /* Tactile-Reclining_Male_Torso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tactile-Reclining_Male_Torso.png"; sourceTree = "<group>"; };
+		5DE6AA1E78184C068BD5FFD2 /* RealmReact.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RealmReact.xcodeproj; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; };
+		6D6553A0A1BB4AC796F299D1 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		8580C593D45B4E8A856CDA75 /* libRNBlur.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNBlur.a; sourceTree = "<group>"; };
-		925834FC462E4FE5ADFF359F /* RNBlur.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNBlur.xcodeproj; path = "../node_modules/react-native-blur/ios/RNBlur.xcodeproj"; sourceTree = "<group>"; };
-		9D432642DF347AC61D116DEB /* Pods_AndyWarholAccessibilityProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AndyWarholAccessibilityProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B240748C851F498B81360E86 /* libc++.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		B61AF744939092D981BC0DE1 /* Pods-AndyWarholAccessibilityProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProjectTests/Pods-AndyWarholAccessibilityProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BAE0AACF679E451B9ADAEABB /* libRealmReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRealmReact.a; sourceTree = "<group>"; };
-		BF5C5CF0CB9D4303A0329EC6 /* RealmReact.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RealmReact.xcodeproj; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; };
-		C67B26E72E38829936FC3317 /* Pods-AndyWarholAccessibilityProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProjectTests/Pods-AndyWarholAccessibilityProjectTests.release.xcconfig"; sourceTree = "<group>"; };
-		D7560D28523B46C29992905C /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
-		DBD73C3EDCC241209E215329 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		DED8ED129B66FEAEAD0E51C7 /* Pods-AndyWarholAccessibilityProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject.debug.xcconfig"; sourceTree = "<group>"; };
-		E33D35D9835445FE8268DCCE /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
-		FD878347E38970A228DAC04F /* Pods_AndyWarholAccessibilityProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AndyWarholAccessibilityProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95AFA373C9D0BDC4AEFE09E8 /* Pods-AndyWarholAccessibilityProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject.debug.xcconfig"; sourceTree = "<group>"; };
+		AC665411C24E4CF6A5C2773D /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B41FF1C7176CF695511DE78D /* Pods_AndyWarholAccessibilityProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AndyWarholAccessibilityProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9653058D874183A3A559DA /* libc++.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		DBB1D3D947CE4DEC804D02F2 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8A54C255B3007466D6E28C3 /* Pods_AndyWarholAccessibilityProjectTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,12 +301,11 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				D135B9C8892D5369A435F7CA /* Pods_AndyWarholAccessibilityProject.framework in Frameworks */,
-				93B591D8B3A04E2B8DA81B54 /* libRNBlur.a in Frameworks */,
-				4C93AA3FBAC344DEA71C537D /* libRealmReact.a in Frameworks */,
-				8C702295C2AF44738CD076F1 /* libc++.tbd in Frameworks */,
-				303EA7CBFB44400E98D04D53 /* libz.tbd in Frameworks */,
-				E3634AC9091841FC963438DB /* libRNDeviceInfo.a in Frameworks */,
+				633BA1BC7B8F408A96F0F333 /* libRNDeviceInfo.a in Frameworks */,
+				F69CF019DCD14030BF6E6846 /* libRealmReact.a in Frameworks */,
+				498E19D7529C4582BD5F2D5D /* libc++.tbd in Frameworks */,
+				89DB25260881405EB749C488 /* libz.tbd in Frameworks */,
+				FA520F5123227F6EF74BC023 /* Pods_AndyWarholAccessibilityProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,23 +352,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* AndyWarholAccessibilityProjectTests */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F21AD99517003FC87E /* AndyWarholAccessibilityProjectTests.m */,
-				00E356F01AD99517003FC87E /* Supporting Files */,
-			);
-			path = AndyWarholAccessibilityProjectTests;
-			sourceTree = "<group>";
-		};
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,15 +371,16 @@
 		13B07FAE1A68108700A75B9A /* AndyWarholAccessibilityProject */ = {
 			isa = PBXGroup;
 			children = (
-				322975E91D5A126B00C6F2B8 /* Images */,
-				32C617961D522F4C009416CE /* Audio */,
+				32CADB431D709A3D006122E5 /* audio */,
+				32CADB281D709A30006122E5 /* images */,
+				3219C0DA1DA42D6300A14415 /* Settings.bundle */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				32E27B3F1CEF8FF2000F775E /* AndyWarholAccessibilityProject-Bridging-Header.h */,
+				32CADBB61D709B14006122E5 /* AndyWarholAccessibilityProject-Bridging-Header.h */,
 			);
 			name = AndyWarholAccessibilityProject;
 			sourceTree = "<group>";
@@ -453,160 +393,135 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		322462E51D1AC58100C847AB /* CMS Accessibility Manager */ = {
+		32CADB281D709A30006122E5 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				322462E61D1AC5AF00C847AB /* CMSAccessibilityManager.swift */,
-				322462E81D1AC66800C847AB /* CMSAccessibilityManagerBridge.m */,
+				32CADB291D709A39006122E5 /* andyAndJulia.png */,
+				32CADB2A1D709A39006122E5 /* asia.png */,
+				32CADB2B1D709A39006122E5 /* blottedLineStill.png */,
+				32CADB2C1D709A39006122E5 /* campbells.png */,
+				32CADB2D1D709A39006122E5 /* childhood.png */,
+				32CADB2E1D709A39006122E5 /* cocaCola.png */,
+				32CADB301D709A39006122E5 /* commercialWork.png */,
+				32CADB311D709A39006122E5 /* earlyYears.png */,
+				32CADB321D709A39006122E5 /* lobbySpace.png */,
+				32DADA851DBA96DD003D00DE /* Tactile-Coca-Cola.png */,
+				32DADA861DBA96DD003D00DE /* Tactile-Female_Fashion_Figure.png */,
+				32DADA871DBA96DD003D00DE /* Tactile-Reclining_Male_Torso.png */,
+				32CADB331D709A39006122E5 /* museumBackground.png */,
+				32CADB341D709A39006122E5 /* newYork.png */,
 			);
-			name = "CMS Accessibility Manager";
+			name = images;
 			sourceTree = "<group>";
 		};
-		322975E91D5A126B00C6F2B8 /* Images */ = {
+		32CADB431D709A3D006122E5 /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				322976021D5A2E3700C6F2B8 /* museumBackground.png */,
-				322975EA1D5A127F00C6F2B8 /* newYork.png */,
-				322975EC1D5A27E500C6F2B8 /* andyAndJulia.png */,
-				322975ED1D5A27E500C6F2B8 /* asia.png */,
-				322975EE1D5A27E500C6F2B8 /* blottedLineStill.png */,
-				322975EF1D5A27E500C6F2B8 /* campbells.png */,
-				322975F01D5A27E500C6F2B8 /* childhood.png */,
-				322975F11D5A27E500C6F2B8 /* cocaCola.png */,
-				322975F21D5A27E500C6F2B8 /* collegeYears.png */,
-				322975F31D5A27E500C6F2B8 /* commercialWork.png */,
-				322975F41D5A27E500C6F2B8 /* earlyYears.png */,
-				322975F51D5A27E500C6F2B8 /* lobbySpace.png */,
-				322975F61D5A27E500C6F2B8 /* tactile.png */,
+				32CADB441D709AC3006122E5 /* AndyAndJulia_visual.mp3 */,
+				32CADB481D709AC3006122E5 /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 */,
+				32CADB491D709AC3006122E5 /* Beck_Jessica_New-York_Introduction.mp3 */,
+				32CADB4A1D709AC3006122E5 /* Beck_Jessica_New-York_Persona.mp3 */,
+				32CADB4B1D709AC3006122E5 /* Beck_Jessica_New-York_Success.mp3 */,
+				32CADB4C1D709AC3006122E5 /* Blotted-Line_Collaboration_v2.mp3 */,
+				32CADB4D1D709AC3006122E5 /* Blotted-Line_Commercial_to_fine.mp3 */,
+				32CADB4E1D709AC3006122E5 /* Blotted-Line_Introduction_v2.mp3 */,
+				32CADB4F1D709AC3006122E5 /* Blotted-Line_Process_v2.mp3 */,
+				32CADB501D709AC3006122E5 /* Campbells_Visual.mp3 */,
+				32CADB511D709AC3006122E5 /* Childhood_Visual.mp3 */,
+				32CADB521D709AC3006122E5 /* CocaCola_Tactile_Visual.mp3 */,
+				32CADB531D709AC3006122E5 /* CocaCola_Visual.mp3 */,
+				32CADB551D709AC3006122E5 /* CommercialWork_Visual.mp3 */,
+				32CADB561D709AC3006122E5 /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */,
+				32CADB571D709AC3006122E5 /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */,
+				32CADB581D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Intro.mp3 */,
+				32CADB591D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 */,
+				32CADB5A1D709AC3006122E5 /* Diaz_Jose-World_Travels-Boy_Book.mp3 */,
+				32CADB5B1D709AC3006122E5 /* Diaz_Jose-World_Travels-Intro.mp3 */,
+				32CADB5C1D709AC3006122E5 /* Diaz_Jose-World_Travels-Sketching.mp3 */,
+				32CADB5E1D709AC3006122E5 /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 */,
+				32CADB5F1D709AC3006122E5 /* Marsden_Grace_Campbells_Introduction.mp3 */,
+				32CADB601D709AC3006122E5 /* Marsden_Grace_Campbells_Torn.mp3 */,
+				32CADB611D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 */,
+				32CADB621D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Introduction.mp3 */,
+				32CADB631D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 */,
+				32CADB651D709AC3006122E5 /* Pearlstein_Moving_to_NYC.mp3 */,
+				32CADB661D709AC3006122E5 /* PittsburghNewYork_VIsual.mp3 */,
+				32CADB671D709AC3006122E5 /* Singelis_Campbells.mp3 */,
+				32CADB681D709AC3006122E5 /* Singelis_Walks_in_NewYork.mp3 */,
+				32CADB691D709AC3006122E5 /* TactileCocaCola_Tactile.mp3 */,
+				32CADB6A1D709AC3006122E5 /* TactileFemaleFashionFigure_Tactile.mp3 */,
+				32CADB6B1D709AC3006122E5 /* TactileFemaleFashionFigure_Visual.mp3 */,
+				32CADB6C1D709AC3006122E5 /* TactileRecliningMaleTorso_Tactile.mp3 */,
+				32CADB6D1D709AC3006122E5 /* TactileRecliningMaleTorso_Visual.mp3 */,
+				32CADB6E1D709AC3006122E5 /* Warhola_Donald_7th-Floor-Overview.mp3 */,
+				32CADB6F1D709AC3006122E5 /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 */,
+				32CADB701D709AC3006122E5 /* Warhola_Donald_Childhood_Family_portrait.mp3 */,
+				32CADB711D709AC3006122E5 /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 */,
+				32CADB721D709AC3006122E5 /* Warhola_Donald_Childhood_Warhola_Family.mp3 */,
+				32CADB741D709AC3006122E5 /* Warhola_Donald_Julia_Mothers_Influence.mp3 */,
+				32CADB751D709AC3006122E5 /* Warhola_Donald_Julia_Prayer.mp3 */,
+				32CADB761D709AC3006122E5 /* Warhola_Donald_Julia_Signature_style.mp3 */,
+				32CADB771D709AC3006122E5 /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 */,
+				32CADB781D709AC3006122E5 /* Warhola_Donald-Childhood_Introduction.mp3 */,
+				32CADB791D709AC3006122E5 /* Warhola_Donald-Julia_Introduction.mp3 */,
+				32CADB7A1D709AC3006122E5 /* Warhola_John_Movie_Projector-v2.mp3 */,
+				32CADB7B1D709AC3006122E5 /* Warhola_Julia_Folksong.mp3 */,
+				32CADB7C1D709AC3006122E5 /* WorldTravels_Visual.mp3 */,
 			);
-			name = Images;
+			name = audio;
 			sourceTree = "<group>";
 		};
-		322976111D5B682000C6F2B8 /* Products */ = {
+		32CADBC31D709B25006122E5 /* Native Modules */ = {
 			isa = PBXGroup;
 			children = (
-				322976211D5B682000C6F2B8 /* libRNDeviceInfo.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		32C617961D522F4C009416CE /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				32C617A31D522F88009416CE /* Warhola_Donald_7th-Floor-Overview.mp3 */,
-				32C617A51D5231C0009416CE /* Childhood_Visual.mp3 */,
-				32C617A61D5231C0009416CE /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 */,
-				32C617A71D5231C0009416CE /* Warhola_Donald_Childhood_Family_portrait.mp3 */,
-				32C617A81D5231C0009416CE /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 */,
-				32C617A91D5231C0009416CE /* Warhola_Donald_Childhood_Warhola_Family.mp3 */,
-				32C617AA1D5231C0009416CE /* Warhola_Donald-Childhood_Introduction.mp3 */,
-				32C617AB1D5231C0009416CE /* Warhola_John_Movie_Projector-v2.mp3 */,
-				32C617B31D523372009416CE /* Beck_Jessica_College-Years_AAP.mp3 */,
-				32C617B41D523372009416CE /* Beck_Jessica_College-Years_Introduction.mp3 */,
-				32C617B51D523372009416CE /* Beck_Jessica_College-Years_Nosepicker-v2.mp3 */,
-				32C617B71D523372009416CE /* CollegeYears_Visual.mp3 */,
-				32C617B81D523372009416CE /* Pearlstein_Meeting_Andy.mp3 */,
-				32C617B91D523372009416CE /* Warhola_Donald_College-Years_Sense-of-Humor.mp3 */,
-				32C617C11D5234CE009416CE /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 */,
-				32C617C21D5234CE009416CE /* Beck_Jessica_New-York_Introduction.mp3 */,
-				32C617C31D5234CE009416CE /* Beck_Jessica_New-York_Persona.mp3 */,
-				32C617C41D5234CE009416CE /* Beck_Jessica_New-York_Success.mp3 */,
-				32C617C51D5234CE009416CE /* Pearlstein_Moving_to_NYC.mp3 */,
-				32C617C61D5234CE009416CE /* PittsburghNewYork_VIsual.mp3 */,
-				32C617C71D5234CE009416CE /* Singelis_Walks_in_NewYork.mp3 */,
-				32C617CF1D523600009416CE /* Blotted-Line_Collaboration_v2.mp3 */,
-				32C617D01D523600009416CE /* Blotted-Line_Commercial_to_fine.mp3 */,
-				32C617D11D523600009416CE /* Blotted-Line_Introduction_v2.mp3 */,
-				32C617D21D523600009416CE /* Blotted-Line_Process_v2.mp3 */,
-				32C617D71D523690009416CE /* AndyAndJulia_visual.mp3 */,
-				32C617D81D523690009416CE /* Warhola_Donald_Julia_Mothers_Influence.mp3 */,
-				32C617D91D523690009416CE /* Warhola_Donald_Julia_Prayer.mp3 */,
-				32C617DA1D523690009416CE /* Warhola_Donald_Julia_Signature_style.mp3 */,
-				32C617DB1D523690009416CE /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 */,
-				32C617DC1D523690009416CE /* Warhola_Donald-Julia_Introduction.mp3 */,
-				32C617DD1D523690009416CE /* Warhola_Julia_Folksong.mp3 */,
-				32C617E51D52379F009416CE /* Diaz_Jose-World_Travels-Boy_Book.mp3 */,
-				32C617E61D52379F009416CE /* Diaz_Jose-World_Travels-Intro.mp3 */,
-				32C617E71D52379F009416CE /* Diaz_Jose-World_Travels-Sketching.mp3 */,
-				32C617E81D52379F009416CE /* WorldTravels_Visual.mp3 */,
-				32C617ED1D5238D7009416CE /* CommercialWork_Visual.mp3 */,
-				32C617EE1D5238D7009416CE /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */,
-				32C617EF1D5238D7009416CE /* Diaz_Jose-Commercial_Art-Intro.mp3 */,
-				32C617F01D5238D7009416CE /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 */,
-				32C617F51D523CC2009416CE /* TactileFemaleFashionFigure_Tactile.mp3 */,
-				32C617F61D523CC2009416CE /* TactileFemaleFashionFigure_Visual.mp3 */,
-				32C617F91D523D5F009416CE /* TactileRecliningMaleTorso_Tactile.mp3 */,
-				32C617FA1D523D5F009416CE /* TactileRecliningMaleTorso_Visual.mp3 */,
-				32C618011D523EB7009416CE /* CocaCola_Tactile_Visual.mp3 */,
-				32C617FE1D523E13009416CE /* TactileCocaCola_Tactile.mp3 */,
-				32C618031D523F63009416CE /* CocaCola_Visual.mp3 */,
-				32C618041D523F63009416CE /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */,
-				32C618051D523F63009416CE /* JBeck_AndyWarholAiWeiwei.mp3 */,
-				32C618061D523F63009416CE /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 */,
-				32C618071D523F63009416CE /* Marsden_Grace_Coca-Cola_Introduction.mp3 */,
-				32C618081D523F63009416CE /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 */,
-				32C6180F1D5240E3009416CE /* Campbells_Visual.mp3 */,
-				32C618101D5240E3009416CE /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 */,
-				32C618111D5240E3009416CE /* Marsden_Grace_Campbells_Introduction.mp3 */,
-				32C618121D5240E3009416CE /* Marsden_Grace_Campbells_Torn.mp3 */,
-				32C618131D5240E3009416CE /* Singelis_Campbells.mp3 */,
-			);
-			name = Audio;
-			sourceTree = "<group>";
-		};
-		32DB93971D01EC7800EE0CDA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				32DB93A51D01EC7800EE0CDA /* libRNBlur.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		32E27B441CEF901E000F775E /* CMS Beacon Manager */ = {
-			isa = PBXGroup;
-			children = (
-				32E27B401CEF8FF2000F775E /* CMSBeaconManager.swift */,
-				32E27B411CEF8FF2000F775E /* CMSBeaconManagerBridge.m */,
-			);
-			name = "CMS Beacon Manager";
-			sourceTree = "<group>";
-		};
-		32F7EF8B1CF4B30000A8C236 /* Native Modules */ = {
-			isa = PBXGroup;
-			children = (
-				322462E51D1AC58100C847AB /* CMS Accessibility Manager */,
-				32F7EF8C1CF4B30800A8C236 /* CMS Audio Manager */,
-				32E27B441CEF901E000F775E /* CMS Beacon Manager */,
+				32CADBC41D709B33006122E5 /* CMSAccessibilityManager */,
+				32CADBC51D709B3C006122E5 /* CMSAudioManager */,
+				32CADBC61D709B45006122E5 /* CMSBeaconManager */,
 			);
 			name = "Native Modules";
 			sourceTree = "<group>";
 		};
-		32F7EF8C1CF4B30800A8C236 /* CMS Audio Manager */ = {
+		32CADBC41D709B33006122E5 /* CMSAccessibilityManager */ = {
 			isa = PBXGroup;
 			children = (
-				32F7EF8D1CF4B32800A8C236 /* CMSAudioManager.swift */,
-				32F7EF8F1CF4B38800A8C236 /* CMSAudioManagerBridge.m */,
+				32CADBB71D709B15006122E5 /* CMSAccessibilityManager.swift */,
+				32CADBB81D709B15006122E5 /* CMSAccessibilityManagerBridge.m */,
 			);
-			name = "CMS Audio Manager";
+			name = CMSAccessibilityManager;
 			sourceTree = "<group>";
 		};
-		32FD36E11D26A8FE00B44B2B /* Products */ = {
+		32CADBC51D709B3C006122E5 /* CMSAudioManager */ = {
 			isa = PBXGroup;
 			children = (
-				32FD36EF1D26A8FE00B44B2B /* libRealmReact.a */,
+				32CADBB91D709B15006122E5 /* CMSAudioManager.swift */,
+				32CADBBA1D709B15006122E5 /* CMSAudioManagerBridge.m */,
+			);
+			name = CMSAudioManager;
+			sourceTree = "<group>";
+		};
+		32CADBC61D709B45006122E5 /* CMSBeaconManager */ = {
+			isa = PBXGroup;
+			children = (
+				32CADBBB1D709B15006122E5 /* CMSBeaconManager.swift */,
+				32CADBBC1D709B15006122E5 /* CMSBeaconManagerBridge.m */,
+			);
+			name = CMSBeaconManager;
+			sourceTree = "<group>";
+		};
+		32CADBD21D709B54006122E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32CADBE01D709B54006122E5 /* libRealmReact.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5D85B7C409EE22BC898B06E9 /* Pods */ = {
+		32CADBE61D709B54006122E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DED8ED129B66FEAEAD0E51C7 /* Pods-AndyWarholAccessibilityProject.debug.xcconfig */,
-				55FF292B07FD905ACEBC74D8 /* Pods-AndyWarholAccessibilityProject.release.xcconfig */,
-				B61AF744939092D981BC0DE1 /* Pods-AndyWarholAccessibilityProjectTests.debug.xcconfig */,
-				C67B26E72E38829936FC3317 /* Pods-AndyWarholAccessibilityProjectTests.release.xcconfig */,
+				32CADBEA1D709B54006122E5 /* libRNDeviceInfo.a */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
@@ -617,13 +532,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7CC27B9F31794B5C65DE8EFE /* Frameworks */ = {
+		7B6A234911334064989ACC65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FD878347E38970A228DAC04F /* Pods_AndyWarholAccessibilityProject.framework */,
-				9D432642DF347AC61D116DEB /* Pods_AndyWarholAccessibilityProjectTests.framework */,
-				B240748C851F498B81360E86 /* libc++.tbd */,
-				DBD73C3EDCC241209E215329 /* libz.tbd */,
+				DA9653058D874183A3A559DA /* libc++.tbd */,
+				AC665411C24E4CF6A5C2773D /* libz.tbd */,
+				B41FF1C7176CF695511DE78D /* Pods_AndyWarholAccessibilityProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -641,9 +555,8 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				925834FC462E4FE5ADFF359F /* RNBlur.xcodeproj */,
-				BF5C5CF0CB9D4303A0329EC6 /* RealmReact.xcodeproj */,
-				D7560D28523B46C29992905C /* RNDeviceInfo.xcodeproj */,
+				6D6553A0A1BB4AC796F299D1 /* RNDeviceInfo.xcodeproj */,
+				5DE6AA1E78184C068BD5FFD2 /* RealmReact.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -660,12 +573,11 @@
 			isa = PBXGroup;
 			children = (
 				13B07FAE1A68108700A75B9A /* AndyWarholAccessibilityProject */,
-				32F7EF8B1CF4B30000A8C236 /* Native Modules */,
+				32CADBC31D709B25006122E5 /* Native Modules */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* AndyWarholAccessibilityProjectTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
-				5D85B7C409EE22BC898B06E9 /* Pods */,
-				7CC27B9F31794B5C65DE8EFE /* Frameworks */,
+				7B6A234911334064989ACC65 /* Frameworks */,
+				DDB73EE62462494BA5F483C2 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -675,46 +587,33 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* AndyWarholAccessibilityProject.app */,
-				00E356EE1AD99517003FC87E /* AndyWarholAccessibilityProjectTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DDB73EE62462494BA5F483C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95AFA373C9D0BDC4AEFE09E8 /* Pods-AndyWarholAccessibilityProject.debug.xcconfig */,
+				2269C6073CFD2C7947542405 /* Pods-AndyWarholAccessibilityProject.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* AndyWarholAccessibilityProjectTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AndyWarholAccessibilityProjectTests" */;
-			buildPhases = (
-				5D9961C2CCCAE5D7CD430C4C /* 📦 Check Pods Manifest.lock */,
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-				72002F0DB31C0AAADBB5AFBA /* 📦 Embed Pods Frameworks */,
-				4514F51C1A456ADC24DF4427 /* 📦 Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = AndyWarholAccessibilityProjectTests;
-			productName = AndyWarholAccessibilityProjectTests;
-			productReference = 00E356EE1AD99517003FC87E /* AndyWarholAccessibilityProjectTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		13B07F861A680F5B00A75B9A /* AndyWarholAccessibilityProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AndyWarholAccessibilityProject" */;
 			buildPhases = (
-				7A101D3FC552B59E8308830F /* 📦 Check Pods Manifest.lock */,
+				62005CCF276AF7413D933D8C /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				982A4456FE3AAAF18281816E /* 📦 Embed Pods Frameworks */,
-				F87CCEA54D6C49F3EC6F5794 /* 📦 Copy Pods Resources */,
+				EFEA163CE70E66E1B54EFA1D /* [CP] Embed Pods Frameworks */,
+				8F6D229BC7E2C417AAD8DDBE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -732,15 +631,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 730;
-				LastUpgradeCheck = 730;
+				LastUpgradeCheck = 800;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = SZY22WCGL8;
+						LastSwiftMigration = 800;
 					};
 				};
 			};
@@ -797,22 +693,17 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = 32FD36E11D26A8FE00B44B2B /* Products */;
-					ProjectRef = BF5C5CF0CB9D4303A0329EC6 /* RealmReact.xcodeproj */;
+					ProductGroup = 32CADBD21D709B54006122E5 /* Products */;
+					ProjectRef = 5DE6AA1E78184C068BD5FFD2 /* RealmReact.xcodeproj */;
 				},
 				{
-					ProductGroup = 32DB93971D01EC7800EE0CDA /* Products */;
-					ProjectRef = 925834FC462E4FE5ADFF359F /* RNBlur.xcodeproj */;
-				},
-				{
-					ProductGroup = 322976111D5B682000C6F2B8 /* Products */;
-					ProjectRef = D7560D28523B46C29992905C /* RNDeviceInfo.xcodeproj */;
+					ProductGroup = 32CADBE61D709B54006122E5 /* Products */;
+					ProjectRef = 6D6553A0A1BB4AC796F299D1 /* RNDeviceInfo.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* AndyWarholAccessibilityProject */,
-				00E356ED1AD99517003FC87E /* AndyWarholAccessibilityProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -874,25 +765,18 @@
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		322976211D5B682000C6F2B8 /* libRNDeviceInfo.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNDeviceInfo.a;
-			remoteRef = 322976201D5B682000C6F2B8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		32DB93A51D01EC7800EE0CDA /* libRNBlur.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNBlur.a;
-			remoteRef = 32DB93A41D01EC7800EE0CDA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		32FD36EF1D26A8FE00B44B2B /* libRealmReact.a */ = {
+		32CADBE01D709B54006122E5 /* libRealmReact.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRealmReact.a;
-			remoteRef = 32FD36EE1D26A8FE00B44B2B /* PBXContainerItemProxy */;
+			remoteRef = 32CADBDF1D709B54006122E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		32CADBEA1D709B54006122E5 /* libRNDeviceInfo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNDeviceInfo.a;
+			remoteRef = 32CADBE91D709B54006122E5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
@@ -912,88 +796,76 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322975FE1D5A27E500C6F2B8 /* commercialWork.png in Resources */,
-				32C617F31D5238D7009416CE /* Diaz_Jose-Commercial_Art-Intro.mp3 in Resources */,
-				32C617AD1D5231C0009416CE /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 in Resources */,
-				32C617EA1D52379F009416CE /* Diaz_Jose-World_Travels-Intro.mp3 in Resources */,
-				32C617FB1D523D5F009416CE /* TactileRecliningMaleTorso_Tactile.mp3 in Resources */,
-				322975FA1D5A27E500C6F2B8 /* campbells.png in Resources */,
-				322975FF1D5A27E500C6F2B8 /* earlyYears.png in Resources */,
-				32C617F81D523CC2009416CE /* TactileFemaleFashionFigure_Visual.mp3 in Resources */,
-				32C617AC1D5231C0009416CE /* Childhood_Visual.mp3 in Resources */,
-				32C617BA1D523372009416CE /* Beck_Jessica_College-Years_AAP.mp3 in Resources */,
-				322975F71D5A27E500C6F2B8 /* andyAndJulia.png in Resources */,
-				32C617B11D5231C0009416CE /* Warhola_Donald-Childhood_Introduction.mp3 in Resources */,
-				32C618181D5240E3009416CE /* Singelis_Campbells.mp3 in Resources */,
-				32C617BB1D523372009416CE /* Beck_Jessica_College-Years_Introduction.mp3 in Resources */,
-				32C617E31D523690009416CE /* Warhola_Donald-Julia_Introduction.mp3 in Resources */,
-				32C617D51D523600009416CE /* Blotted-Line_Introduction_v2.mp3 in Resources */,
-				32C617B21D5231C0009416CE /* Warhola_John_Movie_Projector-v2.mp3 in Resources */,
-				32C618141D5240E3009416CE /* Campbells_Visual.mp3 in Resources */,
-				322976011D5A27E500C6F2B8 /* tactile.png in Resources */,
-				322975FD1D5A27E500C6F2B8 /* collegeYears.png in Resources */,
-				32C617FC1D523D5F009416CE /* TactileRecliningMaleTorso_Visual.mp3 in Resources */,
-				32C617AE1D5231C0009416CE /* Warhola_Donald_Childhood_Family_portrait.mp3 in Resources */,
-				322975EB1D5A127F00C6F2B8 /* newYork.png in Resources */,
-				32C617BF1D523372009416CE /* Pearlstein_Meeting_Andy.mp3 in Resources */,
-				32C6180C1D523F63009416CE /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 in Resources */,
-				32C617E91D52379F009416CE /* Diaz_Jose-World_Travels-Boy_Book.mp3 in Resources */,
-				32C617CB1D5234CE009416CE /* Beck_Jessica_New-York_Success.mp3 in Resources */,
-				32C617F21D5238D7009416CE /* Diaz_Jose-Commercial_Art-I_Miller.mp3 in Resources */,
-				32C618021D523EB7009416CE /* CocaCola_Tactile_Visual.mp3 in Resources */,
+				32CADB391D709A39006122E5 /* campbells.png in Resources */,
+				32CADB3F1D709A39006122E5 /* lobbySpace.png in Resources */,
+				32CADBB51D709AC3006122E5 /* WorldTravels_Visual.mp3 in Resources */,
+				32CADBAE1D709AC3006122E5 /* Warhola_Donald_Julia_Prayer.mp3 in Resources */,
+				32CADB3B1D709A39006122E5 /* cocaCola.png in Resources */,
+				32CADBAA1D709AC3006122E5 /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 in Resources */,
+				32CADB8A1D709AC3006122E5 /* Childhood_Visual.mp3 in Resources */,
+				32CADB8B1D709AC3006122E5 /* CocaCola_Tactile_Visual.mp3 in Resources */,
+				32CADB831D709AC3006122E5 /* Beck_Jessica_New-York_Persona.mp3 in Resources */,
+				32CADB3D1D709A39006122E5 /* commercialWork.png in Resources */,
+				32CADBAD1D709AC3006122E5 /* Warhola_Donald_Julia_Mothers_Influence.mp3 in Resources */,
+				32CADB871D709AC3006122E5 /* Blotted-Line_Introduction_v2.mp3 in Resources */,
+				32CADB8E1D709AC3006122E5 /* CommercialWork_Visual.mp3 in Resources */,
+				32CADBA91D709AC3006122E5 /* Warhola_Donald_Childhood_Family_portrait.mp3 in Resources */,
+				3219C0DB1DA42D6300A14415 /* Settings.bundle in Resources */,
+				32CADB9C1D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 in Resources */,
+				32CADBB41D709AC3006122E5 /* Warhola_Julia_Folksong.mp3 in Resources */,
+				32CADB981D709AC3006122E5 /* Marsden_Grace_Campbells_Introduction.mp3 in Resources */,
+				32CADBB11D709AC3006122E5 /* Warhola_Donald-Childhood_Introduction.mp3 in Resources */,
+				32CADB911D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Intro.mp3 in Resources */,
+				32CADBA51D709AC3006122E5 /* TactileRecliningMaleTorso_Tactile.mp3 in Resources */,
+				32CADB971D709AC3006122E5 /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 in Resources */,
+				32CADB8F1D709AC3006122E5 /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 in Resources */,
+				32CADBA21D709AC3006122E5 /* TactileCocaCola_Tactile.mp3 in Resources */,
+				32CADBB01D709AC3006122E5 /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 in Resources */,
+				32CADBA61D709AC3006122E5 /* TactileRecliningMaleTorso_Visual.mp3 in Resources */,
+				32CADB3E1D709A39006122E5 /* earlyYears.png in Resources */,
+				32CADB8C1D709AC3006122E5 /* CocaCola_Visual.mp3 in Resources */,
+				32CADBA01D709AC3006122E5 /* Singelis_Campbells.mp3 in Resources */,
+				32DADA881DBA96DD003D00DE /* Tactile-Coca-Cola.png in Resources */,
+				32CADB841D709AC3006122E5 /* Beck_Jessica_New-York_Success.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				32C617B01D5231C0009416CE /* Warhola_Donald_Childhood_Warhola_Family.mp3 in Resources */,
-				32C617F41D5238D7009416CE /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 in Resources */,
-				32C617EC1D52379F009416CE /* WorldTravels_Visual.mp3 in Resources */,
-				32C617D31D523600009416CE /* Blotted-Line_Collaboration_v2.mp3 in Resources */,
-				32C617C81D5234CE009416CE /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 in Resources */,
-				32C617CD1D5234CE009416CE /* PittsburghNewYork_VIsual.mp3 in Resources */,
-				32C617E41D523690009416CE /* Warhola_Julia_Folksong.mp3 in Resources */,
-				32C617AF1D5231C0009416CE /* Warhola_Donald_Childhood_Growing_Up_in_the_Depression.mp3 in Resources */,
-				32C617CE1D5234CE009416CE /* Singelis_Walks_in_NewYork.mp3 in Resources */,
-				32C618001D523E13009416CE /* TactileCocaCola_Tactile.mp3 in Resources */,
-				32C618171D5240E3009416CE /* Marsden_Grace_Campbells_Torn.mp3 in Resources */,
-				322976031D5A2E3700C6F2B8 /* museumBackground.png in Resources */,
-				32C6180D1D523F63009416CE /* Marsden_Grace_Coca-Cola_Introduction.mp3 in Resources */,
-				32C617BC1D523372009416CE /* Beck_Jessica_College-Years_Nosepicker-v2.mp3 in Resources */,
-				32C617F11D5238D7009416CE /* CommercialWork_Visual.mp3 in Resources */,
-				32C617C91D5234CE009416CE /* Beck_Jessica_New-York_Introduction.mp3 in Resources */,
-				32C617D41D523600009416CE /* Blotted-Line_Commercial_to_fine.mp3 in Resources */,
-				32C617F71D523CC2009416CE /* TactileFemaleFashionFigure_Tactile.mp3 in Resources */,
-				32C618151D5240E3009416CE /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 in Resources */,
-				32C617E01D523690009416CE /* Warhola_Donald_Julia_Prayer.mp3 in Resources */,
-				32C617CC1D5234CE009416CE /* Pearlstein_Moving_to_NYC.mp3 in Resources */,
-				322975FB1D5A27E500C6F2B8 /* childhood.png in Resources */,
-				32C6180B1D523F63009416CE /* JBeck_AndyWarholAiWeiwei.mp3 in Resources */,
-				32C617DE1D523690009416CE /* AndyAndJulia_visual.mp3 in Resources */,
-				322975F81D5A27E500C6F2B8 /* asia.png in Resources */,
-				32C617D61D523600009416CE /* Blotted-Line_Process_v2.mp3 in Resources */,
-				32C617A41D522F88009416CE /* Warhola_Donald_7th-Floor-Overview.mp3 in Resources */,
-				322975FC1D5A27E500C6F2B8 /* cocaCola.png in Resources */,
-				32C617DF1D523690009416CE /* Warhola_Donald_Julia_Mothers_Influence.mp3 in Resources */,
-				32C6180E1D523F63009416CE /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 in Resources */,
-				32C618091D523F63009416CE /* CocaCola_Visual.mp3 in Resources */,
-				322975F91D5A27E500C6F2B8 /* blottedLineStill.png in Resources */,
-				32C617CA1D5234CE009416CE /* Beck_Jessica_New-York_Persona.mp3 in Resources */,
-				32C6180A1D523F63009416CE /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 in Resources */,
-				32C617C01D523372009416CE /* Warhola_Donald_College-Years_Sense-of-Humor.mp3 in Resources */,
-				32C617E21D523690009416CE /* Warhola_Donald_Julia_The_Boss_Is_Going.mp3 in Resources */,
-				32C618161D5240E3009416CE /* Marsden_Grace_Campbells_Introduction.mp3 in Resources */,
-				32C617EB1D52379F009416CE /* Diaz_Jose-World_Travels-Sketching.mp3 in Resources */,
-				32C617E11D523690009416CE /* Warhola_Donald_Julia_Signature_style.mp3 in Resources */,
-				32C617BE1D523372009416CE /* CollegeYears_Visual.mp3 in Resources */,
-				322976001D5A27E500C6F2B8 /* lobbySpace.png in Resources */,
+				32CADBA81D709AC3006122E5 /* Warhola_Donald_Childhood_Carpatho-Rusyn.mp3 in Resources */,
+				32CADB381D709A39006122E5 /* blottedLineStill.png in Resources */,
+				32CADB891D709AC3006122E5 /* Campbells_Visual.mp3 in Resources */,
+				32CADBA41D709AC3006122E5 /* TactileFemaleFashionFigure_Visual.mp3 in Resources */,
+				32CADB851D709AC3006122E5 /* Blotted-Line_Collaboration_v2.mp3 in Resources */,
+				32CADBB21D709AC3006122E5 /* Warhola_Donald-Julia_Introduction.mp3 in Resources */,
+				32CADB411D709A39006122E5 /* newYork.png in Resources */,
+				32CADB821D709AC3006122E5 /* Beck_Jessica_New-York_Introduction.mp3 in Resources */,
+				32DADA8A1DBA96DD003D00DE /* Tactile-Reclining_Male_Torso.png in Resources */,
+				32CADBAB1D709AC3006122E5 /* Warhola_Donald_Childhood_Warhola_Family.mp3 in Resources */,
+				32CADBAF1D709AC3006122E5 /* Warhola_Donald_Julia_Signature_style.mp3 in Resources */,
+				32CADB9E1D709AC3006122E5 /* Pearlstein_Moving_to_NYC.mp3 in Resources */,
+				32CADB991D709AC3006122E5 /* Marsden_Grace_Campbells_Torn.mp3 in Resources */,
+				32CADBB31D709AC3006122E5 /* Warhola_John_Movie_Projector-v2.mp3 in Resources */,
+				32CADB811D709AC3006122E5 /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 in Resources */,
+				32CADB941D709AC3006122E5 /* Diaz_Jose-World_Travels-Intro.mp3 in Resources */,
+				32CADB361D709A39006122E5 /* andyAndJulia.png in Resources */,
+				32CADB9F1D709AC3006122E5 /* PittsburghNewYork_VIsual.mp3 in Resources */,
+				32CADB921D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 in Resources */,
+				32CADBA71D709AC3006122E5 /* Warhola_Donald_7th-Floor-Overview.mp3 in Resources */,
+				32CADB3A1D709A39006122E5 /* childhood.png in Resources */,
+				32CADB861D709AC3006122E5 /* Blotted-Line_Commercial_to_fine.mp3 in Resources */,
+				32CADB901D709AC3006122E5 /* Diaz_Jose-Commercial_Art-I_Miller.mp3 in Resources */,
+				32CADB9A1D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Expressionist_elements.mp3 in Resources */,
+				32CADB881D709AC3006122E5 /* Blotted-Line_Process_v2.mp3 in Resources */,
+				32CADB951D709AC3006122E5 /* Diaz_Jose-World_Travels-Sketching.mp3 in Resources */,
+				32CADBA11D709AC3006122E5 /* Singelis_Walks_in_NewYork.mp3 in Resources */,
+				32CADB931D709AC3006122E5 /* Diaz_Jose-World_Travels-Boy_Book.mp3 in Resources */,
+				32CADB7D1D709AC3006122E5 /* AndyAndJulia_visual.mp3 in Resources */,
+				32CADB371D709A39006122E5 /* asia.png in Resources */,
+				32CADBA31D709AC3006122E5 /* TactileFemaleFashionFigure_Tactile.mp3 in Resources */,
+				32CADB9B1D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Introduction.mp3 in Resources */,
+				32CADB401D709A39006122E5 /* museumBackground.png in Resources */,
+				32DADA891DBA96DD003D00DE /* Tactile-Female_Fashion_Figure.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,29 +886,14 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
-		4514F51C1A456ADC24DF4427 /* 📦 Copy Pods Resources */ = {
+		62005CCF276AF7413D933D8C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AndyWarholAccessibilityProjectTests/Pods-AndyWarholAccessibilityProjectTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5D9961C2CCCAE5D7CD430C4C /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1044,59 +901,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		72002F0DB31C0AAADBB5AFBA /* 📦 Embed Pods Frameworks */ = {
+		8F6D229BC7E2C417AAD8DDBE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AndyWarholAccessibilityProjectTests/Pods-AndyWarholAccessibilityProjectTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7A101D3FC552B59E8308830F /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		982A4456FE3AAAF18281816E /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F87CCEA54D6C49F3EC6F5794 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1104,151 +916,109 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EFEA163CE70E66E1B54EFA1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00E356F31AD99517003FC87E /* AndyWarholAccessibilityProjectTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32E27B431CEF8FF2000F775E /* CMSBeaconManagerBridge.m in Sources */,
-				32E27B421CEF8FF2000F775E /* CMSBeaconManager.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				32F7EF901CF4B38800A8C236 /* CMSAudioManagerBridge.m in Sources */,
-				32F7EF8E1CF4B32800A8C236 /* CMSAudioManager.swift in Sources */,
-				322462E91D1AC66800C847AB /* CMSAccessibilityManagerBridge.m in Sources */,
-				322462E71D1AC5AF00C847AB /* CMSAccessibilityManager.swift in Sources */,
+				32CADBC01D709B15006122E5 /* CMSAudioManagerBridge.m in Sources */,
+				32CADBBE1D709B15006122E5 /* CMSAccessibilityManagerBridge.m in Sources */,
+				32CADBBD1D709B15006122E5 /* CMSAccessibilityManager.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				32CADBC11D709B15006122E5 /* CMSBeaconManager.swift in Sources */,
+				32CADBC21D709B15006122E5 /* CMSBeaconManagerBridge.m in Sources */,
+				32CADBBF1D709B15006122E5 /* CMSAudioManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* AndyWarholAccessibilityProject */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B61AF744939092D981BC0DE1 /* Pods-AndyWarholAccessibilityProjectTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AndyWarholAccessibilityProjectTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AndyWarholAccessibilityProject.app/AndyWarholAccessibilityProject";
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C67B26E72E38829936FC3317 /* Pods-AndyWarholAccessibilityProjectTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = AndyWarholAccessibilityProjectTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AndyWarholAccessibilityProject.app/AndyWarholAccessibilityProject";
-			};
-			name = Release;
-		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DED8ED129B66FEAEAD0E51C7 /* Pods-AndyWarholAccessibilityProject.debug.xcconfig */;
+			baseConfigurationReference = 95AFA373C9D0BDC4AEFE09E8 /* Pods-AndyWarholAccessibilityProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
+				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/react-native-blur/ios",
-					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/realm/src/**",
 				);
 				INFOPLIST_FILE = AndyWarholAccessibilityProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
+					"$(inherited)",
 					"-ObjC",
 					"-lc++",
-					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CMP.WarholPrototype;
 				PRODUCT_NAME = AndyWarholAccessibilityProject;
-				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AndyWarholAccessibilityProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55FF292B07FD905ACEBC74D8 /* Pods-AndyWarholAccessibilityProject.release.xcconfig */;
+			baseConfigurationReference = 2269C6073CFD2C7947542405 /* Pods-AndyWarholAccessibilityProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
+				CLANG_ANALYZER_OBJC_UNUSED_IVARS = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/react-native-blur/ios",
-					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/realm/src/**",
 				);
 				INFOPLIST_FILE = AndyWarholAccessibilityProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
+					"$(inherited)",
 					"-ObjC",
 					"-lc++",
-					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CMP.WarholPrototype;
 				PRODUCT_NAME = AndyWarholAccessibilityProject;
-				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AndyWarholAccessibilityProject-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1265,17 +1035,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1292,9 +1064,8 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/react-native-blur/ios",
-					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/realm/src/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1316,16 +1087,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1336,13 +1109,13 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
-					"$(SRCROOT)/../node_modules/react-native-blur/ios",
-					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/realm/src/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1350,15 +1123,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AndyWarholAccessibilityProjectTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AndyWarholAccessibilityProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

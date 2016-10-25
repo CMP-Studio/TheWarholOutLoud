@@ -13,7 +13,10 @@ import {
   UPDATE_LOCAL_PREFERENCES,
 } from '../actions/preferences';
 
-import { PLAYER_STATUS_LOADING } from '../actions/audio';
+import {
+  PLAYER_STATUS_LOADING,
+  AUDIO_DID_FINISH_PLAYING,
+} from '../actions/audio';
 
 const initialState = {
   global: [
@@ -27,7 +30,7 @@ const initialState = {
       category: VISUAL_DESCRIPTION,
       totalServed: 0,
       totalListened: 0,
-      percentage: 1,
+      percentage: 0,
     },
     {
       category: ART_PROCESS,
@@ -141,7 +144,7 @@ export function preferences(state = initialState, action) {
       );
     }
 
-
+    case AUDIO_DID_FINISH_PLAYING:
     case UPDATE_LOCAL_PREFERENCES: {
       const updatedLocalPreferences = updateLocalPreferences(state, action.uuid, action.time);
 

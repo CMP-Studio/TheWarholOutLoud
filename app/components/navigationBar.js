@@ -35,8 +35,14 @@ const NavigationBar = (props) => {
 };
 
 NavigationBar.propTypes = {
-  barStyle: PropTypes.object.isRequired,
-  labelStyle: PropTypes.object.isRequired,
+  barStyle: PropTypes.oneOfType([
+    View.propTypes.style,
+    PropTypes.object,
+  ]).isRequired,
+  labelStyle: PropTypes.oneOfType([
+    Text.propTypes.style,
+    PropTypes.object,
+  ]).isRequired,
   label: PropTypes.string.isRequired,
 };
 

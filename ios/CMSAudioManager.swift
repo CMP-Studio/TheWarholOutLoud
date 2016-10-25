@@ -19,6 +19,7 @@ enum CMSAudioManagerEvents:String {
 class CMSAudioManager: RCTEventEmitter {
 
   var player = AVPlayer()
+  var playAudioAfterLoad = false
   var playerRate:Float = 1.0
   var duration:Double = 0.0
 
@@ -37,7 +38,7 @@ class CMSAudioManager: RCTEventEmitter {
     try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
   }
 
-  override func constantsToExport() -> [String: AnyObject] {
+  override func constantsToExport() -> [String: Any] {
     let AudioManagerDidUpdateTime = CMSAudioManagerEvents.AudioManagerDidUpdateTime.rawValue
     let AudioManagerDidFinishPlaying = CMSAudioManagerEvents.AudioManagerDidFinishPlaying.rawValue
 
@@ -59,15 +60,17 @@ class CMSAudioManager: RCTEventEmitter {
     ]
   }
 
-  @objc func loadLocalAudio(audioURL:String,
+  @objc func loadLocalAudio(_ audioURL:String,
                             audioUUID:String,
-                            resolve:RCTPromiseResolveBlock,
-                            reject:RCTPromiseRejectBlock) {
-    if let localPath = NSBundle.mainBundle().pathForResource(audioURL, ofType: "mp3") {
-      let url = NSURL(fileURLWithPath:localPath)
-      let asset = AVURLAsset(URL: url)
+                            playAudioAfterLoad:Bool,
+                            resolve:@escaping RCTPromiseResolveBlock,
+                            reject:@escaping RCTPromiseRejectBlock) {
+    if let localPath = Bundle.main.path(forResource: audioURL, ofType: "mp3") {
+      let url = URL(fileURLWithPath:localPath)
+      let asset = AVURLAsset(url: url)
 
-      uuid = audioUUID
+      self.playAudioAfterLoad = playAudioAfterLoad
+      uuid = audioUUID as NSString
       jsResolveCallback = resolve
       jsRejectCallback = reject
       loadAudio(asset)
@@ -76,14 +79,16 @@ class CMSAudioManager: RCTEventEmitter {
     }
   }
 
-  @objc func loadRemoteAudio(audioURL:String,
+  @objc func loadRemoteAudio(_ audioURL:String,
                              audioUUID:String,
-                             resolve:RCTPromiseResolveBlock,
-                             reject:RCTPromiseRejectBlock) {
-    if let url = NSURL(string:audioURL) {
-      let asset = AVURLAsset(URL: url)
+                             playAudioAfterLoad:Bool,
+                             resolve:@escaping RCTPromiseResolveBlock,
+                             reject:@escaping RCTPromiseRejectBlock) {
+    if let url = URL(string:audioURL) {
+      let asset = AVURLAsset(url: url)
 
-      uuid = audioUUID
+      self.playAudioAfterLoad = playAudioAfterLoad
+      uuid = audioUUID as NSString
       jsResolveCallback = resolve
       jsRejectCallback = reject
       loadAudio(asset)
@@ -92,7 +97,7 @@ class CMSAudioManager: RCTEventEmitter {
     }
   }
 
-  func loadAudio(audioURLAsset:AVURLAsset) {
+  func loadAudio(_ audioURLAsset:AVURLAsset) {
     if playerStatusObserving {
       unloadAudio()
     }
@@ -100,11 +105,11 @@ class CMSAudioManager: RCTEventEmitter {
     duration = CMTimeGetSeconds(audioURLAsset.duration)
     let playerItem = AVPlayerItem(asset: audioURLAsset)
 
-    player.replaceCurrentItemWithPlayerItem(playerItem)
+    player.replaceCurrentItem(with: playerItem)
 
     player.addObserver(self,
                        forKeyPath: "status",
-                       options: NSKeyValueObservingOptions.New,
+                       options: NSKeyValueObservingOptions.new,
                        context: nil)
     playerStatusObserving = true
   }
@@ -120,49 +125,52 @@ class CMSAudioManager: RCTEventEmitter {
       playerStatusObserving = false
     }
 
-    NSNotificationCenter.defaultCenter().removeObserver(self)
+    NotificationCenter.default.removeObserver(self)
     player = AVPlayer()
   }
 
-  override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+  override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
     if keyPath == "status" {
       switch player.status {
-      case .Unknown:
+      case .unknown:
         if let reject = jsRejectCallback{
           let error = player.error
           reject("Audio playback failed", "Audio player failed with unknown error", error)
         }
 
-      case .ReadyToPlay:
-        player.actionAtItemEnd = .Pause
-        player.rate = self.playerRate
+      case .readyToPlay:
+        player.actionAtItemEnd = .pause
+        
+        if playAudioAfterLoad {
+          player.rate = self.playerRate
+        }
 
         let interval = CMTimeMakeWithSeconds(1, Int32(NSEC_PER_SEC))
-        playbackTimeObserver = player.addPeriodicTimeObserverForInterval(interval,
+        playbackTimeObserver = player.addPeriodicTimeObserver(forInterval: interval,
                                                                          queue: nil,
-                                                                         usingBlock: {(time) in
+                                                                         using: {(time) in
           let eventName = CMSAudioManagerEvents.AudioManagerDidUpdateTime.rawValue
           let newTime = CMTimeGetSeconds(time)
 
           let eventData = [
             "uuid": self.uuid,
-            "time": NSNumber(double: newTime),
-          ]
+            "time": NSNumber(value: newTime as Double),
+          ] as [String : Any]
 
-          self.sendEventWithName(eventName, body: eventData)
-        })
+          self.sendEvent(withName: eventName, body: eventData)
+        }) as AnyObject?
 
-        NSNotificationCenter.defaultCenter()
+        NotificationCenter.default
           .addObserver(self,
                        selector: #selector(CMSAudioManager.itemDidFinishPlayingNotification),
-                       name: AVPlayerItemDidPlayToEndTimeNotification,
+                       name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
                        object: nil)
 
         if let resolve = jsResolveCallback {
           resolve([uuid, duration])
         }
 
-      case .Failed:
+      case .failed:
         if let reject = jsRejectCallback {
           let error = player.error
           reject("Audio playback failed", "Audio player failed to initialize", error)
@@ -176,9 +184,10 @@ class CMSAudioManager: RCTEventEmitter {
 
     let eventData = [
       "uuid": self.uuid,
-      ]
+      "time": self.duration,
+      ] as [String : Any]
 
-    self.sendEventWithName(eventName, body: eventData)
+    self.sendEvent(withName: eventName, body: eventData)
   }
 
   @objc func play() {
@@ -203,11 +212,11 @@ class CMSAudioManager: RCTEventEmitter {
     }
 
     let time = CMTimeMakeWithSeconds(0, 1)
-    player.seekToTime(time) { (finished) in
+    player.seek(to: time, completionHandler: { (finished) in
       if finished {
         self.play()
       }
-    }
+    }) 
   }
 
   @objc func togglePlayPause() {
@@ -222,7 +231,7 @@ class CMSAudioManager: RCTEventEmitter {
     }
   }
 
-  @objc func seekToTime(time:Double) {
+  @objc func seekToTime(_ time:Double) {
     guard player.currentItem != nil else {
       return
     }
@@ -230,10 +239,10 @@ class CMSAudioManager: RCTEventEmitter {
     let timeScale = player.currentItem!.asset.duration.timescale;
 
     let seekToTime = CMTimeMakeWithSeconds(time, timeScale)
-    player.seekToTime(seekToTime)
+    player.seek(to: seekToTime)
   }
 
-  @objc func changeRate(rate:Float) {
+  @objc func changeRate(_ rate:Float) {
     guard player.currentItem != nil else {
       return
     }
@@ -245,14 +254,14 @@ class CMSAudioManager: RCTEventEmitter {
     }
   }
 
-  @objc func rewind(secondsToRewindBy:Double) {
+  @objc func rewind(_ secondsToRewindBy:Double) {
     guard player.currentItem != nil else {
       return
     }
 
     let currentTime = CMTimeGetSeconds(player.currentItem!.currentTime())
     let rewindToTime = CMTimeMakeWithSeconds(currentTime - secondsToRewindBy, Int32(NSEC_PER_SEC))
-    player.seekToTime(rewindToTime)
+    player.seek(to: rewindToTime)
   }
 
 }

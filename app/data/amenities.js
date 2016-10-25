@@ -19,7 +19,7 @@ export const allAmenities = [
         title: 'The Factory',
         icon: 'Amenities_Factory.png',
         notes: '',
-        description: 'Come to the factory to try out some signature Warhol art-making techniques like blotted line drawing, acetate collage, and silkscreen printing. All ages are welcome.',
+        description: 'Come to the Factory to try out some signature Warhol art-making techniques like blotted line drawing, acetate collage, and silkscreen printing. All ages are welcome.',
         hours: 'Tuesday-Friday  1:30-5 p.m. \nSaturday-Sunday  12:00-5 p.m.',
       },
       {
@@ -108,7 +108,7 @@ export const allAmenities = [
     amenities: [
       {
         uuid: uuid.v4(),
-        title: 'Special exhibitons gallery',
+        title: 'Special exhibitions gallery',
         icon: 'Amenities_SpecialExhibitions.png',
         notes: '',
         description: 'Temporary exhibitions are featured in this gallery space.',

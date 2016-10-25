@@ -10,6 +10,7 @@ import { amenities } from './amenities';
 import { accessibility } from './accessibility';
 import { nav } from './navigation';
 import { preferences } from './preferences';
+import { tutorial } from './tutorial';
 
 const rootReducer = combineReducers({
   beacon,
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   accessibility,
   nav,
   preferences,
+  tutorial,
 });
 
 export default rootReducer;

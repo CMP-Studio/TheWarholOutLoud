@@ -41,49 +41,55 @@ const AccessibilityScreen = (props) => {
         automaticallyAdjustContentInsets={false}
       >
         <Text style={globalStyles.body}>
-          The Andy Warhol Museum is committed to providing an excellent experience to all of its visitors. We work to assist visitors with disabilities in obtaining reasonable and appropriate accommodations and in supporting equal access to services, programs, and activities. For specific questions about wheelchairs, strollers, or other programmatic or equipment needs, please see Visitor Services at the museum admission desk or call 412.237.8300.
+          The Andy Warhol Museum is committed to providing an excellent experience to visitors of all backgrounds and abilities. For specific questions about wheelchairs, strollers, or other programmatic or equipment needs, please see Visitor Services at the museum admission desk or contact access@warhol.org.
         </Text>
         <Text style={[globalStyles.h1, styles.accessibilityHeader]}>
           Getting around
         </Text>
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
-        A wheelchair accessible entrance to the museum is located at 117 Sandusky Street. Accessible elevators are available on all floors of the museum.
+          The museum’s main entrance at 117 Sandusky Street is wheelchair accessible. The staff entrance at East General Robinson Street is equipped with a lift.
         </Text>
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
-        Standard wheelchairs are available on a limited basis. Please reserve more than 24 hours in advance by calling 412.237.8300.
+          Accessible elevators are located on the first floor of the museum. All floors, including The Factory underground, The Warhol Café, The Warhol Store, and gallery levels, are accessible for people with mobility impairments. Restrooms are located on the underground (basement) floor and the second floor. All restrooms include accessible facilities.
+        </Text>
+        <Text style={[globalStyles.body, globalStyles.paragraph]}>
+          Standard wheelchairs are available free of charge on a limited basis. Please reserve more than 24 hours in advance by contacting access@warhol.org.
         </Text>
         <Text style={[globalStyles.h1, styles.accessibilityHeader]}>
           Blind and low vision
         </Text>
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
-        For blind or visually impaired visitors, tablets with digital versions of wall labels and panel text are available at the admission desk.
+          For visitors who are blind or have low vision, educators are trained to be sighted guides and provide detailed descriptions of artwork on gallery tours. Touchable objects are included when available.
         </Text>
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
-        Educators are trained to be sighted guides and provide detailed descriptions of artwork on gallery tours. Touchable objects are included when available. Please call two weeks in advance to schedule a tour.
+          Tactile displays featuring raised line and textured reproductions of key works in The Warhol’s collection are installed in the 7th floor galleries for all visitors to explore.
         </Text>
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
-        To schedule an exhibition tour, please see Visitor Services at the museum admission desk or contact Eli Kochersperger at 412.237.8326.
-        </Text>
-        <Text style={[globalStyles.h1, styles.accessibilityHeader]}>
-          Service animals
+          Additionally, guests can access screen reader-compatible labels on their own devices or request a device at the admission desk.
         </Text>
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
-        We welcome service animals.
+          To schedule a tour of our exhibitions please contact access@warhol.org. We welcome service dogs.
         </Text>
         <Text style={[globalStyles.h1, styles.accessibilityHeader]}>
           Large print
         </Text>
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
-        Large print wall labels and panel text are available at the admission desk.
+          Large print wall labels and panel text are available at the admission desk.
+        </Text>
+        <Text style={[globalStyles.body, globalStyles.paragraph]}>
+          Additionally, guests can download PDFs from home and load on to their own devices before their visit.
         </Text>
         <Text style={[globalStyles.h1, styles.accessibilityHeader]}>
           Sign language
         </Text>
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
-        Tours conducted in American Sign Language are available upon request. Please call two weeks in advance to schedule a tour.
+        American Sign Language interpreters are available for tours or public programs at The Warhol. Please contact access@warhol.org two weeks in advance to schedule a tour or request an interpreter. Relay calls are welcome.
+        </Text>
+        <Text style={[globalStyles.h1, styles.accessibilityHeader]}>
+          Sensory friendly
         </Text>
         <Text style={[globalStyles.body, globalStyles.paragraph]}>
-        Please see Visitor Services at the museum admission desk or contact Eli Kochersperger at 412.237.8326 to schedule a tour.
+          The Warhol welcomes individuals with autism spectrum disorders and sensory sensitivities during our sensory friendly events for teens and adults and accessible group tours and workshops. To learn about upcoming programs, visit our calendar or contact access@warhol.org to schedule a tour.
         </Text>
         <Text style={[globalStyles.h1, styles.accessibilityHeader]}>
           Questions or comments?

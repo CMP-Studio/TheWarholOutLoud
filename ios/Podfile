@@ -8,7 +8,3 @@ target 'AndyWarholAccessibilityProject' do
   pod 'EstimoteSDK'
 
 end
-
-target 'AndyWarholAccessibilityProjectTests' do
-
-end

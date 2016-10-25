@@ -1,7 +1,7 @@
 
 export const blockRules = [
   {
-    uuid: '38467:38396', // Testing Beacon
+    uuid: '20688:13234', // Testing Beacon
     region: 'blue',
     floor: 7,
     blocks: [],
@@ -10,12 +10,6 @@ export const blockRules = [
     uuid: '54351:29236', // Beacon #1
     region: 'blue',
     floor: 7,
-    blocks: [],
-  },
-  {
-    uuid: '62623:22594', // Beacon #2
-    region: 'blue6',
-    floor: 6,
     blocks: [],
   },
   {
@@ -118,12 +112,6 @@ export const blockRules = [
     ],
   },
   {
-    uuid: '34596:40393', // Beacon #14
-    floor: 6,
-    region: 'blue6',
-    blocks: [],
-  },
-  {
     uuid: '55025:37051', // Beacon #15
     region: 'gray',
     floor: 7,
@@ -150,6 +138,24 @@ export const blockRules = [
     region: 'blue',
     floor: 7,
     blocks: [],
+  },
+  {
+    uuid: '34596:40393', // Beacon #14
+    floor: 6,
+    region: 'blue6',
+    blocks: [
+      '53981:23804', // Beacon #16
+      '40746:35110', // Beacon #8
+    ],
+  },
+  {
+    uuid: '62623:22594', // Beacon #2
+    region: 'blue6',
+    floor: 6,
+    blocks: [
+      '53981:23804', // Beacon #16
+      '40746:35110', // Beacon #8
+    ],
   },
   {
     uuid: '60712:26121', // Beacon #19

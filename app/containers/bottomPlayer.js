@@ -2,7 +2,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { BottomPlayer } from '../components/bottomPlayer';
+import BottomPlayer from '../components/bottomPlayer';
 
 import {
   togglePausePlay,
@@ -14,12 +14,12 @@ import {
   loadPrevAudio,
   replayAudio,
   toggleAutoplay,
+  playAudio,
 } from '../actions/audio';
 
 const mapStateToProps = (state) => {
   return {
     stopTitle: state.bottomPlayer.stopTitle,
-    currentAudioRoute: state.nav.currentAudioRoute,
     currentUUID: state.bottomPlayer.uuid,
     index: state.bottomPlayer.index,
     nextUUID: state.bottomPlayer.nextUUID,
@@ -49,6 +49,7 @@ const mapDispatchToProps = (dispatch) => {
         loadPrevAudio,
         replayAudio,
         toggleAutoplay,
+        playAudio,
       }, dispatch),
   };
 };

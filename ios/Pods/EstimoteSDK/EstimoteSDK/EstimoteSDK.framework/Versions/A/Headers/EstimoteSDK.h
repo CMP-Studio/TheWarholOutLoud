@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.3.0
+//  Version: 4.9.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -45,9 +45,11 @@
 #import "ESTSettingsConnectivity.h"
 #import "ESTSettingConnectivityInterval.h"
 #import "ESTSettingConnectivityPower.h"
+#import "ESTSettingShakeToConnectEnable.h"
 
 #import "ESTBeaconOperationConnectivityInterval.h"
 #import "ESTBeaconOperationConnectivityPower.h"
+#import "ESTBeaconOperationShakeToConnectEnable.h"
 
 /**
  *  Settings Power
@@ -69,15 +71,11 @@
 /**
  *  Settings Power
  */
-#import "ESTSettingPowerSmartPowerModeEnable.h"
-#import "ESTSettingPowerMotionOnlyBroadcastingEnable.h"
 #import "ESTSettingPowerScheduledAdvertisingEnable.h"
 #import "ESTSettingPowerScheduledAdvertisingPeriod.h"
 #import "ESTSettingPowerBatteryPercentage.h"
 #import "ESTSettingPowerBatteryVoltage.h"
 
-#import "ESTBeaconOperationPowerSmartPowerModeEnable.h"
-#import "ESTBeaconOperationPowerMotionOnlyBroadcastingEnable.h"
 #import "ESTBeaconOperationPowerScheduledAdvertisingEnable.h"
 #import "ESTBeaconOperationPowerScheduledAdvertisingPeriod.h"
 #import "ESTBeaconOperationPowerBatteryPercentage.h"
@@ -237,16 +235,25 @@
  *  Sensors
  */
 #import "ESTSettingsSensors.h"
+
 #import "ESTSettingSensorsAmbientLight.h"
 #import "ESTSettingSensorsMotionNotificationEnable.h"
 #import "ESTSettingSensorsTemperature.h"
+#import "ESTSettingSensorsPressure.h"
 
 #import "ESTBeaconOperationSensorsAmbientLight.h"
 #import "ESTBeaconOperationSensorsMotionNotificationEnable.h"
 #import "ESTBeaconOperationSensorsTemperature.h"
+#import "ESTBeaconOperationSensorsPressure.h"
 
 #import "ESTNotificationMotion.h"
 #import "ESTNotificationGPIOData.h"
+
+/**
+ *  Eddystone Configuration Service
+ */
+#import "ESTSettingsEddystoneConfigurationService.h"
+#import "ESTSettingEddystoneConfigurationServiceEnable.h"
 
 /**
  *  Nearables
@@ -263,7 +270,15 @@
 #import "ESTNearableOperationProtocol.h"
 #import "ESTNearableOperationNearableInterval.h"
 #import "ESTNearableOperationNearablePower.h"
+#import "ESTNearableOperationName.h"
 #import "ESTNearableOperationApplicationVersion.h"
+#import "ESTNearableOperationHardware.h"
+#import "ESTNearableOperationMotionOnly.h"
+#import "ESTNearableOperationIBeaconProximityUUID.h"
+#import "ESTNearableOperationIBeaconMajor.h"
+#import "ESTNearableOperationIBeaconMinor.h"
+#import "ESTNearableOperationEddystoneURL.h"
+#import "ESTNearableOperationBroadcastingScheme.h"
 
 /**
  *  Bulk updater
@@ -329,6 +344,7 @@
  */
 #import "ESTRequestV2GetDeviceDetails.h"
 #import "ESTRequestV2GetDevices.h"
+#import "ESTRequestV2DevicesUpdate.h"
 
 /**
  *  Cloud API v2 value objects
@@ -344,6 +360,8 @@
 #import "ESTDeviceSettingsAdvertiserEddystoneURL.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneTLM.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneEID.h"
+#import "ESTDeviceSettingsAdvertiserEstimoteLocation.h"
+#import "ESTDeviceSettingsAdvertiserEstimoteTLM.h"
 #import "ESTDeviceStatusReport.h"
 #import "ESTDeviceGeoLocation.h"
 #import "ESTDeviceIndoorLocation.h"
@@ -360,4 +378,10 @@
 #import "ESTTelemetryNotificationSystemStatus.h"
 #import "ESTTelemetryNotificationMagnetometer.h"
 #import "ESTTelemetryNotificationGPIO.h"
+#import "ESTTelemetryNotificationPressure.h"
+
+/** 
+ * Monitoring
+ */
+#import "ESTMonitoringManager.h"
 

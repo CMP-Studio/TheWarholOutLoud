@@ -3,8 +3,10 @@ import {
   UPDATE_BEACONS,
 } from '../actions/beacon';
 
-import { TourStop } from '../models/tourStop';
+// TODO: In the future load data from a database to prevent memory pressure
+import { blockRules } from '../data/beaconBlockRules';
 
+import { TourStop } from '../models/tourStop';
 const tourStops = TourStop.allRealmObjects().sorted('order');
 
 import { _, includes } from 'lodash';
@@ -18,6 +20,7 @@ export const initialState = {
   ],
   detectedFloor: null,
   tourStops: {},
+  blockRules,
 };
 
 export function closeTourStops(state = initialState, action) {
@@ -34,7 +37,7 @@ export function closeTourStops(state = initialState, action) {
       // blocked it will still block 'z'
       const beaconUUIDs = action.newBeacons;
 
-      const beaconsToBlock = _(action.beaconBlockRules)
+      const beaconsToBlock = _(state.blockRules)
         .filter((beacon) => {
           return includes(beaconUUIDs, beacon.uuid);
         })
@@ -49,7 +52,7 @@ export function closeTourStops(state = initialState, action) {
         .value();
 
       // 2. Find out the users floor and regions by the remaining beacons
-      const beaconData = _(action.beaconBlockRules)
+      const beaconData = _(state.blockRules)
         .filter((beacon) => {
           return includes(beaconsUUIDsToShow, beacon.uuid);
         })

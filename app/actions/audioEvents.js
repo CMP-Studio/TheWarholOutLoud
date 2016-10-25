@@ -39,8 +39,9 @@ function addEventListeners(dispatch, autoplayOn, nextAudioExists) {
         startTimer(dispatch);
       }
 
+      // Rounded because it's the duration
       dispatch(
-        audioDidFinishPlaying(body.uuid),
+        audioDidFinishPlaying(body.uuid, Math.round(body.time)),
       );
     });
 }

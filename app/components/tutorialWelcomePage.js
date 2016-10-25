@@ -8,21 +8,21 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { OFF_WHITE } from '../styles';
+import { OFF_WHITE, TURQUOISE } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    alignItems: 'center',
+    marginHorizontal: 15,
   },
   logo: {
-    marginTop: 10,
-    marginBottom: 60,
+    marginTop: 125,
+    alignSelf: 'center',
+    tintColor: TURQUOISE,
   },
   text: {
     color: OFF_WHITE,
     fontSize: 20,
-    width: 245,
     textAlign: 'center',
   },
 });
@@ -31,14 +31,22 @@ const TutorialWelcomePage = (props) => {
   return (
     <View style={[styles.container]}>
       <Image
-        style={styles.logo}
         accessibilityLabel={'The Warhol: Out Loud Logo'}
-        source={require('../assets/warholTutorialLogo.png')}
+        source={require('../assets/warholLogoType.png')}
       />
-      <Text style={styles.text}>
+      <Image
+        style={styles.logo}
+        source={require('../assets/warholLogo.png')}
+      />
+      <Text style={[styles.text, { fontSize: 40, fontWeight: '500' }]}>
+        out loud
+      </Text>
+      <Text style={[styles.text, { marginTop: 75 }]}>
         {'Welcome to'
          + '\n' +
-        'The Andy Warhol Museum’s inclusive audio guide'}
+        'The Andy Warhol Museum’s'
+        + '\n' +
+        'inclusive audio guide'}
       </Text>
     </View>
   );

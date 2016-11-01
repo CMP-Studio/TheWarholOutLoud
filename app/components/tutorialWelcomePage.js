@@ -30,17 +30,22 @@ const styles = StyleSheet.create({
 const TutorialWelcomePage = (props) => {
   return (
     <View style={[styles.container]}>
-      <Image
-        accessibilityLabel={'The Warhol: Out Loud Logo'}
-        source={require('../assets/warholLogoType.png')}
-      />
-      <Image
-        style={styles.logo}
-        source={require('../assets/warholLogo.png')}
-      />
-      <Text style={[styles.text, { fontSize: 40, fontWeight: '500' }]}>
-        out loud
-      </Text>
+      <View
+        accessible={true}
+        accessibilityTraits={'text'}
+        accessibilityLabel={'The Warhol Out Loud'}
+      >
+        <Image
+          source={require('../assets/warholLogoType.png')}
+        />
+        <Image
+          style={styles.logo}
+          source={require('../assets/warholLogo.png')}
+        />
+        <Text style={[styles.text, { fontSize: 40, fontWeight: '500' }]}>
+          out loud
+        </Text>
+      </View>
       <Text style={[styles.text, { marginTop: 75 }]}>
         {'Welcome to'
          + '\n' +

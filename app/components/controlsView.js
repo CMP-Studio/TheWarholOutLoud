@@ -56,6 +56,8 @@ class ControlsView extends Component {
     playerStatus: PropTypes.string.isRequired,
     prevDisabled: PropTypes.bool.isRequired,
     nextDisabled: PropTypes.bool.isRequired,
+    // autoplayOn is only used to figure out if rerender is nessecary
+    autoplayOn: PropTypes.bool.isRequired,
     actions: PropTypes.shape({
       navToTourStop: PropTypes.func.isRequired,
       togglePausePlay: PropTypes.func.isRequired,
@@ -72,8 +74,9 @@ class ControlsView extends Component {
     const statusChanged = this.props.playerStatus !== nextProps.playerStatus;
     const rateChanged = this.props.playRate !== nextProps.playRate;
     const titleChanged = this.props.audioTitle !== nextProps.audioTitle;
+    const autoplayChanged = this.props.autoplayOn !== nextProps.autoplayOn;
 
-    return statusChanged || rateChanged || titleChanged;
+    return statusChanged || rateChanged || titleChanged || autoplayChanged;
   }
 
   render() {

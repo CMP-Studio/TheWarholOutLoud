@@ -197,11 +197,15 @@ class BottomPlayer extends Component {
 
     return (
       <View
-        style={[styles.bottomBar,
-                { width, height: BOTTOMPLAYERHEIGHT,
-                  bottom: BOTTOMBARHEIGHT,
-                  backgroundColor: OFF_BLACK,
-                 }]}
+        style={[
+          styles.bottomBar,
+          {
+            width,
+            height: BOTTOMPLAYERHEIGHT,
+            bottom: BOTTOMBARHEIGHT,
+            backgroundColor: OFF_BLACK,
+          },
+        ]}
         // Rerender when PLAYER_STATUS_FINISHED begins and ends
         key={playerStatus === PLAYER_STATUS_FINISHED}
       >
@@ -215,6 +219,7 @@ class BottomPlayer extends Component {
           prevDisabled={prevDisabled}
           nextDisabled={nextDisabled}
           playRate={playRate}
+          autoplayOn={autoplayOn}
           actions={{
             togglePausePlay,
             replayAudio,

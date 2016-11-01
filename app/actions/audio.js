@@ -158,6 +158,11 @@ export function unloadAudio() {
   };
 }
 
+function swapElementsInArray(array, indexOne, indexTwo) {
+  const temp = array[indexOne];
+  array[indexOne] = array[indexTwo];
+  array[indexTwo] = temp;
+}
 
 export function loadAudioContent(
   audioContent,
@@ -203,6 +208,15 @@ export function loadAudioContent(
       }
       return contentToUpdate;
     });
+
+    // Make visual description always default to the back of the list
+    const categoryIndex = audioContent.findIndex((content) => {
+      return content.category === 'VISUAL_DESCRIPTION';
+    });
+
+    if (categoryIndex != -1) {
+      swapElementsInArray(audioContent, categoryIndex, audioContent.length - 1);
+    }
 
     // then reorder based on assigned preference percentages
     audioContent.sort((a, b) => {
@@ -386,7 +400,7 @@ export function toggleAutoplay(autoplayOn, timerActive) {
   return async (dispatch) => {
     const newAutoplayStatus = !autoplayOn;
 
-    if (!newAutoplayStatus && timerActive) {
+    if (autoplayOn && timerActive) {
       dispatch(
         stopTimer()
       );

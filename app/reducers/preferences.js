@@ -30,7 +30,7 @@ const initialState = {
       category: VISUAL_DESCRIPTION,
       totalServed: 0,
       totalListened: 0,
-      percentage: 0,
+      percentage: 1,
     },
     {
       category: ART_PROCESS,
@@ -54,7 +54,7 @@ const initialState = {
       category: ARCHIVAL_MATERIAL,
       totalServed: 0,
       totalListened: 0,
-      percentage: 0.5,
+      percentage: 1,
     },
     {
       category: TACTILE_EXPERIENCE,

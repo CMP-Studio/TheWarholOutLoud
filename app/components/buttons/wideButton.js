@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
 const WideButton = (props) => {
   return (
     <TouchableOpacity
+      accessible={true}
+      accessibilityTraits={!props.disabled ? 'button' : 'text'}
+      accessibilityLabel={props.text}
       onPress={props.onPress}
       styles={styles.container}
       disabled={props.disabled || false}

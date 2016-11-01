@@ -114,6 +114,9 @@ class TutorialScreen extends Component {
     if (currentPage === 0 || currentPage === 1) {
       floatingButton = (
         <TouchableOpacity
+          accessible={true}
+          accessibilityTraits={'button'}
+          accessibilityLabel={`Page ${currentPage + 1} of 3. Next Page.`}
           style={styles.floatingButton}
           onPress={() => {
             this.refs[SWIPER_REF].scrollBy(1);
@@ -129,6 +132,9 @@ class TutorialScreen extends Component {
     } else {
       floatingButton = (
         <TouchableOpacity
+          accessible={true}
+          accessibilityTraits={'button'}
+          accessibilityLabel={`Page ${currentPage + 1} of 3. Let\'s get started.`}
           style={styles.floatingButton}
           onPress={() => {
             this.hideModal();

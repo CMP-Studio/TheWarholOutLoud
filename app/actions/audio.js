@@ -302,11 +302,21 @@ export function loadNextAudio(
   stopTitle,
 ) {
   return async (dispatch) => {
+    for (const content of audioContent) {
+      if (content.uuid === currentUUID) {
+        analyticsTrackAudioPartialListen(
+          stopTitle,
+          content.title,
+          timeListened / content.duration,
+        );
+
+        break;
+      }
+    }
+
     dispatch(
       updateLocalPreferences(currentUUID, timeListened)
     );
-
-    //analyticsTrackAudioPartialListen
 
     let newAudioIndex = null;
     let i = 1;
@@ -369,11 +379,21 @@ export function loadPrevAudio(
   stopTitle
 ) {
   return async (dispatch) => {
+    for (const content of audioContent) {
+      if (content.uuid === currentUUID) {
+        analyticsTrackAudioPartialListen(
+          stopTitle,
+          content.title,
+          timeListened / content.duration,
+        );
+
+        break;
+      }
+    }
+
     dispatch(
       updateLocalPreferences(currentUUID, timeListened)
     );
-
-    //analyticsTrackAudioPartialListen(stopTitle, );
 
     let newAudioIndex = null;
     let i = 1;

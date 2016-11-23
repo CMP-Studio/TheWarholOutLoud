@@ -199,6 +199,7 @@ class TourStopScreen extends Component {
             </View>
           </TouchableOpacity>
           <AudioContentList
+            tourStopTitle={this.props.tourStop.shortTitle}
             audioContent={this.props.audioContent}
             currentAudio={this.props.currentAudio}
             currentAudioTime={this.props.currentAudioTime}

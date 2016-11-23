@@ -214,7 +214,7 @@ class AudioContentItem extends Component {
               width: transcriptContainerWidth,
             }}
             accessibilityLabel={parseVoiceoverText(audioContent.title)}
-            onPress={() => { toggleAudioTranscript(audioContent.uuid); }}
+            onPress={() => { toggleAudioTranscript(); }}
             showTranscript={audioContent.showTranscript}
           />
         </View>

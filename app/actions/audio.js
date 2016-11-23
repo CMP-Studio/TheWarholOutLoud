@@ -16,6 +16,10 @@ import {
   updateLocalPreferences,
 } from './preferences';
 
+import {
+  analyticsTrackDeviceAutoPlay,
+} from './analytics';
+
 const AudioManager = NativeModules.CMSAudioManager;
 
 import { _ } from 'lodash';
@@ -390,6 +394,8 @@ export function audioDidFinishPlaying(uuid, time) {
 }
 
 export function toggleAutoplaySuccess(autoplayOn) {
+  analyticsTrackDeviceAutoPlay(autoplayOn);
+
   return {
     type: TOGGLE_AUTOPLAY,
     autoplayOn,

@@ -8,6 +8,10 @@ import {
   updateScreenReaderStatus,
 } from './accessibility';
 
+import {
+  analyticsTrackScreenReaderStatus
+} from './analytics';
+
 const AccessibilityManager = NativeModules.CMSAccessibilityManager;
 const AccessibilityManagerObserver = new NativeEventEmitter(AccessibilityManager);
 
@@ -23,6 +27,8 @@ export function addAccessibilityManagerEventListeners(dispatch) {
   } = AccessibilityManager.Events;
 
   AccessibilityManagerObserver.addListener(screenReaderStatusChanged, (body) => {
+    analyticsTrackScreenReaderStatus(body.screenReaderStatus);
+
     dispatch(
       updateScreenReaderStatus(body.screenReaderStatus)
     );

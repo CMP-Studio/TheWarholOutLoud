@@ -14,6 +14,7 @@ import { trackingID } from './data/trackingID';
 import { WayfindingActor } from './actors/wayfindingActor';
 
 import { decideIfToShowTutorial } from './actions/tutorial';
+import { analyticsTrackDeviceType } from './actions/analytics';
 
 const appVersion = `${DeviceInfo.getVersion()}.${DeviceInfo.getBuildNumber()}`;
 const lastAppVersion = Settings.get('LastAppVersion');
@@ -35,6 +36,7 @@ if (newVersion) {
 }
 
 GoogleAnalytics.setTrackerId(trackingID);
+analyticsTrackDeviceType(!showTutorialEveryTime);
 
 const App = () => {
   const wayfindingActor = new WayfindingActor(store);

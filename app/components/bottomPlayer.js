@@ -169,7 +169,8 @@ class BottomPlayer extends Component {
               audioContent,
               currentUUID,
               index,
-              autoplayOn
+              autoplayOn,
+              stopTitle
             );
           },
         }}
@@ -232,7 +233,8 @@ class BottomPlayer extends Component {
                 currentUUID,
                 index,
                 time,
-                autoplayOn
+                autoplayOn,
+                stopTitle
               );
             },
             loadNextAutoplayAudio: () => {
@@ -240,7 +242,8 @@ class BottomPlayer extends Component {
                 audioContent,
                 currentUUID,
                 index,
-                autoplayOn
+                autoplayOn,
+                stopTitle
               );
             },
             loadPrevAudio: () => {
@@ -249,7 +252,8 @@ class BottomPlayer extends Component {
                 currentUUID,
                 index,
                 time,
-                autoplayOn
+                autoplayOn,
+                stopTitle
               );
             },
           }}

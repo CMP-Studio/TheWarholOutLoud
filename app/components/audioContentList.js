@@ -91,7 +91,8 @@ const AudioContentList = (props) => {
                     props.audioContent,
                     content, props.autoplayOn,
                     props.currentAudio,
-                    props.currentAudioTime
+                    props.currentAudioTime,
+                    props.tourStopTitle,
                   );
                 }
               },

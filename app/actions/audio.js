@@ -18,6 +18,8 @@ import {
 
 import {
   analyticsTrackDeviceAutoPlay,
+  analyticsTrackContentOpened,
+  analyticsTrackAudioOpened,
 } from './analytics';
 
 const AudioManager = NativeModules.CMSAudioManager;
@@ -115,6 +117,8 @@ async function fireAudioAction(
   stopUUID,
   playAudioAfterLoad = true,
 ) {
+  analyticsTrackAudioOpened(stopTitle, activeAudio.title);
+
   const activeAudioIndex = audioContent.findIndex((content, index) => {
     return content.uuid === activeAudio.uuid;
   });
@@ -185,6 +189,8 @@ export function loadAudioContent(
     dispatch(
       loadingAudio(audioContent, currentUUID, timeListened),
     );
+
+    analyticsTrackContentOpened(stopTitle);
 
     // if screen reader is on for a guided tactile story,
     // change initialAudio to visual description
@@ -262,13 +268,17 @@ export function loadAudio(
   activeAudio,
   autoplayOn,
   currentUUID,
-  timeListened
+  timeListened,
+  stopTitle,
 ) {
   return async (dispatch) => {
     dispatch(
       updateLocalPreferences(currentUUID, timeListened)
     );
-    fireAudioAction(audioContent, activeAudio, dispatch, false, autoplayOn);
+
+    fireAudioAction(
+      audioContent, activeAudio, dispatch, false, autoplayOn, stopTitle
+    );
   };
 }
 
@@ -279,6 +289,7 @@ export function loadNextAudio(
   activeAudioIndex,
   timeListened,
   autoplayOn,
+  stopTitle,
 ) {
   return async (dispatch) => {
     dispatch(
@@ -308,7 +319,9 @@ export function loadNextAudio(
 
     const newActiveAudio = audioContent[activeAudioIndex + i];
 
-    fireAudioAction(audioContent, newActiveAudio, dispatch, false, autoplayOn);
+    fireAudioAction(
+      audioContent, newActiveAudio, dispatch, false, autoplayOn, stopTitle
+    );
   };
 }
 
@@ -317,7 +330,8 @@ export function loadNextAutoplayAudio(
   audioContent,
   currentUUID,
   activeAudioIndex,
-  autoplayOn
+  autoplayOn,
+  stopTitle
 ) {
   return async (dispatch) => {
     if (activeAudioIndex + 1 >= audioContent.length) {
@@ -327,7 +341,9 @@ export function loadNextAutoplayAudio(
 
     const newActiveAudio = audioContent[activeAudioIndex + 1];
 
-    fireAudioAction(audioContent, newActiveAudio, dispatch, false, autoplayOn);
+    fireAudioAction(
+      audioContent, newActiveAudio, dispatch, false, autoplayOn, stopTitle
+    );
   };
 }
 
@@ -337,7 +353,8 @@ export function loadPrevAudio(
   currentUUID,
   activeAudioIndex,
   timeListened,
-  autoplayOn
+  autoplayOn,
+  stopTitle
 ) {
   return async (dispatch) => {
     dispatch(
@@ -366,7 +383,9 @@ export function loadPrevAudio(
 
     const newActiveAudio = audioContent[activeAudioIndex - i];
 
-    fireAudioAction(audioContent, newActiveAudio, dispatch, false, autoplayOn);
+    fireAudioAction(
+      audioContent, newActiveAudio, dispatch, false, autoplayOn, stopTitle
+    );
   };
 }
 

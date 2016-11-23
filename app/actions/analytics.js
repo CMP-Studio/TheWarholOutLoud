@@ -3,8 +3,19 @@ import GoogleAnalytics from 'react-native-google-analytics-bridge';
 
 // *** No State Changes Actions ***
 
-
 // Content Analytics
+export function analyticsTrackContentOpened(tourStop) {
+  GoogleAnalytics.trackEvent('Content', 'Opened',
+    {label: tourStop}
+  );
+}
+
+export function analyticsTrackAudioOpened(tourStop, contentTitle) {
+  GoogleAnalytics.trackEvent('Content', 'Opened Audio',
+    {label: `${tourStop} ${contentTitle}`}
+  );
+}
+
 
 // Beacon Analytics
 export function analyticsTrackBeaconRegion(regions) {

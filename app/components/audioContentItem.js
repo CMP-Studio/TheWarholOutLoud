@@ -99,17 +99,6 @@ class AudioContentItem extends Component {
     }),
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    const content = this.props.audioContent;
-    const nextContent = nextProps.audioContent;
-    const screenReader = this.props.screenReader;
-
-    const transcriptChanged = content.showTranscript !== nextContent.showTranscript;
-    const screenReaderChanged = screenReader !== nextProps.screenReader;
-
-    return content.active || transcriptChanged || screenReaderChanged;
-  }
-
   render() {
     const {
       audioContent,

@@ -11,6 +11,10 @@ import {
    screenReaderReloadLayout,
  } from '../actions/accessibility';
 
+ import {
+    analyticsTrackAudioCompleteListen,
+  } from '../actions/analytics';
+
 import {
   PLAYER_STATUS_FINISHED,
   PLAYER_STATUS_ERROR,
@@ -84,6 +88,13 @@ class BottomPlayer extends Component {
     if (this.props.playerStatus === PLAYER_STATUS_LOADING &&
         nextProps.playerStatus === PLAYER_STATUS_PLAY) {
       this.props.actions.playAudio();
+      return;
+    }
+
+    if (nextProps.playerStatus === PLAYER_STATUS_FINISHED) {
+      analyticsTrackAudioCompleteListen(
+        this.props.stopTitle, this.props.audioTitle
+      );
     }
   }
 
@@ -156,7 +167,6 @@ class BottomPlayer extends Component {
         time={time}
         duration={duration}
         playerStatus={playerStatus}
-
         timerActive={timerActive}
         timerStartAt={timerStartAt}
         timerNumber={timerNumber}

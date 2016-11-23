@@ -10,9 +10,20 @@ export function analyticsTrackContentOpened(tourStop) {
   );
 }
 
-export function analyticsTrackAudioOpened(tourStop, contentTitle) {
-  GoogleAnalytics.trackEvent('Content', 'Opened Audio',
-    {label: `${tourStop} ${contentTitle}`}
+export function analyticsTrackAudioCompleteListen(tourStop, contentTitle) {
+  GoogleAnalytics.trackEvent('Content', 'Complete Listen',
+    {label: `${tourStop} - ${contentTitle}`}
+  );
+}
+
+export function analyticsTrackAudioPartialListen(
+  tourStop, contentTitle, percentageListened
+) {
+  GoogleAnalytics.trackEvent('Content', 'Partial Listen',
+    {
+      label: `${tourStop} - ${contentTitle}`,
+      value: Math.round(percentageListened * 100),
+    }
   );
 }
 
@@ -50,6 +61,6 @@ export function analyticsTrackScreenReaderStatus(ScreenReaderStatus) {
 
 export function analyticsTrackTranscriptOpenned(tourStop, contentTitle) {
   GoogleAnalytics.trackEvent('Accessibility', 'TranscriptOpenned',
-    {label: `${tourStop} ${contentTitle}`}
+    {label: `${tourStop} - ${contentTitle}`}
   );
 }

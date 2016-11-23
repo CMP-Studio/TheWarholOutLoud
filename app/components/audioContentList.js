@@ -89,7 +89,8 @@ const AudioContentList = (props) => {
                 } else {
                   loadAudio(
                     props.audioContent,
-                    content, props.autoplayOn,
+                    content,
+                    props.autoplayOn,
                     props.currentAudio,
                     props.currentAudioTime,
                     props.tourStopTitle,

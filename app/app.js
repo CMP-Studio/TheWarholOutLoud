@@ -36,6 +36,8 @@ if (newVersion) {
 }
 
 GoogleAnalytics.setTrackerId(trackingID);
+GoogleAnalytics.setDryRun(false);
+
 analyticsTrackDeviceType(!showTutorialEveryTime);
 
 const App = () => {

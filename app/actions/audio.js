@@ -19,7 +19,7 @@ import {
 import {
   analyticsTrackDeviceAutoPlay,
   analyticsTrackContentOpened,
-  analyticsTrackAudioOpened,
+  analyticsTrackAudioPartialListen,
 } from './analytics';
 
 const AudioManager = NativeModules.CMSAudioManager;
@@ -117,8 +117,6 @@ async function fireAudioAction(
   stopUUID,
   playAudioAfterLoad = true,
 ) {
-  analyticsTrackAudioOpened(stopTitle, activeAudio.title);
-
   const activeAudioIndex = audioContent.findIndex((content, index) => {
     return content.uuid === activeAudio.uuid;
   });
@@ -272,6 +270,18 @@ export function loadAudio(
   stopTitle,
 ) {
   return async (dispatch) => {
+    for (const content of audioContent) {
+      if (content.uuid === currentUUID) {
+        analyticsTrackAudioPartialListen(
+          stopTitle,
+          content.title,
+          timeListened / content.duration,
+        );
+
+        break;
+      }
+    }
+
     dispatch(
       updateLocalPreferences(currentUUID, timeListened)
     );
@@ -295,6 +305,8 @@ export function loadNextAudio(
     dispatch(
       updateLocalPreferences(currentUUID, timeListened)
     );
+
+    //analyticsTrackAudioPartialListen
 
     let newAudioIndex = null;
     let i = 1;
@@ -360,6 +372,8 @@ export function loadPrevAudio(
     dispatch(
       updateLocalPreferences(currentUUID, timeListened)
     );
+
+    //analyticsTrackAudioPartialListen(stopTitle, );
 
     let newAudioIndex = null;
     let i = 1;

@@ -25,6 +25,10 @@ import {
    screenReaderScreenChanged,
  } from '../actions/accessibility';
 
+ import {
+    analyticsTrackBeaconRegion,
+  } from '../actions/analytics';
+
 import { globalStyles, TEAL, OFF_BLACK, LIGHT_BLUE } from '../styles';
 
 const styles = StyleSheet.create({
@@ -148,24 +152,28 @@ class NearMeScreen extends Component {
 
       const regionsDetected = this.props.regions ? this.props.regions.join(', ') : '';
 
-      if (__DEV__ && regionsDetected) {
-        debugView = (
-          <View
-            style={{
-              height: 25,
-              backgroundColor: LIGHT_BLUE,
-            }}
-          >
-            <Text
+      if (regionsDetected) {
+        analyticsTrackBeaconRegion(regionsDetected);
+
+        if (__DEV__) {
+          debugView = (
+            <View
               style={{
-                fontSize: 20,
-                textAlign: 'center',
+                height: 25,
+                backgroundColor: LIGHT_BLUE,
               }}
             >
-              {`Regions: ${regionsDetected}`}
-            </Text>
-          </View>
-        );
+              <Text
+                style={{
+                  fontSize: 20,
+                  textAlign: 'center',
+                }}
+              >
+                {`Regions: ${regionsDetected}`}
+              </Text>
+            </View>
+          );
+        }
       }
 
       let amenitiesList;

@@ -16,6 +16,12 @@ import {
   updateLocalPreferences,
 } from './preferences';
 
+import {
+  analyticsTrackDeviceAutoPlay,
+  analyticsTrackContentOpened,
+  analyticsTrackAudioPartialListen,
+} from './analytics';
+
 const AudioManager = NativeModules.CMSAudioManager;
 
 import { _ } from 'lodash';
@@ -158,6 +164,11 @@ export function unloadAudio() {
   };
 }
 
+function swapElementsInArray(array, indexOne, indexTwo) {
+  const temp = array[indexOne];
+  array[indexOne] = array[indexTwo];
+  array[indexTwo] = temp;
+}
 
 export function loadAudioContent(
   audioContent,
@@ -176,6 +187,8 @@ export function loadAudioContent(
     dispatch(
       loadingAudio(audioContent, currentUUID, timeListened),
     );
+
+    analyticsTrackContentOpened(stopTitle);
 
     // if screen reader is on for a guided tactile story,
     // change initialAudio to visual description
@@ -203,6 +216,15 @@ export function loadAudioContent(
       }
       return contentToUpdate;
     });
+
+    // Make visual description always default to the back of the list
+    const categoryIndex = audioContent.findIndex((content) => {
+      return content.category === 'VISUAL_DESCRIPTION';
+    });
+
+    if (categoryIndex != -1) {
+      swapElementsInArray(audioContent, categoryIndex, audioContent.length - 1);
+    }
 
     // then reorder based on assigned preference percentages
     audioContent.sort((a, b) => {
@@ -244,13 +266,29 @@ export function loadAudio(
   activeAudio,
   autoplayOn,
   currentUUID,
-  timeListened
+  timeListened,
+  stopTitle,
 ) {
   return async (dispatch) => {
+    for (const content of audioContent) {
+      if (content.uuid === currentUUID) {
+        analyticsTrackAudioPartialListen(
+          stopTitle,
+          content.title,
+          timeListened / content.duration,
+        );
+
+        break;
+      }
+    }
+
     dispatch(
       updateLocalPreferences(currentUUID, timeListened)
     );
-    fireAudioAction(audioContent, activeAudio, dispatch, false, autoplayOn);
+
+    fireAudioAction(
+      audioContent, activeAudio, dispatch, false, autoplayOn, stopTitle
+    );
   };
 }
 
@@ -261,8 +299,21 @@ export function loadNextAudio(
   activeAudioIndex,
   timeListened,
   autoplayOn,
+  stopTitle,
 ) {
   return async (dispatch) => {
+    for (const content of audioContent) {
+      if (content.uuid === currentUUID) {
+        analyticsTrackAudioPartialListen(
+          stopTitle,
+          content.title,
+          timeListened / content.duration,
+        );
+
+        break;
+      }
+    }
+
     dispatch(
       updateLocalPreferences(currentUUID, timeListened)
     );
@@ -290,7 +341,9 @@ export function loadNextAudio(
 
     const newActiveAudio = audioContent[activeAudioIndex + i];
 
-    fireAudioAction(audioContent, newActiveAudio, dispatch, false, autoplayOn);
+    fireAudioAction(
+      audioContent, newActiveAudio, dispatch, false, autoplayOn, stopTitle
+    );
   };
 }
 
@@ -299,7 +352,8 @@ export function loadNextAutoplayAudio(
   audioContent,
   currentUUID,
   activeAudioIndex,
-  autoplayOn
+  autoplayOn,
+  stopTitle
 ) {
   return async (dispatch) => {
     if (activeAudioIndex + 1 >= audioContent.length) {
@@ -309,7 +363,9 @@ export function loadNextAutoplayAudio(
 
     const newActiveAudio = audioContent[activeAudioIndex + 1];
 
-    fireAudioAction(audioContent, newActiveAudio, dispatch, false, autoplayOn);
+    fireAudioAction(
+      audioContent, newActiveAudio, dispatch, false, autoplayOn, stopTitle
+    );
   };
 }
 
@@ -319,9 +375,22 @@ export function loadPrevAudio(
   currentUUID,
   activeAudioIndex,
   timeListened,
-  autoplayOn
+  autoplayOn,
+  stopTitle
 ) {
   return async (dispatch) => {
+    for (const content of audioContent) {
+      if (content.uuid === currentUUID) {
+        analyticsTrackAudioPartialListen(
+          stopTitle,
+          content.title,
+          timeListened / content.duration,
+        );
+
+        break;
+      }
+    }
+
     dispatch(
       updateLocalPreferences(currentUUID, timeListened)
     );
@@ -348,7 +417,9 @@ export function loadPrevAudio(
 
     const newActiveAudio = audioContent[activeAudioIndex - i];
 
-    fireAudioAction(audioContent, newActiveAudio, dispatch, false, autoplayOn);
+    fireAudioAction(
+      audioContent, newActiveAudio, dispatch, false, autoplayOn, stopTitle
+    );
   };
 }
 
@@ -376,6 +447,8 @@ export function audioDidFinishPlaying(uuid, time) {
 }
 
 export function toggleAutoplaySuccess(autoplayOn) {
+  analyticsTrackDeviceAutoPlay(autoplayOn);
+
   return {
     type: TOGGLE_AUTOPLAY,
     autoplayOn,
@@ -386,7 +459,7 @@ export function toggleAutoplay(autoplayOn, timerActive) {
   return async (dispatch) => {
     const newAutoplayStatus = !autoplayOn;
 
-    if (!newAutoplayStatus && timerActive) {
+    if (autoplayOn && timerActive) {
       dispatch(
         stopTimer()
       );

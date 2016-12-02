@@ -8,9 +8,13 @@ import { configureStore } from './store';
 
 import DeviceInfo from 'react-native-device-info';
 
+import GoogleAnalytics from 'react-native-google-analytics-bridge';
+import { trackingID } from './data/trackingID';
+
 import { WayfindingActor } from './actors/wayfindingActor';
 
 import { decideIfToShowTutorial } from './actions/tutorial';
+import { analyticsTrackDeviceType } from './actions/analytics';
 
 const appVersion = `${DeviceInfo.getVersion()}.${DeviceInfo.getBuildNumber()}`;
 const lastAppVersion = Settings.get('LastAppVersion');
@@ -30,6 +34,11 @@ store.dispatch(
 if (newVersion) {
   Settings.set({ LastAppVersion: appVersion });
 }
+
+GoogleAnalytics.setTrackerId(trackingID);
+GoogleAnalytics.setDryRun(false);
+
+analyticsTrackDeviceType(!showTutorialEveryTime);
 
 const App = () => {
   const wayfindingActor = new WayfindingActor(store);

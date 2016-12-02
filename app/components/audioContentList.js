@@ -16,6 +16,10 @@ import {
   PLAYER_STATUS_FINISHED,
 } from '../actions/audio';
 
+import {
+  analyticsTrackTranscriptOpenned,
+} from '../actions/analytics';
+
 import AudioContentItem from './audioContentItem';
 
 import { globalStyles } from '../styles';
@@ -58,10 +62,7 @@ const AudioContentList = (props) => {
     renderView = (
       <View>
         <Text style={[styles.betaMessage, globalStyles.body]}>
-          This is app is in beta.
-        </Text>
-        <Text style={[styles.betaMessage, globalStyles.body]}>
-          We're still working on this story.
+          Error loading this story, please try again.
         </Text>
       </View>
     );
@@ -76,7 +77,10 @@ const AudioContentList = (props) => {
             listLength={props.audioContent.length}
             contentWidth={width - SCROLLMARGINS * 2}
             actions={{
-              toggleAudioTranscript,
+              toggleAudioTranscript: () => {
+                analyticsTrackTranscriptOpenned(props.tourStopTitle, content.title);
+                toggleAudioTranscript(content.uuid);
+              },
               audioAction: () => {
                 if (props.currentAudio === content.uuid &&
                     props.playerStatus !== PLAYER_STATUS_UNLOADED &&
@@ -85,9 +89,11 @@ const AudioContentList = (props) => {
                 } else {
                   loadAudio(
                     props.audioContent,
-                    content, props.autoplayOn,
+                    content,
+                    props.autoplayOn,
                     props.currentAudio,
-                    props.currentAudioTime
+                    props.currentAudioTime,
+                    props.tourStopTitle,
                   );
                 }
               },
@@ -136,6 +142,7 @@ const AudioContentList = (props) => {
 };
 
 AudioContentList.propTypes = {
+  tourStopTitle: PropTypes.string.isRequired,
   audioContent: PropTypes.array,
   currentAudio: PropTypes.string,
   currentAudioTime: PropTypes.number,

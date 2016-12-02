@@ -13,12 +13,13 @@
     "react-native": "^0.34.1",
     "react-native-collapsible": "^0.6.0",
     "react-native-device-info": "^0.9.3",
+    "react-native-google-analytics-bridge": "^3.1.0",
     "react-native-swiper": "^1.4.11",
     "react-redux": "^4.4.5",
     "realm": "^0.14.1",
     "redux": "^3.5.2",
+    "redux-devtools-extension": "^1.0.0",
     "redux-thunk": "^2.0.1",
-    "remote-redux-devtools": "^0.3.2",
     "uuid": "^2.0.0"
   },
   "devDependencies": {

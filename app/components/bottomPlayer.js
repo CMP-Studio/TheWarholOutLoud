@@ -11,6 +11,10 @@ import {
    screenReaderReloadLayout,
  } from '../actions/accessibility';
 
+ import {
+    analyticsTrackAudioCompleteListen,
+  } from '../actions/analytics';
+
 import {
   PLAYER_STATUS_FINISHED,
   PLAYER_STATUS_ERROR,
@@ -84,6 +88,13 @@ class BottomPlayer extends Component {
     if (this.props.playerStatus === PLAYER_STATUS_LOADING &&
         nextProps.playerStatus === PLAYER_STATUS_PLAY) {
       this.props.actions.playAudio();
+      return;
+    }
+
+    if (nextProps.playerStatus === PLAYER_STATUS_FINISHED) {
+      analyticsTrackAudioCompleteListen(
+        this.props.stopTitle, this.props.audioTitle
+      );
     }
   }
 
@@ -156,7 +167,6 @@ class BottomPlayer extends Component {
         time={time}
         duration={duration}
         playerStatus={playerStatus}
-
         timerActive={timerActive}
         timerStartAt={timerStartAt}
         timerNumber={timerNumber}
@@ -169,7 +179,8 @@ class BottomPlayer extends Component {
               audioContent,
               currentUUID,
               index,
-              autoplayOn
+              autoplayOn,
+              stopTitle
             );
           },
         }}
@@ -197,11 +208,15 @@ class BottomPlayer extends Component {
 
     return (
       <View
-        style={[styles.bottomBar,
-                { width, height: BOTTOMPLAYERHEIGHT,
-                  bottom: BOTTOMBARHEIGHT,
-                  backgroundColor: OFF_BLACK,
-                 }]}
+        style={[
+          styles.bottomBar,
+          {
+            width,
+            height: BOTTOMPLAYERHEIGHT,
+            bottom: BOTTOMBARHEIGHT,
+            backgroundColor: OFF_BLACK,
+          },
+        ]}
         // Rerender when PLAYER_STATUS_FINISHED begins and ends
         key={playerStatus === PLAYER_STATUS_FINISHED}
       >
@@ -215,6 +230,7 @@ class BottomPlayer extends Component {
           prevDisabled={prevDisabled}
           nextDisabled={nextDisabled}
           playRate={playRate}
+          autoplayOn={autoplayOn}
           actions={{
             togglePausePlay,
             replayAudio,
@@ -227,7 +243,8 @@ class BottomPlayer extends Component {
                 currentUUID,
                 index,
                 time,
-                autoplayOn
+                autoplayOn,
+                stopTitle
               );
             },
             loadNextAutoplayAudio: () => {
@@ -235,7 +252,8 @@ class BottomPlayer extends Component {
                 audioContent,
                 currentUUID,
                 index,
-                autoplayOn
+                autoplayOn,
+                stopTitle
               );
             },
             loadPrevAudio: () => {
@@ -244,7 +262,8 @@ class BottomPlayer extends Component {
                 currentUUID,
                 index,
                 time,
-                autoplayOn
+                autoplayOn,
+                stopTitle
               );
             },
           }}

@@ -3967,6 +3967,10 @@ react-native-device-info@^0.9.3:
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-0.9.5.tgz#0ab7e1342bf7fa0c3889c97938646d2ea9b3b249"
 
+react-native-google-analytics-bridge:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-google-analytics-bridge/-/react-native-google-analytics-bridge-3.1.0.tgz#4869db16e6e18d59f1f4ab6a33e483cc71872421"
+
 react-native-swiper@^1.4.11:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/react-native-swiper/-/react-native-swiper-1.5.1.tgz#6216d49c594e1247ae0dca23756b141fff4dccbe"

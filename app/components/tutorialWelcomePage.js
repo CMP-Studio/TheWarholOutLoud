@@ -36,9 +36,6 @@ const TutorialWelcomePage = (props) => {
         accessibilityLabel={'The Warhol Out Loud'}
       >
         <Image
-          source={require('../assets/warholLogoType.png')}
-        />
-        <Image
           style={styles.logo}
           source={require('../assets/warholLogo.png')}
         />

@@ -407,11 +407,12 @@ export const tourStops = [
     shortTitle: 'Commercial work',
     longTitle: 'Commercial work',
     shortCredit: 'Andy Warhol, Shoe, 1950s © AWF',
-    longCredit: 'Andy Warhol (American, 1928-1987)\n Shoe, 1950s \ngold leaf, tempera, and collage on wood shoe form\n 5 x 2 3/4 x 9 in. (12.7 x 7 x 22.9 cm.)\n The Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n © The Andy Warhol Foundation for the Visual Arts, Inc.\n 1998.1.704',
+    longCredit: 'Andy Warhol (American, 1928-1987)\nShoe, 1950s\ngold leaf, tempera, and collage on wood shoe form\n5 x 2 3/4 x 9 in. (12.7 x 7 x 22.9 cm.)\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.704',
     regions: ['pink'],
     imageURL: 'commercialWork.png',
     imageWidth: 475,
     imageHeight: 292,
+    imageHeight: 327,
     tags: [],
     initialAudio: 'INTRODUCTION',
     audioContent: [

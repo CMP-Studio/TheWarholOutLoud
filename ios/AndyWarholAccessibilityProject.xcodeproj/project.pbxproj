@@ -47,11 +47,9 @@
 		32CADB8A1D709AC3006122E5 /* Childhood_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB511D709AC3006122E5 /* Childhood_Visual.mp3 */; };
 		32CADB8B1D709AC3006122E5 /* CocaCola_Tactile_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB521D709AC3006122E5 /* CocaCola_Tactile_Visual.mp3 */; };
 		32CADB8C1D709AC3006122E5 /* CocaCola_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB531D709AC3006122E5 /* CocaCola_Visual.mp3 */; };
-		32CADB8E1D709AC3006122E5 /* CommercialWork_Visual.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB551D709AC3006122E5 /* CommercialWork_Visual.mp3 */; };
 		32CADB8F1D709AC3006122E5 /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB561D709AC3006122E5 /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */; };
 		32CADB901D709AC3006122E5 /* Diaz_Jose-Commercial_Art-I_Miller.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB571D709AC3006122E5 /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */; };
 		32CADB911D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB581D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Intro.mp3 */; };
-		32CADB921D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB591D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 */; };
 		32CADB971D709AC3006122E5 /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB5E1D709AC3006122E5 /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 */; };
 		32CADB981D709AC3006122E5 /* Marsden_Grace_Campbells_Introduction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB5F1D709AC3006122E5 /* Marsden_Grace_Campbells_Introduction.mp3 */; };
 		32CADB991D709AC3006122E5 /* Marsden_Grace_Campbells_Torn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32CADB601D709AC3006122E5 /* Marsden_Grace_Campbells_Torn.mp3 */; };
@@ -241,11 +239,9 @@
 		32CADB511D709AC3006122E5 /* Childhood_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Childhood_Visual.mp3; sourceTree = "<group>"; };
 		32CADB521D709AC3006122E5 /* CocaCola_Tactile_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CocaCola_Tactile_Visual.mp3; sourceTree = "<group>"; };
 		32CADB531D709AC3006122E5 /* CocaCola_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CocaCola_Visual.mp3; sourceTree = "<group>"; };
-		32CADB551D709AC3006122E5 /* CommercialWork_Visual.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CommercialWork_Visual.mp3; sourceTree = "<group>"; };
 		32CADB561D709AC3006122E5 /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Coke-Hand_Painted_Pop.mp3"; sourceTree = "<group>"; };
 		32CADB571D709AC3006122E5 /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Commercial_Art-I_Miller.mp3"; sourceTree = "<group>"; };
 		32CADB581D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Commercial_Art-Intro.mp3"; sourceTree = "<group>"; };
-		32CADB591D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3"; sourceTree = "<group>"; };
 		32CADB5E1D709AC3006122E5 /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Marsden_Grace_Campbells_AbEx-to-Pop.mp3"; sourceTree = "<group>"; };
 		32CADB5F1D709AC3006122E5 /* Marsden_Grace_Campbells_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marsden_Grace_Campbells_Introduction.mp3; sourceTree = "<group>"; };
 		32CADB601D709AC3006122E5 /* Marsden_Grace_Campbells_Torn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Marsden_Grace_Campbells_Torn.mp3; sourceTree = "<group>"; };
@@ -448,11 +444,9 @@
 				32CADB511D709AC3006122E5 /* Childhood_Visual.mp3 */,
 				32CADB521D709AC3006122E5 /* CocaCola_Tactile_Visual.mp3 */,
 				32CADB531D709AC3006122E5 /* CocaCola_Visual.mp3 */,
-				32CADB551D709AC3006122E5 /* CommercialWork_Visual.mp3 */,
 				32CADB561D709AC3006122E5 /* Diaz_Jose-Coke-Hand_Painted_Pop.mp3 */,
 				32CADB571D709AC3006122E5 /* Diaz_Jose-Commercial_Art-I_Miller.mp3 */,
 				32CADB581D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Intro.mp3 */,
-				32CADB591D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 */,
 				32CADB5E1D709AC3006122E5 /* Marsden_Grace_Campbells_AbEx-to-Pop.mp3 */,
 				32CADB5F1D709AC3006122E5 /* Marsden_Grace_Campbells_Introduction.mp3 */,
 				32CADB601D709AC3006122E5 /* Marsden_Grace_Campbells_Torn.mp3 */,
@@ -851,7 +845,6 @@
 				32CADB3D1D709A39006122E5 /* commercialWork.png in Resources */,
 				32CADBAD1D709AC3006122E5 /* Warhola_Donald_Julia_Mothers_Influence.mp3 in Resources */,
 				32CADB871D709AC3006122E5 /* Blotted-Line_Introduction_v2.mp3 in Resources */,
-				32CADB8E1D709AC3006122E5 /* CommercialWork_Visual.mp3 in Resources */,
 				32CADBA91D709AC3006122E5 /* Warhola_Donald_Childhood_Family_portrait.mp3 in Resources */,
 				3219C0DB1DA42D6300A14415 /* Settings.bundle in Resources */,
 				32CADB9C1D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Mass-Appeal.mp3 in Resources */,
@@ -890,7 +883,6 @@
 				32CADB811D709AC3006122E5 /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 in Resources */,
 				32CADB361D709A39006122E5 /* andyAndJulia.png in Resources */,
 				32CADB9F1D709AC3006122E5 /* PittsburghNewYork_VIsual.mp3 in Resources */,
-				32CADB921D709AC3006122E5 /* Diaz_Jose-Commercial_Art-Noah_the_Boa.mp3 in Resources */,
 				32CADBA71D709AC3006122E5 /* Warhola_Donald_7th-Floor-Overview.mp3 in Resources */,
 				32CADB3A1D709A39006122E5 /* childhood.png in Resources */,
 				32CADB861D709AC3006122E5 /* Blotted-Line_Commercial_to_fine.mp3 in Resources */,

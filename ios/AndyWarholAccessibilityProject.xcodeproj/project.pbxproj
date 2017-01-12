@@ -90,6 +90,7 @@
 		32E203011DC88AE90079C55C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E203001DC88AE90079C55C /* CoreData.framework */; };
 		32E203031DC88AF90079C55C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E203021DC88AF90079C55C /* SystemConfiguration.framework */; };
 		32E203051DC88B190079C55C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E203041DC88B190079C55C /* libsqlite3.0.tbd */; };
+		32ECA2701E27E8F100416736 /* VisualDescription_Shoe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32ECA26F1E27E8F100416736 /* VisualDescription_Shoe.mp3 */; };
 		498E19D7529C4582BD5F2D5D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9653058D874183A3A559DA /* libc++.tbd */; };
 		633BA1BC7B8F408A96F0F333 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB1D3D947CE4DEC804D02F2 /* libRNDeviceInfo.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -283,6 +284,7 @@
 		32E203001DC88AE90079C55C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		32E203021DC88AF90079C55C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		32E203041DC88B190079C55C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		32ECA26F1E27E8F100416736 /* VisualDescription_Shoe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VisualDescription_Shoe.mp3; sourceTree = "<group>"; };
 		3E3EB3C879304F519391D452 /* RCTGoogleAnalyticsBridge.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTGoogleAnalyticsBridge.xcodeproj; path = "../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/RCTGoogleAnalyticsBridge.xcodeproj"; sourceTree = "<group>"; };
 		5DE6AA1E78184C068BD5FFD2 /* RealmReact.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RealmReact.xcodeproj; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; };
 		6D6553A0A1BB4AC796F299D1 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 		32CADB431D709A3D006122E5 /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				32ECA26F1E27E8F100416736 /* VisualDescription_Shoe.mp3 */,
 				32CADB441D709AC3006122E5 /* AndyAndJulia_visual.mp3 */,
 				32CADB481D709AC3006122E5 /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 */,
 				32CADB491D709AC3006122E5 /* Beck_Jessica_New-York_Introduction.mp3 */,
@@ -896,6 +899,7 @@
 				32CADB9B1D709AC3006122E5 /* Marsden_Grace_Coca-Cola_Introduction.mp3 in Resources */,
 				32A7B7601DE4D54800407F48 /* BoyBook_Introduction.mp3 in Resources */,
 				32CADB401D709A39006122E5 /* museumBackground.png in Resources */,
+				32ECA2701E27E8F100416736 /* VisualDescription_Shoe.mp3 in Resources */,
 				32DADA891DBA96DD003D00DE /* Tactile-Female_Fashion_Figure.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

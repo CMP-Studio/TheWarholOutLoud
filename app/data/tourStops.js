@@ -428,6 +428,16 @@ export const tourStops = [
       },
       {
         uuid: uuid.v4(),
+        category: 'VISUAL_DESCRIPTION',
+        depth: 0,
+        title: 'Visual description',
+        duration: 3,
+        speaker: 'Narrator',
+        audioURL: 'VisualDescription_Shoe',
+        transcript: 'This is a placeholder.',
+      },
+      {
+        uuid: uuid.v4(),
         category: 'ART_PROCESS',
         depth: 0,
         title: 'I. Miller shoes',

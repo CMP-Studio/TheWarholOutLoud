@@ -14,6 +14,7 @@ Targets: iOS 9.0 or greater
   ```
   react-native run-ios
   ```
+  
 ####Building on a device is an exercise left to the reader. However, here are some minimal adjustments that need to be made (assuming you already have an Apple developer account):
 <!-- -->
 

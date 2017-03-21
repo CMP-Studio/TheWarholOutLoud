@@ -1,6 +1,7 @@
 # The Warhol: Out Loud App
 
-Targets: iOS 9.0 or greater
+Targets:   
+- iOS 9.0 or greater 
 
 ### Description
 

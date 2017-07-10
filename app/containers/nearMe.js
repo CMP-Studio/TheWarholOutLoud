@@ -1,15 +1,18 @@
-
 import { connect } from 'react-redux';
 
 import NearMeScreen from '../components/nearMeScreen';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
+  const floor = state.closeTourStops.detectedFloor;
+  const allAmenities = state.amenities.allAmenities;
+  const amenities = floor ? allAmenities[floor].amenities : [];
+
   return {
     playerOpen: state.bottomPlayer.playerOpen,
     closeTourStops: state.closeTourStops.tourStops,
     regions: state.closeTourStops.regions,
-    floor: state.closeTourStops.detectedFloor,
-    amenities: ((state.closeTourStops.detectedFloor === null) ? [] : state.amenities.allAmenities[state.closeTourStops.detectedFloor].amenities),
+    floor,
+    amenities,
     activeTab: state.nav.activeTab,
     screenReader: state.accessibility.screenReader,
     playerStatus: state.bottomPlayer.playerStatus,
@@ -21,11 +24,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {};
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NearMeScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(NearMeScreen);

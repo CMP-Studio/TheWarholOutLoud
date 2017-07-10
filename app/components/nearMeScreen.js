@@ -1,12 +1,6 @@
-
 import React, { Component, PropTypes } from 'react';
 
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-} from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
 import NavigationBar from './navigationBar';
 import Grid from './grid';
@@ -21,13 +15,9 @@ import { PLAYER_STATUS_PLAY } from '../actions/audio';
 import BluetoothButton from './buttons/bluetoothButton';
 import LocationServicesButton from './buttons/locationServicesButton';
 
-import {
-   screenReaderScreenChanged,
- } from '../actions/accessibility';
+import { screenReaderScreenChanged } from '../actions/accessibility';
 
- import {
-    analyticsTrackBeaconRegion,
-  } from '../actions/analytics';
+import { analyticsTrackBeaconRegion } from '../actions/analytics';
 
 import { globalStyles, TEAL, OFF_BLACK, LIGHT_BLUE } from '../styles';
 
@@ -69,12 +59,12 @@ const styles = StyleSheet.create({
 let lastSeenNumber = 0;
 
 class NearMeScreen extends Component {
-  static title = 'Near Me'
+  static title = 'Near Me';
 
   static propTypes = {
     navigator: PropTypes.object.isRequired,
     playerOpen: PropTypes.bool.isRequired,
-    closeTourStops: PropTypes.object.isRequired,
+    closeTourStops: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
     regions: PropTypes.array.isRequired,
     amenities: PropTypes.array.isRequired,
     timerActive: PropTypes.bool.isRequired,
@@ -82,11 +72,11 @@ class NearMeScreen extends Component {
     screenReader: PropTypes.bool.isRequired,
     atNearMeRoot: PropTypes.bool.isRequired,
     playerStatus: PropTypes.string.isRequired,
-    floor: PropTypes.number,
+    floor: PropTypes.string,
     tracking: PropTypes.bool,
     bluetoothOn: PropTypes.bool.isRequired,
     locationServicesStatus: PropTypes.string.isRequired,
-  }
+  };
 
   shouldComponentUpdate(nextProps, nextState) {
     return nextProps.activeTab === TAB_NEARME && nextProps.atNearMeRoot;
@@ -103,17 +93,13 @@ class NearMeScreen extends Component {
       contentView = (
         <View style={[styles.messageContainer, styles.settingContainer]}>
           <Text style={globalStyles.body}>
-            {'While at the museum, we show you stories based on what’s near you.'
-             + '\n\n' +
-            'To use this feature, we’ll need two things from you…'}
+            {'While at the museum, we show you stories based on what’s near you.' +
+              '\n\n' +
+              'To use this feature, we’ll need two things from you…'}
           </Text>
           <View style={styles.buttonsContainer}>
-            <LocationServicesButton
-              locationServicesStatus={this.props.locationServicesStatus}
-            />
-            <BluetoothButton
-              bluetoothOn={this.props.bluetoothOn}
-            />
+            <LocationServicesButton locationServicesStatus={this.props.locationServicesStatus} />
+            <BluetoothButton bluetoothOn={this.props.bluetoothOn} />
           </View>
         </View>
       );
@@ -122,7 +108,7 @@ class NearMeScreen extends Component {
 
       if (this.props.floor === null) {
         storiesMessage = 'While at the museum, we show you stories based on what’s near you.';
-      } else if (this.props.floor === 7) {
+      } else if (this.props.floor === '7') {
         if (tourStopsNum === 0) {
           storiesMessage = 'There are no stories near you.';
         } else if (tourStopsNum === 1) {
@@ -140,11 +126,12 @@ class NearMeScreen extends Component {
       // 3. The number of stops has changed
       // 4. The autoplay timer is not active
       // 5. The player is not currently playing
-      if (this.props.activeTab === TAB_NEARME &&
-          this.props.atNearMeRoot &&
-          lastSeenNumber !== tourStopsNum &&
-          !this.props.timerActive &&
-          this.props.playerStatus !== PLAYER_STATUS_PLAY
+      if (
+        this.props.activeTab === TAB_NEARME &&
+        this.props.atNearMeRoot &&
+        lastSeenNumber !== tourStopsNum &&
+        !this.props.timerActive &&
+        this.props.playerStatus !== PLAYER_STATUS_PLAY
       ) {
         lastSeenNumber = tourStopsNum;
         screenReaderScreenChanged(storiesMessage);
@@ -180,10 +167,7 @@ class NearMeScreen extends Component {
       if (this.props.amenities.length !== 0) {
         amenitiesList = (
           <View style={[styles.amenitiesContainer, { backgroundColor: LIGHT_BLUE }]}>
-            <Text
-              allowFontScaling={false}
-              style={[styles.amenitiesTitle, globalStyles.h1]}
-            >
+            <Text allowFontScaling={false} style={[styles.amenitiesTitle, globalStyles.h1]}>
               Amenities
             </Text>
             {this.props.amenities.map((amenity, index) => {
@@ -191,7 +175,7 @@ class NearMeScreen extends Component {
                 <AmenitiesItem
                   key={amenity.uuid}
                   amenity={amenity}
-                  border={index !== (this.props.amenities.length - 1)}
+                  border={index !== this.props.amenities.length - 1}
                 />
               );
             })}
@@ -209,7 +193,7 @@ class NearMeScreen extends Component {
           <Grid
             items={tourStops}
             screenReader={this.props.screenReader}
-            onCellPress={(item) => {
+            onCellPress={item => {
               this.props.navigator.push({
                 title: item.shortTitle,
                 component: TourStop,
@@ -234,9 +218,9 @@ class NearMeScreen extends Component {
     let floor;
     if (this.props.floor === null) {
       floor = 'Near Me';
-    } else if (this.props.floor === 0) {
+    } else if (this.props.floor === '0') {
       floor = 'Underground';
-    } else if (this.props.floor === 1) {
+    } else if (this.props.floor === '1') {
       floor = 'Entrance Space';
     } else {
       floor = `Floor ${this.props.floor}`;
@@ -259,13 +243,9 @@ class NearMeScreen extends Component {
             height: 44,
           }}
         />
-        <View
-          style={[styles.container, { marginBottom: containerMargin }]}
-        >
+        <View style={[styles.container, { marginBottom: containerMargin }]}>
           {debugView}
-          <ScrollView
-            automaticallyAdjustContentInsets={false}
-          >
+          <ScrollView automaticallyAdjustContentInsets={false}>
             {contentView}
           </ScrollView>
         </View>

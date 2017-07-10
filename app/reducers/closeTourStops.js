@@ -1,10 +1,7 @@
-
-import {
-  UPDATE_BEACONS,
-} from '../actions/beacon';
+import { UPDATE_BEACONS } from '../actions/beacon';
 
 // TODO: In the future load data from a database to prevent memory pressure
-import { blockRules } from '../data/beaconBlockRules';
+import blockRules from '../data/beaconBlockRules.json';
 
 import { TourStop } from '../models/tourStop';
 const tourStops = TourStop.allRealmObjects().sorted('order');
@@ -12,12 +9,8 @@ const tourStops = TourStop.allRealmObjects().sorted('order');
 import { _, includes } from 'lodash';
 
 export const initialState = {
-  regions: [
-
-  ],
-  previousRegions: [
-
-  ],
+  regions: [],
+  previousRegions: [],
   detectedFloor: null,
   tourStops: {},
   blockRules,
@@ -27,97 +20,82 @@ export function closeTourStops(state = initialState, action) {
   switch (action.type) {
     case UPDATE_BEACONS: {
       if (action.newBeacons.length === 0) {
-        return state;
+        return Object.assign({}, state, {
+          regions: [],
+          detectedFloor: null,
+          tourStops: [],
+        });
       }
 
-      // 1. Figure out which beacons we care about by filtering out the blocked ones
+      // 1. Filter out blocked beacons
+      const beaconsToBlock = [];
+      const beacons = _.chain(action.newBeacons)
+        .reduce((beaconList, beaconUUID) => {
+          const foundBeacon = blockRules[beaconUUID];
 
-      // NOTE: Blocking cascades!
-      // e.g. If 'y' blocks 'x' and 'x' blocks 'z' then even if 'x' is being
-      // blocked it will still block 'z'
-      const beaconUUIDs = action.newBeacons;
+          if (foundBeacon != null) {
+            beaconList.push(foundBeacon);
 
-      const beaconsToBlock = _(state.blockRules)
-        .filter((beacon) => {
-          return includes(beaconUUIDs, beacon.uuid);
-        })
-        .flatMap('blocks')
-        .uniq()
-        .value();
+            for (const block of foundBeacon.blocks) {
+              if (!includes(beaconsToBlock, block)) {
+                beaconsToBlock.push(block);
+              }
+            }
+          }
 
-      const beaconsUUIDsToShow = _(beaconUUIDs)
-        .filter((uuid) => {
-          return !includes(beaconsToBlock, uuid);
+          return beaconList;
+        }, [])
+        .filter(beacon => {
+          return !includes(beaconsToBlock, beacon.uuid);
         })
         .value();
 
       // 2. Find out the users floor and regions by the remaining beacons
-      const beaconData = _(state.blockRules)
-        .filter((beacon) => {
-          return includes(beaconsUUIDsToShow, beacon.uuid);
-        })
-        .value();
-
       // A. Detect the floor the user is on
-      const detectedFloors = _(beaconData)
-        .flatMap('floor')
-        .uniq()
-        .value();
+      const detectedFloors = _(beacons).flatMap('floor').uniq().value();
 
+      // Only update floor if unanimous
       let detectedFloor;
-
-      // Only update if unanimous
       if (detectedFloors.length !== 1) {
         detectedFloor = state.detectedFloor;
       } else {
         detectedFloor = detectedFloors[0];
       }
 
-      // B. Detect the regions relevent to the user
-      const detectedRegions = _(beaconData)
-        .flatMap('region')
-        .uniq()
-        .value();
+      // B. Detect the regions
+      const previousRegions = _(beacons).flatMap('region').uniq().value();
 
-      const previousRegions = detectedRegions;
+      // Only update regions if detected twice in a row
       let regions;
-
       if (state.regions.length === 0) {
         regions = previousRegions;
       } else {
         regions = _(state.previousRegions)
-          .filter((region) => {
+          .filter(region => {
             return includes(previousRegions, region);
           })
           .value();
       }
 
       if (regions.length === 0) {
-        return Object.assign({},
-          state,
-          {
-            regions: state.regions,
-            previousRegions,
-            detectedFloor,
-            tourStops: state.tourStops,
-          }
-        );
+        return Object.assign({}, state, {
+          regions: state.regions,
+          previousRegions,
+          detectedFloor,
+          tourStops: state.tourStops,
+        });
       }
 
       // 3. Find the tour stops with the returned regions
       const query = `regions CONTAINS "${regions.join('" OR regions CONTAINS "')}"`;
-      const showTourStops = tourStops
-        .filtered(query);
+      const showTourStops = tourStops.filtered(query);
 
-      return Object.assign({},
-        state,
-        {
-          regions,
-          previousRegions,
-          detectedFloor,
-          tourStops: showTourStops,
-        }
-      );
+      return Object.assign({}, state, {
+        regions,
+        previousRegions,
+        detectedFloor,
+        tourStops: showTourStops,
+      });
     }
 
     default:

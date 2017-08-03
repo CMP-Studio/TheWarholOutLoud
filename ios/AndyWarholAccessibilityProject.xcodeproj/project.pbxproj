@@ -553,6 +553,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		32CBCBBC1F336064001E6105 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				DBB1D3D947CE4DEC804D02F2 /* libRNDeviceInfo.a */,
+				2D260585236149398895A4E6 /* libRealmReact.a */,
+				B991F4038E0A48CCB38481C8 /* libRCTGoogleAnalyticsBridge.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		32E202EF1DC88AB60079C55C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,6 +629,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				7B6A234911334064989ACC65 /* Frameworks */,
 				DDB73EE62462494BA5F483C2 /* Pods */,
+				32CBCBBC1F336064001E6105 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";

@@ -1,121 +1,51 @@
 {
-  "20688:13234": {
-    "name": "Testing Beacon",
-    "uuid": "20688:13234",
-    "region": "blue",
+  "38467:38396": {
+    "name": "D",
+    "uuid": "38467:38396",
     "floor": "7",
+    "region": "light blue",
     "blocks": []
   },
-  "54351:29236": {
-    "name": "Beacon #1",
-    "uuid": "54351:29236",
-    "region": "blue",
+  "26844:29297": {
+    "name": "C",
+    "uuid": "26844:29297",
     "floor": "7",
-    "blocks": []
-  },
-  "10198:12437": {
-    "name": "Beacon #3",
-    "uuid": "10198:12437",
-    "region": "red",
-    "floor": "7",
-    "blocks": ["8184:46711", "31392:9354", "8696:20374", "54351:29236", "38857:8717"]
-  },
-  "34942:3069": {
-    "name": "Beacon #4",
-    "uuid": "34942:3069",
     "region": "pink",
-    "floor": "7",
-    "blocks": ["8184:46711", "31392:9354", "8696:20374"]
-  },
-  "25828:43124": {
-    "name": "Beacon #5",
-    "uuid": "25828:43124",
-    "region": "gray",
-    "floor": "7",
     "blocks": []
   },
-  "33478:1626": {
-    "name": "Beacon #6",
-    "uuid": "33478:1626",
-    "region": "yellow",
+  "50636:64948": {
+    "name": "E",
+    "uuid": "50636:64948",
     "floor": "7",
-    "blocks": ["54351:29236", "38857:8717"]
-  },
-  "31122:32132": {
-    "name": "Beacon #7",
-    "uuid": "31122:32132",
-    "region": "gray",
-    "floor": "7",
-    "blocks": ["34942:3069", "8184:46711", "31392:9354"]
-  },
-  "40746:35110": {
-    "name": "Beacon #8",
-    "uuid": "40746:35110",
-    "region": "gray",
-    "floor": "7",
-    "blocks": ["8184:46711", "31392:9354"]
-  },
-  "8184:46711": {
-    "name": "Beacon #9",
-    "uuid": "8184:46711",
-    "region": "green",
-    "floor": "7",
+    "region": "overview",
     "blocks": []
   },
   "31392:9354": {
     "name": "Beacon #10",
     "uuid": "31392:9354",
+    "floor": "7",
     "region": "green",
-    "floor": "7",
     "blocks": []
   },
-  "4877:711": {
-    "name": "Beacon #11",
-    "uuid": "4877:711",
-    "region": "yellow",
+  "23568:17990": {
+    "name": "L",
+    "uuid": "23568:17990",
     "floor": "7",
-    "blocks": ["54351:29236", "38857:8717"]
-  },
-  "8696:20374": {
-    "name": "Beacon #12",
-    "uuid": "8696:20374",
     "region": "orange",
-    "floor": "7",
     "blocks": []
   },
-  "38857:8717": {
-    "name": "Beacon #13",
-    "uuid": "38857:8717",
-    "region": "blue",
-    "floor": "7",
+  "41131:48773": {
+    "name": "Beacon #20",
+    "uuid": "41131:48773",
+    "floor": "5",
+    "region": "blue5",
     "blocks": []
   },
-  "55025:37051": {
-    "name": "Beacon #15",
-    "uuid": "55025:37051",
-    "region": "gray",
+  "25596:24389": {
+    "name": "F",
+    "uuid": "25596:24389",
     "floor": "7",
-    "blocks": []
-  },
-  "53981:23804": {
-    "name": "Beacon #16",
-    "uuid": "53981:23804",
-    "region": "gray",
-    "floor": "7",
-    "blocks": []
-  },
-  "36732:40211": {
-    "name": "Beacon #17",
-    "uuid": "36732:40211",
-    "region": "yellow",
-    "floor": "7",
-    "blocks": ["54351:29236", "38857:8717"]
-  },
-  "6198:51662": {
-    "name": "Beacon #18",
-    "uuid": "6198:51662",
-    "region": "blue",
-    "floor": "7",
+    "region": "overview",
     "blocks": []
   },
   "34596:40393": {
@@ -125,102 +55,179 @@
     "region": "blue6",
     "blocks": ["53981:23804", "40746:35110"]
   },
-  "62623:22594": {
-    "name": "Beacon #2",
-    "uuid": "62623:22594",
-    "region": "blue6",
-    "floor": "6",
-    "blocks": ["53981:23804", "40746:35110"]
-  },
-  "60712:26121": {
-    "name": "Beacon #19",
-    "uuid": "60712:26121",
-    "region": "blue5",
-    "floor": "5",
-    "blocks": []
-  },
-  "41131:48773": {
-    "name": "Beacon #20",
-    "uuid": "41131:48773",
-    "region": "blue5",
-    "floor": "5",
-    "blocks": []
-  },
-  "37048:26826": {
-    "name": "Beacon #21",
-    "uuid": "37048:26826",
-    "region": "blue4",
-    "floor": "4",
-    "blocks": []
-  },
-  "21979:16285": {
-    "name": "Beacon #22",
-    "uuid": "21979:16285",
-    "region": "blue4",
-    "floor": "4",
-    "blocks": []
-  },
-  "47703:26079": {
-    "name": "Beacon #23",
-    "uuid": "47703:26079",
-    "region": "blue3",
-    "floor": "3",
-    "blocks": []
-  },
-  "48357:24996": {
-    "name": "Beacon #24",
-    "uuid": "48357:24996",
-    "region": "blue3",
-    "floor": "3",
+  "38378:21486": {
+    "name": "Beacon #27",
+    "uuid": "38378:21486",
+    "floor": "1",
+    "region": "blue1",
     "blocks": []
   },
   "43326:26582": {
     "name": "Beacon #25",
     "uuid": "43326:26582",
-    "region": "blue2",
     "floor": "2",
+    "region": "blue2",
     "blocks": []
   },
-  "8314:60741": {
-    "name": "Beacon #26",
-    "uuid": "8314:60741",
-    "region": "blue2",
-    "floor": "2",
+  "31122:32132": {
+    "name": "Beacon #7",
+    "uuid": "31122:32132",
+    "floor": "7",
+    "region": "tactiles",
+    "blocks": ["34942:3069", "8184:46711", "31392:9354"]
+  },
+  "38857:8717": {
+    "name": "Beacon #13",
+    "uuid": "38857:8717",
+    "floor": "7",
+    "region": "blue",
     "blocks": []
   },
-  "38378:21486": {
-    "name": "Beacon #27",
-    "uuid": "38378:21486",
-    "region": "blue1",
-    "floor": "1",
+  "47703:26079": {
+    "name": "Beacon #23",
+    "uuid": "47703:26079",
+    "floor": "3",
+    "region": "blue3",
     "blocks": []
   },
   "13116:35432": {
     "name": "Beacon #28",
     "uuid": "13116:35432",
-    "region": "blue1",
     "floor": "1",
+    "region": "blue1",
     "blocks": []
   },
-  "14906:11587": {
-    "name": "Beacon #29",
-    "uuid": "14906:11587",
-    "region": "blue1",
-    "floor": "1",
+  "48357:24996": {
+    "name": "Beacon #24",
+    "uuid": "48357:24996",
+    "floor": "3",
+    "region": "blue3",
+    "blocks": []
+  },
+  "21979:16285": {
+    "name": "Beacon #22",
+    "uuid": "21979:16285",
+    "floor": "4",
+    "region": "blue4",
+    "blocks": []
+  },
+  "19716:58820": {
+    "name": "N",
+    "uuid": "19716:58820",
+    "floor": "7",
+    "region": "orange",
+    "blocks": []
+  },
+  "3608:22749": {
+    "name": "O",
+    "uuid": "3608:22749",
+    "floor": "7",
+    "region": "light blue",
     "blocks": []
   },
   "12162:44903": {
     "name": "Beacon #30",
     "uuid": "12162:44903",
-    "region": "blue0",
     "floor": "0",
+    "region": "blue0",
+    "blocks": []
+  },
+  "37048:26826": {
+    "name": "Beacon #21",
+    "uuid": "37048:26826",
+    "floor": "4",
+    "region": "blue4",
+    "blocks": []
+  },
+  "60712:26121": {
+    "name": "Beacon #19",
+    "uuid": "60712:26121",
+    "floor": "5",
+    "region": "blue5",
+    "blocks": []
+  },
+  "969:44570": {
+    "name": "A",
+    "uuid": "969:44570",
+    "floor": "7",
+    "region": "green",
+    "blocks": []
+  },
+  "62623:22594": {
+    "name": "Beacon #2",
+    "uuid": "62623:22594",
+    "floor": "6",
+    "region": "blue6",
+    "blocks": ["53981:23804", "40746:35110"]
+  },
+  "43421:1925": {
+    "name": "M",
+    "uuid": "43421:1925",
+    "floor": "7",
+    "region": "pink",
+    "blocks": []
+  },
+  "12878:52037": {
+    "name": "K",
+    "uuid": "12878:52037",
+    "floor": "7",
+    "region": "orange",
+    "blocks": []
+  },
+  "25828:43124": {
+    "name": "Beacon #5",
+    "uuid": "25828:43124",
+    "floor": "7",
+    "region": "overview",
+    "blocks": []
+  },
+  "6198:51662": {
+    "name": "Beacon #18",
+    "uuid": "6198:51662",
+    "floor": "7",
+    "region": "overview",
+    "blocks": []
+  },
+  "14906:11587": {
+    "name": "Beacon #29",
+    "uuid": "14906:11587",
+    "floor": "1",
+    "region": "blue1",
+    "blocks": []
+  },
+  "32715:57403": {
+    "name": "B",
+    "uuid": "32715:57403",
+    "floor": "7",
+    "region": "tactiles",
+    "blocks": ["34596:40393"]
+  },
+  "65307:43258": {
+    "name": "G",
+    "uuid": "65307:43258",
+    "floor": "7",
+    "region": "blue",
     "blocks": []
   },
   "16195:56093": {
     "name": "Beacon #31",
     "uuid": "16195:56093",
-    "region": "blue0",
     "floor": "0",
+    "region": "blue0",
+    "blocks": []
+  },
+  "8314:60741": {
+    "name": "Beacon #26",
+    "uuid": "8314:60741",
+    "floor": "2",
+    "region": "blue2",
+    "blocks": []
+  },
+  "50825:1666": {
+    "name": "H",
+    "uuid": "50825:1666",
+    "floor": "7",
+    "region": "pink",
     "blocks": []
   }
 }

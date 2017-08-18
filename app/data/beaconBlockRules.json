@@ -25,7 +25,7 @@
     "uuid": "31392:9354",
     "floor": "7",
     "region": "green",
-    "blocks": []
+    "blocks": ["34596:40393"]
   },
   "23568:17990": {
     "name": "L",
@@ -83,6 +83,13 @@
     "region": "blue",
     "blocks": []
   },
+  "54351:29236": {
+    "name": "Beacon #1",
+    "uuid": "54351:29236",
+    "floor": "7",
+    "region": "blue",
+    "blocks": []
+  },
   "47703:26079": {
     "name": "Beacon #23",
     "uuid": "47703:26079",
@@ -116,13 +123,6 @@
     "uuid": "19716:58820",
     "floor": "7",
     "region": "orange",
-    "blocks": []
-  },
-  "3608:22749": {
-    "name": "O",
-    "uuid": "3608:22749",
-    "floor": "7",
-    "region": "light blue",
     "blocks": []
   },
   "12162:44903": {
@@ -177,13 +177,6 @@
   "25828:43124": {
     "name": "Beacon #5",
     "uuid": "25828:43124",
-    "floor": "7",
-    "region": "overview",
-    "blocks": []
-  },
-  "6198:51662": {
-    "name": "Beacon #18",
-    "uuid": "6198:51662",
     "floor": "7",
     "region": "overview",
     "blocks": []

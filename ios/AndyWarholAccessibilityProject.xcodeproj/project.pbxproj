@@ -218,6 +218,19 @@
 		2269C6073CFD2C7947542405 /* Pods-AndyWarholAccessibilityProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject.release.xcconfig"; sourceTree = "<group>"; };
 		2D260585236149398895A4E6 /* libRealmReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRealmReact.a; sourceTree = "<group>"; };
 		3219C0DA1DA42D6300A14415 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		3237497D1F87D26600E21E32 /* Tactile_SelfPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tactile_SelfPortrait.png; sourceTree = "<group>"; };
+		3237497E1F87D26600E21E32 /* Tactile_MickJagger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tactile_MickJagger.png; sourceTree = "<group>"; };
+		3237497F1F87D26600E21E32 /* doItYourself.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doItYourself.png; sourceTree = "<group>"; };
+		323749801F87D26700E21E32 /* Tactile_Campbells.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tactile_Campbells.png; sourceTree = "<group>"; };
+		323749811F87D26700E21E32 /* archives.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = archives.png; sourceTree = "<group>"; };
+		323749821F87D26700E21E32 /* Tactile_Skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tactile_Skull.png; sourceTree = "<group>"; };
+		323749831F87D26800E21E32 /* Tactile_ScreenTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tactile_ScreenTest.png; sourceTree = "<group>"; };
+		323749841F87D26800E21E32 /* Tactile_Camouflage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tactile_Camouflage.png; sourceTree = "<group>"; };
+		323749851F87D26800E21E32 /* Tactile_MaoWallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tactile_MaoWallpaper.png; sourceTree = "<group>"; };
+		323749861F87D26800E21E32 /* Tactile_JuliaWarhola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tactile_JuliaWarhola.png; sourceTree = "<group>"; };
+		323749871F87D26900E21E32 /* Tactile_Jackie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tactile_Jackie.png; sourceTree = "<group>"; };
+		323749881F87D26900E21E32 /* Tactile_BrilloSoapPads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tactile_BrilloSoapPads.png; sourceTree = "<group>"; };
+		323749891F87D26900E21E32 /* warholsHeritage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warholsHeritage.png; sourceTree = "<group>"; };
 		3264D3F01E6DAA1600FE083B /* college.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = college.png; sourceTree = "<group>"; };
 		3264D3F21E6DAE2700FE083B /* Beck_Jessica_College-Years_Introduction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beck_Jessica_College-Years_Introduction.mp3"; sourceTree = "<group>"; };
 		3264D3F31E6DAE2700FE083B /* CollegeYears_Visual_ThreeFigures.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CollegeYears_Visual_ThreeFigures.mp3; sourceTree = "<group>"; };
@@ -422,6 +435,19 @@
 		32CADB281D709A30006122E5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				323749811F87D26700E21E32 /* archives.png */,
+				3237497F1F87D26600E21E32 /* doItYourself.png */,
+				323749881F87D26900E21E32 /* Tactile_BrilloSoapPads.png */,
+				323749841F87D26800E21E32 /* Tactile_Camouflage.png */,
+				323749801F87D26700E21E32 /* Tactile_Campbells.png */,
+				323749871F87D26900E21E32 /* Tactile_Jackie.png */,
+				323749861F87D26800E21E32 /* Tactile_JuliaWarhola.png */,
+				323749851F87D26800E21E32 /* Tactile_MaoWallpaper.png */,
+				3237497E1F87D26600E21E32 /* Tactile_MickJagger.png */,
+				323749831F87D26800E21E32 /* Tactile_ScreenTest.png */,
+				3237497D1F87D26600E21E32 /* Tactile_SelfPortrait.png */,
+				323749821F87D26700E21E32 /* Tactile_Skull.png */,
+				323749891F87D26900E21E32 /* warholsHeritage.png */,
 				3264D3F01E6DAA1600FE083B /* college.png */,
 				32CADB291D709A39006122E5 /* andyAndJulia.png */,
 				32CADB2B1D709A39006122E5 /* blottedLineStill.png */,

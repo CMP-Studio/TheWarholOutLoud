@@ -94,7 +94,7 @@ const Grid = (props) => {
         accessible={true}
         accessibilityTraits={traits}
         accessibilityLabel={
-          `${parseVoiceoverText(item.longTitle)}, ${realIndex} of ${gridLength}.` +
+          `${parseVoiceoverText(item.longTitle)}, ${realIndex} of ${gridLength} on ${props.floorName}.` +
           ` Plays audio for ${item.shortTitle} story.`
         }
       >
@@ -130,46 +130,47 @@ const Grid = (props) => {
     );
   };
 
-  const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-  const dataSource = ds.cloneWithRows(props.items);
-
-  let listView;
-
   if (props.screenReader) {
-    listView = (
-      <ListView
-        enableEmptySections={true}
-        contentContainerStyle={styles.gridRow}
-        dataSource={dataSource}
-        renderRow={(item, sectionIndex, index) => {
-          return renderItem(item, index, props.onCellPress, null, true);
-        }}
-      />
-    );
-  } else {
-    listView = (
+    let content = [];
+
+    props.items.forEach((item, index) => {
+      content.push(
+        renderItem(item, index, props.onCellPress, null, true)
+      );
+    });
+
+    return (
       <View style={styles.gridRow}>
-        <ListView
-          enableEmptySections={true}
-          contentContainerStyle={styles.gridColumn}
-          dataSource={dataSource}
-          initialListSize={20}
-          renderRow={(item, sectionIndex, index) => {
-            return renderItem(item, index, props.onCellPress, true);
-          }}
-        />
-        <ListView
-          enableEmptySections={true}
-          contentContainerStyle={styles.gridColumn}
-          dataSource={dataSource}
-          initialListSize={20}
-          renderRow={(item, sectionIndex, index) => {
-            return renderItem(item, index, props.onCellPress, false);
-          }}
-        />
+        {content}
       </View>
     );
   }
+
+  const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+  const dataSource = ds.cloneWithRows(props.items);
+
+  const listView = (
+    <View style={styles.gridRow}>
+      <ListView
+        enableEmptySections={true}
+        contentContainerStyle={styles.gridColumn}
+        dataSource={dataSource}
+        initialListSize={20}
+        renderRow={(item, sectionIndex, index) => {
+          return renderItem(item, index, props.onCellPress, true);
+        }}
+      />
+      <ListView
+        enableEmptySections={true}
+        contentContainerStyle={styles.gridColumn}
+        dataSource={dataSource}
+        initialListSize={20}
+        renderRow={(item, sectionIndex, index) => {
+          return renderItem(item, index, props.onCellPress, false);
+        }}
+      />
+    </View>
+  );
 
   return (
     <View style={styles.container}>
@@ -183,6 +184,7 @@ Grid.propTypes = {
     PropTypes.array,
     PropTypes.object,
   ]).isRequired,
+  floorName: PropTypes.string.isRequired,
   selected: PropTypes.string,
   onCellPress: PropTypes.func.isRequired,
   screenReader: PropTypes.bool.isRequired,

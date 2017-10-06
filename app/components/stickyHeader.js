@@ -36,6 +36,7 @@ const StickyHeader = (props) => {
   return (
     <View
       style={styles.cell}
+      accessible={true}
       accessibilityTraits={['header']}
       accessibilityLabel={label}
     >

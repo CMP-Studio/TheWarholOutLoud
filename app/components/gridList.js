@@ -51,11 +51,12 @@ const GridList = props => {
 
   tourStopsByFloorSorted.forEach((floor) => {
     const floorTourStops = tourStopsByFloor[floor];
+    const floorName = `${floor}${numberSuffix(floor)} Floor`;
 
     content.push(
       <StickyHeader
         key={`${floor} header}`}
-        title={`${floor}${numberSuffix(floor)} Floor`}
+        title={floorName}
         numberOfObjects={floorTourStops.length}
         objectSingular={'tour stop'}
         objectPlural={'tour stops'}
@@ -69,6 +70,7 @@ const GridList = props => {
         key={`${floor} items`}
         items={floorTourStops}
         selected={props.selected}
+        floorName={floorName}
         screenReader={props.screenReader}
         onCellPress={(item) => {
           props.navigator.push({

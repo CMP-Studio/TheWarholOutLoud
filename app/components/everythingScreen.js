@@ -4,17 +4,12 @@ import React, { Component, PropTypes } from 'react';
 import {
   StyleSheet,
   View,
-  ScrollView,
 } from 'react-native';
 
-import Grid from './grid';
-import TourStop from '../containers/tourStop';
+import GridList from './gridList';
 
 import { BOTTOMBARHEIGHT } from './rootScreen';
 import { BOTTOMPLAYERHEIGHT } from './bottomPlayer';
-import { TAB_STORIES } from '../actions/navigation';
-
-import { TEAL, OFF_BLACK } from '../styles';
 
 const styles = StyleSheet.create({
   container: {
@@ -44,31 +39,12 @@ class EverythingScreen extends Component {
       <View
         style={[styles.container, { marginBottom: containerMargin }]}
       >
-        <ScrollView
-          automaticallyAdjustContentInsets={false}
-        >
-          <Grid
-            items={this.props.tourStops}
-            selected={this.props.currentStopUUID}
-            screenReader={this.props.screenReader}
-            onCellPress={(item) => {
-              this.props.navigator.push({
-                title: item.shortTitle,
-                component: TourStop,
-                barTintColor: '#ffffff',
-                tintColor: TEAL,
-                titleTextColor: OFF_BLACK,
-                shadowHidden: true,
-                passProps: {
-                  tab: TAB_STORIES,
-                  tourStop: item,
-                  initialCategory: item.initialAudio,
-                  imageURL: item.imageURL,
-                },
-              });
-            }}
-          />
-        </ScrollView>
+        <GridList
+          items={this.props.tourStops}
+          selected={this.props.currentStopUUID}
+          screenReader={this.props.screenReader}
+          navigator={this.props.navigator}
+        />
       </View>
     );
   }

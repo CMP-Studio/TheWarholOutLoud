@@ -6,6 +6,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  Dimensions,
 } from 'react-native';
 
 import {
@@ -25,6 +26,8 @@ import NextButton from './buttons/nextButton';
 import RewindButton from './buttons/rewindButton';
 import ToggleSpeedButton from './buttons/toggleSpeedButton';
 
+import ViewTicker from './viewTicker';
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
@@ -35,6 +38,7 @@ const styles = StyleSheet.create({
   },
   titleRow: {
     justifyContent: 'center',
+    marginHorizontal: 10,
     marginBottom: 7,
   },
   titleText: {
@@ -113,6 +117,8 @@ class ControlsView extends Component {
       title = audioTitle;
     }
 
+    const width = Dimensions.get('window').width;
+
     return (
       <View style={styles.container}>
         {/* Title of stop and audio file */}
@@ -122,14 +128,16 @@ class ControlsView extends Component {
           accessibilityTraits={['button', 'header']}
           accessibilityLabel={`${parseVoiceoverText(title)}, ${stopTitle}. Double tap to return to the chapter listing for this story.`}
         >
-          <View style={[styles.row, styles.titleRow]}>
-            <Text style={[globalStyles.h2, { fontWeight: '300' }]}>
-              {stopTitle}
-            </Text>
-            <Text style={[globalStyles.h2, { fontWeight: '500' }]}>
-              &nbsp; {parseDisplayText(title)}
-            </Text>
-          </View>
+          <ViewTicker width={width} uniqueChildrenKey={audioTitle}>
+            <View style={[styles.row, styles.titleRow]}>
+              <Text style={[globalStyles.h2, { fontWeight: '300' }]}>
+                {stopTitle}
+              </Text>
+              <Text style={[globalStyles.h2, { fontWeight: '500' }]}>
+                &nbsp; {parseDisplayText(title)}
+              </Text>
+            </View>
+          </ViewTicker>
         </TouchableOpacity>
         {/* Controls */}
         {/* Previous  */}

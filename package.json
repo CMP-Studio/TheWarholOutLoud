@@ -16,7 +16,7 @@
     "react-native-google-analytics-bridge": "^3.1.0",
     "react-native-swiper": "^1.4.11",
     "react-redux": "^4.4.5",
-    "realm": "^0.14.1",
+    "realm": "^1.13.0",
     "redux": "^3.5.2",
     "redux-devtools-extension": "^1.0.0",
     "redux-thunk": "^2.0.1",

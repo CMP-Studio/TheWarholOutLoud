@@ -161,6 +161,11 @@
 		4DE93F7D1F8B32C600E17B0E /* 1_Introduction_Jose Diaz Boy Book.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DE93F7B1F8B32C000E17B0E /* 1_Introduction_Jose Diaz Boy Book.mp3 */; };
 		4DE93F7E1F8B32D100E17B0E /* 1_Introduction_Jose Diaz College.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DE93F7A1F8B32C000E17B0E /* 1_Introduction_Jose Diaz College.mp3 */; };
 		4DE93F7F1F8B32D300E17B0E /* 1_Introduction_Jose Diaz Work.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DE93F7C1F8B32C100E17B0E /* 1_Introduction_Jose Diaz Work.mp3 */; };
+		4DE93F851F8B4EDB00E17B0E /* 1_Introduction_Jessica Beck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DE93F831F8B4ED200E17B0E /* 1_Introduction_Jessica Beck.mp3 */; };
+		4DE93F861F8B4EDD00E17B0E /* 2_Irony and wit_Jessica Beck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DE93F841F8B4ED200E17B0E /* 2_Irony and wit_Jessica Beck.mp3 */; };
+		4DE93F871F8B4EE000E17B0E /* 3_A vital acquisition_Patrick Moore.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DE93F811F8B4ED200E17B0E /* 3_A vital acquisition_Patrick Moore.mp3 */; };
+		4DE93F881F8B4EE200E17B0E /* 4_Source material_Erin Byrne.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DE93F821F8B4ED200E17B0E /* 4_Source material_Erin Byrne.mp3 */; };
+		4DE93F891F8B4EE400E17B0E /* VisualDescription_DoItYourselfSailboats.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DE93F801F8B4ED100E17B0E /* VisualDescription_DoItYourselfSailboats.mp3 */; };
 		633BA1BC7B8F408A96F0F333 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB1D3D947CE4DEC804D02F2 /* libRNDeviceInfo.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		89DB25260881405EB749C488 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC665411C24E4CF6A5C2773D /* libz.tbd */; };
@@ -456,6 +461,11 @@
 		4DE93F7A1F8B32C000E17B0E /* 1_Introduction_Jose Diaz College.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1_Introduction_Jose Diaz College.mp3"; sourceTree = "<group>"; };
 		4DE93F7B1F8B32C000E17B0E /* 1_Introduction_Jose Diaz Boy Book.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1_Introduction_Jose Diaz Boy Book.mp3"; sourceTree = "<group>"; };
 		4DE93F7C1F8B32C100E17B0E /* 1_Introduction_Jose Diaz Work.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1_Introduction_Jose Diaz Work.mp3"; sourceTree = "<group>"; };
+		4DE93F801F8B4ED100E17B0E /* VisualDescription_DoItYourselfSailboats.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = VisualDescription_DoItYourselfSailboats.mp3; sourceTree = "<group>"; };
+		4DE93F811F8B4ED200E17B0E /* 3_A vital acquisition_Patrick Moore.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "3_A vital acquisition_Patrick Moore.mp3"; sourceTree = "<group>"; };
+		4DE93F821F8B4ED200E17B0E /* 4_Source material_Erin Byrne.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "4_Source material_Erin Byrne.mp3"; sourceTree = "<group>"; };
+		4DE93F831F8B4ED200E17B0E /* 1_Introduction_Jessica Beck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1_Introduction_Jessica Beck.mp3"; sourceTree = "<group>"; };
+		4DE93F841F8B4ED200E17B0E /* 2_Irony and wit_Jessica Beck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "2_Irony and wit_Jessica Beck.mp3"; sourceTree = "<group>"; };
 		5DE6AA1E78184C068BD5FFD2 /* RealmReact.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RealmReact.xcodeproj; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; };
 		6D6553A0A1BB4AC796F299D1 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -618,6 +628,11 @@
 			isa = PBXGroup;
 			children = (
 				4DE93F7B1F8B32C000E17B0E /* 1_Introduction_Jose Diaz Boy Book.mp3 */,
+				4DE93F831F8B4ED200E17B0E /* 1_Introduction_Jessica Beck.mp3 */,
+				4DE93F841F8B4ED200E17B0E /* 2_Irony and wit_Jessica Beck.mp3 */,
+				4DE93F811F8B4ED200E17B0E /* 3_A vital acquisition_Patrick Moore.mp3 */,
+				4DE93F821F8B4ED200E17B0E /* 4_Source material_Erin Byrne.mp3 */,
+				4DE93F801F8B4ED100E17B0E /* VisualDescription_DoItYourselfSailboats.mp3 */,
 				4DE93F7A1F8B32C000E17B0E /* 1_Introduction_Jose Diaz College.mp3 */,
 				4DE93F7C1F8B32C100E17B0E /* 1_Introduction_Jose Diaz Work.mp3 */,
 				3237499A1F87D6AC00E21E32 /* 3_Photos and opaque projectors_Jessica Beck.mp3 */,
@@ -1124,6 +1139,7 @@
 				323749F01F87F62D00E21E32 /* 1_Introduction_Grace Marston.mp3 in Resources */,
 				32CADB391D709A39006122E5 /* campbells.png in Resources */,
 				32CADB3F1D709A39006122E5 /* lobbySpace.png in Resources */,
+				4DE93F861F8B4EDD00E17B0E /* 2_Irony and wit_Jessica Beck.mp3 in Resources */,
 				32CADBAE1D709AC3006122E5 /* Warhola_Donald_Julia_Prayer.mp3 in Resources */,
 				32374A041F87F62D00E21E32 /* Tactile_Campbells.mp3 in Resources */,
 				32374A191F87F62D00E21E32 /* Warhola_AllIWantForChristmas-v2.mp3 in Resources */,
@@ -1174,6 +1190,7 @@
 				323749EF1F87F62D00E21E32 /* 1_Introduction_Danielle Linzer.mp3 in Resources */,
 				323749FF1F87F62D00E21E32 /* CrushedCampbells_Visual.mp3 in Resources */,
 				32CADB841D709AC3006122E5 /* Beck_Jessica_New-York_Success.mp3 in Resources */,
+				4DE93F851F8B4EDB00E17B0E /* 1_Introduction_Jessica Beck.mp3 in Resources */,
 				323749F51F87F62D00E21E32 /* 2_Torn crumpled crushed_Grace Marston.mp3 in Resources */,
 				3264D3F81E6DAE2700FE083B /* Pearlstein_HowDoesItFeelToBeFamous.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
@@ -1204,6 +1221,7 @@
 				32CADB821D709AC3006122E5 /* Beck_Jessica_New-York_Introduction.mp3 in Resources */,
 				32374A161F87F62D00E21E32 /* VisualDescription_EightShoes.mp3 in Resources */,
 				32DADA8A1DBA96DD003D00DE /* Tactile-Reclining_Male_Torso.png in Resources */,
+				4DE93F891F8B4EE400E17B0E /* VisualDescription_DoItYourselfSailboats.mp3 in Resources */,
 				323749FD1F87F62D00E21E32 /* Beck_Jessica_New-York_DedicatedAndDriven.mp3 in Resources */,
 				323749E11F87F59000E21E32 /* Tactile_JuliaWarhola.png in Resources */,
 				32CADBAB1D709AC3006122E5 /* Warhola_Donald_Childhood_Warhola_Family.mp3 in Resources */,
@@ -1213,6 +1231,7 @@
 				32CADB991D709AC3006122E5 /* Marsden_Grace_Campbells_Torn.mp3 in Resources */,
 				32CADBB31D709AC3006122E5 /* Warhola_John_Movie_Projector-v2.mp3 in Resources */,
 				323749F61F87F62D00E21E32 /* 2_Warhola_Donald_NeighborhoodWatch.mp3 in Resources */,
+				4DE93F871F8B4EE000E17B0E /* 3_A vital acquisition_Patrick Moore.mp3 in Resources */,
 				32A7B75F1DE4D54800407F48 /* BoyBook_UnidentifiedMale_VisualDescription.mp3 in Resources */,
 				323749DE1F87F59000E21E32 /* Tactile_Camouflage.png in Resources */,
 				32CADB811D709AC3006122E5 /* Beck_Jessica_New-York_Commercial-Fine-Art.mp3 in Resources */,
@@ -1250,6 +1269,7 @@
 				323749E91F87F62D00E21E32 /* 3_Photos and opaque projectors_Jessica Beck.mp3 in Resources */,
 				32374A111F87F62D00E21E32 /* Visual_MaoWallpaper.mp3 in Resources */,
 				323749EA1F87F62D00E21E32 /* 3_Three Figures_Jose Diaz.mp3 in Resources */,
+				4DE93F881F8B4EE200E17B0E /* 4_Source material_Erin Byrne.mp3 in Resources */,
 				32DADA891DBA96DD003D00DE /* Tactile-Female_Fashion_Figure.png in Resources */,
 				323749FC1F87F62D00E21E32 /* 5-Julia Warhola's dress_Erin Byrne.mp3 in Resources */,
 			);

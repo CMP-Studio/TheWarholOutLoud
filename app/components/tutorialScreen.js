@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: OFF_BLACK,
     marginTop: 20,
+    paddingTop: 20,
   },
   floatingButtonContainer: {
     backgroundColor: 'transparent',

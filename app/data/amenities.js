@@ -160,6 +160,15 @@ export const allAmenities = [
           "Andy Warhol created artworks that explored the boundaries of the moving image from the time he purchased his first movie camera in 1963 until the end of his life in 1987. The touch screens in this gallery allow you to view more than 100 full-length selections from Warhol's film, video, and television work.",
         hours: '',
       },
+      {
+        uuid: uuid.v4(),
+        title: 'Tactile reproductions',
+        icon: 'Amenities_Tactile.png',
+        notes: '',
+        description:
+          "Get a sense of the texture, shape, and composition in Andy Warhol's artwork through touch.",
+        hours: '',
+      },
     ],
   },
   {
@@ -175,6 +184,15 @@ export const allAmenities = [
           'The result of a collaboration between Andy Warhol and engineer Billy Klüver, this 1966 sculptural installation is comprised of floating, reflective scotchpak silver "clouds" filled with helium and oxygen. You are welcome to gently touch the clouds; these objects move randomly through the space and may touch you.',
         hours: '',
       },
+      {
+        uuid: uuid.v4(),
+        title: 'Tactile reproductions',
+        icon: 'Amenities_Tactile.png',
+        notes: '',
+        description:
+          "Get a sense of the texture, shape, and composition in Andy Warhol's artwork through touch.",
+        hours: '',
+      },
     ],
   },
   {
@@ -188,6 +206,15 @@ export const allAmenities = [
         notes: '',
         description:
           'Between 1964 and 1966, Andy Warhol created almost 500 <i>Screen Tests</i> of famous and anonymous visitors to his studio. Visitors are invited to create their own.',
+        hours: '',
+      },
+      {
+        uuid: uuid.v4(),
+        title: 'Tactile reproductions',
+        icon: 'Amenities_Tactile.png',
+        notes: '',
+        description:
+          "Get a sense of the texture, shape, and composition in Andy Warhol's artwork through touch.",
         hours: '',
       },
     ],

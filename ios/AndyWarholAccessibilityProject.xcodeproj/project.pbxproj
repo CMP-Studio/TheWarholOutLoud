@@ -171,7 +171,6 @@
 		89DB25260881405EB749C488 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AC665411C24E4CF6A5C2773D /* libz.tbd */; };
 		8C5FAA5343744AA884971758 /* libRCTGoogleAnalyticsBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B991F4038E0A48CCB38481C8 /* libRCTGoogleAnalyticsBridge.a */; };
 		F69CF019DCD14030BF6E6846 /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D260585236149398895A4E6 /* libRealmReact.a */; };
-		FA520F5123227F6EF74BC023 /* Pods_AndyWarholAccessibilityProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41FF1C7176CF695511DE78D /* Pods_AndyWarholAccessibilityProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -472,7 +471,6 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		95AFA373C9D0BDC4AEFE09E8 /* Pods-AndyWarholAccessibilityProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndyWarholAccessibilityProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndyWarholAccessibilityProject/Pods-AndyWarholAccessibilityProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AC665411C24E4CF6A5C2773D /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		B41FF1C7176CF695511DE78D /* Pods_AndyWarholAccessibilityProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AndyWarholAccessibilityProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B991F4038E0A48CCB38481C8 /* libRCTGoogleAnalyticsBridge.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTGoogleAnalyticsBridge.a; sourceTree = "<group>"; };
 		DA9653058D874183A3A559DA /* libc++.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		DBB1D3D947CE4DEC804D02F2 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
@@ -500,7 +498,6 @@
 				633BA1BC7B8F408A96F0F333 /* libRNDeviceInfo.a in Frameworks */,
 				F69CF019DCD14030BF6E6846 /* libRealmReact.a in Frameworks */,
 				498E19D7529C4582BD5F2D5D /* libc++.tbd in Frameworks */,
-				FA520F5123227F6EF74BC023 /* Pods_AndyWarholAccessibilityProject.framework in Frameworks */,
 				8C5FAA5343744AA884971758 /* libRCTGoogleAnalyticsBridge.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -858,7 +855,6 @@
 				32E203001DC88AE90079C55C /* CoreData.framework */,
 				DA9653058D874183A3A559DA /* libc++.tbd */,
 				AC665411C24E4CF6A5C2773D /* libz.tbd */,
-				B41FF1C7176CF695511DE78D /* Pods_AndyWarholAccessibilityProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1370,6 +1366,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = SZY22WCGL8;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1378,6 +1375,7 @@
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
+					"$(SRCROOT)/../node_modules/react-native/Libraries/**",
 				);
 				INFOPLIST_FILE = AndyWarholAccessibilityProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1409,6 +1407,7 @@
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = SZY22WCGL8;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1417,6 +1416,7 @@
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
+					"$(SRCROOT)/../node_modules/react-native/Libraries/**",
 				);
 				INFOPLIST_FILE = AndyWarholAccessibilityProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -22,7 +22,8 @@ export default function hydrate(newVersion) {
       const realmObjects = realm.objects(TourStop.NAME);
       realm.delete(realmObjects);
 
-      for (const tourStop of tourStops) {
+      for (let i = 0; i < tourStops.length; i++) {
+        let tourStop = tourStops[i];
         saveToRealm(tourStop);
       }
     });

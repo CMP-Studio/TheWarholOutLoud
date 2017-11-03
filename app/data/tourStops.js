@@ -134,7 +134,7 @@ export const tourStops = [
     order: 2,
     shortTitle: "Warhol's heritage",
     longTitle: "Warhol's Carpatho-Rusyn heritage",
-    regions: ["blue"],
+    regions: ["blue", "light blue"],
     imageURL: "warholsHeritage.png",
     imageWidth: 331,
     imageHeight: 475,

@@ -165,7 +165,7 @@ export const tourStops = [
         speaker: "Narrator",
         audioURL: "VisualDescription_JuliaPassport",
         transcript:
-          "<i>Narrator:</i>\n\nThis seemingly half-finished paint-by-numbers image of two sailboats at sea on a cloudy day is actually an original acrylic and graphite painting from Warhol’s Do It Yourself series.\n\nThe saturated sky has been filled in with dark blue, and some layers of the puffy clouds are rendered in light pink, rose, and lavender.\n\nBut much of the painting consists of shapes thinly-outlined with pencil, each containing a perfect type-set number that corresponds to an unknown color key. In the clouds are rolling layers of 1, 7, 14, 17, 18, and 22, while the sea comprises dozens of small, almond-shaped waves to be painted 7, 8, 9, and 17.\n\nSome color details can be found on the boat in the foreground, including teal green marks along the edge of the main sail and a black and brown mast topped by a small orange flag, but most sections are still waiting to be painted."
+          "<i>Narrator:</i>\n\nThis is the Czechoslovakian passport issued to Andy Warhol’s mother, Julia Warhola, in 1920. The tattered paper document features several official stamps and notations, including a rectangular stamp in purple ink from the American consulate in Prague.\n\nIt states that the bearer is to depart for the United States of American between October 12, 2019 and December 31, 1920, with the latter date crossed out and changed to October 12, 1921 in black handwritten. The correction is confirmed by a signature, which differs from the signature beneath it—that of the American vice consul.\n\nIn the upper half of the faded, well-worn document is a 3-inch by 2-inch sepia toned photograph of young Julia affixed with strips of yellowed tape. In it, Julia stands against a dark backdrop, gazing to our left with narrow eyes and a slight grin on her closed lips. She wears a dark pleated skirt, a dark head scarf, and a white blouse with frills at the wrists. The creased photograph, which appears to be a snapshot rather than a formal portrait, is signed at the bottom by Julia herself."
       },
       {
         uuid: uuid.v4(),
@@ -233,7 +233,7 @@ export const tourStops = [
     regions: ["olive", "blue"],
     imageURL: "college.png",
     imageWidth: 475,
-    imageHeight: 311,
+    imageHeight: 321,
     imageAccessibilityLabel: "",
     shortCredit:
       "Andy Warhol, <i>Three Figures in Back of Produce Truck</i>, 1946-1947 © AWF",
@@ -279,12 +279,12 @@ export const tourStops = [
         uuid: uuid.v4(),
         category: "ART_PROCESS",
         depth: 0,
-        title: "<i>Three Figures in the Back of a Produce Truck</i>",
+        title: "<i>Three Figures in Back of Produce Truck</i>",
         duration: 32,
         speaker: "Jose Diaz",
         audioURL: "3_Three Figures_Jose Diaz",
         transcript:
-          "<i>Chief curator Jose Carlos Diaz:</i>\n\nIn the drawing Three Figures in Back of a Produce Truck, you can see a woman with a young male, possibly a son as she’s shopping a Paul Warhola’s produce truck.\n\nWhat makes this drawing so special is that we’ve the introduction of watercolor and color ink. For me, this really predates the blotted line and, sort of, the commercial work that Andy Warhol did.\n\nThis particular work is beautiful, as well, because the ink of the pen is so fine that you could actually make out the description of some of the crates, such as grapes and peaches."
+          "<i>Chief curator Jose Carlos Diaz:</i>\n\nIn the drawing <i>Three Figures in Back of Produce Truck</i>, you can see a woman with a young male, possibly a son as she’s shopping a Paul Warhola’s produce truck.\n\nWhat makes this drawing so special is that we’ve the introduction of watercolor and color ink. For me, this really predates the blotted line and, sort of, the commercial work that Andy Warhol did.\n\nThis particular work is beautiful, as well, because the ink of the pen is so fine that you could actually make out the description of some of the crates, such as grapes and peaches."
       },
       {
         uuid: uuid.v4(),
@@ -350,17 +350,7 @@ export const tourStops = [
         transcript:
           "<i>Jessica Beck:</i>\n\nThe other thing about this photograph that's notable is that you catch Warhol in this very sort of precocious, naïve, a bit shy moment in his career, before 1961 and '62 when he starts crafting a persona with his costume, with his dress—you know, leather jackets, striped shirts of the Silver Factory period. \n\nAt this point he has an oversized suit. It's a little too baggy for him. He's carrying his portfolio, which he sort of pounded the pavement with editors, went in and met with people, was very sort of active in getting his name spread around the commercial design community. So it's also important to note that this is the period before that sort of cool, distant persona started to take shape."
       },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "Success is a job in New York",
-        duration: 41,
-        speaker: "Jessica Beck",
-        audioURL: "Beck_Jessica_New-York_Success",
-        transcript:
-          '<i>Jessica Beck:</i>\n\nWarhol was exceptionally talented as a commercial illustrator. He figured out a way to speak to editors, made some major success early on in his career with illustration, most notably with <i>Glamour</i> magazine. He illustrated a story called "What is Success?" \n\nOne of the pages of the stories was "Success is a Job in New York," and that kind of sums up Warhol\'s first decade in Manhattan, was that he ended up being hugely successful financially and during his time as a commercial illustrator continued to seek the attention of important dealers. It wasn\'t until 1962 that that finally happened for him.'
-      },
+
       {
         uuid: uuid.v4(),
         category: "COMMENTARY_ANECDOTE",
@@ -371,6 +361,17 @@ export const tourStops = [
         audioURL: "Beck_Jessica_New-York_Commercial-Fine-Art",
         transcript:
           "<i>Jessica Beck:</i>\n\nWarhol at this point in his career is very active in commercial design and commercial illustration. \n\nBut, with that said, he always remained very dedicated to building an art career and an art portfolio as well, so it's important to remember that, even at a time when he was on a different track, he always had one foot in this sort of activity of collecting a circle of other artists to be around, getting the attention of gallerists, circulating handmade artist books. So Warhol is very driven at this early first moment in New York."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "Success is a job in New York",
+        duration: 41,
+        speaker: "Jessica Beck",
+        audioURL: "Beck_Jessica_New-York_Success",
+        transcript:
+          '<i>Jessica Beck:</i>\n\nWarhol was exceptionally talented as a commercial illustrator. He figured out a way to speak to editors, made some major success early on in his career with illustration, most notably with <i>Glamour</i> magazine. He illustrated a story called "What is Success?" \n\nOne of the pages of the stories was "Success is a Job in New York," and that kind of sums up Warhol\'s first decade in Manhattan, was that he ended up being hugely successful financially and during his time as a commercial illustrator continued to seek the attention of important dealers. It wasn\'t until 1962 that that finally happened for him.'
       },
       {
         uuid: uuid.v4(),
@@ -460,113 +461,17 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 6,
-    shortTitle: "Andy and Julia",
-    longTitle: "Andy and Julia",
-    regions: ["pink", "orange"],
-    imageURL: "andyAndJulia.png",
-    imageWidth: 346,
-    imageHeight: 475,
-    imageAccessibilityLabel: "",
-    shortCredit: "Andy Warhol, <i>Folding Screen</i>, 1950s © AWF",
-    longCredit:
-      "Andy Warhol (American, 1928-1987)\n<i>Folding Screen</i>\n1950s\ntempera on cardboard and wooden screen\n64 1/2 x 50 in. (163.8 x 127 cm.)\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.796",
-    tags: [],
-    initialAudio: "INTRODUCTION",
-    audioContent: [
-      {
-        uuid: uuid.v4(),
-        category: "INTRODUCTION",
-        depth: 0,
-        title: "Introduction",
-        duration: 20,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Donald-Julia_Introduction",
-        transcript:
-          "<i>Donald Warhola:</i>\n\nHi, my name is Donald Warhola. I’m one of ten nieces and nephews of Andy Warhol.\n\nJulia Warhola was my grandmother and she was of course the mother of Andy Warhol.\n\nShortly Uncle Andy graduated from Carnegie Tech and moved to New York City, Julia then moved up to New York City to be with Andy."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "VISUAL_DESCRIPTION",
-        depth: 0,
-        title: "Visual description",
-        duration: 75,
-        speaker: "Narrator",
-        audioURL: "AndyAndJulia_visual",
-        transcript:
-          '<i>Narrator:</i>\n\nThis three panel folding room divider, which stands over five feet tall and flattens to a width of four feet, is adorned with large, hand-painted letters. The separate wooden panels are faced with sheets of mottled light brown cardboard, and are connected by small brass hinges. The third panel, on our right, is weathered and stained at the top.\n\nPainted in black onto the panels are the letters of the alphabet, casually rendered in a sometimes fanciful cursive font that features thin lines and spiral curlicues. Beside a large, straight-backed lower case A is a much more elaborate uppercase B, which has a curved back and three curling flourishes. On the second line, in middle panel, the I and J are both simple lowercase letters that appear plucked from a handwritten note. The H which precedes them, however, is a large uppercase letter with a sweeping switchback horizontal line that twice crosses the vertical stems. At our lower right hand corner the artist has signed the piece "Andy Warhol\'s mother" in matching cursive with the same black tempera paint.'
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "<i>Folding Screen</i>",
-        duration: 18,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Donald-Julia_FoldingScreen-v2",
-        transcript:
-          "<i>Donald Warhola:</i>\n\nSo this is a large trifold free-standing screen and it has various letters painted on it. With this style, it's very similar to the writing of Julia Warhola. And it's even signed, down in the lower right-hand corner, \"Andy Warhol's mother.\""
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 1,
-        title: "Signature style",
-        duration: 30,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Donald_Julia_Signature_style",
-        transcript:
-          "<i>Donald Warhola:</i> \n\nUncle Andy really enjoyed, really admired the way my grandmother would write, that sort of old European style of writing, so any time he had any text to put on any of his works he would have her do it, especially during his commercial art days, and also he would have her sign a lot of his artwork. If you notice you'll see some of the earlier works were signed with one signature of Andy Warhol, and then after Julia passed away his signature changed. So that was not a coincidence."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 1,
-        title: "A mother's influence",
-        duration: 68,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Donald_Julia_Mothers_Influence",
-        transcript:
-          '<i>Donald Warhola:</i>\n\nJulia really enjoyed her art. Art was one of the things that she enjoyed, along with singing, so I believe with that that Uncle Andy was really kind of tuned in and knew that basically that Julia was very talented.\n\nI believe Uncle Andy, really I’m sure, was looking for ideas from Julia all the time.\n\nThere is a work, a drawing that Julia did, I think it’s around 1952 of a Campbell’s Soup can, and of course two cats. And it has "Campbell’s Soup, It’s Very Good" sort of almost written in broken English, and I believe—I can’t help but think that influenced Uncle Andy or might have been one piece of the puzzle or one idea that helped Uncle Andy to do the Campbell Soup can paintings and prints that he did.\n\nI believe Uncle Andy was very complex and there was not any one idea that led to his decisions, but I believe that multiple ideas, and I’m sure that that contributed to his decision to do the Campbell’s Soup can.\n\n'
-      },
-      {
-        uuid: uuid.v4(),
-        category: "COMMENTARY_ANECDOTE",
-        depth: 0,
-        title: "Living on a prayer",
-        duration: 23,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Donald_Julia_Prayer",
-        transcript:
-          "<i>Donald Warhola:</i>\n\nJulia was very religious. \n\nI remember whenever I would visit up in New York Uncle Andy would kneel down and say a prayer with Julia each morning before he left. And again the premise being that it’s a dangerous world, your life is again on this thread, and you should pray for God’s protection and to watch over you to bring you back."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "COMMENTARY_ANECDOTE",
-        depth: 0,
-        title: '"The boss is going to fire me"',
-        duration: 42,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Donald_Julia_The_Boss_Is_Going",
-        transcript:
-          "<i>Donald Warhola:</i>\n\nWhat I always admire about Julia is that she really—I believe she really nurtured my uncle’s artistic talent, and then throughout their life, they had a very mutual love and respect for each other. Julia would help Andy with his art. \n\nI remember being up there as a child and seeing Julia working with Uncle Andy. I remember one occasion where she was talking to my father and Uncle Andy was in the room, too, and Uncle Andy was looking at Julia, and she’s talking to my father, and she’s getting a little nervous, he’s getting a little nervous, and Dad’s talking and talking and Julia had to stop Dad and said, “I’d better get back to work or else the boss is gonna fire me.”"
-      }
-    ]
-  },
-  {
-    uuid: uuid.v4(),
-    floor: 7,
     order: 7,
     shortTitle: "Boy Book",
     longTitle: "Boy Book",
     regions: ["pink"],
-    imageURL: "boyBook.png",
-    imageWidth: 390,
+    imageURL: "1998-1-1692_pub_01.jpg",
+    imageWidth: 315,
     imageHeight: 475,
     imageAccessibilityLabel: "",
-    shortCredit: "Andy Warhol, <i>Reclining Male Torso</i>, 1950s © AWF",
+    shortCredit: "Andy Warhol, <i>Seated Male Nude Torso</i>, 1950s © AWF",
     longCredit:
-      "Andy Warhol, <i>Reclining Male Torso</i>, 1950s\nThe Andy Warhol Museum, Pittsburgh; Founding Collection,\n Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.1694",
+      "Andy Warhol, <i>Seated Male Nude Torso</i>, 1950s\nThe Andy Warhol Museum, Pittsburgh; Founding Collection,\nContribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.1692",
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -579,18 +484,18 @@ export const tourStops = [
         speaker: "Jose Diaz",
         audioURL: "1_Introduction_Jose Diaz Boy Book",
         transcript:
-          "<i>Jose Diaz:</i>\n\nIn 1956 Andy Warhol had an exhibition titled <i>Drawings for a Boy Book</i>. What makes the Boy Book drawings so interesting is that these were illustrated at the same time when Andy Warhol was a successful commercial illustrator. The subject matter of these drawings were young men, often body parts – their feet, their torsos, their faces."
+          "<i>Chief curator Jose Carlos Diaz:</i>\n\nHello, my name is Jose Diaz. I’m the chief curator here at The Andy Warhol Museum.\n\nThe drawings from the <i>Boy Book</i> series are unique because they’re all one of a kind. You can see that Andy used a ballpoint pen or pencil. This would have been based off a live model, not an appropriated image from a newspaper or a photo. These works were not meant to be multiples or distributed to a wide variety of clients. These were one-of-a-kind and were meant to be shown in a fine art gallery, which is what Warhol was hopefully pursuing"
       },
       {
         uuid: uuid.v4(),
         category: "VISUAL_DESCRIPTION",
         depth: 0,
         title: "Visual description",
-        duration: 65,
+        duration: 47,
         speaker: "Narrator",
-        audioURL: "TactileRecliningMaleTorso_Visual",
+        audioURL: "VisualDescription_SeatedMaleNudeTorso",
         transcript:
-          "<i>Narrator:</i>\n\nThis stylized line drawing on yellowed manila paper features a bare-chested young man lounging on a formal sofa.\n\nRendered with simple lines from a ballpoint pen, the muscular young man lies on his side, facing us, his head resting on his bicep at our upper left-hand corner. With his body propped up by a large, unadorned pillow, he stares at us with wide eyes and full, pouting lips. He has a broad shoulder and a long muscular arm, which is draped across his body and rests of a second pillow near the bottom righthand corner.\n\nBehind and beneath the young man, the patterned upholstery is represented by seemingly random shapes and patches of densely packed parallel lines. Other patches of texture include tufts of wavy hair on the young man’s head and forearm, and fine feathery lines that delineate the man’s pectoral muscles at the center of the drawing."
+          "<i>Narrator:</i>\n\nThis black ink drawing on yellowed Manila paper features a young, bare-chested man rendered with thin, uniform lines, shown from the waist up. The subject sits in profile facing our left with his right elbow on a raised knee as his head rests on a closed fist under his chin.\n\nWhile the lips and eyes are represented by simple outlines, greater detail is present in the ear and the curved parallel lines in the subject’s hair and eyebrows. Dozens of tiny, loosely-rendered heart shapes adorn the man’s arms, chest, and side. Under the man’s dimpled chin, in the space between his fist and throat, is a patch of vertical lines, perhaps representing a shadow or background decoration."
       },
       {
         uuid: uuid.v4(),
@@ -611,13 +516,13 @@ export const tourStops = [
     order: 8,
     shortTitle: "Commercial work",
     longTitle: "Commercial work",
-    shortCredit: "Andy Warhol, <i>Eight Shoes</i>, 1950s © AWF",
+    shortCredit: "Andy Warhol, <i>Female Fashion Figure</i>, 1950s © AWF",
     longCredit:
-      "Andy Warhol, <i>Eight Shoes</i>, 1950s\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.1045",
+      "Andy Warhol, <i>Female Fashion Figure</i>, 1950s\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.1194",
     regions: ["pink"],
-    imageURL: "commercialWork.png",
+    imageURL: "1998-1-1194_pub_01.jpg",
     imageWidth: 475,
-    imageHeight: 327,
+    imageHeight: 374,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -637,11 +542,11 @@ export const tourStops = [
         category: "VISUAL_DESCRIPTION",
         depth: 0,
         title: "Visual description",
-        duration: 53,
+        duration: 71,
         speaker: "Narrator",
-        audioURL: "VisualDescription_EightShoes",
+        audioURL: "TactileFemaleFashionFigure_Visual",
         transcript:
-          "<i>Narrator:</i>\n\nThis illustration consists of two sheets of Strathmore paper, taped together like pages of an open book.\n\nOn our right is a black ink line drawing of eight stylish women’s shoes. On the left is the mirror image of the black line drawing, adorned with brightly-colored Aniline dye and shaded with patches of heavy black ink.\n\nAll of the shoes have chunky heels, and range from strappy sandals to tall lace-up boots. Some feature patterns on the sides, and others are ornamented with buckles on the front or top.\n\nWhile the shoes on the left have been painted red, green, orange, and pink, the line drawing on the right is free of color, save for some small patches of lime green ink which may have been transferred from the left when the sheets of paper were pressed together."
+          "<i>Narrator:</i>\n\nThis black ink line drawing with synthetic dye features a fashionable, lithe woman in a puffy, knee-length dress standing in front of a 1950s convertible sports car.\n\nRendered in irregular black ink lines, the woman stands at the center of the piece, facing our right, with one hand reaching up to touch the string of pearls around her neck. She wears her hair coiffed and up, with pointed heels on her feet, and an oval rosette in the bodice of her sleeveless dress.\n\nBehind her is a 1959 Plymouth Sport Fury convertible, which faces our upper right hand corner as if preparing to drive away from us. The long, sleek car has rear fins and a round spare tire case mounted on the trunk. The front of the car has a freestanding windshield, a round side mirror, and an open interior.\n\nWhile the background and the woman lack color, both the car and the dress have been painted with vibrant, watery dye: violet for the dress, and cherry red for the sports car."
       },
       {
         uuid: uuid.v4(),
@@ -652,12 +557,12 @@ export const tourStops = [
         speaker: "Jessica Beck",
         audioURL: "2_Consumer culture and pop_Jessica Beck",
         transcript:
-          "<i>Curator Jessica Beck:</i>\n\nIn the 1950s, America is actually going through a really interesting and important moment culturally. It’s post World War II. There’s a boom economically. Culture picks up, consumer culture picks up in an important way which led to a complete renaissance in advertising and newspapers and all sorts of media—the dawn of television and radio. The world had become much more interested in a visual culture.\n\nThe change in visual culture after World War II that started happening in the U.S. [and] was also happening in Europe completely changed the way we thought about art. Another movement had started to take shape and that movement was pop."
+          "<i>Curator Jessica Beck:</i>\n\nHi, I'm Jessica Beck.\n\nIn the 1950s, America is actually going through a really interesting and important moment culturally. It’s post World War II. There’s a boom economically. Culture picks up, consumer culture picks up in an important way which led to a complete renaissance in advertising and newspapers and all sorts of media—the dawn of television and radio. The world had become much more interested in a visual culture.\n\nThe change in visual culture after World War II that started happening in the U.S. [and] was also happening in Europe completely changed the way we thought about art. Another movement had started to take shape and that movement was pop."
       },
       {
         uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
+        category: "HISTORICAL_CONTEXT",
+        depth: 1,
         title: "Unique style",
         duration: 51,
         speaker: "Jessica Beck",
@@ -731,11 +636,11 @@ export const tourStops = [
         category: "VISUAL_DESCRIPTION",
         depth: 0,
         title: "Visual description",
-        duration: 77,
+        duration: 71,
         speaker: "Narrator",
         audioURL: "TactileFemaleFashionFigure_Visual",
         transcript:
-          "<i>Narrator:</i>\n\nThis black ink line drawing with synthetic dye features a fashionable, lithe woman in a puffy, knee-length dress standing in front of a 1950s convertible sports car. Rendered in irregular black ink lines, the woman stands at the center of the piece, facing our right, with one hand reaching up to touch the string of pearls around her neck. She wears her hair coiffed and up, with pointed heels on her feet, and an oval rosette in the bodice of her sleeveless dress. Behind her is a 1959 Plymouth Sport Fury convertible, which faces our upper right hand corner as if preparing to drive away from us. The long, sleek car has rear fins and a round spare tire case mounted on the trunk. The front of the car has a freestanding windshield, a round side mirror, and an open interior. While the background and the woman lack color, both the car and the dress have been painted with vibrant, watery dye: violet for the dress, and cherry red for the sports car."
+          "<i>Narrator:</i>\n\nThis black ink line drawing with synthetic dye features a fashionable, lithe woman in a puffy, knee-length dress standing in front of a 1950s convertible sports car.\n\nRendered in irregular black ink lines, the woman stands at the center of the piece, facing our right, with one hand reaching up to touch the string of pearls around her neck. She wears her hair coiffed and up, with pointed heels on her feet, and an oval rosette in the bodice of her sleeveless dress.\n\nBehind her is a 1959 Plymouth Sport Fury convertible, which faces our upper right hand corner as if preparing to drive away from us. The long, sleek car has rear fins and a round spare tire case mounted on the trunk. The front of the car has a freestanding windshield, a round side mirror, and an open interior.\n\nWhile the background and the woman lack color, both the car and the dress have been painted with vibrant, watery dye: violet for the dress, and cherry red for the sports car."
       }
     ]
   },
@@ -963,11 +868,11 @@ export const tourStops = [
     shortTitle: "Pop products",
     longTitle: "Pop products: Campbell's soup",
     shortCredit:
-      "Andy Warhol, <i>Crushed Campbell’s Soup Can (Beef Noodle)</i>, 1962 © AWF",
+      "Andy Warhol (American, 1928-1987), <i>Big Torn Campbell's Soup Can (Pepper Pot)</i>, 1962 © AWF",
     longCredit:
-      "Andy Warhol (American, 1928-1987)\n<i>Crushed Campbell’s Soup Can (Beef Noodle)</i>, 1962\ncasein and graphite on cotton canvas\n71 7/8 x 52 in. (182.6 x 132.1 cm.)\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.30",
+      "Andy Warhol (American, 1928-1987)\n<i>Big Torn Campbell's Soup Can (Pepper Pot)</i>, 1962\ncasein and graphite on canvas\n71 5/8 x 52 in. (181.9 x 132.1 cm.)\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.31",
     regions: ["green"],
-    imageURL: "campbells.png",
+    imageURL: "1998-1-31_pub_01-Web_Ready_(475px_longest_edge)_-_Check_Copyright_Before_Using_on_Web.jpg",
     imageWidth: 340,
     imageHeight: 475,
     tags: [],
@@ -989,11 +894,11 @@ export const tourStops = [
         category: "VISUAL_DESCRIPTION",
         depth: 0,
         title: "Visual description",
-        duration: 72,
+        duration: 73,
         speaker: "Narrator",
         audioURL: "Campbells_Visual",
         transcript:
-          "<i>Narrator:</i>\n\nThis painting of a heavily-dented Campbell's soup can measures six feet tall and over four feet wide. Rendered with casein paint and graphite, the can appears to have been squeezed in the middle by a strong hand. The lid sticks up and out of the squished top of the can like a large, flat tongue. The can features a simplified Campbell's label: red on top, white on the bottom with a solid gold emblem in the middle. The name “Campbell's” appears at the top in white cursive with a thin black shadow. Under that is the word “condensed” in small white letters. Beneath the gold emblem in larger red letters is the product name “Beef Noodle,” and, beneath that, the word “Soup” in black and yellow lettering.  A row of small golden fleur-de-lis symbols run along the bottom of the label. Because it has been crushed, the perspective of the can and label are distorted: the emblem becomes elongated and the word “Campbell's” gets cut off. While the top and bottom of the can have been outlined with thin black paint, the sides have been left unpainted, leaving faint graphite lines that are almost invisible."
+          "<i>Narrator:</i>\n\nThis six foot tall, four-and-a-third foot wide canvas features a single can of Campbell’s soup with a ripped and peeling label.\n\nThe large black and gray can stands just to our right of center, rendered in graphite and thin, casein paint. The full-color label peels off to our left, torn down the middle of the company’s name and logo. The ripped label hangs loose, still connected on the unseen back of the can.\n\nSeveral tears in the paper obscure the label’s design, which features a red upper half with white calligraphy script, a white bottom half with red block script, and a round golden crest in the middle, bridging the two halves. Other label elements include a small patent notice in white near the upper left, illegible cooking instructions curving around the left edge, and a row of golden fleurs-de-lis at the bottom. The partial product name on the label is marred by several tears, but the letters P-E-P suggest that the advertised variety might be Pepper Pot soup."
       },
       {
         uuid: uuid.v4(),
@@ -1015,7 +920,7 @@ export const tourStops = [
         speaker: "Jessica Beck",
         audioURL: "3_Photos and opaque projectors_Jessica Beck",
         transcript:
-          "<i>Jessica Beck:</i>\n\nHi I'm Jessica Beck.\n\nAt this moment Warhol often used photographs as source material for his paintings. He used an image taken by Edward Wallowitch: a young photographer, a close friend and an intimate lover.\n\nAnd he used the photograph on top of an opaque projector. He would project onto the blank canvas and trace the shadow of the image with pencil. He would then go in with paint and hand paint in the Campbell's image using tape to get a clean line and a clean edge around each individual brush stroke."
+          "<i>Jessica Beck:</i>\n\nHi, I'm Jessica Beck.\n\nAt this moment Warhol often used photographs as source material for his paintings. He used an image taken by Edward Wallowitch: a young photographer, a close friend and an intimate lover.\n\nAnd he used the photograph on top of an opaque projector. He would project onto the blank canvas and trace the shadow of the image with pencil. He would then go in with paint and hand paint in the Campbell's image using tape to get a clean line and a clean edge around each individual brush stroke."
       },
       {
         uuid: uuid.v4(),
@@ -1055,7 +960,7 @@ export const tourStops = [
         speaker: "Jessica Beck",
         audioURL: "1_Introduction_Jessica Beck",
         transcript:
-          "<i>Curator Jessica Beck:</i>\n\nHello! My name is Jessica Beck. I’m the Milton Fine Curator of Art here at The Andy Warhol Museum.\n\nThis painting, Do It Yourself (Sailboat), Warhol created in 1962. It’s a fairly large canvas. It’s an image from a paint by numbers set, a do-it-yourself paint by numbers set of a sailboat.\n\nWarhol didn’t like the painting process. He found some of it tedious. Instead of painting every individual number on this canvas, he actually applied Letraset numbers."
+          "<i>Curator Jessica Beck:</i>\n\nHello! My name is Jessica Beck. I’m the Milton Fine Curator of Art here at The Andy Warhol Museum.\n\nThis painting, <i>Do It Yourself (Sailboat)</i>, Warhol created in 1962. It’s a fairly large canvas. It’s an image from a paint by numbers set, a do-it-yourself paint by numbers set of a sailboat.\n\nWarhol didn’t like the painting process. He found some of it tedious. Instead of painting every individual number on this canvas, he actually applied Letraset numbers."
       },
       {
         uuid: uuid.v4(),
@@ -1066,7 +971,7 @@ export const tourStops = [
         speaker: "Narrator",
         audioURL: "VisualDescription_DoItYourselfSailboats",
         transcript:
-          "<i>Narrator:</i>\n\nThis seemingly half-finished paint-by-numbers image of two sailboats at sea on a cloudy day is actually an original acrylic and graphite painting from Warhol’s Do It Yourself series.\n\nThe saturated sky has been filled in with dark blue, and some layers of the puffy clouds are rendered in light pink, rose, and lavender.\n\nBut much of the painting consists of shapes thinly-outlined with pencil, each containing a perfect type-set number that corresponds to an unknown color key. In the clouds are rolling layers of 1, 7, 14, 17, 18, and 22, while the sea comprises dozens of small, almond-shaped waves to be painted 7, 8, 9, and 17.\n\nSome color details can be found on the boat in the foreground, including teal green marks along the edge of the main sail and a black and brown mast topped by a small orange flag, but most sections are still waiting to be painted."
+          "<i>Narrator:</i>\n\nThis seemingly half-finished paint-by-numbers image of two sailboats at sea on a cloudy day is actually an original acrylic and graphite painting from Warhol’s <i>Do It Yourself</i> series.\n\nThe saturated sky has been filled in with dark blue, and some layers of the puffy clouds are rendered in light pink, rose, and lavender.\n\nBut much of the painting consists of shapes thinly-outlined with pencil, each containing a perfect type-set number that corresponds to an unknown color key. In the clouds are rolling layers of 1, 7, 14, 17, 18, and 22, while the sea comprises dozens of small, almond-shaped waves to be painted 7, 8, 9, and 17.\n\nSome color details can be found on the boat in the foreground, including teal green marks along the edge of the main sail and a black and brown mast topped by a small orange flag, but most sections are still waiting to be painted."
       },
       {
         uuid: uuid.v4(),
@@ -1088,7 +993,7 @@ export const tourStops = [
         speaker: "Patrick Moore",
         audioURL: "3_A vital acquisition_Patrick Moore",
         transcript:
-          "<i>Director Patrick Moore:</i>\n\nI’m Patrick Moore. I’m the Director of the Warhol.\n\nWe acquired Do It Yourself (Sailboat) in 2016 through an exchange and it was a vital acquisition for us because it really filled one of the very rare gaps in our very comprehensive collection.\n\nThese works in particular show a different side to Warhol even though they were made during his most famous period. You’ll see that the color palette is different than most of the work from that period. And also they demonstrate a kind of democratic ideal of anyone being able to make a great painting."
+          "<i>Director Patrick Moore:</i>\n\nI’m Patrick Moore. I’m the Director of the Warhol.\n\nWe acquired <i>Do It Yourself (Sailboat)</i> in 2016 through an exchange and it was a vital acquisition for us because it really filled one of the very rare gaps in our very comprehensive collection.\n\nThese works in particular show a different side to Warhol even though they were made during his most famous period. You’ll see that the color palette is different than most of the work from that period. And also they demonstrate a kind of democratic ideal of anyone being able to make a great painting."
       },
       {
         uuid: uuid.v4(),
@@ -1099,7 +1004,7 @@ export const tourStops = [
         speaker: "Erin Byrne",
         audioURL: "4_Source material_Erin Byrne",
         transcript:
-          "<i>Archivist Erin Byrne:</i>\n\nHi, I’m Erin Byrne.\n\nIn a vitrine on the other side of the room, you’ll see source material for Warhol’s Do It Yourself series.\n\nThese paintings involved Letrasets which were developed in 1959 and they were marketed towards commercial artists and designers. They came in a wide range of styles and fonts and sizes.\n\nThe Letrasets that are in this vitrine are the dry rub process which the user would just able to place the letters or the symbols on whatever mockup they were using in their artwork. And then they would just simply rub the actual letter off of the Letraset onto the artwork.\n\nThe idea behind Letrasets was it allowed amateurs to create professional and refined artworks. Warhol, being a commercial artist at the time, would have been aware of Letrasets and, like many things in his artwork, you can see him incorporating new and emerging technologies into his works."
+          "<i>Archivist Erin Byrne:</i>\n\nHi, I’m Erin Byrne.\n\nIn a vitrine on the other side of the room, you’ll see source material for Warhol’s <i>Do It Yourself</i> series.\n\nThese paintings involved Letrasets which were developed in 1959 and they were marketed towards commercial artists and designers. They came in a wide range of styles and fonts and sizes.\n\nThe Letrasets that are in this vitrine are the dry rub process which the user would just able to place the letters or the symbols on whatever mockup they were using in their artwork. And then they would just simply rub the actual letter off of the Letraset onto the artwork.\n\nThe idea behind Letrasets was it allowed amateurs to create professional and refined artworks. Warhol, being a commercial artist at the time, would have been aware of Letrasets and, like many things in his artwork, you can see him incorporating new and emerging technologies into his works."
       }
     ]
   },

@@ -170,6 +170,16 @@ function swapElementsInArray(array, indexOne, indexTwo) {
   array[indexTwo] = temp;
 }
 
+function preferenceSorter(globalPreferences, categories) {
+  return categories.sort((categoryA, categoryB) => {
+    preferencePercentageA = globalPreferences.filter((pref) => { return pref.category === categoryA; })[0].percentage;
+    preferencePercentageB = globalPreferences.filter((pref) => { return pref.category === categoryB; })[0].percentage;
+    if (preferencePercentageA > preferencePercentageB) return -1;
+    else if (preferencePercentageA < preferencePercentageB) return 1;
+    else return 0;
+  });
+}
+
 export function loadAudioContent(
   audioContent,
   initialAudio,
@@ -190,73 +200,67 @@ export function loadAudioContent(
 
     analyticsTrackContentOpened(stopTitle);
 
-    // if screen reader is on for a guided tactile story,
-    // change initialAudio to visual description
-    let newInitialAudio = initialAudio;
-    if (screenReaderOn && initialAudio === 'TACTILE_EXPERIENCE') {
-      newInitialAudio = 'VISUAL_DESCRIPTION';
-    }
+    let contentCategories = [];
 
-    // Reorder audio content based on global preferences
-    // A higher percentage means the audio content is preferred
-    audioContent.map((content) => {
-      const contentToUpdate = content;
-
-      if (content.category === newInitialAudio) {
-        // Initial audio should always appear at top of list
-        contentToUpdate.preferencePercentage = 1.1;
-      } else if (content.category === 'VISUAL_DESCRIPTION' && screenReaderOn) {
-        // If screenreader is on,
-        // this should be second, so assign 100%
-        contentToUpdate.preferencePercentage = 1;
-      } else {
-        contentToUpdate.preferencePercentage = (globalPreferences.find((preference) => {
-          return content.category === preference.category;
-        })).percentage;
+    // get unique content categories in intial order
+    for (var i = 0; i < audioContent.length; i++) {
+      let c = audioContent[i].category;
+      if (contentCategories.indexOf(c) === -1) {
+        contentCategories.push(c);
       }
-      return contentToUpdate;
-    });
-
-    // Make visual description always default to the back of the list
-    const categoryIndex = audioContent.findIndex((content) => {
-      return content.category === 'VISUAL_DESCRIPTION';
-    });
-
-    if (categoryIndex != -1) {
-      swapElementsInArray(audioContent, categoryIndex, audioContent.length - 1);
     }
 
-    // then reorder based on assigned preference percentages
-    audioContent.sort((a, b) => {
-      if (a.preferencePercentage > b.preferencePercentage) return -1;
-      else if (a.preferencePercentage < b.preferencePercentage) return 1;
-      return 0;
-    });
+    // We sort the audio categories based on three cases:
+    let sortedCategories = [];
 
-    const activeAudio = _(audioContent)
-      .filter((content) => {
-        return content.category === newInitialAudio;
-      })
-      .first();
+    // 1) If its a tactile experience
+    if (contentCategories.indexOf('TACTILE_EXPERIENCE') !== -1) {
+      sortedCategories.push(initialAudio);
+      sortedCategories.push('TACTILE_EXPERIENCE');
+      sortedCategories.push('VISUAL_DESCRIPTION');
 
-    if (activeAudio == null) {
-      dispatch(
-        loadAudioFailure(),
-      );
+      var remainingCategories = contentCategories.filter((c) => { return (c !== initialAudio && c !== 'TACTILE_EXPERIENCE' && c !== 'VISUAL_DESCRIPTION'); });
+      sortedCategories = sortedCategories.concat(preferenceSorter(globalPreferences, remainingCategories));
+    }
+    // 2) Non-tactile tour stop, screenreader on
+    else if (screenReaderOn) {
+      sortedCategories.push(initialAudio);
+      sortedCategories.push('VISUAL_DESCRIPTION');
 
+      var remainingCategories = contentCategories.filter((c) => { return (c !== initialAudio && c !== 'VISUAL_DESCRIPTION'); });
+      sortedCategories = sortedCategories.concat(preferenceSorter(globalPreferences, remainingCategories));
+    } 
+    // 3) Non-tactile tour stop, screenreader off
+    else {
+      sortedCategories.push(initialAudio);
+      var remainingCategories = contentCategories.filter((c) => { return (c !== initialAudio); })
+      sortedCategories = sortedCategories.concat(preferenceSorter(globalPreferences, remainingCategories));
+    }
+
+    // then arrange the content to match the sorting of categories 
+    // keep in mind branching content may have a different category from parent, 
+    // But should always be under parent
+    let sortedAudioContent = [];
+    for (var i=0; i<sortedCategories.length; i++) {
+      let category = sortedCategories[i];
+      sortedAudioContent = sortedAudioContent.concat(audioContent.filter((content) => { return content.category === category }));
+    }   
+
+    if (sortedAudioContent.length < 1) {
+      dispatch(loadAudioFailure());
       return;
+    } else {
+      fireAudioAction(
+        sortedAudioContent,
+        sortedAudioContent[0],
+        dispatch,
+        true,
+        autoplayOn,
+        stopTitle,
+        stopUUID,
+        false,
+      );
     }
-
-    fireAudioAction(
-      audioContent,
-      activeAudio,
-      dispatch,
-      true,
-      autoplayOn,
-      stopTitle,
-      stopUUID,
-      false,
-    );
   };
 }
 

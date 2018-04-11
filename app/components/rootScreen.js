@@ -61,8 +61,20 @@ class RootScreen extends Component {
     }).isRequired,
   }
 
+
   componentDidMount() {
     this.props.actions.getScreenReaderStatus();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.currentAudioTab !== this.props.currentAudioTab) {
+      if (prevProps.currentAudioTab === TAB_NEARME && this.refs.NEARME_REF != null) {
+        this.refs.NEARME_REF.popToTop();
+      }
+      else if (prevProps.currentAudioTab === TAB_STORIES && this.refs.TAB_STORIES != null) {
+        this.refs.TAB_STORIES.popToTop();
+      }
+    }
   }
 
   render() {

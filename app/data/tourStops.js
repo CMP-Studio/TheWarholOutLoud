@@ -132,16 +132,17 @@ export const tourStops = [
     uuid: uuid.v4(),
     floor: 7,
     order: 2,
-    shortTitle: "Warhol's heritage",
-    longTitle: "Warhol's Carpatho-Rusyn heritage",
-    regions: ["blue", "olive"],
-    imageURL: "warholsHeritage.png",
-    imageWidth: 331,
+    shortTitle: "College years",
+    longTitle: "College years",
+    regions: ["blue"],
+    imageURL: "2017-1-1_int_01-Web_Ready_(475px_longest_edge)_-_Check_Copyright_Before_Using_on_Web.jpg",
+    imageWidth: 383,
     imageHeight: 475,
     imageAccessibilityLabel: "",
-    shortCredit: "<i>Passport (Julia Warhola)</i>, 1920",
+    shortCredit:
+      "Philip Pearlstein, <i>Art Class</i>, 1946-47",
     longCredit:
-      "<i>Passport (Julia Warhola)</i>, 1920\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\nTC522.118.4",
+      "Philip Pearlstein, <i>Art Class</i>, 1946-47\nThe Andy Warhol Museum, Pittsburgh; Gift of Dorothy Cantor and Philip Pearlstein\n2017.1.1",
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -150,159 +151,84 @@ export const tourStops = [
         category: "INTRODUCTION",
         depth: 0,
         title: "Introduction",
-        duration: 48,
-        speaker: "Erin Byrne",
-        audioURL: "0-Introduction_Erin Byrne",
+        duration: 32,
+        speaker: "Jessica Beck",
+        audioURL: "1_Introduction_JessicaBeck_CollegeYears",
         transcript:
-          "<i>Archivist Erin Byrne:</i>\n\nHi, I’m Erin Byrne. I’m the archivist here at The Andy Warhol Museum.\n\nIn front of us, we have two vitrines. On the left side, these are all items related to Julia Warhola, who was Andy’s mother. On the right side is a vitrine just related to Andrej Warhola, so Andy’s father.\n\nAndrej and Julia came from the Carpatho-Rusyn region of East Central Europe which encompasses about five countries and their small village Mikova is located in present day Slovakia.\n\nWe decided to do these vitrines about Andrej and Julia because as with so many people, the origin story really kind of sets the tone and gives context for the person you’re going to spend your time getting to know here at the museum."
+          "<i>Jessica Beck:</i>\n\nHi. My name is Jessica Beck. I’m the Milton Fine Curator of Art here at The Andy Warhol Museum.\n\nWe are looking at an early college work by Philip Pearlstein that was painted between 1946 and ’47. Philip Pearlstein was one of Andy Warhol’s classmates from Carnegie Tech, which we now know as Carnegie Mellon University.\n\nIt was a class assignment done at Carnegie Tech, and it depicts Andy Warhol as a young student. And I particularly love this image because it really captures Warhol’s unique body language, unique form, the sort of spirit of Warhol at a young age, particularly his hands. And it’s really fascinating to think how these hands would turn out to be the hands of one of the most important artists of the twentieth century."
       },
       {
         uuid: uuid.v4(),
         category: "VISUAL_DESCRIPTION",
         depth: 0,
         title: "Visual description",
-        duration: 77,
+        duration: 52,
         speaker: "Narrator",
-        audioURL: "VisualDescription_JuliaPassport",
+        audioURL: "6_VisualDescription_ArtClass",
         transcript:
-          "<i>Narrator:</i>\n\nThis is the Czechoslovakian passport issued to Andy Warhol’s mother, Julia Warhola, in 1920. The tattered paper document features several official stamps and notations, including a rectangular stamp in purple ink from the American consulate in Prague.\n\nIt states that the bearer is to depart for the United States of American between October 12, 2019 and December 31, 1920, with the latter date crossed out and changed to October 12, 1921 in black handwritten. The correction is confirmed by a signature, which differs from the signature beneath it—that of the American vice consul.\n\nIn the upper half of the faded, well-worn document is a 3-inch by 2-inch sepia toned photograph of young Julia affixed with strips of yellowed tape. In it, Julia stands against a dark backdrop, gazing to our left with narrow eyes and a slight grin on her closed lips. She wears a dark pleated skirt, a dark head scarf, and a white blouse with frills at the wrists. The creased photograph, which appears to be a snapshot rather than a formal portrait, is signed at the bottom by Julia herself."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 0,
-        title: "The Warholas: An immigration story",
-        duration: 32,
-        speaker: "Erin Byrne",
-        audioURL: "2-The Warholas' immigration story_Erin Byrne",
-        transcript:
-          "<i>Archivist Erin Byrne:</i>\n\nAndrej first immigrates to the U.S. in 1905 and he comes back in 1908\n\nHe marries Julia in the following year, 1909, and then immigrates one more time in 1912 right before the start of World War I. They’re married for three years before Andrej departs and Julia is waiting in Mikova for nine years before she’s able to depart and follow her husband to Pittsburgh, Pennsylvania."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 1,
-        title: "Julia Warhola's passport",
-        duration: 60,
-        speaker: "Erin Byrne",
-        audioURL: "3-Julia Warhola's passport_Erin Byrne",
-        transcript:
-          "<i>Archivist Erin Byrne:</i>\n\nIn the Julia vitrine, in the top left corner, we have Julia’s passport which was found in one of the time capsules here at the museum. The document itself is heavily worn.\n\nYou can see a picture of Julia wearing very traditional Carpatho-Rusyn dress with her headscarf and her blouse. The document itself is incredibly fragile. It has been folded in quarters and the tape is just disintegrating at the seams.\n\nThe historical significance of this passport for us is that it traces Julia’s journey from what during the time was known as Czechoslovakia, and we can see her entering into Poland, entering into Germany, entering into Belgium, when she finally arrives in England. Julia departs Liverpool on June 11, 1921 and after a ten-day voyage, she arrives in New York on June 21, 1921 to be reunited with Andrej."
+          "<i>Narrator:</i>\n\nRendered with a rich pastel palette, and discernible brushstrokes and sponge marks, this painting depicts four students in an art class, each working on their own drawing. Two subjects sit in the background with their heads down, focused on the artwork they hold in their laps.\n\nSeated in the foreground, a man holds his paper and backing board in his lap, but instead focuses on the work of the woman beside him. The man is blonde, lean, and bespectacled. He wears brown loafers and pants, a peach-colored shirt with an open collar, and a blue sweater vest.\n\nThe woman sits at our right wearing teal shoes, a tan skirt, a salmon-colored blouse, and turquoise cat eye glasses. Beneath her wooden stool in tiny uppercase letters is the handwritten name “Pearlstein.”"
       },
       {
         uuid: uuid.v4(),
         category: "COMMENTARY_ANECDOTE",
         depth: 0,
-        title: "Carpatho-Rusyn heritage",
+        title: "Carnegie Tech classmates",
         duration: 46,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Donald_Childhood_Carpatho-Rusyn",
+        speaker: "Jessica Beck",
+        audioURL: "2_ClassmatesAtCarnegie_JessicaBeck",
         transcript:
-          "<i>Donald Warhola:</i>\n\nHis parents were from an area called the Carpathian Mountains, and they’re known as the Carpatho-Rusyns. And this area spans into Slovakia, Ukraine, and Poland. \n\nAnd the people from this area are very hardworking—simple people but self-sufficient, and very deeply religious as well. And it’s interesting too, because not only very religious but also liking to have a good time. Whenever Andrej and Julia got married, it was a three-day wedding. \n\nIn my opinion, when I think about that Carpatho-Rusyn heritage, I see that in my uncle, because he was very hard-working, very prolific in how much work he created, took his work very seriously, too. Work was his life."
+          "<i>Jessica Beck:</i>\n\nPhilip Pearlstein, Andy Warhol, and Dorothy Cantor were all classmates at Carnegie Tech in the early ’40s.\n\nPhilip Pearlstein was slightly different than Warhol because he was drafted and went to the war. He came back in the fall of 1946, on the GI Bill to finish his years at Carnegie Tech.\n\nAnd when they graduated in 1949, they both went to New York together, shared a small apartment studio. And a year later, Dorothy Cantor, who was a year younger than Philip and Andy, came up to New York as well.\n\nShe also was striving to be an artist. And Philip and Dorothy got married, started a family. And like many women of this generation, sort of put her career aside to support the career of her husband."
       },
       {
         uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 0,
-        title: "Julia Warhola's dress",
-        duration: 48,
-        speaker: "Erin Byrne",
-        audioURL: "5-Julia Warhola's dress_Erin Byrne",
+        category: "COMMENTARY_ANECDOTE",
+        depth: 1,
+        title: "Pearlstein and Warhol",
+        duration: 29,
+        speaker: "Jessica Beck",
+        audioURL: "3_PhilipPearlstein_JessicaBeck",
         transcript:
-          "<i>Archivist Erin Byrne</i>\n\nA lot of the objects in this vitrine represent the culture that Andre and Julia left behind. The traditional folk costume that’s in the right-hand side corner of this vitrine represents the dress that women in Mikova would have worn at that time. Their outfits were highly embroidered and decorative and floral. These clothing options have a lot of meaning. In terms of the style, they would have been tailored to each village, each would have had its own particular style of embroidery. The way a woman wore her hair, the way she wore a headdress: these were all signifiers of her marital status, her family status. The fact that Julia brought these things over shows that she was still very tied to her homeland."
+          "<i>Jessica Beck:</i>\n\nBoth Andy Warhol and Philip Pearlstein went into New York with the goal of landing a design job, or an illustration job of some kind in advertising or design coming from their studies of industrial design at Carnegie Tech.\n\nIn an interesting way, they hit New York together. They go on interviews together, but their careers take off in different periods. And, ultimately, Warhol ends up becoming, historically, the more celebrated artist of the two."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "COMMENTARY_ANECDOTE",
+        depth: 1,
+        title: "Cantor's kittens",
+        duration: 33,
+        speaker: "Jessica Beck",
+        audioURL: "4_CantorsKittens_JessicaBeck",
+        transcript:
+          "<i>Jessica Beck:</i>\n\nWhen you turn the corner, and you move out of this first college year period on the seventh floor, and you transition into Warhol’s entry point into New York in 1949, you’ll see these really delicate sweet drawings of kittens done by Dorothy Cantor.\n\nAnd so because of the close friendship that he had with Phillip and Dorothy Cantor, he gifted them two kittens. And it’s really sweet to see these drawings as kind of a symbol of their friendship, and their connection."
       },
       {
         uuid: uuid.v4(),
         category: "ARCHIVAL_MATERIAL",
         depth: 0,
-        title: "Julia sings a Carpatho-Rusyn folk song",
-        duration: 69,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Julia_Folksong",
+        title: '"How does it feel to be famous?"',
+        duration: 76,
+        speaker: "Philip Pearlstein",
+        audioURL: "Pearlstein_HowDoesItFeelToBeFamous",
         transcript:
-          "<i>Donald Warhola:</i>\n\nJulia really enjoyed singing, especially folk songs and religious hymns from the Carpatho-Rusyn culture. The following hymn is Julia singing a song in her native language giving glory to God. \n\n<i>Julia Warhola singing</i>"
-      }
+          '<i>Jessica Beck:</i>\n\nWarhol\'s friend Philip Pearlstein describes meeting Warhol at Carnegie Tech.\n\n<i>Philip Pearlstein:</i>\n\nAfter that we came back—after we came back to Pittsburgh, I went to—on the GI Bill—back to my—for my second year at Carnegie. And the class was made up of about 30 veterans from various services, some of them into their 40s of years of age. There were two young men. One of them walked up to me and said, "How does it feel to be famous?" And he was referring to Life magazine, and they had been told this formidable—whatever you want to call it—this coming back to school. And this was Andy Warhol. He said, "How\'s it feel to be famous?" And I said, "Well, it only lasted five minutes." But we became close friends, and he set up his easel next to mine and we were very close friends for the next three years.'
+        },
+        {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: 'Warhol\'s college work',
+        duration: 30,
+        speaker: "Jessica Beck",
+        audioURL: "5_WarholsCollegeWork_JessicaBeck",
+        transcript:
+          '<i>Jessica Beck:</i>\n\nThe interesting thing about Warhol’s college work is that it’s very unexpected. People don’t necessarily expect to see such a naive hand from Warhol.\n\nWhat’s so fascinating about the collection here at The Andy Warhol Museum is that we can show this period for Warhol, this nascent period, where he’s working out ideas like so many artists kind of figuring out his style, and just truly taking creative risks at this period, and exercising different parts of his stylistic palette.'
+        }
     ]
   },
   {
     uuid: uuid.v4(),
     floor: 7,
     order: 3,
-    shortTitle: "College years",
-    longTitle: "College years",
-    regions: ["olive", "blue"],
-    imageURL: "college.png",
-    imageWidth: 475,
-    imageHeight: 321,
-    imageAccessibilityLabel: "",
-    shortCredit:
-      "Andy Warhol, <i>Three Figures in Back of Produce Truck</i>, 1946-1947 © AWF",
-    longCredit:
-      "Andy Warhol, <i>Three Figures in Back of Produce Truck</i>, 1946-1947\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.1622",
-    tags: [],
-    initialAudio: "INTRODUCTION",
-    audioContent: [
-      {
-        uuid: uuid.v4(),
-        category: "INTRODUCTION",
-        depth: 0,
-        title: "Introduction",
-        duration: 38,
-        speaker: "Jose Diaz",
-        audioURL: "1_Introduction_Jose Diaz College",
-        transcript:
-          "<i>Chief curator Jose Carlos Diaz:</i>\n\nHello, my name is Jose Diaz. I’m the chief curator here at The Andy Warhol Museum.\n\nOne of the highlights of the seventh floor is that we have two walls featuring early college work by Andy Warhol. Andy Warhol studied pictorial design at Carnegie Tech which is now CMU, but what’s really beautiful about this display of paintings and drawings is that is really predates a lot of Warhol’s later practices.\n\nWhat’s really important about this is that, throughout Warhol’s career, he always seems to capture himself and really capture the times. This is very much a young Andy Warhol, but as you travel throughout the museum you’ll see the transformation of his persona, of his style."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "VISUAL_DESCRIPTION",
-        depth: 0,
-        title: "Visual description",
-        duration: 59,
-        speaker: "Narrator",
-        audioURL: "VisualDescription_ThreeFiguresInBackOfAProduceTruck",
-        transcript:
-          "<i>Narrator:</i>\n\nThis ink and watercolor painting on sketchbook paper depicts two women and a boy standing at the back of an open produce truck. The scene is rendered with wavy black ink lines and layers of semi-transparent watercolor paint.\n\nThe three figures are clustered near the center of the painting with the open truck on our right and the front door of a building behind them on our left. A tall woman in a green dress stands barefoot at the right of the group facing the open truck. Inside are crates and baskets labeled “grapes,” “oranges” and “Georgia peaches” in loose handwriting.\n\nIn the middle of the group a plump woman in a brown dress and hat stands with her arm around a blonde boy, who wears blue pants, a blue shirt, and glasses, and holds a brown paper bag filled with groceries under his arm. At the boy’s feet is an inscription written in graphite: “ATTA Boy—Carrying them up to 6th floor.”"
-      },
-      {
-        uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 0,
-        title: "Neighborhood watch",
-        duration: 58,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Donald_NeighborhoodWatch",
-        transcript:
-          "<i>Donald Warhola:</i>\n\nMy name is Donald Warhola. I’m one of ten nieces and nephews of Andy Warhol.\n\nHere we have a series of pencil drawings that my uncle did while he was attending Carnegie Tech. During the summer when his school load was much less he would help his older brother Paul sell fruits and vegetables in the local Oakland neighborhood that they lived in. It was not uncommon for Uncle Andy to prefer to be the observer.\n\nMost likely Andy got bored just participating and selling door-to-door and that he preferred to pull out his sketchpad and sketch these scenes. And you can see, he uses what I would describe as almost a whimsical or satirical style.\n\nSo I believe that Warhol really saw this as an opportunity to really capture the inner workings of Pittsburgh the city and his neighborhood. Sort of that Slovak immigrant neighborhood in the late 1940s in Pittsburgh."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "<i>Three Figures in Back of Produce Truck</i>",
-        duration: 32,
-        speaker: "Jose Diaz",
-        audioURL: "3_Three Figures_Jose Diaz",
-        transcript:
-          "<i>Chief curator Jose Carlos Diaz:</i>\n\nIn the drawing <i>Three Figures in Back of Produce Truck</i>, you can see a woman with a young male, possibly a son as she’s shopping a Paul Warhola’s produce truck.\n\nWhat makes this drawing so special is that we’ve the introduction of watercolor and color ink. For me, this really predates the blotted line and, sort of, the commercial work that Andy Warhol did.\n\nThis particular work is beautiful, as well, because the ink of the pen is so fine that you could actually make out the description of some of the crates, such as grapes and peaches."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 1,
-        title: "Young Warhol in Pittsburgh",
-        duration: 24,
-        speaker: "Jose Diaz",
-        audioURL: "4_Young Warhol in Pittsburgh_Jose Diaz",
-        transcript:
-          "<i>Chief curator Jose Carlos Diaz:</i>\n\nWell, the reason I love the produce truck series is that it shows us an Andy Warhol that most people are not familiar with.\n\nThis is a young teenager, a young adult living in Pittsburgh in the 1940s. This places him as the working class individual that would have grown up in Pittsburgh. This predates his success, his celebrity status and for me, this makes Andy Warhol a very real person."
-      }
-    ]
-  },
-  {
-    uuid: uuid.v4(),
-    floor: 7,
-    order: 4,
     shortTitle: "New York",
     longTitle: "From Pittsburgh to New York",
     regions: ["orange", "olive"],
@@ -400,6 +326,102 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
+    order: 4,
+    shortTitle: "Andy and Julia",
+    longTitle: "Andy and Julia",
+    regions: ["orange"],
+    imageURL: "1998-3-1769_int_01.jpg",
+    imageWidth: 475,
+    imageHeight: 444,
+    imageAccessibilityLabel: "",
+    shortCredit: "Julia Warhola, <i>Two Angels Praying</i>, ca. 1953",
+    longCredit:
+      "Julia Warhola, <i>Two Angels Praying</i>, ca. 1953\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.3.1769",
+    tags: [],
+    initialAudio: "INTRODUCTION",
+    audioContent: [
+      {
+        uuid: uuid.v4(),
+        category: "INTRODUCTION",
+        depth: 0,
+        title: "Introduction",
+        duration: 19,
+        speaker: "Donald Warhola",
+        audioURL: "Warhola_Donald-Julia_Introduction",
+        transcript:
+          "<i>Donald Warhola:</i>\n\nHi, my name is Donald Warhola. I’m a nephew of Andy Warhol, and I work here at The Andy Warhol Museum.\n\nThis artwork was done by Julia Warhola, Andy’s mother, who was also an artist. Shortly after Andy moved from Pittsburgh to New York City, Julia also moved to New York to live with Andy."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "VISUAL_DESCRIPTION",
+        depth: 0,
+        title: "Visual description",
+        duration: 38,
+        speaker: "Narrator",
+        audioURL: "1_VisualDescription_TwoAngelsPraying",
+        transcript:
+          '<i>Narrator:</i>\n\nIn this child-like black ink line drawing, two angels with feathery wings pray beneath a small cross and an eight-pointed star.\n\nThe angels face one another, reaching out with bent, wavy arms and quickly-rendered hands clasped in prayer. They have curly, bouffant hairdos and long wings of loosely-drawn feathers in place of their bodies.\n\nBetween them, above their hands, is the small cross, which is slightly curved as if bowing to our right. Above it is the small star, which resembles a dark, spinning pinwheel.'
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "Signature style",
+        duration: 63,
+        speaker: "Donald Warhola",
+        audioURL: "Warhola_Donald_Julia_Signature_style",
+        transcript:
+          "<i>Donald Warhola:</i> \n\nJulia really enjoyed her art. Art was one of the things that she enjoyed, along with singing, so I believe with that that Uncle Andy was really kind of tuned in and knew that basically that Julia was very talented with her art.\n\nShe kind of focused on drawing cats and angels. That was the two themes that you’ll see throughout a lot of her work, and I believe a lot of that was because her love of animals and her deep religious beliefs.\n\nAnd also Uncle Andy really enjoyed, really admired the way my grandmother would write, that sort of old European style of writing, so any time he had any text to put on any of his works he would have her do it, especially during his commercial art days, and also he would have her sign a lot of his artwork. If you notice you’ll see some of the earlier works were signed with one signature of Andy Warhol, and then after Julia passed away his signature changed. So that was not a coincidence."
+      },      
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 1,
+        title: "A mother's influence",
+        duration: 53,
+        speaker: "Donald Warhola",
+        audioURL: "Warhola_Donald_Julia_Mothers_Influence",
+        transcript:
+          '<i>Donald Warhola:</i>\n\nI believe Uncle Andy, really I’m sure, was looking for ideas from Julia all the time.\n\nThere is a work, a drawing that Julia did, I think it’s around 1952 of a Campbell’s Soup can, and of course two cats. And it has "Campbell’s Soup, It’s Very Good" sort of almost written in broken English, and I believe—I can’t help but think that influenced Uncle Andy or might have been one piece of the puzzle or one idea that helped Uncle Andy to do the Campbell Soup can paintings and prints that he did.\n\nI believe Uncle Andy was very complex and there was not any one idea that led to his decisions, but I believe that multiple ideas, and I’m sure that that contributed to his decision to do the Campbell’s Soup can.'
+      },
+      {
+        uuid: uuid.v4(),
+        category: "COMMENTARY_ANECDOTE",
+        depth: 0,
+        title: "Living on a prayer",
+        duration: 23,
+        speaker: "Donald Warhola",
+        audioURL: "Warhola_Donald_Julia_Prayer",
+        transcript:
+          "<i>Donald Warhola:</i>\n\nJulia was very religious. \n\nI remember whenever I would visit up in New York Uncle Andy would kneel down and say a prayer with Julia each morning before he left. And again the premise being that it’s a dangerous world, your life is again on this thread, and you should pray for God’s protection and to watch over you to bring you back."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "COMMENTARY_ANECDOTE",
+        depth: 0,
+        title: '"The boss is going to fire me"',
+        duration: 42,
+        speaker: "Donald Warhola",
+        audioURL: "Warhola_Donald_Julia_The_Boss_Is_Going",
+        transcript:
+          "<i>Donald Warhola:</i>\n\nWhat I always admire about Julia is that she really—I believe she really nurtured my uncle’s artistic talent, and then throughout their life, they had a very mutual love and respect for each other. Julia would help Andy with his art. \n\nI remember being up there as a child and seeing Julia working with Uncle Andy. I remember one occasion where she was talking to my father and Uncle Andy was in the room, too, and Uncle Andy was looking at Julia, and she’s talking to my father, and she’s getting a little nervous, he’s getting a little nervous, and Dad’s talking and talking and Julia had to stop Dad and said, “I’d better get back to work or else the boss is gonna fire me.”"
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ARCHIVAL_MATERIAL",
+        depth: 0,
+        title: "Julia sings a Carpatho-Rusyn folk song",
+        duration: 69,
+        speaker: "Donald Warhola",
+        audioURL: "Warhola_Julia_Folksong",
+        transcript:
+          "<i>Donald Warhola:</i>\n\nJulia really enjoyed singing, especially folk songs and religious hymns from the Carpatho-Rusyn culture. The following hymn is Julia singing a song in her native language giving glory to God. \n\n<i>Julia Warhola singing</i>"
+      }
+    ]
+  },
+  {
+    uuid: uuid.v4(),
+    floor: 7,
     order: 5,
     shortTitle: "Blotted line",
     longTitle: "Blotted line",
@@ -461,68 +483,16 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 7,
-    shortTitle: "Boy Book",
-    longTitle: "Boy Book",
-    regions: ["pink"],
-    imageURL: "1998-1-1692_pub_01.jpg",
-    imageWidth: 315,
-    imageHeight: 475,
-    imageAccessibilityLabel: "",
-    shortCredit: "Andy Warhol, <i>Seated Male Nude Torso</i>, 1950s © AWF",
-    longCredit:
-      "Andy Warhol, <i>Seated Male Nude Torso</i>, 1950s\nThe Andy Warhol Museum, Pittsburgh; Founding Collection,\nContribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.1692",
-    tags: [],
-    initialAudio: "INTRODUCTION",
-    audioContent: [
-      {
-        uuid: uuid.v4(),
-        category: "INTRODUCTION",
-        depth: 0,
-        title: "Introduction",
-        duration: 24,
-        speaker: "Jose Diaz",
-        audioURL: "1_Introduction_Jose Diaz Boy Book",
-        transcript:
-          "<i>Chief curator Jose Carlos Diaz:</i>\n\nHello, my name is Jose Diaz. I’m the chief curator here at The Andy Warhol Museum.\n\nThe drawings from the <i>Boy Book</i> series are unique because they’re all one of a kind. You can see that Andy used a ballpoint pen or pencil. This would have been based off a live model, not an appropriated image from a newspaper or a photo. These works were not meant to be multiples or distributed to a wide variety of clients. These were one-of-a-kind and were meant to be shown in a fine art gallery, which is what Warhol was hopefully pursuing"
-      },
-      {
-        uuid: uuid.v4(),
-        category: "VISUAL_DESCRIPTION",
-        depth: 0,
-        title: "Visual description",
-        duration: 47,
-        speaker: "Narrator",
-        audioURL: "VisualDescription_SeatedMaleNudeTorso",
-        transcript:
-          "<i>Narrator:</i>\n\nThis black ink drawing on yellowed Manila paper features a young, bare-chested man rendered with thin, uniform lines, shown from the waist up. The subject sits in profile facing our left with his right elbow on a raised knee as his head rests on a closed fist under his chin.\n\nWhile the lips and eyes are represented by simple outlines, greater detail is present in the ear and the curved parallel lines in the subject’s hair and eyebrows. Dozens of tiny, loosely-rendered heart shapes adorn the man’s arms, chest, and side. Under the man’s dimpled chin, in the space between his fist and throat, is a patch of vertical lines, perhaps representing a shadow or background decoration."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "Fearless",
-        duration: 62,
-        speaker: "Jose Diaz",
-        audioURL: "3_A fearlessness in his sexuality_Jessica Beck",
-        transcript:
-          "<i>Curator Jessica Beck:</i>\n\nThis young group in New York that starts to emerge around the pop movement are people like Roy Lichtenstein, Jasper Johns, Robert Rauschenberg, James Rosenquist. These were Warhol’s peers and they were people Warhol wanted to be associated with and he wanted to show with them.\n\nBut there was also a very masculine front happening with the art movement in New York at this time for very obvious reasons. Homosexuality wasn’t something that people talked about. Homosexual relations would still be considered criminal in this moment in New York.\n\nWith Warhol, there was a fearlessness around his sexuality. He did intimate drawings of men kissing. He brought his sexuality into his work. He also wore his sexuality in a way that other people did not with his mannerisms and his gesture and his dress. And so he was seen potentially as a threat to these other artists out of fear that they would somehow be outed as gay, as well."
-      }
-    ]
-  },
-  {
-    uuid: uuid.v4(),
-    floor: 7,
-    order: 8,
+    order: 6,
     shortTitle: "Commercial work",
     longTitle: "Commercial work",
-    shortCredit: "Andy Warhol, <i>Female Fashion Figure</i>, 1950s © AWF",
+    shortCredit: "Andy Warhol, <i>Baseball Players (Early)</i>, ca. 1950 © AWF",
     longCredit:
-      "Andy Warhol, <i>Female Fashion Figure</i>, 1950s\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.1194",
+      "Andy Warhol, <i>Baseball Players (Early)</i>, ca. 1950\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.1151",
     regions: ["pink"],
-    imageURL: "1998-1-1194_pub_01.jpg",
+    imageURL: "1998-1-1151_int_01.jpg",
     imageWidth: 475,
-    imageHeight: 374,
+    imageHeight: 387,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -542,11 +512,11 @@ export const tourStops = [
         category: "VISUAL_DESCRIPTION",
         depth: 0,
         title: "Visual description",
-        duration: 71,
+        duration: 54,
         speaker: "Narrator",
-        audioURL: "TactileFemaleFashionFigure_Visual",
+        audioURL: "1_VisualDescription_BaseballPlayers",
         transcript:
-          "<i>Narrator:</i>\n\nThis black ink line drawing with synthetic dye features a fashionable, lithe woman in a puffy, knee-length dress standing in front of a 1950s convertible sports car.\n\nRendered in irregular black ink lines, the woman stands at the center of the piece, facing our right, with one hand reaching up to touch the string of pearls around her neck. She wears her hair coiffed and up, with pointed heels on her feet, and an oval rosette in the bodice of her sleeveless dress.\n\nBehind her is a 1959 Plymouth Sport Fury convertible, which faces our upper right hand corner as if preparing to drive away from us. The long, sleek car has rear fins and a round spare tire case mounted on the trunk. The front of the car has a freestanding windshield, a round side mirror, and an open interior.\n\nWhile the background and the woman lack color, both the car and the dress have been painted with vibrant, watery dye: violet for the dress, and cherry red for the sports car."
+          "<i>Narrator:</i>\n\nThis cartoon-like line drawing of a professional baseball game features several players in pinstriped uniforms, an umpire, and a section of the distant bleachers on an otherwise blank sheet of off-white Strathmore brand paper.\n\nThe batter, catcher, and umpire are clustered in the foreground near our lower left, facing the pitcher’s mound in the middle ground at our right. Behind the pitcher is a sprinting baserunner, and an outfielder stands in the distance. The batter has already swung and stares up into the sky, as do the umpire, baserunner, and outfielder. At our upper left sits a distant bank of bleachers which is topped with decorative trim and small flags. Inside the bleachers are dozens of tiny faceless circles, representing individual spectators."
       },
       {
         uuid: uuid.v4(),
@@ -569,6 +539,165 @@ export const tourStops = [
         audioURL: "3_Unique style_Jessica Beck",
         transcript:
           "<i>Curator Jessica Beck:</i>\n\nIn the 1950s when Warhol is first living and working in New York, it’s a moment when many artists were working as commercial illustrators or designers or sometimes window dressers to pay their bills.\n\nWarhol is one of these people but he ends up being very successful with his commercial illustrations because he had a very unique style that was, some could say, naive.\n\nBut very different from his peers, Warhol signed his name to all his work so he had a sense of ownership over this commercial period. It was also a form of practice for him. The vocabulary and the form of editing and cropping that he learned during this early period as a commercial designer ended up becoming touchstones to his formal practice as a painter by 1961. "
+      }
+    ]
+  },
+  {
+    uuid: uuid.v4(),
+    floor: 7,
+    order: 7,
+    shortTitle: "Sketches",
+    longTitle: "Warhol's intimate sketches",
+    regions: ["pink"],
+    imageURL: "1998-1-944_pub_01-Web Ready (475px longest edge) - Check Copyright Before Using on Web.jpg",
+    imageWidth: 376,
+    imageHeight: 475,
+    imageAccessibilityLabel: "",
+    shortCredit: "Andy Warhol, <i>Male Head</i>, 1950s © AWF",
+    longCredit:
+      "Andy Warhol, <i>Male Head</i>, 1950s\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.944",
+    tags: [],
+    initialAudio: "INTRODUCTION",
+    audioContent: [
+      {
+        uuid: uuid.v4(),
+        category: "INTRODUCTION",
+        depth: 0,
+        title: "Introduction",
+        duration: 25,
+        speaker: "Grace Marston",
+        audioURL: "1_Introduction_GraceMarston",
+        transcript:
+          "<i>Grace Marston:</i>\n\nHi, this is Grace Marston and I am an artist educator at The Andy Warhol Museum.\n\nWarhol's most well-known portraits of men from the 1950s are drawings from his boy book series done on paper with ballpoint pens. However, he experimented with a variety of other materials.\n\nThroughout this display we see combinations of oil paint, tempera, blotted line drawings, marbleizing, and even spray paint with stencils."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "VISUAL_DESCRIPTION",
+        depth: 0,
+        title: "Visual description",
+        duration: 56,
+        speaker: "Narrator",
+        audioURL: "5_VisualDescription_MaleHead",
+        transcript:
+          "<i>Narrator:</i>\n\nSet against a deep violet backdrop, a thin, bare-chested man stares with wide-open eyes.\n\nThe line-drawn subject stands at our lower left, facing the edge of the paper in a three-quarter profile, depicted from the chest up. The man’s arms are raised and crossed above his monk-like hair as if hugging the top of his head. This position exaggerates his protruding shoulder blade, which resembles a bulging hump.\n\nThe subject’s facial features are rendered with considerable detail in fine black ink lines, but no detail is present on his torso. He has full lips, a long nose with a round nostril, low, curving eyebrows, and large, bulging eyes.\n\nBehind and above him, the uneven violet background features discernible roller marks that fade out towards the upper edge of the Strathmore paper."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "Subverting the gender paradigm",
+        duration: 40,
+        speaker: "Grace Marston",
+        audioURL: "2_SubvertingTheGenderParadigm_GraceMarston",
+        transcript:
+          "<i>Grace Marston:</i>\n\nWarhol used many different art supplies for this series of portraits, but they do share some aesthetic traits. Through his color choices and his drawing style, Warhol appears to soften or even feminize these young men.\n\nHe surrounds them with pink and purple backgrounds, sometimes decorating them with hearts, or flowers, or ribbons. Most of these men have very luscious, full lips and long, delicate eyelashes. Pairs of men are shown in really intimate poses, kissing or gently caressing one another.\n\nAnd by including so many traditionally feminine features in his portraits of men, Warhol has daringly subverted the gender paradigm."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 1,
+        title: "Gender expectations",
+        duration: 25,
+        speaker: "Grace Marston",
+        audioURL: "3_GenderExpectations_GraceMarston",
+        transcript:
+          "<i>Grace Marston:</i>\n\nIn 1950s America men were expected to be very tough and macho, and women were expected to be sweet and subservient, and much of Warhol's commercial art catered to these expectations. He knew that his job was to convey what clothing stores and fashion magazines wanted a woman to be.\n\nBut with his more personal art projects Warhol revealed that a man can look just as delicate and beautiful as a woman."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "COMMENTARY_ANECDOTE",
+        depth: 0,
+        title: "Developing a queer network",
+        duration: 35,
+        speaker: "Grace Marston",
+        audioURL: "4_DevelopingAQueerNetwork_GraceMarston",
+        transcript:
+          "<i>Grace Marston:</i>\n\nShortly after arriving in Manhattan in 1949, Andy Warhol tapped into the bustling creative network that is the New York gay community. He met illustrators, set designers, artists, dancers, and musicians, who just like him, had come to New York seeking opportunity and camaraderie.\n\nThese men became his models, his roommates, his friends, his collaborators and his lovers. Forming these relationships provided companionship and some advantages in the New York art world, where making connections is essential. Together they helped each other's careers and enriched one another's lives."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "Fearless",
+        duration: 62,
+        speaker: "Jessica Beck",
+        audioURL: "Fearlessness_Jessica Beck",
+        transcript:
+          "<i>Curator Jessica Beck:</i>\n\nHi. My name is Jessica Beck.\n\nThis young group in New York that starts to emerge around the Pop movement are people like Roy Lichtenstein, Jasper Johns, Robert Rauschenberg, James Rosenquist. These were Warhol’s peers and they were people Warhol wanted to be associated with and he wanted to show with them.\n\nBut there was also a very masculine front happening with the art movement in New York at this time for very obvious reasons. Homosexuality wasn’t something that people talked about. Homosexual relations would still be considered criminal in this moment in New York.\n\nWith Warhol, there was a fearlessness around his sexuality. He did intimate drawings of men kissing. He brought his sexuality into his work. He also wore his sexuality in a way that other people did not with his mannerisms and his gesture and his dress. And so he was seen potentially as a threat to these other artists out of fear that they would somehow be outed as gay, as well."
+      }
+    ]
+  },
+  {
+    uuid: uuid.v4(),
+    floor: 7,
+    order: 8,
+    shortTitle: "Process",
+    longTitle: "Process and pattern",
+    regions: ["pink"],
+    imageURL: "1998-1-3_pub_01-Web Ready (475px longest edge) - Check Copyright Before Using on Web.jpg",
+    imageWidth: 475,
+    imageHeight: 419,
+    imageAccessibilityLabel: "",
+    shortCredit: "Andy Warhol, <i>Two Heads</i>, ca. 1957 © AWF",
+    longCredit:
+      "Andy Warhol, <i>Two Heads</i>, ca. 1957\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.3",
+    tags: [],
+    initialAudio: "INTRODUCTION",
+    audioContent: [
+      {
+        uuid: uuid.v4(),
+        category: "INTRODUCTION",
+        depth: 0,
+        title: "Introduction",
+        duration: 35,
+        speaker: "Sarah LaRue",
+        audioURL: "1_Introduction_SarahLaRue",
+        transcript:
+          "<i>Sarah LaRue:</i>\n\nHi, this is Sarah LaRue, and I am an artist educator at The Andy Warhol Museum.\n\nIn the 1950s Warhol used a number of different processes for his commercial art.\n\nHe used a blotted line technique, which was a basic form of print making involving a calligraphy pen and India ink, as well as rubber stamping, where he would carve into soft rubber to create an image that he could stamp onto paper in a grid or other composition.\n\nAnd he also used stenciling. Stenciling allowed Warhol to create blocks of color in a certain shape, and also to reproduce text."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "VISUAL_DESCRIPTION",
+        depth: 0,
+        title: "Visual description",
+        duration: 49,
+        speaker: "Narrator",
+        audioURL: "5_VisualDescription_TwoHeads",
+        transcript:
+          "<i>Narrator:</i>\n\nThis painting features the heads of two blonde men against a pale mauve and peach backdrop stenciled with black shapes.\n\nThe two heads are sparsely rendered with thin black ink lines and are positioned at the bottom of the canvas, facing one another as if preparing to kiss. While many short lines indicate waves in their tidy side-parted haircuts, only a few of the features in their pale pink faces have been included, conveyed with faint, simple outlines.\n\nBehind the two heads, a variety of distinct shapes adorns the murky pastel-colored backdrop, stenciled onto the canvas with black spray paint. The roughly symmetrical pattern resembles a cross between a modern leopard print and a Rorschach inkblot."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "Stamping",
+        duration: 27,
+        speaker: "Sarah LaRue",
+        audioURL: "2_Stamping_SarahLaRue",
+        transcript:
+          "<i>Sarah LaRue:</i>\n\nStamping enabled Warhol to easily create grid like compositions of repeating images or patterns.\n\nTo make a rubber stamp you draw or trace an image onto paper, and then transfer it onto soft rubber using carbon paper. Then you use a carving tool to remove negative space—basically any part of the image that would not be printed. Finally, you apply some ink to the stamp and press firmly onto a paper surface to create a stamped image."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "Stenciling",
+        duration: 27,
+        speaker: "Sarah LaRue",
+        audioURL: "3_Stenciling_SarahLaRue",
+        transcript:
+          "<i>Sarah LaRue:</i>\n\nA stencil can allow you to create the same shape over and over. Warhol used it specifically to create blocks of color in a certain shape. He also sometimes used it to reproduce text, more dependably than with stamps.\n\nTo make a stencil you take a thin sheet of material such as paper, plastic, or even metal and cut a design through it. And then you apply paint through these cut spaces onto your surface."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "<i>Two Heads</i>",
+        duration: 37,
+        speaker: "Sarah LaRue",
+        audioURL: "4_TwoHeads_SarahLaRue",
+        transcript:
+          "<i>Sarah LaRue:</i>\n\nIn <i>Two Heads</i> from 1957, Warhol used a stencil with spray paint in combination with the blotted line technique. The stencil is symmetrical and it has a lot of geometric shapes that are arranged across the page. The edges of each shape is a little bit blurry, probably from that use of spray paint.\n\nAt the bottom of the composition there are two heads that were created with the blotted line technique, and they are of two men who are very close together. They look like they're almost about two embrace. The stenciled pattern in the background almost looks like it could be rays of energy or the thoughts of these two men radiating out from their heads."
       }
     ]
   },
@@ -1236,7 +1365,7 @@ export const tourStops = [
         title: "Guided tactile experience",
         duration: 170,
         speaker: "Narrator",
-        audioURL: "Tactile_Skull",
+        audioURL: "Tactile_SelfPortrait",
         transcript:
           "<i>Narrator:</i>\n\nThis silkscreened self portrait depicts the electric blue head of Andy Warhol floating in a smooth, glossy black space. He faces us squarely wearing a spiky wig, with locks of hair shooting out in all directions like a wild crown or an exploding firework. Keep in mind that this tactile reproduction has been scaled down considerably - the original measures nine feet tall and nine feet wide!\n\nBegin by placing your hand in the center of the piece, which is to say atop Andy Warhol’s head. Sweeping your hand back and forth, explore the raised locks of hair, which stick up in all directions in smooth clumps, textured matted patches, and feathery individual strands. Moving toward the upper left you’ll find small raised flecks on the smooth background. These little dots, which fly from the wig like water shaken off a wet dog, are actually artifacts of the silkscreen process, as is the nubbin found on the upper edge of the piece, near the right-hand corner.\n\nOnce again, place your hand at the center of the piece atop Andy Warhol’s head. As you move your hand down toward his face you’ll find that the wig sits quite low on his forehead and ends at his brow line. As Warhol is lit from above, the shadow under his furrowed brow creates a distinct ridge that might feel a bit like a single connected eyebrow. Directly below the brow ridge you will find the subject’s classically-rendered eyes, each of which is punctuated with a tiny electric blue dot: the reflection of light on the pupil.\n\nLocate the bridge of the nose between the eyes where the brow seems to furrow. Using one hand or two, trace the recessed shadows that fall down both sides of the nose, and under the tip as well, creating a triangular moat. Continuing down the face, over the smooth blank space between the nose and upper lip, you will reach the subject’s recessed mouth. From here, move down over the lower lip to locate Warhol’s textured chin, which ends in a bowl-shaped ridge at the bottom edge of the piece.\n\nTo explore the shape of the subject’s face, press the tip of your finger against the pad of your thumb in a pinching gesture and place it on the base of the chin. Now slowly spread your finger and thumb, tracing both sides of the chin as it curves up into the jawline and begins to widen. Warhol’s hollow cheeks are filled with shadow, creating the illusion of a very narrow face, but the gap between your finger and thumb will widen considerably as you move up onto his high cheekbones."
       },

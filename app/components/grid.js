@@ -1,6 +1,6 @@
 
 import React, { PropTypes } from 'react';
-
+import * as _ from "lodash";
 import {
   StyleSheet,
   Text,
@@ -131,12 +131,8 @@ const Grid = (props) => {
   };
 
   if (props.screenReader) {
-    let content = [];
-
-    props.items.forEach((item, index) => {
-      content.push(
-        renderItem(item, index, props.onCellPress, null, true)
-      );
+    let content = _.map(props.items, (item, index) => {
+      return renderItem(item, index, props.onCellPress, null, true);
     });
 
     return (
@@ -184,7 +180,7 @@ Grid.propTypes = {
     PropTypes.array,
     PropTypes.object,
   ]).isRequired,
-  floorName: PropTypes.string.isRequired,
+  floorName: PropTypes.string,
   selected: PropTypes.string,
   onCellPress: PropTypes.func.isRequired,
   screenReader: PropTypes.bool.isRequired,

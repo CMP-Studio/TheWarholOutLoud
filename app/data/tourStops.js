@@ -150,11 +150,11 @@ export const tourStops = [
         category: "INTRODUCTION",
         depth: 0,
         title: "Introduction",
-        duration: 48,
+        duration: 42,
         speaker: "Erin Byrne",
-        audioURL: "0-Introduction_Erin Byrne",
+        audioURL: "0-Introduction_JuliaVitrine_Only_Erin Byrne",
         transcript:
-          "<i>Archivist Erin Byrne:</i>\n\nHi, I’m Erin Byrne. I’m the archivist here at The Andy Warhol Museum.\n\nIn front of us, we have two vitrines. On the left side, these are all items related to Julia Warhola, who was Andy’s mother. On the right side is a vitrine just related to Andrej Warhola, so Andy’s father.\n\nAndrej and Julia came from the Carpatho-Rusyn region of East Central Europe which encompasses about five countries and their small village Mikova is located in present day Slovakia.\n\nWe decided to do these vitrines about Andrej and Julia because as with so many people, the origin story really kind of sets the tone and gives context for the person you’re going to spend your time getting to know here at the museum."
+          "<i>Archivist Erin Byrne:</i>\n\nHi, I’m Erin Byrne. I’m the archivist here at The Andy Warhol Museum.\n\nIn front of us, we have two vitrines. These are all items related to Julia Warhola, who was Andy’s mother.\n\nAndrej and Julia came from the Carpatho-Rusyn region of East Central Europe which encompasses about five countries and their small village Mikova is located in present day Slovakia.\n\nWe decided to do these vitrines about Andrej and Julia because as with so many people, the origin story really kind of sets the tone and gives context for the person you’re going to spend your time getting to know here at the museum."
       },
       {
         uuid: uuid.v4(),

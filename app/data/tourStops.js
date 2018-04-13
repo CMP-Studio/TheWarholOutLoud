@@ -132,6 +132,102 @@ export const tourStops = [
     uuid: uuid.v4(),
     floor: 7,
     order: 2,
+    shortTitle: "Warhol's heritage",
+    longTitle: "Warhol's Carpatho-Rusyn heritage",
+    regions: ["blue", "olive"],
+    imageURL: "juliapassport.jpg",
+    imageWidth: 331,
+    imageHeight: 475,
+    imageAccessibilityLabel: "",
+    shortCredit: "<i>Passport (Julia Warhola)</i>, 1920",
+    longCredit:
+      "<i>Passport (Julia Warhola)</i>, 1920\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\nTC522.118.4",
+    tags: [],
+    initialAudio: "INTRODUCTION",
+    audioContent: [
+      {
+        uuid: uuid.v4(),
+        category: "INTRODUCTION",
+        depth: 0,
+        title: "Introduction",
+        duration: 48,
+        speaker: "Erin Byrne",
+        audioURL: "0-Introduction_Erin Byrne",
+        transcript:
+          "<i>Archivist Erin Byrne:</i>\n\nHi, I’m Erin Byrne. I’m the archivist here at The Andy Warhol Museum.\n\nIn front of us, we have two vitrines. On the left side, these are all items related to Julia Warhola, who was Andy’s mother. On the right side is a vitrine just related to Andrej Warhola, so Andy’s father.\n\nAndrej and Julia came from the Carpatho-Rusyn region of East Central Europe which encompasses about five countries and their small village Mikova is located in present day Slovakia.\n\nWe decided to do these vitrines about Andrej and Julia because as with so many people, the origin story really kind of sets the tone and gives context for the person you’re going to spend your time getting to know here at the museum."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "VISUAL_DESCRIPTION",
+        depth: 0,
+        title: "Visual description",
+        duration: 77,
+        speaker: "Narrator",
+        audioURL: "VisualDescription_JuliaPassport",
+        transcript:
+          "<i>Narrator:</i>\n\nThis is the Czechoslovakian passport issued to Andy Warhol’s mother, Julia Warhola, in 1920. The tattered paper document features several official stamps and notations, including a rectangular stamp in purple ink from the American consulate in Prague.\n\nIt states that the bearer is to depart for the United States of American between October 12, 2019 and December 31, 1920, with the latter date crossed out and changed to October 12, 1921 in black handwritten. The correction is confirmed by a signature, which differs from the signature beneath it—that of the American vice consul.\n\nIn the upper half of the faded, well-worn document is a 3-inch by 2-inch sepia toned photograph of young Julia affixed with strips of yellowed tape. In it, Julia stands against a dark backdrop, gazing to our left with narrow eyes and a slight grin on her closed lips. She wears a dark pleated skirt, a dark head scarf, and a white blouse with frills at the wrists. The creased photograph, which appears to be a snapshot rather than a formal portrait, is signed at the bottom by Julia herself."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "HISTORICAL_CONTEXT",
+        depth: 0,
+        title: "The Warholas: An immigration story",
+        duration: 32,
+        speaker: "Erin Byrne",
+        audioURL: "2-The Warholas' immigration story_Erin Byrne",
+        transcript:
+          "<i>Archivist Erin Byrne:</i>\n\nAndrej first immigrates to the U.S. in 1905 and he comes back in 1908\n\nHe marries Julia in the following year, 1909, and then immigrates one more time in 1912 right before the start of World War I. They’re married for three years before Andrej departs and Julia is waiting in Mikova for nine years before she’s able to depart and follow her husband to Pittsburgh, Pennsylvania."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "HISTORICAL_CONTEXT",
+        depth: 1,
+        title: "Julia Warhola's passport",
+        duration: 60,
+        speaker: "Erin Byrne",
+        audioURL: "3-Julia Warhola's passport_Erin Byrne",
+        transcript:
+          "<i>Archivist Erin Byrne:</i>\n\nIn the Julia vitrine, in the top left corner, we have Julia’s passport which was found in one of the time capsules here at the museum. The document itself is heavily worn.\n\nYou can see a picture of Julia wearing very traditional Carpatho-Rusyn dress with her headscarf and her blouse. The document itself is incredibly fragile. It has been folded in quarters and the tape is just disintegrating at the seams.\n\nThe historical significance of this passport for us is that it traces Julia’s journey from what during the time was known as Czechoslovakia, and we can see her entering into Poland, entering into Germany, entering into Belgium, when she finally arrives in England. Julia departs Liverpool on June 11, 1921 and after a ten-day voyage, she arrives in New York on June 21, 1921 to be reunited with Andrej."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "COMMENTARY_ANECDOTE",
+        depth: 0,
+        title: "Carpatho-Rusyn roots",
+        duration: 46,
+        speaker: "Donald Warhola",
+        audioURL: "4-Carpathon-Rusyn heritage_Donald Warhola",
+        transcript:
+          "<i>Donald Warhola:</i>\n\nHis parents were from an area called the Carpathian Mountains, and they’re known as the Carpatho-Rusyns. And this area spans into Slovakia, Ukraine, and Poland. \n\nAnd the people from this area are very hardworking—simple people but self-sufficient, and very deeply religious as well. And it’s interesting too, because not only very religious but also liking to have a good time. Whenever Andrej and Julia got married, it was a three-day wedding. \n\nIn my opinion, when I think about that Carpatho-Rusyn heritage, I see that in my uncle, because he was very hard-working, very prolific in how much work he created, took his work very seriously, too. Work was his life."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "HISTORICAL_CONTEXT",
+        depth: 0,
+        title: "Julia Warhola's dress",
+        duration: 48,
+        speaker: "Erin Byrne",
+        audioURL: "5-Julia Warhola's dress_Erin Byrne",
+        transcript:
+          "<i>Archivist Erin Byrne</i>\n\nA lot of the objects in this vitrine represent the culture that Andre and Julia left behind. The traditional folk costume that’s in the right-hand side corner of this vitrine represents the dress that women in Mikova would have worn at that time. Their outfits were highly embroidered and decorative and floral. These clothing options have a lot of meaning. In terms of the style, they would have been tailored to each village, each would have had its own particular style of embroidery. The way a woman wore her hair, the way she wore a headdress: these were all signifiers of her marital status, her family status. The fact that Julia brought these things over shows that she was still very tied to her homeland."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ARCHIVAL_MATERIAL",
+        depth: 0,
+        title: "Julia sings a Carpatho-Rusyn folk song",
+        duration: 69,
+        speaker: "Donald Warhola",
+        audioURL: "Warhola_Julia_Folksong",
+        transcript:
+          "<i>Donald Warhola:</i>\n\nJulia really enjoyed singing, especially folk songs and religious hymns from the Carpatho-Rusyn culture. The following hymn is Julia singing a song in her native language giving glory to God. \n\n<i>Julia Warhola singing</i>"
+      }
+    ]
+  },
+  {
+    uuid: uuid.v4(),
+    floor: 7,
+    order: 3,
     shortTitle: "College years",
     longTitle: "College years",
     regions: ["blue"],
@@ -228,7 +324,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 3,
+    order: 4,
     shortTitle: "New York",
     longTitle: "From Pittsburgh to New York",
     regions: ["orange", "olive"],
@@ -326,7 +422,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 4,
+    order: 5,
     shortTitle: "Andy and Julia",
     longTitle: "Andy and Julia",
     regions: ["orange"],
@@ -406,23 +502,12 @@ export const tourStops = [
         transcript:
           "<i>Donald Warhola:</i>\n\nWhat I always admire about Julia is that she really—I believe she really nurtured my uncle’s artistic talent, and then throughout their life, they had a very mutual love and respect for each other. Julia would help Andy with his art. \n\nI remember being up there as a child and seeing Julia working with Uncle Andy. I remember one occasion where she was talking to my father and Uncle Andy was in the room, too, and Uncle Andy was looking at Julia, and she’s talking to my father, and she’s getting a little nervous, he’s getting a little nervous, and Dad’s talking and talking and Julia had to stop Dad and said, “I’d better get back to work or else the boss is gonna fire me.”"
       },
-      {
-        uuid: uuid.v4(),
-        category: "ARCHIVAL_MATERIAL",
-        depth: 0,
-        title: "Julia sings a Carpatho-Rusyn folk song",
-        duration: 69,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Julia_Folksong",
-        transcript:
-          "<i>Donald Warhola:</i>\n\nJulia really enjoyed singing, especially folk songs and religious hymns from the Carpatho-Rusyn culture. The following hymn is Julia singing a song in her native language giving glory to God. \n\n<i>Julia Warhola singing</i>"
-      }
     ]
   },
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 5,
+    order: 6,
     shortTitle: "Blotted line",
     longTitle: "Blotted line",
     shortCredit: 'Still from "Blotted Line Video," The Andy Warhol Museum',
@@ -483,7 +568,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 6,
+    order: 7,
     shortTitle: "Commercial work",
     longTitle: "Commercial work",
     shortCredit: "Andy Warhol, <i>Baseball Players (Early)</i>, ca. 1950 © AWF",
@@ -545,7 +630,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 7,
+    order: 8,
     shortTitle: "Sketches",
     longTitle: "Warhol's intimate sketches",
     regions: ["pink"],
@@ -630,7 +715,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 8,
+    order: 9,
     shortTitle: "Process",
     longTitle: "Process and pattern",
     regions: ["pink"],
@@ -704,7 +789,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 9,
+    order: 10,
     shortTitle: "Female Fashion Figure",
     longTitle: "Tactile reproduction: <i>Female Fashion Figure</i>",
     shortCredit: "Tactile reproduction: <i>Female Fashion Figure</i>",
@@ -776,7 +861,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 10,
+    order: 11,
     shortTitle: "Reclining Male Torso",
     longTitle: "Tactile reproduction: <i>Reclining Male Torso</i>",
     shortCredit: "Tactile reproduction: <i>Reclining Male Torso</i>",
@@ -848,7 +933,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 11,
+    order: 12,
     shortTitle: "Coca-Cola [2]",
     longTitle: "Tactile reproduction: <i>Coca-Cola [2]</i>",
     shortCredit: "Tactile reproduction: <i>Coca-Cola [2]</i>",
@@ -920,7 +1005,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 12,
+    order: 13,
     shortTitle: "Hand-painted pop",
     longTitle: "Hand-painted pop: Coca-Cola",
     shortCredit: "Andy Warhol, <i>Coca-Cola [2]</i>, 1961 © AWF",
@@ -993,7 +1078,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 13,
+    order: 14,
     shortTitle: "Pop products",
     longTitle: "Pop products: Campbell's soup",
     shortCredit:
@@ -1067,7 +1152,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 14,
+    order: 15,
     shortTitle: "Do It Yourself",
     longTitle: "<i>Do It Yourself (Sailboat)</i>",
     shortCredit: "Andy Warhol, <i>Do It Yourself (Sailboat)</i>, 1962 © AWF",

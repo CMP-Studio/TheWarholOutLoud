@@ -86,23 +86,12 @@ export const tourStops = [
         uuid: uuid.v4(),
         category: "HISTORICAL_CONTEXT",
         depth: 0,
-        title: "The Warholas",
-        duration: 47,
+        title: "Andy, Julia, John",
+        duration: 41,
         speaker: "Donald Warhola",
-        audioURL: "Warhola_Donald_Childhood_Warhola_Family",
+        audioURL: "OL_audio_AndyJuliaJohn_childhood_1998-3-5247",
         transcript:
-          "<i>Donald Warhola:</i>\n\nAndy Warhol was born here in Pittsburgh, in the South Oakland section of Pittsburgh. \n\nHis parents came here; they immigrated from what’s present-day eastern Slovakia, a small village called Miková. At the time, the borders were changing—actually, when Andrej came over it was still Austria-Hungary. He came over in 1912. It took nine years for Julia to join him. Because of the outbreak of World War I, she was not able to leave the country until after the war, so she came over in 1921, and they started a family in 1922. \n\nPaul was the first who was born; dad—John Warhola—was the second son who was born in 1925, and Andy was born in 1928."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 1,
-        title: "Family portrait",
-        duration: 25,
-        speaker: "Donald Warhola",
-        audioURL: "Warhola_Donald_Childhood_Family_portrait",
-        transcript:
-          "<i>Donald Warhola:</i>\n\nThis is a photograph of my grandmother Julia, as well as Andy when he was about 2 years old, and my father when he was about 5. \n\nAnd this is a professional photograph, but I like it for a strange reason that Paul and Andrej are not in the photograph. And most likely Paul was at school, and Andrej was at work. And that’s just the way Julia was, very spontaneous."
+          "<i>Donald Warhola:</i>\n\nThis is a photograph of my grandmother Julia, as well as Andy when he was about 2 years old, and my father when he was about 5.\n\nAndy Warhol was born here in Pittsburgh, in the South Oakland section of Pittsburgh. Paul was the first who was born; dad—John Warhola—was the second son who was born in 1925, and Andy was born in 1928.\n\nAnd this is a professional photograph, but I like it for a strange reason that Paul and Andrej are not in the photograph. And most likely Paul was at school, and Andrej was at work. And that’s just the way Julia was, very spontaneous."
       },
       {
         uuid: uuid.v4(),
@@ -135,13 +124,13 @@ export const tourStops = [
     shortTitle: "Warhol's heritage",
     longTitle: "Warhol's Carpatho-Rusyn heritage",
     regions: ["blue", "olive"],
-    imageURL: "juliapassport.jpg",
-    imageWidth: 331,
+    imageURL: "T3256_pub_01.jpg",
+    imageWidth: 330,
     imageHeight: 475,
     imageAccessibilityLabel: "",
-    shortCredit: "<i>Passport (Julia Warhola)</i>, 1920",
+    shortCredit: "<i>Julia Zavacky Warhola in a photograph made for her passport</i>, 1920",
     longCredit:
-      "<i>Passport (Julia Warhola)</i>, 1920\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\nTC522.118.4",
+      "<i>Julia Zavacky Warhola in a photograph made for her passport</i>, 1920\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\nT3256",
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -150,44 +139,22 @@ export const tourStops = [
         category: "INTRODUCTION",
         depth: 0,
         title: "Introduction",
-        duration: 42,
-        speaker: "Erin Byrne",
-        audioURL: "0-Introduction_JuliaVitrine_Only_Erin Byrne",
+        duration: 36,
+        speaker: "Donald Warhola",
+        audioURL: "OL_audio_Introduction_WarholsHeritage_DonaldWarhola",
         transcript:
-          "<i>Archivist Erin Byrne:</i>\n\nHi, I’m Erin Byrne. I’m the archivist here at The Andy Warhol Museum.\n\nIn front of us, we have two vitrines. These are all items related to Julia Warhola, who was Andy’s mother.\n\nAndrej and Julia came from the Carpatho-Rusyn region of East Central Europe which encompasses about five countries and their small village Mikova is located in present day Slovakia.\n\nWe decided to do these vitrines about Andrej and Julia because as with so many people, the origin story really kind of sets the tone and gives context for the person you’re going to spend your time getting to know here at the museum."
+          "<i>Donald Warhola:</i>\n\nHi, my name is Donald Warhola. I’m a nephew of Andy Warhol, and I work here at The Andy Warhol Museum.\n\nHis parents came here; they immigrated from what’s present-day eastern Slovakia, a small village called Miková. At the time, the borders were changing—actually, when Andrej came over it was still Austria-Hungary. He came over in 1912. It took nine years for Julia to join him. Because of the outbreak of World War I, she was not able to leave the country until after the war, so she came over in 1921, and they started a family in 1922."
       },
       {
         uuid: uuid.v4(),
         category: "VISUAL_DESCRIPTION",
         depth: 0,
         title: "Visual description",
-        duration: 77,
+        duration: 42,
         speaker: "Narrator",
-        audioURL: "VisualDescription_JuliaPassport",
+        audioURL: "VisualDescription_JuliaPhoto",
         transcript:
-          "<i>Narrator:</i>\n\nThis is the Czechoslovakian passport issued to Andy Warhol’s mother, Julia Warhola, in 1920. The tattered paper document features several official stamps and notations, including a rectangular stamp in purple ink from the American consulate in Prague.\n\nIt states that the bearer is to depart for the United States of American between October 12, 2019 and December 31, 1920, with the latter date crossed out and changed to October 12, 1921 in black handwritten. The correction is confirmed by a signature, which differs from the signature beneath it—that of the American vice consul.\n\nIn the upper half of the faded, well-worn document is a 3-inch by 2-inch sepia toned photograph of young Julia affixed with strips of yellowed tape. In it, Julia stands against a dark backdrop, gazing to our left with narrow eyes and a slight grin on her closed lips. She wears a dark pleated skirt, a dark head scarf, and a white blouse with frills at the wrists. The creased photograph, which appears to be a snapshot rather than a formal portrait, is signed at the bottom by Julia herself."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 0,
-        title: "The Warholas: An immigration story",
-        duration: 32,
-        speaker: "Erin Byrne",
-        audioURL: "2-The Warholas' immigration story_Erin Byrne",
-        transcript:
-          "<i>Archivist Erin Byrne:</i>\n\nAndrej first immigrates to the U.S. in 1905 and he comes back in 1908\n\nHe marries Julia in the following year, 1909, and then immigrates one more time in 1912 right before the start of World War I. They’re married for three years before Andrej departs and Julia is waiting in Mikova for nine years before she’s able to depart and follow her husband to Pittsburgh, Pennsylvania."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 1,
-        title: "Julia Warhola's passport",
-        duration: 60,
-        speaker: "Erin Byrne",
-        audioURL: "3-Julia Warhola's passport_Erin Byrne",
-        transcript:
-          "<i>Archivist Erin Byrne:</i>\n\nIn the Julia vitrine, in the top left corner, we have Julia’s passport which was found in one of the time capsules here at the museum. The document itself is heavily worn.\n\nYou can see a picture of Julia wearing very traditional Carpatho-Rusyn dress with her headscarf and her blouse. The document itself is incredibly fragile. It has been folded in quarters and the tape is just disintegrating at the seams.\n\nThe historical significance of this passport for us is that it traces Julia’s journey from what during the time was known as Czechoslovakia, and we can see her entering into Poland, entering into Germany, entering into Belgium, when she finally arrives in England. Julia departs Liverpool on June 11, 1921 and after a ten-day voyage, she arrives in New York on June 21, 1921 to be reunited with Andrej."
+          "<i>Narrator:</i>\n\nThis sepia-toned image is a facsimile of the photograph found in Julia Warhola’s 1920 passport.\n\nIn it, Julia stands against a dark backdrop, gazing to our left with narrow eyes and a slight grin on her closed lips. She wears a dark pleated skirt, a dark head scarf knotted beneath her chin, and a white blouse with two layers of frills at the wrists and a thin line of embroidery above the waist.\n\nThe photograph, which appears to be a snapshot rather than a formal portrait, is blemished with watermarks, tape residue, and slightly tattered edges, and is creased with several tears and fold lines."
       },
       {
         uuid: uuid.v4(),
@@ -199,17 +166,6 @@ export const tourStops = [
         audioURL: "4-Carpathon-Rusyn heritage_Donald Warhola",
         transcript:
           "<i>Donald Warhola:</i>\n\nHis parents were from an area called the Carpathian Mountains, and they’re known as the Carpatho-Rusyns. And this area spans into Slovakia, Ukraine, and Poland. \n\nAnd the people from this area are very hardworking—simple people but self-sufficient, and very deeply religious as well. And it’s interesting too, because not only very religious but also liking to have a good time. Whenever Andrej and Julia got married, it was a three-day wedding. \n\nIn my opinion, when I think about that Carpatho-Rusyn heritage, I see that in my uncle, because he was very hard-working, very prolific in how much work he created, took his work very seriously, too. Work was his life."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 0,
-        title: "Julia Warhola's dress",
-        duration: 48,
-        speaker: "Erin Byrne",
-        audioURL: "5-Julia Warhola's dress_Erin Byrne",
-        transcript:
-          "<i>Archivist Erin Byrne</i>\n\nA lot of the objects in this vitrine represent the culture that Andre and Julia left behind. The traditional folk costume that’s in the right-hand side corner of this vitrine represents the dress that women in Mikova would have worn at that time. Their outfits were highly embroidered and decorative and floral. These clothing options have a lot of meaning. In terms of the style, they would have been tailored to each village, each would have had its own particular style of embroidery. The way a woman wore her hair, the way she wore a headdress: these were all signifiers of her marital status, her family status. The fact that Julia brought these things over shows that she was still very tied to her homeland."
       },
       {
         uuid: uuid.v4(),
@@ -426,9 +382,9 @@ export const tourStops = [
     shortTitle: "Andy and Julia",
     longTitle: "Andy and Julia",
     regions: ["orange"],
-    imageURL: "1998-3-1769_int_01.jpg",
+    imageURL: "1998-3-1775_pub_01-Web_Ready.jpg",
     imageWidth: 475,
-    imageHeight: 444,
+    imageHeight: 302,
     imageAccessibilityLabel: "",
     shortCredit: "Julia Warhola, <i>Two Angels Praying</i>, ca. 1953",
     longCredit:
@@ -452,11 +408,11 @@ export const tourStops = [
         category: "VISUAL_DESCRIPTION",
         depth: 0,
         title: "Visual description",
-        duration: 38,
+        duration: 59,
         speaker: "Narrator",
-        audioURL: "1_VisualDescription_TwoAngelsPraying",
+        audioURL: "OL_visualDescription_andyAndJulia_1998.3.1775",
         transcript:
-          '<i>Narrator:</i>\n\nIn this child-like black ink line drawing, two angels with feathery wings pray beneath a small cross and an eight-pointed star.\n\nThe angels face one another, reaching out with bent, wavy arms and quickly-rendered hands clasped in prayer. They have curly, bouffant hairdos and long wings of loosely-drawn feathers in place of their bodies.\n\nBetween them, above their hands, is the small cross, which is slightly curved as if bowing to our right. Above it is the small star, which resembles a dark, spinning pinwheel.'
+          '<i>Narrator:</i>\n\nThis childlike line drawing in black ink features two angels praying to a smiling face that floats on a feathery cloud.\n\nThe angels face one another, gazing up at the holy child above them. They wear solemn expressions, have ghostly stippled arms and hair, and appear to be kneeling inside separate, swirling clouds. Long wings of loosely-drawn feathers arch out of their backs, spilling over the edges of the curlicue clouds.\n\nAbove and between them is the smiling face of the child. The face has scalloped edges, like a small puffy cloud. Topped with curly hair, the face grins cheerfully, resting its chin on the feathers.\n\nAbove the face is a five-pointed star, and beneath it is a simple cross. At the bottom of the drawing, in fanciful handwritten script, is the phrase "andy Warhol mothers to zoo."'
       },
       {
         uuid: uuid.v4(),
@@ -568,79 +524,17 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 7,
-    shortTitle: "Commercial work",
-    longTitle: "Commercial work",
-    shortCredit: "Andy Warhol, <i>Baseball Players (Early)</i>, ca. 1950 © AWF",
-    longCredit:
-      "Andy Warhol, <i>Baseball Players (Early)</i>, ca. 1950\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.1151",
-    regions: ["pink"],
-    imageURL: "1998-1-1151_int_01.jpg",
-    imageWidth: 475,
-    imageHeight: 387,
-    tags: [],
-    initialAudio: "INTRODUCTION",
-    audioContent: [
-      {
-        uuid: uuid.v4(),
-        category: "INTRODUCTION",
-        depth: 0,
-        title: "Introduction",
-        duration: 38,
-        speaker: "Jose Diaz",
-        audioURL: "1_Introduction_Jose Diaz Work",
-        transcript:
-          "<i>Jose Diaz:</i>\n\nHello. My name is Jose Diaz, the Milton Fine curator here at The Andy Warhol Museum. \n\nThe amazing thing about Andy is that he rarely turned down any work. He was able to produce work quickly, and he was also able to follow directions. So, because of this, he was able to pick up clients such as <i>Vogue</i>, <i>Mademoiselle</i>, <i>Harper's Bazaar</i>. \n\nHe was also taking on commissions for companies. He would make greeting cards for Tiffany's. He made stationery for Bergdorf Goodman. And he even made placemats for the Bird Cage restaurant in Lord & Taylor. Whatever drawings were actually not selected by the clients he ended up framing and hanging in a small café called Serendipity, where he would sell them."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "VISUAL_DESCRIPTION",
-        depth: 0,
-        title: "Visual description",
-        duration: 54,
-        speaker: "Narrator",
-        audioURL: "1_VisualDescription_BaseballPlayers",
-        transcript:
-          "<i>Narrator:</i>\n\nThis cartoon-like line drawing of a professional baseball game features several players in pinstriped uniforms, an umpire, and a section of the distant bleachers on an otherwise blank sheet of off-white Strathmore brand paper.\n\nThe batter, catcher, and umpire are clustered in the foreground near our lower left, facing the pitcher’s mound in the middle ground at our right. Behind the pitcher is a sprinting baserunner, and an outfielder stands in the distance. The batter has already swung and stares up into the sky, as do the umpire, baserunner, and outfielder. At our upper left sits a distant bank of bleachers which is topped with decorative trim and small flags. Inside the bleachers are dozens of tiny faceless circles, representing individual spectators."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 0,
-        title: "Consumer culture and Pop Art",
-        duration: 49,
-        speaker: "Jessica Beck",
-        audioURL: "2_Consumer culture and pop_Jessica Beck",
-        transcript:
-          "<i>Curator Jessica Beck:</i>\n\nHi, I'm Jessica Beck.\n\nIn the 1950s, America is actually going through a really interesting and important moment culturally. It’s post World War II. There’s a boom economically. Culture picks up, consumer culture picks up in an important way which led to a complete renaissance in advertising and newspapers and all sorts of media—the dawn of television and radio. The world had become much more interested in a visual culture.\n\nThe change in visual culture after World War II that started happening in the U.S. [and] was also happening in Europe completely changed the way we thought about art. Another movement had started to take shape and that movement was pop."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 1,
-        title: "Unique style",
-        duration: 51,
-        speaker: "Jessica Beck",
-        audioURL: "3_Unique style_Jessica Beck",
-        transcript:
-          "<i>Curator Jessica Beck:</i>\n\nIn the 1950s when Warhol is first living and working in New York, it’s a moment when many artists were working as commercial illustrators or designers or sometimes window dressers to pay their bills.\n\nWarhol is one of these people but he ends up being very successful with his commercial illustrations because he had a very unique style that was, some could say, naive.\n\nBut very different from his peers, Warhol signed his name to all his work so he had a sense of ownership over this commercial period. It was also a form of practice for him. The vocabulary and the form of editing and cropping that he learned during this early period as a commercial designer ended up becoming touchstones to his formal practice as a painter by 1961. "
-      }
-    ]
-  },
-  {
-    uuid: uuid.v4(),
-    floor: 7,
     order: 8,
     shortTitle: "Sketches",
     longTitle: "Warhol's intimate sketches",
     regions: ["pink"],
-    imageURL: "1998-1-944_pub_01-Web Ready (475px longest edge) - Check Copyright Before Using on Web.jpg",
-    imageWidth: 376,
+    imageURL: "1998-1-1768-5_pub_01-Web Ready.jpg",
+    imageWidth: 396,
     imageHeight: 475,
     imageAccessibilityLabel: "",
-    shortCredit: "Andy Warhol, <i>Male Head</i>, 1950s © AWF",
+    shortCredit: "Andy Warhol, <i>Male Portraits</i>, 1950s © AWF",
     longCredit:
-      "Andy Warhol, <i>Male Head</i>, 1950s\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.944",
+      "Andy Warhol, <i>Male Portraits</i>, 1950s\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.1768.5",
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -660,11 +554,11 @@ export const tourStops = [
         category: "VISUAL_DESCRIPTION",
         depth: 0,
         title: "Visual description",
-        duration: 56,
+        duration: 50,
         speaker: "Narrator",
-        audioURL: "5_VisualDescription_MaleHead",
+        audioURL: "OL_visualDescriptions_malePortraits_warholsIntimateSketches",
         transcript:
-          "<i>Narrator:</i>\n\nSet against a deep violet backdrop, a thin, bare-chested man stares with wide-open eyes.\n\nThe line-drawn subject stands at our lower left, facing the edge of the paper in a three-quarter profile, depicted from the chest up. The man’s arms are raised and crossed above his monk-like hair as if hugging the top of his head. This position exaggerates his protruding shoulder blade, which resembles a bulging hump.\n\nThe subject’s facial features are rendered with considerable detail in fine black ink lines, but no detail is present on his torso. He has full lips, a long nose with a round nostril, low, curving eyebrows, and large, bulging eyes.\n\nBehind and above him, the uneven violet background features discernible roller marks that fade out towards the upper edge of the Strathmore paper."
+          "<i>Narrator:</i>\n\nRendered with a ballpoint pen, this ink line drawing on yellowed paper features a portrait of a serene young man who faces us with his head tilted to our left, perhaps lying back or lounging.\n\nHis large eyes and full lips are closed, and his nose is upturned, drawing attention to his open nostrils and the area under them. The subject’s eyebrows and long lashes are boldly rendered with darker lines than the hatched shading found in his upper lip.\n\nAdditional hatching is present in the trimmed hair at the subject’s temple, while the hair on top of his head is defined with wavy contour lines. The subject’s neck and shoulders are sparsely rendered, as is his dimpled chin. The right edge of his face, on our left, is undefined."
       },
       {
         uuid: uuid.v4(),
@@ -704,7 +598,7 @@ export const tourStops = [
         category: "ART_PROCESS",
         depth: 0,
         title: "Fearless",
-        duration: 62,
+        duration: 64,
         speaker: "Jessica Beck",
         audioURL: "Fearlessness_Jessica Beck",
         transcript:
@@ -715,370 +609,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 9,
-    shortTitle: "Process",
-    longTitle: "Process and pattern",
-    regions: ["pink"],
-    imageURL: "1998-1-3_pub_01-Web Ready (475px longest edge) - Check Copyright Before Using on Web.jpg",
-    imageWidth: 475,
-    imageHeight: 419,
-    imageAccessibilityLabel: "",
-    shortCredit: "Andy Warhol, <i>Two Heads</i>, ca. 1957 © AWF",
-    longCredit:
-      "Andy Warhol, <i>Two Heads</i>, ca. 1957\nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution The Andy Warhol Foundation for the Visual Arts, Inc.\n© The Andy Warhol Foundation for the Visual Arts, Inc.\n1998.1.3",
-    tags: [],
-    initialAudio: "INTRODUCTION",
-    audioContent: [
-      {
-        uuid: uuid.v4(),
-        category: "INTRODUCTION",
-        depth: 0,
-        title: "Introduction",
-        duration: 35,
-        speaker: "Sarah LaRue",
-        audioURL: "1_Introduction_SarahLaRue",
-        transcript:
-          "<i>Sarah LaRue:</i>\n\nHi, this is Sarah LaRue, and I am an artist educator at The Andy Warhol Museum.\n\nIn the 1950s Warhol used a number of different processes for his commercial art.\n\nHe used a blotted line technique, which was a basic form of print making involving a calligraphy pen and India ink, as well as rubber stamping, where he would carve into soft rubber to create an image that he could stamp onto paper in a grid or other composition.\n\nAnd he also used stenciling. Stenciling allowed Warhol to create blocks of color in a certain shape, and also to reproduce text."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "VISUAL_DESCRIPTION",
-        depth: 0,
-        title: "Visual description",
-        duration: 49,
-        speaker: "Narrator",
-        audioURL: "5_VisualDescription_TwoHeads",
-        transcript:
-          "<i>Narrator:</i>\n\nThis painting features the heads of two blonde men against a pale mauve and peach backdrop stenciled with black shapes.\n\nThe two heads are sparsely rendered with thin black ink lines and are positioned at the bottom of the canvas, facing one another as if preparing to kiss. While many short lines indicate waves in their tidy side-parted haircuts, only a few of the features in their pale pink faces have been included, conveyed with faint, simple outlines.\n\nBehind the two heads, a variety of distinct shapes adorns the murky pastel-colored backdrop, stenciled onto the canvas with black spray paint. The roughly symmetrical pattern resembles a cross between a modern leopard print and a Rorschach inkblot."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "Stamping",
-        duration: 27,
-        speaker: "Sarah LaRue",
-        audioURL: "2_Stamping_SarahLaRue",
-        transcript:
-          "<i>Sarah LaRue:</i>\n\nStamping enabled Warhol to easily create grid like compositions of repeating images or patterns.\n\nTo make a rubber stamp you draw or trace an image onto paper, and then transfer it onto soft rubber using carbon paper. Then you use a carving tool to remove negative space—basically any part of the image that would not be printed. Finally, you apply some ink to the stamp and press firmly onto a paper surface to create a stamped image."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "Stenciling",
-        duration: 27,
-        speaker: "Sarah LaRue",
-        audioURL: "3_Stenciling_SarahLaRue",
-        transcript:
-          "<i>Sarah LaRue:</i>\n\nA stencil can allow you to create the same shape over and over. Warhol used it specifically to create blocks of color in a certain shape. He also sometimes used it to reproduce text, more dependably than with stamps.\n\nTo make a stencil you take a thin sheet of material such as paper, plastic, or even metal and cut a design through it. And then you apply paint through these cut spaces onto your surface."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "<i>Two Heads</i>",
-        duration: 37,
-        speaker: "Sarah LaRue",
-        audioURL: "4_TwoHeads_SarahLaRue",
-        transcript:
-          "<i>Sarah LaRue:</i>\n\nIn <i>Two Heads</i> from 1957, Warhol used a stencil with spray paint in combination with the blotted line technique. The stencil is symmetrical and it has a lot of geometric shapes that are arranged across the page. The edges of each shape is a little bit blurry, probably from that use of spray paint.\n\nAt the bottom of the composition there are two heads that were created with the blotted line technique, and they are of two men who are very close together. They look like they're almost about two embrace. The stenciled pattern in the background almost looks like it could be rays of energy or the thoughts of these two men radiating out from their heads."
-      }
-    ]
-  },
-  {
-    uuid: uuid.v4(),
-    floor: 7,
-    order: 10,
-    shortTitle: "Female Fashion Figure",
-    longTitle: "Tactile reproduction: <i>Female Fashion Figure</i>",
-    shortCredit: "Tactile reproduction: <i>Female Fashion Figure</i>",
-    longCredit: "Tactile reproduction: <i>Female Fashion Figure</i>",
-    regions: ["tactiles"],
-    imageURL: "Tactile-Female_Fashion_Figure.png",
-    imageWidth: 475,
-    imageHeight: 414,
-    tags: [],
-    initialAudio: "INTRODUCTION",
-    audioContent: [
-      {
-        uuid: uuid.v4(),
-        category: "INTRODUCTION",
-        depth: 0,
-        title: "Introduction",
-        duration: 33,
-        speaker: "Danielle Linzer",
-        audioURL: "1_Introduction_Danielle Linzer",
-        transcript:
-          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nHi! I’m Danielle Linzer. I’m the director of learning and public engagement at The Warhol.\n\nAs you move through the Warhol’s galleries, you’ll encounter various tables that have tactile reproductions of artworks in the Warhol’s collection.\n\nThese tactile reproductions are designed to be accessible to people who are blind or have low vision but we think that they’re really enriching for everybody. They can offer a really in-depth, multisensory experience of an artwork.\n\nWe pair that with a guided audio experience that really walks you through what you’re feeling."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "How to use the tactile reproductions",
-        duration: 50,
-        speaker: "Danielle Linzer",
-        audioURL: "2_How to use the tactile reproductions_Danielle Linzer",
-        transcript:
-          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nLots of people visit museums and really want to touch things and unfortunately we’re not always able to. This is an opportunity to indulge this impulse. You’re welcome to move your hands over the surface and start to appreciate some of the lines, the boundaries, the textures.\n\nOn our audio guide you’ll find guided tactile experiences which are designed to be used in tandem with the three-dimensional reproductions.\n\nThey really guide you through what you’re feeling, helping you to move your hands over the surface of the piece and recognize different kinds of features and formal elements within the work, whereas visual descriptions we offer for works throughout the galleries. A visual description is really translating the visual into the verbal. It’s describing what you’re seeing in front of you."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "Making the tactile reproductions",
-        duration: 40,
-        speaker: "Danielle Linzer",
-        audioURL: "3_Making the tactile reproductions_Danielle Linzer",
-        transcript:
-          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nMaking these tactile reproductions is a really labor-intensive process. It combines an artist’s craftsmanship with really sophisticated digital technologies.\n\nIn it’s simplest form, we’re taking a two-dimensional image, a high-resolution scan of the artwork, and then selectively highlighting certain features to bring them forward or push them back in space and then running that file through a router which cuts into the surface of a material called Acetol, which is a very high density plastic. It’s very durable, it feels good to touch, and it can hold a lot of information, a lot of detail."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "TACTILE_EXPERIENCE",
-        depth: 0,
-        title: "Guided tactile experience",
-        duration: 241,
-        speaker: "Narrator",
-        audioURL: "TactileFemaleFashionFigure_Tactile",
-        transcript:
-          "<i>Narrator:</i>\n\nThis line drawing with synthetic dye features a fashionable, lithe woman in a puffy, knee-length dress standing in front of a 1950s’ convertible sports car. \n\nCentered near the bottom of the piece you will find the woman’s feet, tucked into pointy high-heeled shoes. If you follow the woman’s legs up toward the knees you will soon come to the hem of her dress. Using both hands, explore the edges of her skirt, which is shaped like a soft triangle, and comes back toward the center at her narrow waist. Continuing up the dress you will find a V-shaped neckline, and thin straps that lead to her sloping shoulders. A delicate string of pearls hangs around the woman’s neck, which she is touching with the tips of her slender fingers. \n\nAbove the woman’s shoulders you’ll find her long, thin neck. She is depicted in profile, facing our right, so by following the line of her neck on the right hand side you will soon come to her chin, then her lips, and her delicate, pointy nose. The line leads up to a puff of coiffed hair, which juts out over her forehead. Her up-do curves back along the contours of her head, and ends at the nape of her bare neck. \n\nNow that you have fully mapped out the edges of this work’s central subject, perhaps take some time to explore her dress more fully. Discover the rosette on the bodice, in the center of her chest, the small pleats near the waist, and the garment’s smooth, soft texture, used to evoke the watery, violet color found in the original piece. \n\nBehind the woman is a 1959 Plymouth Sport Fury Convertible sports car, which faces the upper right-hand corner of the piece. If you start, once again, at the woman’s feet, follow her legs, and then the left-hand edge of the skirt, you will soon discover the car’s rear bumper, which stretches out toward the left-hand edge of the work. The back of the car features thin, elongated tail lights, a bumper with chrome details, and a blank, rectangular license plate. At the far left, above the taillight, you will find a decorative fin, which delineates the rear corner of the car. Near the center of the trunk, directly above the license plate, are concentric circles representing the spare tire case mounted on the rear. \n\nTo explore the front of the car, begin once again at the woman’s feet. Follow her legs up to the hem, then follow the hemline to the right, and along the side of her skirt. Here you will find the side of the car, which begins at the rear wheel well and continues up toward the right-hand corner. The side of the car also features two parallel racing stripes that cross the door on the way to the rounded nose. Directly below the nose is the front tire, and above it, to the left, is a small round side mirror. Continuing toward the left you will find the outline of the windshield, as well as the top half of the steering wheel and the low rearview mirror, which is mounted above the dashboard inside the car. \n\nNote that the body of the car has the same smooth texture as found in the dress. In the original piece, the artist painted both objects with Dr. Martin’s watercolors: violet for the dress, and cherry red for the sports car. \n\nOne last thing—near the bottom right hand corner you will find a single dot in an otherwise blank area of the piece. This represents a tiny black mark from the artist’s pen, which may, or may not, have been an intentional addition to the original work."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "VISUAL_DESCRIPTION",
-        depth: 0,
-        title: "Visual description",
-        duration: 71,
-        speaker: "Narrator",
-        audioURL: "TactileFemaleFashionFigure_Visual",
-        transcript:
-          "<i>Narrator:</i>\n\nThis black ink line drawing with synthetic dye features a fashionable, lithe woman in a puffy, knee-length dress standing in front of a 1950s convertible sports car.\n\nRendered in irregular black ink lines, the woman stands at the center of the piece, facing our right, with one hand reaching up to touch the string of pearls around her neck. She wears her hair coiffed and up, with pointed heels on her feet, and an oval rosette in the bodice of her sleeveless dress.\n\nBehind her is a 1959 Plymouth Sport Fury convertible, which faces our upper right hand corner as if preparing to drive away from us. The long, sleek car has rear fins and a round spare tire case mounted on the trunk. The front of the car has a freestanding windshield, a round side mirror, and an open interior.\n\nWhile the background and the woman lack color, both the car and the dress have been painted with vibrant, watery dye: violet for the dress, and cherry red for the sports car."
-      }
-    ]
-  },
-  {
-    uuid: uuid.v4(),
-    floor: 7,
     order: 11,
-    shortTitle: "Reclining Male Torso",
-    longTitle: "Tactile reproduction: <i>Reclining Male Torso</i>",
-    shortCredit: "Tactile reproduction: <i>Reclining Male Torso</i>",
-    longCredit: "Tactile reproduction: <i>Reclining Male Torso</i>",
-    imageURL: "Tactile-Reclining_Male_Torso.png",
-    imageWidth: 408,
-    imageHeight: 475,
-    regions: ["tactiles"],
-    tags: [],
-    initialAudio: "INTRODUCTION",
-    audioContent: [
-      {
-        uuid: uuid.v4(),
-        category: "INTRODUCTION",
-        depth: 0,
-        title: "Introduction",
-        duration: 33,
-        speaker: "Danielle Linzer",
-        audioURL: "1_Introduction_Danielle Linzer",
-        transcript:
-          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nHi! I’m Danielle Linzer. I’m the director of learning and public engagement at The Warhol.\n\nAs you move through the Warhol’s galleries, you’ll encounter various tables that have tactile reproductions of artworks in the Warhol’s collection.\n\nThese tactile reproductions are designed to be accessible to people who are blind or have low vision but we think that they’re really enriching for everybody. They can offer a really in-depth, multisensory experience of an artwork.\n\nWe pair that with a guided audio experience that really walks you through what you’re feeling."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "How to use the tactile reproductions",
-        duration: 50,
-        speaker: "Danielle Linzer",
-        audioURL: "2_How to use the tactile reproductions_Danielle Linzer",
-        transcript:
-          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nLots of people visit museums and really want to touch things and unfortunately we’re not always able to. This is an opportunity to indulge this impulse. You’re welcome to move your hands over the surface and start to appreciate some of the lines, the boundaries, the textures.\n\nOn our audio guide you’ll find guided tactile experiences which are designed to be used in tandem with the three-dimensional reproductions.\n\nThey really guide you through what you’re feeling, helping you to move your hands over the surface of the piece and recognize different kinds of features and formal elements within the work, whereas visual descriptions we offer for works throughout the galleries. A visual description is really translating the visual into the verbal. It’s describing what you’re seeing in front of you."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "Making the tactile reproductions",
-        duration: 40,
-        speaker: "Danielle Linzer",
-        audioURL: "3_Making the tactile reproductions_Danielle Linzer",
-        transcript:
-          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nMaking these tactile reproductions is a really labor-intensive process. It combines an artist’s craftsmanship with really sophisticated digital technologies.\n\nIn it’s simplest form, we’re taking a two-dimensional image, a high-resolution scan of the artwork, and then selectively highlighting certain features to bring them forward or push them back in space and then running that file through a router which cuts into the surface of a material called Acetol, which is a very high density plastic. It’s very durable, it feels good to touch, and it can hold a lot of information, a lot of detail."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "TACTILE_EXPERIENCE",
-        depth: 0,
-        title: "Guided tactile experience",
-        duration: 201,
-        speaker: "Narrator",
-        audioURL: "TactileRecliningMaleTorso_Tactile",
-        transcript:
-          "<i>Narrator:</i>\n\nThis stylized line drawing features a bare-chested young man, lounging on a formal sofa, facing us. \n\nAt the bottom right-hand corner, you will find a patch of wavy, parallel lines representing part of the pillow. If you continue up from there, close to the edge of the piece, you will soon find the man’s pointy elbow. Keeping your right hand on that spot, slowly drag your other hand straight across to the left. You will pass several small patches of loose, parallel lines that represent hairs before coming to the other side of the man’s forearm. \n\nNow that you have located both edges, explore the length of the man’s long, draping arm. Lower down you will find the forearm curving at the wrist, and fingers that hang beyond the bottom edge of the piece. \n\nMoving back up the limb, your left hand will follow the straight edge of the forearm to the crook of the young man’s elbow. Here a line branches off toward the top of the piece, outlining the gentle curve of his bicep. The inner arm ends at the man’s armpit, represented by a narrow, tilting V. \n\nOn the right your fingers will find the widening forearm, the pointy elbow, the bulging tricep, and the strong shoulder joint. The line then brings you around to left where you can trace the man’s broad shoulder. You’ll likely notice a patch of fine parallel marks, like ribbing, just above this line. This is part of the pattern found on the back of the sofa. Continuing along the shoulder you will come to the side of the young man’s neck. Here, in the upper left-hand corner of the piece, is the young man’s face. \n\nHe looks at us with large eyes, pouting lips, and a few tufts of wavy hair. Remember, this rendering is stylized, so the man’s features might not be easily recognizable. To orient yourself, try finding the man’s ear by moving up the line of his neck, on the right. From there you can trace his jawline, down around the chin, past the full lips, to the sharp cheekbone. \n\nDirectly below the man’s head is a large, roughly square pillow, the edges of which outline the largest blank space in the piece. Below the pillow, near the lower left hand corner, you will find irregular shapes and textures representing the patterned sofa. More irregular patches of decoration can be found on the back of the sofa above the man’s shoulder, and in the upper right-hand corner. \n\nIn the center of the piece is the outline of the young man’s chest. To locate it, first find the patch of ribbing above the man’s shoulder. Moving straight down from there you will cross the shoulder line, and eventually come to a feathery, upside-down Y. This is the outline of the man’s inner pectoral muscles. To the right you will find his nipple, which is represented by an oval with a curving hood, like an eyelid. The nipple on the left is not depicted, as it is covered by the large square pillow."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "VISUAL_DESCRIPTION",
-        depth: 0,
-        title: "Visual description",
-        duration: 65,
-        speaker: "Narrator",
-        audioURL: "TactileRecliningMaleTorso_Visual",
-        transcript:
-          "<i>Narrator:</i>\n\nThis stylized line drawing on yellowed manila paper features a bare-chested young man lounging on a formal sofa. Rendered with simple lines from a ballpoint pen, the muscular young man lies on his side, facing us, his head resting on his bicep at our upper left-hand corner. With his body propped up by a large, unadorned pillow, he stares at us with wide eyes and full, pouting lips. He has a broad shoulder and a long muscular arm, which is draped across his body and rests on a second pillow near the bottom righthand corner. Behind and beneath the young man, the patterned upholstery is represented by seemingly random shapes and patches of densely packed parallel lines. Other patches of texture include tufts of wavy hair on the young man’s head and forearm, and fine feathery lines that delineate the man’s pectoral muscles at the center of the drawing."
-      }
-    ]
-  },
-  {
-    uuid: uuid.v4(),
-    floor: 7,
-    order: 12,
-    shortTitle: "Coca-Cola [2]",
-    longTitle: "Tactile reproduction: <i>Coca-Cola [2]</i>",
-    shortCredit: "Tactile reproduction: <i>Coca-Cola [2]</i>",
-    longCredit: "Tactile reproduction: <i>Coca-Cola [2]</i>",
-    regions: ["tactiles"],
-    imageURL: "Tactile-Coca-Cola.png",
-    imageWidth: 475,
-    imageHeight: 372,
-    tags: [],
-    initialAudio: "INTRODUCTION",
-    audioContent: [
-      {
-        uuid: uuid.v4(),
-        category: "INTRODUCTION",
-        depth: 0,
-        title: "Introduction",
-        duration: 33,
-        speaker: "Danielle Linzer",
-        audioURL: "1_Introduction_Danielle Linzer",
-        transcript:
-          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nHi! I’m Danielle Linzer. I’m the director of learning and public engagement at The Warhol.\n\nAs you move through the Warhol’s galleries, you’ll encounter various tables that have tactile reproductions of artworks in the Warhol’s collection.\n\nThese tactile reproductions are designed to be accessible to people who are blind or have low vision but we think that they’re really enriching for everybody. They can offer a really in-depth, multisensory experience of an artwork.\n\nWe pair that with a guided audio experience that really walks you through what you’re feeling."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "How to use the tactile reproductions",
-        duration: 50,
-        speaker: "Danielle Linzer",
-        audioURL: "2_How to use the tactile reproductions_Danielle Linzer",
-        transcript:
-          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nLots of people visit museums and really want to touch things and unfortunately we’re not always able to. This is an opportunity to indulge this impulse. You’re welcome to move your hands over the surface and start to appreciate some of the lines, the boundaries, the textures.\n\nOn our audio guide you’ll find guided tactile experiences which are designed to be used in tandem with the three-dimensional reproductions.\n\nThey really guide you through what you’re feeling, helping you to move your hands over the surface of the piece and recognize different kinds of features and formal elements within the work, whereas visual descriptions we offer for works throughout the galleries. A visual description is really translating the visual into the verbal. It’s describing what you’re seeing in front of you."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "Making the tactile reproductions",
-        duration: 40,
-        speaker: "Danielle Linzer",
-        audioURL: "3_Making the tactile reproductions_Danielle Linzer",
-        transcript:
-          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nMaking these tactile reproductions is a really labor-intensive process. It combines an artist’s craftsmanship with really sophisticated digital technologies.\n\nIn it’s simplest form, we’re taking a two-dimensional image, a high-resolution scan of the artwork, and then selectively highlighting certain features to bring them forward or push them back in space and then running that file through a router which cuts into the surface of a material called Acetol, which is a very high density plastic. It’s very durable, it feels good to touch, and it can hold a lot of information, a lot of detail."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "TACTILE_EXPERIENCE",
-        depth: 0,
-        title: "Guided tactile experience",
-        duration: 132,
-        speaker: "Narrator",
-        audioURL: "TactileCocaCola_Tactile",
-        transcript:
-          "<i>Narrator:</i>\n\nThis piece features a large bottle of Coca-Cola in an abstract setting, originally rendered in black crayon and black paint. \n\nThe glass bottle stands alone on the left. Starting near the bottom, you can follow its curves up toward the narrow mouth near the upper left hand corner of the piece. The brand’s cursive logo is located halfway up the bottle, and a patch with the texture of polished concrete can be found at the top. We’ll return to that patch in a moment. To the left of the bottle, covering the edge of the piece, are patches of rough lines, which represent the crayon markings found in the original work. \n\nCovering the right-hand side of the piece, parallel to the bottle, is a large, thick column with a slightly flared base. Most of this column is filled in with the same patchy crayon markings found on the left edge, and therefore shares the same rough texture. Near the top, however, is a large smooth patch, representing the dark black paint used by artist Andy Warhol. \n\nCentered at the top of the piece are the first three letters of the Coca-Cola logo: C O C. The first C has a long curving tail that underlines the other letters, and the cursive O is connected to the second C by a swooping line near the top. The rest of the logo is blocked on the right by the large column. \n\nOn the left, covering the top of the bottle and much of the corner, is the textured patch that feels like polished concrete. This texture is unique in the piece representing neither the crayon, nor the thick black paint. It represents a cloudy gray smudge, perhaps made with a dry brush or rag. \n\nFinally, a few unusual markings can be found near the bottom of the piece. Between the flared bases of the bottle and the column are three symbols in a neat row, which resemble the letters Q, n, and L."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "VISUAL_DESCRIPTION",
-        depth: 0,
-        title: "Visual description",
-        duration: 77,
-        speaker: "Narrator",
-        audioURL: "CocaCola_Tactile_Visual",
-        transcript:
-          "<i>Narrator:</i>\n\nThis canvas, which measures almost six feet tall and over four feet wide, features a glass bottle of Coca-Cola, rendered in black casein paint and crayon. \n\nThe large, detailed bottle stands on our left, rising up from the bottom of the canvas. Covering the right-hand edge of the painting is a thick black column with a slightly flared base. Most of the column is filled in with patches of light-black crayon markings, but the top features a more solid patch of heavy black paint. \n\nAt the top of the canvas are the first three letters of the Coca-Cola logo, with the rest obscured by the column. More light-black crayon markings appear at the left edge of the canvas, and a smudge of dry black paint marks the upper left hand corner, clouding the top of the glass bottle. \n\nCentered near the bottom of the canvas, between the flared bottoms of the column and the bottle, are several small symbols. One is a circle with a small vertical line protruding from the bottom, the second is a backwards lowercase N, and the third is a thick vertical line with an imprecise mark at the lower right."
-      }
-    ]
-  },
-  {
-    uuid: uuid.v4(),
-    floor: 7,
-    order: 13,
-    shortTitle: "Hand-painted pop",
-    longTitle: "Hand-painted pop: Coca-Cola",
-    shortCredit: "Andy Warhol, <i>Coca-Cola [2]</i>, 1961 © AWF",
-    longCredit:
-      "Andy Warhol (American, 1928-1987) \n<i>Coca-Cola [2]</i>, 1961 \ncasein and crayon on linen \n69 1/2 x 52 1/4 in. (176.5 x 132.7 cm.) \nThe Andy Warhol Museum, Pittsburgh; Founding Collection, Contribution Dia Center for the Arts \n© The Andy Warhol Foundation for the Visual Arts, Inc. \n1997.1.20",
-    imageURL: "cocaCola.png",
-    imageWidth: 352,
-    imageHeight: 475,
-    regions: ["green"],
-    tags: [],
-    initialAudio: "INTRODUCTION",
-    audioContent: [
-      {
-        uuid: uuid.v4(),
-        category: "INTRODUCTION",
-        depth: 0,
-        title: "Introduction",
-        duration: 22,
-        speaker: "Grace Marston",
-        audioURL: "Marsden_Grace_Coca-Cola_Introduction",
-        transcript:
-          "<i>Grace Marston:</i>\n\nHi. My name is Grace Marston. I am an educator and a gallery attendant at The Andy Warhol Museum. \n\nIn the early 1960s Andy Warhol was doing a great deal of hand-painted work where he was copying commercial products, images from magazines and advertisements, and Coca-Cola was really kind of one of the biggest, most popular brands represented in this time period."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "VISUAL_DESCRIPTION",
-        depth: 0,
-        title: "Visual description",
-        duration: 77,
-        speaker: "Narrator",
-        audioURL: "CocaCola_Visual",
-        transcript:
-          "<i>Narrator:</i>\n\nThis canvas, which measures almost six feet tall and over four feet wide, features a glass bottle of Coca-Cola, rendered in black casein paint and crayon. \n\nThe large, detailed bottle stands on our left, rising up from the bottom of the canvas. Covering the right-hand edge of the painting is a thick black column with a slightly flared base. Most of the column is filled in with patches of light-black crayon markings, but the top features a more solid patch of heavy black paint. \n\nAt the top of the canvas are the first three letters of the Coca-Cola logo, with the rest obscured by the column. More light-black crayon markings appear at the left edge of the canvas, and a smudge of dry black paint marks the upper left hand corner, clouding the top of the glass bottle. \n\nCentered near the bottom of the canvas, between the flared bottoms of the column and the bottle, are several small symbols. One is a circle with a small vertical line protruding from the bottom, the second is a backwards lowercase N, and the third is a thick vertical line with an imprecise mark at the lower right."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "HISTORICAL_CONTEXT",
-        depth: 0,
-        title: "Mass appeal",
-        duration: 33,
-        speaker: "Grace Marston",
-        audioURL: "Marsden_Grace_Coca-Cola_Mass-Appeal",
-        transcript:
-          "<i>Grace Marston:</i>\n\nWarhol chose the Coca-Cola bottle as a subject matter for many artworks because he was really interested in the popularity of the brand and the accessibility of the product. \n\nHe talked about how Coke, you know, is the same no matter who's buying it. You can't pay any more money to get a better bottle of Coca-Cola, so whether you're Elizabeth Taylor or the president or just the bum around the corner, you're gonna get the same soda in your Coca-Cola bottle. And so he appreciated that that kind of democratized the product and that it had such a mass appeal."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: "Expressionist elements",
-        duration: 35,
-        speaker: "Grace Marston",
-        audioURL: "Marsden_Grace_Coca-Cola_Expressionist_elements",
-        transcript:
-          "<i>Grace Marston:</i>\n\nWhat's unique about this particular Coke bottle painting is it has all these expressionist elements that you don't see in many of the other Coke bottle works, which are much more straightforward. \n\nOn this canvas we see a lot of smudges, a lot of scribbles. We see that Andy used both crayon and casein on the painting. We see that he included these black bars on either side of the Coke bottle that are sort of incomplete, that weren't actually in his source image, the advertisement that he based it on. It's much messier than a lot of the other Coke bottle paintings that we see."
-      },
-      {
-        uuid: uuid.v4(),
-        category: "ART_PROCESS",
-        depth: 0,
-        title: '"This is hand-painted pop"',
-        duration: 48,
-        speaker: "Jose Diaz",
-        audioURL: "Diaz_Jose-Coke-Hand_Painted_Pop",
-        transcript:
-          "<i>Chief curator Jose Diaz:</i>\n\nHello, my name is Jose Diaz. I am the chief curator at The Andy Warhol Museum.\n\nAt the time, in the early '60s, abstract expressionism was the most popular artistic movement in America. It was an American movement, mostly led by an artist named Jackson Pollock. The concept was that the works were expressed through action and emotion.\n\nSo in these earlier works, we see that the paintings that Warhol made are very painterly. You can see drips of paint. If you were to run your hand down the Coke bottle, you find that the line is broken, that there's different mediums on the canvas.\n\nWhat's interesting is that Andy really can't find what type of artist he wants to be. A lot of the works here have heavy paint drips. You can find the memory of the brush stroke or the crayon running across the canvas. This is hand-painted pop."
-      }
-    ]
-  },
-  {
-    uuid: uuid.v4(),
-    floor: 7,
-    order: 14,
     shortTitle: "Pop products",
     longTitle: "Pop products: Campbell's soup",
     shortCredit:
@@ -1152,7 +683,7 @@ export const tourStops = [
   {
     uuid: uuid.v4(),
     floor: 7,
-    order: 15,
+    order: 12,
     shortTitle: "Do It Yourself",
     longTitle: "<i>Do It Yourself (Sailboat)</i>",
     shortCredit: "Andy Warhol, <i>Do It Yourself (Sailboat)</i>, 1962 © AWF",
@@ -1222,6 +753,222 @@ export const tourStops = [
       }
     ]
   },
+    {
+    uuid: uuid.v4(),
+    floor: 7,
+    order: 13,
+    shortTitle: "Female Fashion Figure",
+    longTitle: "Tactile reproduction: <i>Female Fashion Figure</i>",
+    shortCredit: "Tactile reproduction: <i>Female Fashion Figure</i>",
+    longCredit: "Tactile reproduction: <i>Female Fashion Figure</i>",
+    regions: ["tactiles"],
+    imageURL: "Tactile-Female_Fashion_Figure.png",
+    imageWidth: 475,
+    imageHeight: 414,
+    tags: [],
+    initialAudio: "INTRODUCTION",
+    audioContent: [
+      {
+        uuid: uuid.v4(),
+        category: "INTRODUCTION",
+        depth: 0,
+        title: "Introduction",
+        duration: 33,
+        speaker: "Danielle Linzer",
+        audioURL: "1_Introduction_Danielle Linzer",
+        transcript:
+          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nHi! I’m Danielle Linzer. I’m the director of learning and public engagement at The Warhol.\n\nAs you move through the Warhol’s galleries, you’ll encounter various tables that have tactile reproductions of artworks in the Warhol’s collection.\n\nThese tactile reproductions are designed to be accessible to people who are blind or have low vision but we think that they’re really enriching for everybody. They can offer a really in-depth, multisensory experience of an artwork.\n\nWe pair that with a guided audio experience that really walks you through what you’re feeling."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "How to use the tactile reproductions",
+        duration: 50,
+        speaker: "Danielle Linzer",
+        audioURL: "2_How to use the tactile reproductions_Danielle Linzer",
+        transcript:
+          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nLots of people visit museums and really want to touch things and unfortunately we’re not always able to. This is an opportunity to indulge this impulse. You’re welcome to move your hands over the surface and start to appreciate some of the lines, the boundaries, the textures.\n\nOn our audio guide you’ll find guided tactile experiences which are designed to be used in tandem with the three-dimensional reproductions.\n\nThey really guide you through what you’re feeling, helping you to move your hands over the surface of the piece and recognize different kinds of features and formal elements within the work, whereas visual descriptions we offer for works throughout the galleries. A visual description is really translating the visual into the verbal. It’s describing what you’re seeing in front of you."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "Making the tactile reproductions",
+        duration: 40,
+        speaker: "Danielle Linzer",
+        audioURL: "3_Making the tactile reproductions_Danielle Linzer",
+        transcript:
+          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nMaking these tactile reproductions is a really labor-intensive process. It combines an artist’s craftsmanship with really sophisticated digital technologies.\n\nIn it’s simplest form, we’re taking a two-dimensional image, a high-resolution scan of the artwork, and then selectively highlighting certain features to bring them forward or push them back in space and then running that file through a router which cuts into the surface of a material called Acetol, which is a very high density plastic. It’s very durable, it feels good to touch, and it can hold a lot of information, a lot of detail."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "TACTILE_EXPERIENCE",
+        depth: 0,
+        title: "Guided tactile experience",
+        duration: 241,
+        speaker: "Narrator",
+        audioURL: "TactileFemaleFashionFigure_Tactile",
+        transcript:
+          "<i>Narrator:</i>\n\nThis line drawing with synthetic dye features a fashionable, lithe woman in a puffy, knee-length dress standing in front of a 1950s’ convertible sports car. \n\nCentered near the bottom of the piece you will find the woman’s feet, tucked into pointy high-heeled shoes. If you follow the woman’s legs up toward the knees you will soon come to the hem of her dress. Using both hands, explore the edges of her skirt, which is shaped like a soft triangle, and comes back toward the center at her narrow waist. Continuing up the dress you will find a V-shaped neckline, and thin straps that lead to her sloping shoulders. A delicate string of pearls hangs around the woman’s neck, which she is touching with the tips of her slender fingers. \n\nAbove the woman’s shoulders you’ll find her long, thin neck. She is depicted in profile, facing our right, so by following the line of her neck on the right hand side you will soon come to her chin, then her lips, and her delicate, pointy nose. The line leads up to a puff of coiffed hair, which juts out over her forehead. Her up-do curves back along the contours of her head, and ends at the nape of her bare neck. \n\nNow that you have fully mapped out the edges of this work’s central subject, perhaps take some time to explore her dress more fully. Discover the rosette on the bodice, in the center of her chest, the small pleats near the waist, and the garment’s smooth, soft texture, used to evoke the watery, violet color found in the original piece. \n\nBehind the woman is a 1959 Plymouth Sport Fury Convertible sports car, which faces the upper right-hand corner of the piece. If you start, once again, at the woman’s feet, follow her legs, and then the left-hand edge of the skirt, you will soon discover the car’s rear bumper, which stretches out toward the left-hand edge of the work. The back of the car features thin, elongated tail lights, a bumper with chrome details, and a blank, rectangular license plate. At the far left, above the taillight, you will find a decorative fin, which delineates the rear corner of the car. Near the center of the trunk, directly above the license plate, are concentric circles representing the spare tire case mounted on the rear. \n\nTo explore the front of the car, begin once again at the woman’s feet. Follow her legs up to the hem, then follow the hemline to the right, and along the side of her skirt. Here you will find the side of the car, which begins at the rear wheel well and continues up toward the right-hand corner. The side of the car also features two parallel racing stripes that cross the door on the way to the rounded nose. Directly below the nose is the front tire, and above it, to the left, is a small round side mirror. Continuing toward the left you will find the outline of the windshield, as well as the top half of the steering wheel and the low rearview mirror, which is mounted above the dashboard inside the car. \n\nNote that the body of the car has the same smooth texture as found in the dress. In the original piece, the artist painted both objects with Dr. Martin’s watercolors: violet for the dress, and cherry red for the sports car. \n\nOne last thing—near the bottom right hand corner you will find a single dot in an otherwise blank area of the piece. This represents a tiny black mark from the artist’s pen, which may, or may not, have been an intentional addition to the original work."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "VISUAL_DESCRIPTION",
+        depth: 0,
+        title: "Visual description",
+        duration: 71,
+        speaker: "Narrator",
+        audioURL: "TactileFemaleFashionFigure_Visual",
+        transcript:
+          "<i>Narrator:</i>\n\nThis black ink line drawing with synthetic dye features a fashionable, lithe woman in a puffy, knee-length dress standing in front of a 1950s convertible sports car.\n\nRendered in irregular black ink lines, the woman stands at the center of the piece, facing our right, with one hand reaching up to touch the string of pearls around her neck. She wears her hair coiffed and up, with pointed heels on her feet, and an oval rosette in the bodice of her sleeveless dress.\n\nBehind her is a 1959 Plymouth Sport Fury convertible, which faces our upper right hand corner as if preparing to drive away from us. The long, sleek car has rear fins and a round spare tire case mounted on the trunk. The front of the car has a freestanding windshield, a round side mirror, and an open interior.\n\nWhile the background and the woman lack color, both the car and the dress have been painted with vibrant, watery dye: violet for the dress, and cherry red for the sports car."
+      }
+    ]
+  },
+  {
+    uuid: uuid.v4(),
+    floor: 7,
+    order: 14,
+    shortTitle: "Reclining Male Torso",
+    longTitle: "Tactile reproduction: <i>Reclining Male Torso</i>",
+    shortCredit: "Tactile reproduction: <i>Reclining Male Torso</i>",
+    longCredit: "Tactile reproduction: <i>Reclining Male Torso</i>",
+    imageURL: "Tactile-Reclining_Male_Torso.png",
+    imageWidth: 408,
+    imageHeight: 475,
+    regions: ["tactiles"],
+    tags: [],
+    initialAudio: "INTRODUCTION",
+    audioContent: [
+      {
+        uuid: uuid.v4(),
+        category: "INTRODUCTION",
+        depth: 0,
+        title: "Introduction",
+        duration: 33,
+        speaker: "Danielle Linzer",
+        audioURL: "1_Introduction_Danielle Linzer",
+        transcript:
+          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nHi! I’m Danielle Linzer. I’m the director of learning and public engagement at The Warhol.\n\nAs you move through the Warhol’s galleries, you’ll encounter various tables that have tactile reproductions of artworks in the Warhol’s collection.\n\nThese tactile reproductions are designed to be accessible to people who are blind or have low vision but we think that they’re really enriching for everybody. They can offer a really in-depth, multisensory experience of an artwork.\n\nWe pair that with a guided audio experience that really walks you through what you’re feeling."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "How to use the tactile reproductions",
+        duration: 50,
+        speaker: "Danielle Linzer",
+        audioURL: "2_How to use the tactile reproductions_Danielle Linzer",
+        transcript:
+          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nLots of people visit museums and really want to touch things and unfortunately we’re not always able to. This is an opportunity to indulge this impulse. You’re welcome to move your hands over the surface and start to appreciate some of the lines, the boundaries, the textures.\n\nOn our audio guide you’ll find guided tactile experiences which are designed to be used in tandem with the three-dimensional reproductions.\n\nThey really guide you through what you’re feeling, helping you to move your hands over the surface of the piece and recognize different kinds of features and formal elements within the work, whereas visual descriptions we offer for works throughout the galleries. A visual description is really translating the visual into the verbal. It’s describing what you’re seeing in front of you."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "Making the tactile reproductions",
+        duration: 40,
+        speaker: "Danielle Linzer",
+        audioURL: "3_Making the tactile reproductions_Danielle Linzer",
+        transcript:
+          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nMaking these tactile reproductions is a really labor-intensive process. It combines an artist’s craftsmanship with really sophisticated digital technologies.\n\nIn it’s simplest form, we’re taking a two-dimensional image, a high-resolution scan of the artwork, and then selectively highlighting certain features to bring them forward or push them back in space and then running that file through a router which cuts into the surface of a material called Acetol, which is a very high density plastic. It’s very durable, it feels good to touch, and it can hold a lot of information, a lot of detail."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "TACTILE_EXPERIENCE",
+        depth: 0,
+        title: "Guided tactile experience",
+        duration: 201,
+        speaker: "Narrator",
+        audioURL: "TactileRecliningMaleTorso_Tactile",
+        transcript:
+          "<i>Narrator:</i>\n\nThis stylized line drawing features a bare-chested young man, lounging on a formal sofa, facing us. \n\nAt the bottom right-hand corner, you will find a patch of wavy, parallel lines representing part of the pillow. If you continue up from there, close to the edge of the piece, you will soon find the man’s pointy elbow. Keeping your right hand on that spot, slowly drag your other hand straight across to the left. You will pass several small patches of loose, parallel lines that represent hairs before coming to the other side of the man’s forearm. \n\nNow that you have located both edges, explore the length of the man’s long, draping arm. Lower down you will find the forearm curving at the wrist, and fingers that hang beyond the bottom edge of the piece. \n\nMoving back up the limb, your left hand will follow the straight edge of the forearm to the crook of the young man’s elbow. Here a line branches off toward the top of the piece, outlining the gentle curve of his bicep. The inner arm ends at the man’s armpit, represented by a narrow, tilting V. \n\nOn the right your fingers will find the widening forearm, the pointy elbow, the bulging tricep, and the strong shoulder joint. The line then brings you around to left where you can trace the man’s broad shoulder. You’ll likely notice a patch of fine parallel marks, like ribbing, just above this line. This is part of the pattern found on the back of the sofa. Continuing along the shoulder you will come to the side of the young man’s neck. Here, in the upper left-hand corner of the piece, is the young man’s face. \n\nHe looks at us with large eyes, pouting lips, and a few tufts of wavy hair. Remember, this rendering is stylized, so the man’s features might not be easily recognizable. To orient yourself, try finding the man’s ear by moving up the line of his neck, on the right. From there you can trace his jawline, down around the chin, past the full lips, to the sharp cheekbone. \n\nDirectly below the man’s head is a large, roughly square pillow, the edges of which outline the largest blank space in the piece. Below the pillow, near the lower left hand corner, you will find irregular shapes and textures representing the patterned sofa. More irregular patches of decoration can be found on the back of the sofa above the man’s shoulder, and in the upper right-hand corner. \n\nIn the center of the piece is the outline of the young man’s chest. To locate it, first find the patch of ribbing above the man’s shoulder. Moving straight down from there you will cross the shoulder line, and eventually come to a feathery, upside-down Y. This is the outline of the man’s inner pectoral muscles. To the right you will find his nipple, which is represented by an oval with a curving hood, like an eyelid. The nipple on the left is not depicted, as it is covered by the large square pillow."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "VISUAL_DESCRIPTION",
+        depth: 0,
+        title: "Visual description",
+        duration: 65,
+        speaker: "Narrator",
+        audioURL: "TactileRecliningMaleTorso_Visual",
+        transcript:
+          "<i>Narrator:</i>\n\nThis stylized line drawing on yellowed manila paper features a bare-chested young man lounging on a formal sofa. Rendered with simple lines from a ballpoint pen, the muscular young man lies on his side, facing us, his head resting on his bicep at our upper left-hand corner. With his body propped up by a large, unadorned pillow, he stares at us with wide eyes and full, pouting lips. He has a broad shoulder and a long muscular arm, which is draped across his body and rests on a second pillow near the bottom righthand corner. Behind and beneath the young man, the patterned upholstery is represented by seemingly random shapes and patches of densely packed parallel lines. Other patches of texture include tufts of wavy hair on the young man’s head and forearm, and fine feathery lines that delineate the man’s pectoral muscles at the center of the drawing."
+      }
+    ]
+  },
+  {
+    uuid: uuid.v4(),
+    floor: 7,
+    order: 15,
+    shortTitle: "Coca-Cola [2]",
+    longTitle: "Tactile reproduction: <i>Coca-Cola [2]</i>",
+    shortCredit: "Tactile reproduction: <i>Coca-Cola [2]</i>",
+    longCredit: "Tactile reproduction: <i>Coca-Cola [2]</i>",
+    regions: ["tactiles"],
+    imageURL: "Tactile-Coca-Cola.png",
+    imageWidth: 475,
+    imageHeight: 372,
+    tags: [],
+    initialAudio: "INTRODUCTION",
+    audioContent: [
+      {
+        uuid: uuid.v4(),
+        category: "INTRODUCTION",
+        depth: 0,
+        title: "Introduction",
+        duration: 33,
+        speaker: "Danielle Linzer",
+        audioURL: "1_Introduction_Danielle Linzer",
+        transcript:
+          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nHi! I’m Danielle Linzer. I’m the director of learning and public engagement at The Warhol.\n\nAs you move through the Warhol’s galleries, you’ll encounter various tables that have tactile reproductions of artworks in the Warhol’s collection.\n\nThese tactile reproductions are designed to be accessible to people who are blind or have low vision but we think that they’re really enriching for everybody. They can offer a really in-depth, multisensory experience of an artwork.\n\nWe pair that with a guided audio experience that really walks you through what you’re feeling."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "How to use the tactile reproductions",
+        duration: 50,
+        speaker: "Danielle Linzer",
+        audioURL: "2_How to use the tactile reproductions_Danielle Linzer",
+        transcript:
+          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nLots of people visit museums and really want to touch things and unfortunately we’re not always able to. This is an opportunity to indulge this impulse. You’re welcome to move your hands over the surface and start to appreciate some of the lines, the boundaries, the textures.\n\nOn our audio guide you’ll find guided tactile experiences which are designed to be used in tandem with the three-dimensional reproductions.\n\nThey really guide you through what you’re feeling, helping you to move your hands over the surface of the piece and recognize different kinds of features and formal elements within the work, whereas visual descriptions we offer for works throughout the galleries. A visual description is really translating the visual into the verbal. It’s describing what you’re seeing in front of you."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "ART_PROCESS",
+        depth: 0,
+        title: "Making the tactile reproductions",
+        duration: 40,
+        speaker: "Danielle Linzer",
+        audioURL: "3_Making the tactile reproductions_Danielle Linzer",
+        transcript:
+          "<i>Director of learning and public engagement Danielle Linzer:</i>\n\nMaking these tactile reproductions is a really labor-intensive process. It combines an artist’s craftsmanship with really sophisticated digital technologies.\n\nIn it’s simplest form, we’re taking a two-dimensional image, a high-resolution scan of the artwork, and then selectively highlighting certain features to bring them forward or push them back in space and then running that file through a router which cuts into the surface of a material called Acetol, which is a very high density plastic. It’s very durable, it feels good to touch, and it can hold a lot of information, a lot of detail."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "TACTILE_EXPERIENCE",
+        depth: 0,
+        title: "Guided tactile experience",
+        duration: 132,
+        speaker: "Narrator",
+        audioURL: "TactileCocaCola_Tactile",
+        transcript:
+          "<i>Narrator:</i>\n\nThis piece features a large bottle of Coca-Cola in an abstract setting, originally rendered in black crayon and black paint. \n\nThe glass bottle stands alone on the left. Starting near the bottom, you can follow its curves up toward the narrow mouth near the upper left hand corner of the piece. The brand’s cursive logo is located halfway up the bottle, and a patch with the texture of polished concrete can be found at the top. We’ll return to that patch in a moment. To the left of the bottle, covering the edge of the piece, are patches of rough lines, which represent the crayon markings found in the original work. \n\nCovering the right-hand side of the piece, parallel to the bottle, is a large, thick column with a slightly flared base. Most of this column is filled in with the same patchy crayon markings found on the left edge, and therefore shares the same rough texture. Near the top, however, is a large smooth patch, representing the dark black paint used by artist Andy Warhol. \n\nCentered at the top of the piece are the first three letters of the Coca-Cola logo: C O C. The first C has a long curving tail that underlines the other letters, and the cursive O is connected to the second C by a swooping line near the top. The rest of the logo is blocked on the right by the large column. \n\nOn the left, covering the top of the bottle and much of the corner, is the textured patch that feels like polished concrete. This texture is unique in the piece representing neither the crayon, nor the thick black paint. It represents a cloudy gray smudge, perhaps made with a dry brush or rag. \n\nFinally, a few unusual markings can be found near the bottom of the piece. Between the flared bases of the bottle and the column are three symbols in a neat row, which resemble the letters Q, n, and L."
+      },
+      {
+        uuid: uuid.v4(),
+        category: "VISUAL_DESCRIPTION",
+        depth: 0,
+        title: "Visual description",
+        duration: 77,
+        speaker: "Narrator",
+        audioURL: "CocaCola_Tactile_Visual",
+        transcript:
+          "<i>Narrator:</i>\n\nThis canvas, which measures almost six feet tall and over four feet wide, features a glass bottle of Coca-Cola, rendered in black casein paint and crayon. \n\nThe large, detailed bottle stands on our left, rising up from the bottom of the canvas. Covering the right-hand edge of the painting is a thick black column with a slightly flared base. Most of the column is filled in with patches of light-black crayon markings, but the top features a more solid patch of heavy black paint. \n\nAt the top of the canvas are the first three letters of the Coca-Cola logo, with the rest obscured by the column. More light-black crayon markings appear at the left edge of the canvas, and a smudge of dry black paint marks the upper left hand corner, clouding the top of the glass bottle. \n\nCentered near the bottom of the canvas, between the flared bottoms of the column and the bottle, are several small symbols. One is a circle with a small vertical line protruding from the bottom, the second is a backwards lowercase N, and the third is a thick vertical line with an imprecise mark at the lower right."
+      }
+    ]
+  },
   {
     uuid: uuid.v4(),
     floor: 3,
@@ -1260,9 +1007,9 @@ export const tourStops = [
     shortCredit: "Tactile reproduction: <i>Camouflage</i>",
     longCredit: "Tactile reproduction: <i>Camouflage</i>",
     regions: ["white"],
-    imageURL: "Tactile_Camouflage.png",
-    imageWidth: 475,
-    imageHeight: 465,
+    imageURL: "OL_image_Camoflage_Tactile.jpg",
+    imageWidth: 1046,
+    imageHeight: 705,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -1332,9 +1079,9 @@ export const tourStops = [
     shortCredit: "Tactile reproduction: <i>Mao Wallpaper</i>",
     longCredit: "Tactile reproduction: <i>Mao Wallpaper</i>",
     regions: ["white"],
-    imageURL: "Tactile_MaoWallpaper.png",
-    imageWidth: 475,
-    imageHeight: 474,
+    imageURL: "OL_image_MaoWallpaper_Tactile.jpg",
+    imageWidth: 1249,
+    imageHeight: 1000,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -1404,9 +1151,9 @@ export const tourStops = [
     shortCredit: "Tactile reproduction: <i>Self-Portrait</i>",
     longCredit: "Tactile reproduction: <i>Self-Portrait</i>",
     regions: ["white"],
-    imageURL: "Tactile_SelfPortrait.png",
-    imageWidth: 395,
-    imageHeight: 475,
+    imageURL: "OL_image_SelfPortrait_Tactile.jpg",
+    imageWidth: 1500,
+    imageHeight: 1013,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -1476,9 +1223,9 @@ export const tourStops = [
     shortCredit: "Tactile reproduction: <i>Skull</i>",
     longCredit: "Tactile reproduction: <i>Skull</i>",
     regions: ["white"],
-    imageURL: "Tactile_Skull.png",
-    imageWidth: 475,
-    imageHeight: 437,
+    imageURL: "OL_image_Skull_Tactile.jpg",
+    imageWidth: 1500,
+    imageHeight: 1580,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -1548,9 +1295,9 @@ export const tourStops = [
     shortCredit: "Tactile reproduction: <i>Julia Warhola</i>",
     longCredit: "Tactile reproduction: <i>Julia Warhola</i>",
     regions: ["purple"],
-    imageURL: "Tactile_JuliaWarhola.png",
-    imageWidth: 475,
-    imageHeight: 475,
+    imageURL: "OL_image_JuliaWarhol_Tactile.jpg",
+    imageWidth: 1343,
+    imageHeight: 1000,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -1620,9 +1367,9 @@ export const tourStops = [
     shortCredit: "Tactile reproduction: <i>Mick Jagger</i>",
     longCredit: "Tactile reproduction: <i>Mick Jagger</i>",
     regions: ["purple"],
-    imageURL: "Tactile_MickJagger.png",
-    imageWidth: 475,
-    imageHeight: 475,
+    imageURL: "OL_image_MickJagger_Tactile.jpg",
+    imageWidth: 1200,
+    imageHeight: 1000,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -1692,9 +1439,9 @@ export const tourStops = [
     shortCredit: "Tactile reproduction: <i>Brillo Soap Pads Box</i>",
     longCredit: "Tactile reproduction: <i>Brillo Soap Pads Box</i>",
     regions: ["red"],
-    imageURL: "Tactile_BrilloSoapPads.png",
-    imageWidth: 464,
-    imageHeight: 475,
+    imageURL: "OL_image_BrilloSoapPadsBox_Tactile.jpg",
+    imageWidth: 1173,
+    imageHeight: 782,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -1767,9 +1514,9 @@ export const tourStops = [
     longCredit:
       "Tactile reproduction: <i>Campbell's Soup I: Cream of Mushroom</i>",
     regions: ["red"],
-    imageURL: "Tactile_Campbells.png",
-    imageWidth: 365,
-    imageHeight: 475,
+    imageURL: "OL_image_CambellsSoupICreamOfMushroom_Tactile.jpg",
+    imageWidth: 1352,
+    imageHeight: 1000,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -1839,9 +1586,9 @@ export const tourStops = [
     shortCredit: "Tactile reproduction: <i>Jackie</i>",
     longCredit: "Tactile reproduction: <i>Jackie</i>",
     regions: ["red"],
-    imageURL: "Tactile_Jackie.png",
-    imageWidth: 412,
-    imageHeight: 475,
+    imageURL: "OL_image_Jackie_Tactile.jpg",
+    imageWidth: 988,
+    imageHeight: 1000,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
@@ -1913,9 +1660,9 @@ export const tourStops = [
     longCredit:
       "Tactile reproduction: <i>Screen Test: Billy Linich [ST194]</i>",
     regions: ["red"],
-    imageURL: "Tactile_ScreenTest.png",
-    imageWidth: 475,
-    imageHeight: 432,
+    imageURL: "OL_image_ScreenTestBillyLinich_Tactile.jpg",
+    imageWidth: 953,
+    imageHeight: 892,
     tags: [],
     initialAudio: "INTRODUCTION",
     audioContent: [
